@@ -1,0 +1,14 @@
+\documentclass[16pt]{article}
+\input{Algo1Macros.tex}
+\usepackage[spanish]{babel}
+\title{Especificación}
+
+\begin{document}
+
+\maketitle
+\begin{proc}{factorial}{\In n: \ent, \Out result: \ent}{}
+	\pre{n\geq0}
+	\post{(n=0\implica result=1)\wedge(n>0 \implica result=\prod_{k=1}^{n}k)}
+\end{proc}
+
+\end{document}
