@@ -1,0 +1,4 @@
+/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir
+/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/gtest.dir
