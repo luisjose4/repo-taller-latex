@@ -23,7 +23,9 @@ void acelerar(reunion& r, int prof, int freq) {
 }
 
 void ralentizar(reunion& r, int prof, int freq) {
-    // Implementacions
+    for (int i = 0; i < r.size(); ++i) {
+        ralentizarSenial(r[i].first, prof, freq);
+    }
     return;
 }
 

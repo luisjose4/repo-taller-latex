@@ -23,6 +23,8 @@ bool reunionValida(reunion r, int prof, int freq);
 //acelerar
 void acelerarSenial(senial& s, int prof, int freq)
 
+//ralentizar
+void ralentizarSenial(senial& s, int prof, int freq)
 
 
 #endif //TPI_FUNCIONES_AUXILIARES_H
