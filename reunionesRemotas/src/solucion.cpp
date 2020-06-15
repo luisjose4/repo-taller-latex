@@ -30,9 +30,7 @@ void ralentizar(reunion& r, int prof, int freq) {
 }
 
 vector<hablante> tonosDeVozElevados(reunion r, int freq, int prof) {
-    vector<hablante> maximos;
-    // Implementacion
-    return maximos;
+    return hablantesConTonosElevados(r, freq, prof);
 }
 
 void ordenar(reunion& r, int freq, int prof) {
@@ -63,4 +61,3 @@ void filtradoMediana(senial& s, int R, int prof, int freq){
     // Implementacion
     return;
 }
-

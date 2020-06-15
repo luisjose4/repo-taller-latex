@@ -125,3 +125,22 @@ void ralentizarSenial(senial& s, int prof, int freq){
     s = salida;
     return;
 }
+
+/************* Ejercicio 6 - tonosDeVozElevados *************/
+
+vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof){
+    vector<hablante> hablantes = {};
+    float mayorTono = 0;
+    for (int i = 0; i < r.size(); ++i) {
+        float iesimoTono = tono( r[i].first );
+
+        if ( iesimoTono > mayorTono ){
+            mayorTono = iesimoTono;
+            hablantes = { r[i].second };
+        }
+        if ( iesimoTono == mayorTono ) {
+            hablantes.push_back(r[i].second);
+        }
+    }
+    return hablantes;
+}
