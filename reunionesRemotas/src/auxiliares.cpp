@@ -2,11 +2,12 @@
 #include "definiciones.h"
 #include "auxiliares.h"
 
+/************* Ejercicio 4 *************/
+
 void escribirSenial(senial  s, string nombreArchivo){
     // Implementacion
     return;
 }
-
 
 senial leerSenial(string nombreArchivo){
     senial s;
@@ -14,12 +15,18 @@ senial leerSenial(string nombreArchivo){
     return s;
 }
 
+/************* Ejercicio 4 *************/
+
 bool senialesOrdenadasIguales(senial s1, senial s2){
+
     if(s1.size() != s2.size())
         return false;
 
-    for (int i = 0; i < s1.size(); ++i)
-        if (s1[i] != s2[i]){return false;}
+    for (int i = 0; i < s1.size(); ++i){
+        if (s1[i] != s2[i]){
+        	return false;
+        }
+    }
 
     return true;
 }
