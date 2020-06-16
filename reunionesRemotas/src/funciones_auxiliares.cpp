@@ -1,6 +1,3 @@
-//
-// Created by Luijo on 13/06/2020.
-//
 
 #include "funciones_auxiliares.h"
 
@@ -105,11 +102,45 @@ bool reunionValida(reunion r, int prof, int freq){
 /************* Ejercicio 4 - acelerar *************/
 
 void acelerarSenial(senial& s, int prof, int freq){
-    int i = 0;
-    while ( i < s.size() ){
-        s.erase(s.begin()+i);
-        i = i + 1;//es i+1 porque al hacer el erase modifico la longitud de s y no necesito ir sumando 2
+    for (int i = 0; i < s.size(); ++i) {
+        s.erase(s.begin() + i);
     }
     return;
 }
 
+/************* Ejercicio 5 - ralentizar *************/
+
+void ralentizarSenial(senial& s, int prof, int freq){
+    int longFinal = 2 * s.size() - 1;
+    senial salida(longFinal, 0);
+    for (int i = 0; i < salida.size(); ++i) {
+        int valor;
+        if ( i % 2 == 0 ) {
+            salida[i] = s[i/2];
+        }
+        else {
+            salida[i] = ( s[i/2] + s[i/2 + 1] ) / 2;
+        }
+    }
+    s = salida;
+    return;
+}
+
+/************* Ejercicio 6 - tonosDeVozElevados *************/
+
+vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof){
+    vector<hablante> hablantes = {};
+    float mayorTono = 0;
+    for (int i = 0; i < r.size(); ++i) {
+        float iesimoTono = tono( r[i].first );
+
+        if ( iesimoTono > mayorTono ){
+            mayorTono = iesimoTono;
+            hablantes = { r[i].second };
+        }
+        if ( iesimoTono == mayorTono ) {
+            hablantes.push_back(r[i].second);
+        }
+    }
+    return hablantes;
+}

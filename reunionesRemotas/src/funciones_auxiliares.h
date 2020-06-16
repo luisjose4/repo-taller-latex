@@ -21,8 +21,12 @@ bool existeSubseqEnojada(senial s, int umbral, int prof, int freq);
 bool reunionValida(reunion r, int prof, int freq);
 
 //acelerar
-void acelerarSenial(senial& s, int prof, int freq)
+void acelerarSenial(senial& s, int prof, int freq);
 
+//ralentizar
+void ralentizarSenial(senial& s, int prof, int freq);
 
+//tonosDeVozElevados
+vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof);
 
 #endif //TPI_FUNCIONES_AUXILIARES_H

@@ -23,14 +23,14 @@ void acelerar(reunion& r, int prof, int freq) {
 }
 
 void ralentizar(reunion& r, int prof, int freq) {
-    // Implementacions
+    for (int i = 0; i < r.size(); ++i) {
+        ralentizarSenial(r[i].first, prof, freq);
+    }
     return;
 }
 
 vector<hablante> tonosDeVozElevados(reunion r, int freq, int prof) {
-    vector<hablante> maximos;
-    // Implementacion
-    return maximos;
+    return hablantesConTonosElevados(r, freq, prof);
 }
 
 void ordenar(reunion& r, int freq, int prof) {
@@ -61,4 +61,3 @@ void filtradoMediana(senial& s, int R, int prof, int freq){
     // Implementacion
     return;
 }
-
