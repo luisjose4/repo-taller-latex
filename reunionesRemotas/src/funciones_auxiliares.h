@@ -14,6 +14,8 @@ bool enRango(senial s, int prof);
 bool profValida(int prof);
 bool duraMasDe(senial s, int freq, float seg);
 
+float tono(senial s);
+
 //seEnojo
 bool existeSubseqEnojada(senial s, int umbral, int prof, int freq);
 

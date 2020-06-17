@@ -17,6 +17,44 @@ senial leerSenial(string nombreArchivo){
 
 /************* Ejercicio 4 *************/
 
+vector<pair<hablante, float> > obtenerReunionYSusPromedios(reunion r)
+{
+    vector<pair<hablante, float> > ret;
+    pair<hablante, float> nodo;
+
+    for (int m = 0; m < r.size(); m++) {
+        nodo.first = r[m].second;
+        nodo.second = tono(r[m].first);
+
+        ret.push_back(nodo);
+    }
+
+    return ret;
+}
+
+void ordenarPromedios(vector<pair<hablante, float> > &promedios)
+{
+    for (int i = 1; i < promedios.size(); i++) {
+        for (int j = 1; j > 0 && promedios[j - 1].second > promedios[j].second; j--) {
+            iter_swap(promedios.begin() + j, promedios.begin() + j - 1);
+        }
+    }
+
+}
+
+void ordenarReunionAcordeAPromedios(reunion &r, vector<pair<hablante, float> > promediosOrdenados)
+{
+    int nHablante;
+    reunion reunionOriginal = r;
+
+    for (int k = 0; k < r.size(); k++) {
+        nHablante = promediosOrdenados[k].first;
+        r[k] = reunionOriginal[nHablante];
+    }
+}
+
+/************* Ejercicio 4 *************/
+
 bool senialesOrdenadasIguales(senial s1, senial s2){
 
     if(s1.size() != s2.size())

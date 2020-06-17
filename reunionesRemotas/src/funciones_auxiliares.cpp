@@ -33,7 +33,9 @@ bool duraMasDe(senial s, int freq, float seg){//preguntar
 /************* Ejercicio 2 - seEnojo *************/
 
 float tono(senial s){
+
     float sum = 0;
+
     for (int i = 0; i < s.size(); i++)
     {
         sum = sum + abs(s[i]);	//hace falta pasarlo a double??
