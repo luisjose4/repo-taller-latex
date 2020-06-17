@@ -52,12 +52,10 @@ bool hablantesSuperpuestos(reunion r, int prof, int freq, int umbral) {
 }
 
 senial reconstruir(senial s, int prof, int freq) {
-    senial senalReconstruida;
-    senalReconstruida = reconstruirSenial(s);
-    return senalReconstruida;
+    return reconstruirSenial(s);
 }
 
 void filtradoMediana(senial& s, int R, int prof, int freq){
-    return esFiltrada(s,R)
+    Filtrada(s,R);
 }
 

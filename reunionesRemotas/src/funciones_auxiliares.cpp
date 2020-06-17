@@ -139,11 +139,9 @@ bool haySilencioQueLoContiene(senial s, int i, int freq, int umbral){
 
 bool seRespetan(reunion r,int h1,int h2,int freq,int umbral){
     bool res = true;
-    for (int i = 0; i < r[h1].first && res == true; ++i) {
-        if(!(haySilencioQueLoContiene(r[h1].first,i,freq,umbral)) == true) {
-            if (haySilencioQueLoContiene(r[h2].first, i, freq, umbral) == true) {
-
-            } else {
+    for (int i = 0; i < r[h1].first && res ; ++i) {
+        if(!(haySilencioQueLoContiene(r[h1].first,i,freq,umbral))) {
+            if (!haySilencioQueLoContiene(r[h2].first, i, freq, umbral)) {
                 res = false;
             }
         }
@@ -155,12 +153,57 @@ bool seRespetan(reunion r,int h1,int h2,int freq,int umbral){
 
 /************* Ejercicio 10 - reconstruir *************/
 senial reconstruirSenial(senial s){
-
+    for (int i = 1; i < s.size()-1; ++i) {
+        if(s[i] == 0){
+           s[i] = reconstruirPosicionSiCorresponde(s,i);
+        }
+    }
+    return s;
 }
 
+int reconstruirPosicionSiCorresponde(senial s,int i){
+    return (esPasajePorCero(s,i) && s[0] == 0) ||
+}
 
+int signo(int k){
+    if(k > 0){
+        return 1;
+    } else if(k<0){
+        return -1;
+    }else{
+        return 0;
+    }
+}
+int distancia(int j, int i){
+    if(j-i < 0){
+        return (j-i)*-1;
+    }else {
+        return j-i;
+    }
+}
+/*bool esPasajePorCero(senial s, int i){
+    return signo(s[i - 1])* signo(s[i + 1]) == -1;
+}
+*/
+int esValorEnPosicion(senial s, int valor, int i){
+    int j = i-1;
+    int k = i+1;
+    for (j; j!=0 && s[j]==0 ; --j) {
+        // nada, solo queremos que vaya restando.
+    }
+    for (k ; k!= s.size()  ; ++k) {
+        // nada, solo queremos que vaya sumando.
+    }
+
+    return (s[k] + s[j]) / 2
+}
+/*
+ * distancia <= 5????
+ * en predicado masCercanoNoNulo???????
+*/
 /************* Ejercicio 11 - friltradoMediana *************/
-bool esFiltrada(senial s, int R){
+senial Filtrada(senial s, int R){
 
 
 }
+// subSeq(s, i−R, i+R+1)... si i=0, entonces subseq desde -2??
