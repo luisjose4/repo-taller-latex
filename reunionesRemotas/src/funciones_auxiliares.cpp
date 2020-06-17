@@ -113,3 +113,54 @@ void acelerarSenial(senial& s, int prof, int freq){
     return;
 }
 
+/************* Ejercicio 9 - hablantesSuperpuestos *************/
+bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
+    for (int h1 = 0; h1 < r.size(); ++h1) {
+        for (int h2 = h1 + 1; h2 < r.size() ; ++h2) {
+            if (!(seRespetan(r,h1,h2,freq,umbral))){
+                return true
+
+            }
+        }
+
+    }
+}
+
+bool haySilencioQueLoContiene(senial s, int i, int freq, int umbral){
+    for (int j = 0; j < s.size() ; ++j) {
+        for (int k = j+1; k < s.size(); ++k) {
+            if (j <= i && k>=i && esSilencio(s,j,k,freq,umbral)){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool seRespetan(reunion r,int h1,int h2,int freq,int umbral){
+    bool res = true;
+    for (int i = 0; i < r[h1].first && res == true; ++i) {
+        if(!(haySilencioQueLoContiene(r[h1].first,i,freq,umbral)) == true) {
+            if (haySilencioQueLoContiene(r[h2].first, i, freq, umbral) == true) {
+
+            } else {
+                res = false;
+            }
+        }
+    }
+}
+
+
+
+
+/************* Ejercicio 10 - reconstruir *************/
+senial reconstruirSenial(senial s){
+
+}
+
+
+/************* Ejercicio 11 - friltradoMediana *************/
+bool esFiltrada(senial s, int R){
+
+
+}

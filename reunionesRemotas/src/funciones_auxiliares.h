@@ -21,8 +21,15 @@ bool existeSubseqEnojada(senial s, int umbral, int prof, int freq);
 bool reunionValida(reunion r, int prof, int freq);
 
 //acelerar
-void acelerarSenial(senial& s, int prof, int freq)
+void acelerarSenial(senial& s, int prof, int freq);
 
+//hablantesSuperpuestos
+bool hayHablantesSuperpuestos(reunion r,int freq,int umbral);
 
+//reconstruir
+senial reconstruirSenial(senial s);
+
+//filtradoMediana
+bool esFiltrada(senial s, int R);
 
 #endif //TPI_FUNCIONES_AUXILIARES_H

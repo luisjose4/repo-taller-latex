@@ -4,22 +4,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/main.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/main.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/src/auxiliares.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/src/solucion.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/acelerar.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/esReunionValida.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/esSenial.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/filtradoMediana.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/hablantesSuperpuestos.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/ordenar.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/ralentizar.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/reconstruir.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/seEnojo.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/silencios.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.o"
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/tonosDeVozElevados.cpp" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.o"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/main.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/main.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/auxiliares.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/solucion.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/acelerar.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/esReunionValida.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/esSenial.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/filtradoMediana.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/hablantesSuperpuestos.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/ordenar.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/ralentizar.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/reconstruir.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/seEnojo.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/silencios.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/tonosDeVozElevados.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
@@ -27,7 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

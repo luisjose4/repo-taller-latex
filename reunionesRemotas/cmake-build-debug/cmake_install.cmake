@@ -1,8 +1,8 @@
-# Install script for directory: /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas
+# Install script for directory: G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/reunionesRemotas")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
