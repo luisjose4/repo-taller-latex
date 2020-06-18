@@ -1,6 +1,7 @@
 #include "solucion.h"
 #include "funciones_auxiliares.h"
 #include "auxiliares.h"
+#include "definiciones.h"
 
 // Ejercicios
 
@@ -37,19 +38,18 @@ vector<hablante> tonosDeVozElevados(reunion r, int freq, int prof) {
 void ordenar(reunion& r, int freq, int prof) {
 
     vector<pair<hablante, float> > promedios;
-
     promedios = obtenerReunionYSusPromedios(r);
 
-    ordenarPromedios(&promedios);
+    ordenarPromedios(promedios);
 
     ordenarReunionAcordeAPromedios(r, promedios);
-
     return;
 }
 
-vector<intervalo > silencios(senial s, int prof, int freq, int umbral) {
-    vector<pair<int,int> > intervalos;
-    // Implementacion
+vector<intervalo> silencios(senial s, int prof, int freq, int umbral)
+{
+    vector<intervalo> intervalos;
+    intervalos = obtenerSilencios(s, freq, umbral);
     return intervalos;
 }
 

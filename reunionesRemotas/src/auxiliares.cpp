@@ -1,6 +1,7 @@
 #include "../lib/gtest.h"
 #include "definiciones.h"
 #include "auxiliares.h"
+#include "funciones_auxiliares.h"
 
 /************* Ejercicio 4 *************/
 
@@ -16,6 +17,9 @@ senial leerSenial(string nombreArchivo){
 }
 
 /************* Ejercicio 4 *************/
+
+
+/************* ordenar *************/
 
 vector<pair<hablante, float> > obtenerReunionYSusPromedios(reunion r)
 {
@@ -34,8 +38,10 @@ vector<pair<hablante, float> > obtenerReunionYSusPromedios(reunion r)
 
 void ordenarPromedios(vector<pair<hablante, float> > &promedios)
 {
+    /* Insertion sort */
+
     for (int i = 1; i < promedios.size(); i++) {
-        for (int j = 1; j > 0 && promedios[j - 1].second > promedios[j].second; j--) {
+        for (int j = i; j > 0 && promedios[j - 1].second < promedios[j].second; j--) {
             iter_swap(promedios.begin() + j, promedios.begin() + j - 1);
         }
     }
@@ -53,7 +59,70 @@ void ordenarReunionAcordeAPromedios(reunion &r, vector<pair<hablante, float> > p
     }
 }
 
-/************* Ejercicio 4 *************/
+/************* ordenar *************/
+
+/************* silencios *************/
+
+bool superaUmbral(int valor, int umbral)
+{
+    return abs(valor) >= umbral;
+}
+
+void actualizarIndicesYFlags(int &inicioSilencio, int indiceActual, bool &outCandidatoSilencio, bool &outEsSilencio, int freq)
+{
+    if (outCandidatoSilencio == false) {
+        inicioSilencio = indiceActual;
+    }
+    outCandidatoSilencio = true;
+
+    if (indiceActual - inicioSilencio >= freq * 0.1) {
+        outEsSilencio = true;
+    }
+}
+
+void agregarIntervalo(vector<intervalo> &listaDeSilencios, int inicioSilencio, int finSilencio)
+{
+    intervalo silencio;
+
+    silencio.first = inicioSilencio;
+    silencio.second = finSilencio;
+
+    listaDeSilencios.push_back(silencio);
+}
+
+vector<intervalo> obtenerSilencios(senial s, int freq, int umbral)
+{
+    vector<intervalo> ret(0);
+    int inicioSilencio = 0;
+    bool candidatoASilencio = false;
+    bool esSilencio = false;
+
+
+    for (int i = 0; i < s.size(); i++) {
+
+        if (superaUmbral(s[i], umbral) == false) {
+            actualizarIndicesYFlags(inicioSilencio, i, candidatoASilencio, esSilencio, freq);
+        }
+
+        else {
+            if (esSilencio) {
+                agregarIntervalo(ret, inicioSilencio, i - 1);
+            }
+            esSilencio = false;
+            candidatoASilencio = false;
+        }
+    }
+
+
+
+    if (esSilencio) { /* agregar silencio en caso de que termine al final */
+        agregarIntervalo(ret, inicioSilencio, s.size() - 1);
+    }
+
+    return ret;
+}
+
+/************* silencios *************/
 
 bool senialesOrdenadasIguales(senial s1, senial s2){
 

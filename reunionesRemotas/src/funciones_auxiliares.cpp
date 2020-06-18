@@ -32,7 +32,8 @@ bool duraMasDe(senial s, int freq, float seg){//preguntar
 
 /************* Ejercicio 2 - seEnojo *************/
 
-float tono(senial s){
+float tono(senial s)
+{
 
     float sum = 0;
 
@@ -67,7 +68,7 @@ bool umbralValido(int umbral){
 
 bool esMatriz(vector<pair<senial, hablante>> r){
     for (int i = 0; i < r.size(); ++i) {
-        if ( typeid(r[i]) != typeid(pair<senial, hablante>) ) return false;
+//        if ( typeid(r[i]) != typeid(pair<senial, hablante>) ) return false;
     } //comparo los tipos (que sean de tipo pair<senial, hablante>
     return true;
 }//esta bien que sea asi la entrada? me parece que entonces no tendria sentido ver si es matriz
