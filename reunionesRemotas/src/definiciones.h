@@ -2,7 +2,6 @@
 #define REUNIONESREMOTAS_DEFINICIONES_H
 
 
-
 #include <vector>
 #include <tuple>
 #include <cmath>
