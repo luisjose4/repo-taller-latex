@@ -69,7 +69,7 @@ TEST(seEnojoTEST, senialEnojadaConLongitudMinima){
 }
 
 TEST(seEnojoTEST, senialEnojadaConSubseqMinimaEnojada){
-    senial s = {0,1,1,0,0,0,0,1,0,2,4,-2,-4,3,3,-3,3,0,6,5,1,-1,-5,3,3,-3,-3,5,-2,0,0,0,0,0,0,1,-2,2,1,0,0,3};
+    senial s = {0,0,0,0,3,3,3,3,3,3,3,3,4,3,3,3,3,3,3,3,3,3,3,3,0,0,0,0,0,0,1,-2,2,1,0,0,3};
     int prof = 8;
     int freq = 10;
     int umbral = 3;
@@ -94,5 +94,3 @@ TEST(seEnojoTEST, senialEnojadaConMayoriaDeMuestrasIgualesACero){
 
     ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
 }
-
-

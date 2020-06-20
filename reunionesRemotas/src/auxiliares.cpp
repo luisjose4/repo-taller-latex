@@ -103,15 +103,15 @@ bool senialesValidas(reunion r, int prof, int freq)
 
 bool todosHablantesDistintos(reunion r)
 {
-    bool repetidos = false;
+    bool res = true;
 
-    for (int i = 0; i < r.size() && !repetidos; ++i) {
-        for (int j = i + 1; j < r.size() && !repetidos; ++j) {
-            repetidos = ( r[i].second == r[j].second );
+    for (int i = 0; i < r.size() && res; ++i) {
+        for (int j = i + 1; j < r.size() && res; ++j) {
+            res = ( r[i].second != r[j].second );
         }
     }
 
-    return true;
+    return res;
 }
 
 bool hablantesDeReunionValidos(reunion r, int prof, int freq)
