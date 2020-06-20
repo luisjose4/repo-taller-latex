@@ -148,8 +148,79 @@ bool seRespetan(reunion r,int h1,int h2,int freq,int umbral){
     }
 }
 
+/************* Ejercicio 10 - reconstruir *************/
+
+senial reconstruirSenial(senial s){
+    for (int i = 0; i < s.size() ; ++i) {
+        if (s[i] == 0){
+            if(esPasajePorCero(s, i) && s[0] = 0){
+                // pasa al siguiente elemento.                                         queda raro...
+            } else if(!esPasajePorCero(s,i) && esValorEnPosicion(s,s[i],i)){
+                s[i] = valor(s,i);
+            }
+        }
+    }
+
+    return s;
+}
 
 
+
+bool esValorEnPosicion(senial s,int valor,int i){
+    int j = i-1;
+    int k = i+1;
+    while (j!=0 && s[j]==0){
+        --j;
+    }
+    while (k!= s.size() && s[k]==0){
+        ++k;
+    }
+    return masCercanosNoNulos(s,i,j,k)
+
+}
+
+bool masCercanosNoNulos(senial s, int i, int j, int k){
+    return distancia(j,k) <= 5
+}
+
+bool reconstruirPosicionSiCorresponde(senial s,int i){
+    return (esPasajePorCero(s,i) && s[0] == 0) || (!esPasajePorCero(s,i) && valorEnPosicion(s,i))
+}
+
+bool esPasajePorCero(senial s, int i){
+    return signo(s[i - 1])* signo(s[i + 1]) == -1;
+}
+
+int valor(senial s, int i){
+    int j = i-1;
+    int k = i+1;
+    for (j; j!=0 && s[j]==0 ; --j) {
+
+    }
+    for (k ; k!= s.size()  ; ++k) {
+        // nada, solo queremos que vaya sumando.
+    }
+
+    return (s[k] + s[j]) / 2
+}
+
+int distancia(int j, int i){
+    if(j-i < 0){
+        return (j-i)*-1;
+    }else {
+        return j-i;
+    }
+}
+
+int signo(int k){
+    if(k > 0){
+        return 1;
+    } else if(k<0){
+        return -1;
+    }else{
+        return 0;
+    }
+}
 
 /************* Ejercicio 10 - reconstruir *************/
 senial reconstruirSenial(senial s){
@@ -181,10 +252,10 @@ int distancia(int j, int i){
         return j-i;
     }
 }
-/*bool esPasajePorCero(senial s, int i){
+bool esPasajePorCero(senial s, int i){
     return signo(s[i - 1])* signo(s[i + 1]) == -1;
 }
-*/
+
 int esValorEnPosicion(senial s, int valor, int i){
     int j = i-1;
     int k = i+1;
