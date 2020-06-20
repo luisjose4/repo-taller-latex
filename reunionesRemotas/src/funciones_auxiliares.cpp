@@ -223,12 +223,12 @@ int signo(int k){
 }
 
 /************* Ejercicio 11 - friltradoMediana *************/
-senial filtrada(senial s, int r){
-    senial w;
-    for (int i = 0; i < s.size(); ++i) {
-         if(!coincidenExtremos(s,i,r)){
-            w = ordenarSenialW(subSec(s,i-r,i+r+1));
-            s[i]=w[r];
+senial filtrada(senial s, int r){ //O(n).                               ejercicio 3.
+    senial w; // 1
+    for (int i = 0; i < s.size(); ++i) { // n
+         if(!coincidenExtremos(s,i,r)){ // 1
+            w = ordenarSenialW(subSec(s,i-r,i+r+1)); // 1
+            s[i]=w[r]; // 1
         }
     }
     return s;
