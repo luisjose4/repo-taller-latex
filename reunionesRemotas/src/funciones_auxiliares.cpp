@@ -175,12 +175,12 @@ bool esValorEnPosicion(senial s,int valor,int i){
     while (k!= s.size() && s[k]==0){
         ++k;
     }
-    return masCercanosNoNulos(s,i,j,k)
+    return masCercanosNoNulos(s,i,j,k);
 
 }
 
 bool masCercanosNoNulos(senial s, int i, int j, int k){
-    return distancia(j,k) <= 5
+    return distancia(j,k) <= 5;
 }
 
 bool reconstruirPosicionSiCorresponde(senial s,int i){
@@ -201,7 +201,7 @@ int valor(senial s, int i){
         // nada, solo queremos que vaya sumando.
     }
 
-    return (s[k] + s[j]) / 2
+    return (s[k] + s[j]) / 2;
 }
 
 int distancia(int j, int i){
@@ -222,59 +222,44 @@ int signo(int k){
     }
 }
 
-/************* Ejercicio 10 - reconstruir *************/
-senial reconstruirSenial(senial s){
-    for (int i = 1; i < s.size()-1; ++i) {
-        if(s[i] == 0){
-           s[i] = reconstruirPosicionSiCorresponde(s,i);
+/************* Ejercicio 11 - friltradoMediana *************/
+senial filtrada(senial s, int r){
+    senial w;
+    for (int i = 0; i < s.size(); ++i) {
+         if(!coincidenExtremos(s,i,r)){
+            w = ordenarSenialW(subSec(s,i-r,i+r+1));
+            s[i]=w[r];
         }
     }
     return s;
 }
-
-int reconstruirPosicionSiCorresponde(senial s,int i){
-    return (esPasajePorCero(s,i) && s[0] == 0) ||
+bool coincidenExtremos(senial s,int i,int r){
+    return i < r || i>= s.size() - r;
 }
 
-int signo(int k){
-    if(k > 0){
-        return 1;
-    } else if(k<0){
-        return -1;
-    }else{
-        return 0;
+senial subSec(senial s,int i, int r){
+    senial w = [];
+    for (int j = i; j < r ; ++j) {
+        w.push_back(s[j]);
     }
 }
-int distancia(int j, int i){
-    if(j-i < 0){
-        return (j-i)*-1;
-    }else {
-        return j-i;
+senial ordenarSenialW (senial w){
+    return insertionSort(w);
+}
+senial insertionSort (senial lista ) {
+    for(int i=0; i < lista . size () ; i++) {
+        insertar (lista ,i) ;
+    }
+    return lista ;
+}
+void insertar ( senial &lista , int i) {
+    while (i > 0 && lista [i] < lista [i -1]) {
+        swap (lista ,i,i -1) ;
+        i - -;
     }
 }
-bool esPasajePorCero(senial s, int i){
-    return signo(s[i - 1])* signo(s[i + 1]) == -1;
+void swap ( senial &lista , int i, int j) {
+    int k= lista [i];
+    lista [i]= lista [j];
+    lista [j]=k;
 }
-
-int esValorEnPosicion(senial s, int valor, int i){
-    int j = i-1;
-    int k = i+1;
-    for (j; j!=0 && s[j]==0 ; --j) {
-        // nada, solo queremos que vaya restando.
-    }
-    for (k ; k!= s.size()  ; ++k) {
-        // nada, solo queremos que vaya sumando.
-    }
-
-    return (s[k] + s[j]) / 2
-}
-/*
- * distancia <= 5????
- * en predicado masCercanoNoNulo???????
-*/
-/************* Ejercicio 11 - friltradoMediana *************/
-senial Filtrada(senial s, int R){
-
-
-}
-// subSeq(s, i−R, i+R+1)... si i=0, entonces subseq desde -2??
