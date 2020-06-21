@@ -28,7 +28,7 @@ void acelerarSenial(senial &s, int prof, int freq);
 void ralentizarSenial(senial &s, int prof, int freq);
 
 
-/************* tonosDeVozElevados **/
+/******** tonosDeVozElevados *******/
 vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof);
 
 
@@ -38,10 +38,23 @@ void ordenarPromedios(vector<pair<hablante, float> > &promedios);
 void ordenarReunionAcordeAPromedios(reunion &r, vector<pair<hablante, float> > promediosOrdenados);
 
 
-/************* silencios ***********/
+/************ silencios ************/
 void actualizarIndicesYFlags(int &inicioSilencio, int indiceActual, bool &outCandidatoSilencio, bool &outEsSilencio, int freq);
 void agregarIntervalo(vector<intervalo> &listaDeSilencios, int inicioSilencio, int finSilencio);
 vector<intervalo> obtenerSilencios(senial s, int freq, int umbral);
+
+
+/****** hablantesSuperpuestos ******/
+bool hayHablantesSuperpuestos(reunion r, int freq, int umbral);
+
+
+/*********** reconstruir ***********/
+senial reconstruirSenial(senial s);
+
+
+/********* filtradoMediana *********/
+bool filtrada(senial s, int R);
+
 
 
 

@@ -282,20 +282,175 @@ vector<intervalo> obtenerSilencios(senial s, int freq, int umbral)
 }
 
 
+/****** hablantesSuperpuestos ********/
+bool haySilencioQueLoContiene(senial s, int i, int freq, int umbral)
+{
+    for (int j = 0; j < s.size(); ++j) {
+        for (int k = j + 1; k < s.size(); ++k) {
+            if (j <= i && k >= i && esSilencio(s, j, k, freq, umbral)) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool seRespetan(reunion r, int h1, int h2, int freq, int umbral)
+{
+    bool res = true;
+
+    for (int i = 0; i < r[h1].first && res; ++i) {
+        if (!(haySilencioQueLoContiene(r[h1].first, i, freq, umbral))) {
+            if (!haySilencioQueLoContiene(r[h2].first, i, freq, umbral)) {
+                res = false;
+            }
+        }
+    }
+}
+
+bool hayHablantesSuperpuestos(reunion r, int freq, int umbral)
+{
+    for (int h1 = 0; h1 < r.size(); ++h1) {
+        for (int h2 = h1 + 1; h2 < r.size(); ++h2) {
+            if (!(seRespetan(r, h1, h2, freq, umbral))) {
+                return true;
+            }
+        }
+
+    }
+}
+
+
+/*********** reconstruir *************/
+int signo(int k)
+{
+    if (k == 0)
+        return 0;
+
+    return (k > 0) ? 1 : -1;
+}
+
+int distancia(int j, int i)
+{
+    return (j - i > 0) ? (j - i) : (i - j);
+}
+
+int valor(senial s, int i)
+{
+    int j = i - 1;
+    int k = i + 1;
+    for (j; j != 0 && s[j] == 0; --j) {
+
+    }
+    for (k; k != s.size(); ++k) {
+    // nada, solo queremos que vaya sumando.
+    }
+
+    return (s[k] + s[j]) / 2;
+}
+
+bool esPasajePorCero(senial s, int i)
+{
+    return signo(s[i - 1]) * signo(s[i + 1]) == -1;
+}
+
+bool masCercanosNoNulos(senial s, int i, int j, int k)
+{
+    return distancia(j, k) <= 5;
+}
+
+bool esValorEnPosicion(senial s, int valor, int i)
+{
+    int j = i - 1;
+    int k = i + 1;
+    while (j != 0 && s[j] == 0) {
+        --j;
+    }
+    while (k != s.size() && s[k] == 0) {
+        ++k;
+    }
+
+    return masCercanosNoNulos(s, i, j, k);
+}
+
+bool reconstruirPosicionSiCorresponde(senial s, int i)
+{
+    return (esPasajePorCero(s, i) && s[0] == 0) || (!esPasajePorCero(s, i) && esValorEnPosicion(s, i));
+}
+
+senial reconstruirSenial(senial s)
+{
+    for (int i = 0; i < s.size(); ++i) {
+        if (s[i] == 0) {
+            if (esPasajePorCero(s, i) && s[0] = 0) {
+                // pasa al siguiente elemento.                                         queda raro...
+            } else if (!esPasajePorCero(s, i) && esValorEnPosicion(s, s[i], i)) {
+                s[i] = valor(s, i);
+            }
+        }
+    }
+
+    return s;
+}
+
+
+/************* Ejercicio 11 - friltradoMediana *************/
+bool coincidenExtremos(senial s, int i, int r)
+{
+    return i < r || i >= s.size() - r;
+}
+
+void swap(senial &lista, int i, int j) 
+{
+    int k = lista[i];
+    lista[i] = lista[j];
+    lista[j] = k;
+}
+
+void insertar(senial &lista, int i)
+{
+    while (i > 0 && lista[i] < lista[i - 1]) {
+        swap(lista, i, i - 1);
+        i--;
+    }
+}
+
+senial insertionSort(senial lista)
+{
+    for (int i = 0; i < lista.size(); i++) {
+        insertar(lista, i);
+    }
+    return lista;
+}
+
+senial ordenarSenialW(senial w)
+{
+    return insertionSort(w);
+}
+
+senial subSec(senial s, int i, int r)
+{
+    senial
+    w = [];
+
+    for (int j = i; j < r; ++j) {
+        w.push_back(s[j]);
+    }
+}
 
 
 /************* Ejercicio 4 *************/
+
+
 
 senial leerSenial(string nombreArchivo)
 {
     senial s(0);
     string StringDeLaSenial;
     ifstream inputArchivo;
-    char buf[100];
-    int numeroDeSenial = 0;
 
-    strncpy(buf, nombreArchivo.c_str(), 100);
-    inputArchivo.open(buf, ios_base::in);
+
+    inputArchivo.open(nombreArchivo.c_str(), ios_base::in);
     if (inputArchivo.is_open() == false) {
         return s;
     }
@@ -303,6 +458,8 @@ senial leerSenial(string nombreArchivo)
     getline(inputArchivo, StringDeLaSenial);
 
     for (int k = 0; k < StringDeLaSenial.size(); k++) {
+
+        int numeroDeSenial = 0;
 
         if (StringDeLaSenial[k] != ' ') {
             numeroDeSenial *= 10;
@@ -321,10 +478,8 @@ senial leerSenial(string nombreArchivo)
 void escribirSenial(senial s, string nombreArchivo)
 {
     ofstream outputArchivo;
-    char buf[100];
 
-    strncpy(buf, nombreArchivo.c_str(), 100);
-    outputArchivo.open(buf, ios_base::app);
+    outputArchivo.open(nombreArchivo.c_str(), ios_base::app);
     if ( !outputArchivo.is_open() ) {
         return;
     }
