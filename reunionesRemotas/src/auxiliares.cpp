@@ -147,7 +147,6 @@ void ralentizarSenial(senial &s, int prof, int freq)
     senial salida(longFinal, 0);
 
     for (int i = 0; i < salida.size(); ++i) {
-        int valor;
         if (i % 2 == 0) {
             salida[i] = s[i / 2];
         } else {

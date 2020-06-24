@@ -9,6 +9,7 @@ bool esSenial(vector<int> s, int prof, int freq) {
 }
 
 bool seEnojo(senial s, int umbral, int prof, int freq) {
+    // o(s^3)?
     return existeSubseqEnojada(s, umbral, prof, freq);
 }
 
@@ -17,6 +18,7 @@ bool esReunionValida(reunion r, int prof, int freq) {
 }
 
 void acelerar(reunion& r, int prof, int freq) {
+    // O(m*n)?
     for (int i = 0; i < r.size(); ++i) {
         acelerarSenial(r[i].first, prof, freq);
     }

@@ -59,6 +59,36 @@ TEST(seEnojoTEST, senialConTonoIgualAlUmbral){
     ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
 }
 
+TEST(seEnojoTEST, senialConTonoMayorAlUmbral)
+{
+    senial s(20, -4);
+    int prof = 8;
+    int freq = 10;
+    int umbral = 3;
+
+    ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+}
+
+TEST(seEnojoTEST, senialConTonoMayorAlUmbra2)
+{
+    senial s { 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 };
+    int prof = 8;
+    int freq = 10;
+    int umbral = 3;
+
+    ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+}
+
+TEST(seEnojoTEST, senialEnojadaConLongitudBorde)
+{
+    senial s(19, -5);
+    int prof = 8;
+    int freq = 10;
+    int umbral = 3;
+
+    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+}
+
 TEST(seEnojoTEST, senialEnojadaConLongitudMinima){
     senial s(20,-5) ;
     int prof = 8;
@@ -93,4 +123,14 @@ TEST(seEnojoTEST, senialEnojadaConMayoriaDeMuestrasIgualesACero){
     int umbral = 3;
 
     ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+}
+
+TEST(seEnojoTEST, senialEnojadaConMayoriaDeMuestrasBajas)
+{
+    senial s = { 0, 0, 1, 0, 4, 0, 0, 4, 2, 0, 0, 0, 0, 0, 2, 0, 1, 0, -1, 0, 0, 5, 0, -5, 0, 0, 0, 0, 0 };
+    int prof = 8;
+    int freq = 10;
+    int umbral = 3;
+
+    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
 }

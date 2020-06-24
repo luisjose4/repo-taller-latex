@@ -107,16 +107,53 @@ TEST(ordenarTEST, ordenarValido6)
 
     ordenar(reunionOriginal, prof, freq);
 
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    for (int i = 0; i < reunionOriginal.size(); i++) {
-        cout << reunionOriginal[i].second << " ";
-    }
-    cout << endl;
-    cout << endl;
-    cout << endl;
+    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+}
+
+TEST(ordenarTEST, ordenarValido7)
+{
+    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    senial hablante2 = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    senial hablante3 = { 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    senial hablante4 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    senial hablante5 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    senial hablante6 = { 20, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    senial hablante7 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    senial hablante8 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+
+    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante5, 4), make_pair(hablante7, 6), make_pair(hablante4, 3), make_pair(
+            hablante6, 5), make_pair(hablante2, 1), make_pair(hablante3, 2), make_pair(hablante8, 7) };
+    int prof = 32;
+    int freq = 10;
+
+    reunion reunionOrdenada = { make_pair(hablante7, 6), make_pair(hablante8, 7), make_pair(hablante6, 5), make_pair(hablante5, 4), make_pair(
+            hablante1, 0), make_pair(hablante4, 3), make_pair(hablante3, 2), make_pair(hablante2, 1), };
+
+    ordenar(reunionOriginal, prof, freq);
+
+    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+}
+
+TEST(ordenarTEST, ordenarValido8)
+{
+    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    senial hablante2 = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    senial hablante3 = { 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    senial hablante4 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    senial hablante5 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    senial hablante6 = { 20, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    senial hablante7 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    senial hablante8 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+
+    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante5, 4), make_pair(hablante7, 6), make_pair(hablante4, 3), make_pair(
+            hablante6, 5), make_pair(hablante3, 2), make_pair(hablante2, 1), make_pair(hablante8, 7) };
+    int prof = 32;
+    int freq = 10;
+
+    reunion reunionOrdenada = { make_pair(hablante7, 6), make_pair(hablante8, 7), make_pair(hablante6, 5), make_pair(hablante5, 4), make_pair(
+            hablante1, 0), make_pair(hablante4, 3), make_pair(hablante3, 2), make_pair(hablante2, 1), };
+
+    ordenar(reunionOriginal, prof, freq);
 
     ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
 }

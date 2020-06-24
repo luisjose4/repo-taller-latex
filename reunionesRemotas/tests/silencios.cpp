@@ -66,3 +66,38 @@ TEST(silenciosTEST, silenciosValidos5)
     ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
 }
 
+TEST(silenciosTEST, silenciosValidos6)
+{
+    senial hablante = { 0, 0, 1, 6, 7, 4, 0, 7, 0, 9, 0, 4, 4, 1, 10, 4, 4 };
+    int prof = 8;
+    int freq = 10;
+    int umbral = 5;
+
+    vector<intervalo> intervalos = { make_pair(0, 2), make_pair(5, 6), make_pair(10, 13), make_pair(15, 16) };
+
+    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+}
+
+TEST(silenciosTEST, silenciosValidos7)
+{
+    senial hablante = { 4, 0, 1, 4, 7, 4, 0, 7, 0, 9, 0, 4, 4, 1, 10, 4, 5 };
+    int prof = 8;
+    int freq = 10;
+    int umbral = 5;
+
+    vector<intervalo> intervalos = { make_pair(0, 3), make_pair(5, 6), make_pair(10, 13) };
+
+    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+}
+
+TEST(silenciosTEST, silenciosValidos8)
+{
+    senial hablante = { 4, 0, 1, 4, 7, 4, 0, 7, 0, 9, 0, 4, 4, 1, 10, 4, 5 };
+    int prof = 8;
+    int freq = 10;
+    int umbral = 11;
+
+    vector<intervalo> intervalos = { make_pair(0, 16) };
+
+    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+}

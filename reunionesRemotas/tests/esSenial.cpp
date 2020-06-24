@@ -45,7 +45,6 @@ TEST(esSenialTEST, muestrasEnRango){
     ASSERT_TRUE(esSenial(s, prof, freq));
 }
 
-
 TEST(esSenialTEST, muestrasNoEnRango1){
     senial s = {1,3,-3,4,6,0,-2,-8,9,-15,145};
     int prof = 8;
@@ -71,7 +70,7 @@ TEST(esSenialTEST, profundidadValida1){
 }
 
 TEST(esSenialTEST, profundidadValida2){
-    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    senial s = { 1, 3, -3, 4, 6, 32000, -2, -8, 9, -15, 7 };
     int prof = 16;
     int freq = 10;
 
@@ -86,9 +85,27 @@ TEST(esSenialTEST, profundidadValida3){
     ASSERT_TRUE(esSenial(s, prof, freq));
 }
 
+TEST(esSenialTEST, profundidadValida4)
+{
+    senial s = { 1, 3, -3, 4, 6, 0, -2, -8, 70000, -15, 7 };
+    int prof = 32;
+    int freq = 10;
+
+    ASSERT_TRUE(esSenial(s, prof, freq));
+}
+
 TEST(esSenialTEST, profundidadInvalida){
     senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
     int prof = 3;
+    int freq = 10;
+
+    ASSERT_FALSE(esSenial(s, prof, freq));
+}
+
+TEST(esSenialTEST, profundidadInvalida2)
+{
+    senial s = { 1, 3, -3, 4, 6, 0, -2, -8, 70000, -15, 7 };
+    int prof = 16;
     int freq = 10;
 
     ASSERT_FALSE(esSenial(s, prof, freq));
@@ -133,7 +150,6 @@ TEST(esSenialTEST, duracionInvalida){
 
     ASSERT_FALSE(esSenial(s, prof, freq));
 }
-
 
 TEST(esSenialTEST, secuenciaVacia){
     senial s = { };
