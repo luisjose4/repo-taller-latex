@@ -115,15 +115,72 @@ void acelerarSenial(senial& s, int prof, int freq){
 
 /************* Ejercicio 9 - hablantesSuperpuestos *************/
 bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
+    for (int i = 0; i < r[0].first; ++i) {
+        int personasHablando = 0;
+        for (int j = 0; j < r.size(); ++j) {
+            if(r[j].first[i] > umbral){
+                ++personasHablando;
+            }
+            if (personasHablando == 2){
+                return true;
+            }
+        }
+
+    }
+    return false;
+}
+
+/*    ideas anteriores, las dejo por si es que esta mal la ultima.
+bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
+    for (int hablante = 0; hablante < r.size() - 1; ++hablante) {
+        if(dosMuestrasSuperanElUmbral(r,umbral,hablante)){
+            return true;
+        }
+    }
+    return false;
+}
+
+bool dosMuestrasSuperanElUmbral(reunion r,int umbral,int hablante){
+    for (int i = 0; i < r[hablante].first; ++i) {
+        for (int j = 0; j < r[hablante + 1].first ; ++j) {
+            if(r[hablante].first[i] > umbral && r[h2].first[i] < umbral){
+                return true;
+            }
+        }
+    }
+}
+
+bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
+    for (int h1 = 0; h1 < r.size() ; ++h1) {
+        for (int h2 = h1+1; h2 < r.size(); ++h2) {
+            if(hablanAlMismoTiempo(r, umbral,h1,h2)){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+bool hablanAlMismoTiempo(reunion r, int umbral,int h1, int h2){
+    for (int i = 0; i < ; ++i) {
+        if(r[h1].first[i] > umbral && r[h2].first[i] < umbral){
+            return true;
+        }
+    }
+}
+*/
+
+/************* Ejercicio 9 - hablantesSuperpuestos *************/
+bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
     for (int h1 = 0; h1 < r.size(); ++h1) {
         for (int h2 = h1 + 1; h2 < r.size() ; ++h2) {
             if (!(seRespetan(r,h1,h2,freq,umbral))){
-                return true
+                return true;
 
             }
         }
 
     }
+    return false;
 }
 
 bool haySilencioQueLoContiene(senial s, int i, int freq, int umbral){
