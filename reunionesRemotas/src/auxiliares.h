@@ -33,9 +33,7 @@ vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof);
 
 
 /************* ordenar *************/
-vector<pair<hablante, float> > obtenerReunionYSusPromedios(reunion r);
-void ordenarPromedios(vector<pair<hablante, float> > &promedios);
-void ordenarReunionAcordeAPromedios(reunion &r, vector<pair<hablante, float> > promediosOrdenados);
+void ordenarReunionAcordeAPromedios(reunion &r);
 
 
 /************ silencios ************/
