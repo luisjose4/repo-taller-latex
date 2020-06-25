@@ -30,6 +30,6 @@ bool hayHablantesSuperpuestos(reunion r,int freq,int umbral);
 senial reconstruirSenial(senial s);
 
 //filtradoMediana
-bool filtrada(senial s, int R);
+senial filtrada(senial s, int R);
 
 #endif //TPI_FUNCIONES_AUXILIARES_H

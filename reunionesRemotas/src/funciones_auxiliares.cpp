@@ -114,11 +114,18 @@ void acelerarSenial(senial& s, int prof, int freq){
 }
 
 /************* Ejercicio 9 - hablantesSuperpuestos *************/
+
+int valorAbsoluto(int &x){
+    if(x<0){
+        x=-x;
+    }
+}
+
 bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
-    for (int i = 0; i < r[0].first; ++i) {
+    for (int i = 0; i < r[0].first.size(); ++i) {
         int personasHablando = 0;
         for (int j = 0; j < r.size(); ++j) {
-            if(r[j].first[i] > umbral){
+            if(valorAbsoluto(r[j].first[i]) >= umbral){
                 ++personasHablando;
             }
             if (personasHablando == 2){
@@ -130,123 +137,11 @@ bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
     return false;
 }
 
-/*    ideas anteriores, las dejo por si es que esta mal la ultima.
-bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
-    for (int hablante = 0; hablante < r.size() - 1; ++hablante) {
-        if(dosMuestrasSuperanElUmbral(r,umbral,hablante)){
-            return true;
-        }
-    }
-    return false;
-}
 
-bool dosMuestrasSuperanElUmbral(reunion r,int umbral,int hablante){
-    for (int i = 0; i < r[hablante].first; ++i) {
-        for (int j = 0; j < r[hablante + 1].first ; ++j) {
-            if(r[hablante].first[i] > umbral && r[h2].first[i] < umbral){
-                return true;
-            }
-        }
-    }
-}
-
-bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
-    for (int h1 = 0; h1 < r.size() ; ++h1) {
-        for (int h2 = h1+1; h2 < r.size(); ++h2) {
-            if(hablanAlMismoTiempo(r, umbral,h1,h2)){
-                return true;
-            }
-        }
-    }
-    return false;
-}
-bool hablanAlMismoTiempo(reunion r, int umbral,int h1, int h2){
-    for (int i = 0; i < ; ++i) {
-        if(r[h1].first[i] > umbral && r[h2].first[i] < umbral){
-            return true;
-        }
-    }
-}
-*/
-
-/************* Ejercicio 9 - hablantesSuperpuestos *************/
-bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
-    for (int h1 = 0; h1 < r.size(); ++h1) {
-        for (int h2 = h1 + 1; h2 < r.size() ; ++h2) {
-            if (!(seRespetan(r,h1,h2,freq,umbral))){
-                return true;
-
-            }
-        }
-
-    }
-    return false;
-}
-
-bool haySilencioQueLoContiene(senial s, int i, int freq, int umbral){
-    for (int j = 0; j < s.size() ; ++j) {
-        for (int k = j+1; k < s.size(); ++k) {
-            if (j <= i && k>=i && esSilencio(s,j,k,freq,umbral)){
-                return true;
-            }
-        }
-    }
-    return false;
-}
-
-bool seRespetan(reunion r,int h1,int h2,int freq,int umbral){
-    bool res = true;
-    for (int i = 0; i < r[h1].first && res ; ++i) {
-        if(!(haySilencioQueLoContiene(r[h1].first,i,freq,umbral))) {
-            if (!haySilencioQueLoContiene(r[h2].first, i, freq, umbral)) {
-                res = false;
-            }
-        }
-    }
-}
-
-/************* Ejercicio 10 - reconstruir *************/
-
-senial reconstruirSenial(senial s){
-    for (int i = 0; i < s.size() ; ++i) {
-        if (s[i] == 0){
-            if(esPasajePorCero(s, i) && s[0] = 0){
-                // pasa al siguiente elemento.                                         queda raro...
-            } else if(!esPasajePorCero(s,i) && esValorEnPosicion(s,s[i],i)){
-                s[i] = valor(s,i);
-            }
-        }
-    }
-
-    return s;
-}
 
 
 
-bool esValorEnPosicion(senial s,int valor,int i){
-    int j = i-1;
-    int k = i+1;
-    while (j!=0 && s[j]==0){
-        --j;
-    }
-    while (k!= s.size() && s[k]==0){
-        ++k;
-    }
-    return masCercanosNoNulos(s,i,j,k);
-
-}
-
-bool masCercanosNoNulos(senial s, int i, int j, int k){
-    return distancia(j,k) <= 5;
-}
-
-bool reconstruirPosicionSiCorresponde(senial s,int i){
-    return (esPasajePorCero(s,i) && s[0] == 0) || (!esPasajePorCero(s,i) && valorEnPosicion(s,i))
-}
-
-bool esPasajePorCero(senial s, int i){
-    return signo(s[i - 1])* signo(s[i + 1]) == -1;
-}
+/************* Ejercicio 10 - reconstruir *************/
 
 int valor(senial s, int i){
     int j = i-1;
@@ -279,44 +174,90 @@ int signo(int k){
     }
 }
 
-/************* Ejercicio 11 - friltradoMediana *************/
-senial filtrada(senial s, int r){ //O(n).                               ejercicio 3.
-    senial w; // 1
-    for (int i = 0; i < s.size(); ++i) { // n
-         if(!coincidenExtremos(s,i,r)){ // 1
-            w = ordenarSenialW(subSec(s,i-r,i+r+1)); // 1
-            s[i]=w[r]; // 1
+bool esPasajePorCero(senial s, int i){
+    return signo(s[i - 1])* signo(s[i + 1]) == -1;
+}
+
+bool masCercanosNoNulos(senial s, int i, int j, int k){
+    return distancia(j,k) <= 5;
+}
+
+bool esValorEnPosicion(senial s,int valor,int i){
+    int j = i-1;
+    int k = i+1;
+    while (j!=0 && s[j]==0){
+        --j;
+    }
+    while (k!= s.size() && s[k]==0){
+        ++k;
+    }
+    return masCercanosNoNulos(s,i,j,k);
+
+}
+
+senial reconstruirSenial(senial s){
+    for (int i = 0; i < s.size() ; ++i) {
+        if (s[i] == 0){
+            if(esPasajePorCero(s, i) && s[0] == 0){
+                // pasa al siguiente elemento.                                         queda raro...
+            } else if(!esPasajePorCero(s,i) && esValorEnPosicion(s,s[i],i)){
+                s[i] = valor(s,i);
+            }
         }
     }
+
     return s;
 }
+
+
+
+
+
+/************* Ejercicio 11 - friltradoMediana *************/
+
 bool coincidenExtremos(senial s,int i,int r){
     return i < r || i>= s.size() - r;
 }
 
 senial subSec(senial s,int i, int r){
-    senial w = [];
+    senial w;
     for (int j = i; j < r ; ++j) {
         w.push_back(s[j]);
     }
 }
-senial ordenarSenialW (senial w){
-    return insertionSort(w);
+
+void swap ( senial &lista , int i, int j) {
+    int k= lista [i];
+    lista [i]= lista [j];
+    lista [j]=k;
 }
+
+
+void insertar ( senial &lista , int i) {
+    while (i > 0 && lista [i] < lista [i -1]) {
+        swap (lista ,i,i -1) ;
+        i --;
+    }
+}
+
 senial insertionSort (senial lista ) {
     for(int i=0; i < lista . size () ; i++) {
         insertar (lista ,i) ;
     }
     return lista ;
 }
-void insertar ( senial &lista , int i) {
-    while (i > 0 && lista [i] < lista [i -1]) {
-        swap (lista ,i,i -1) ;
-        i - -;
-    }
+senial ordenarSenialW (senial w){
+    return insertionSort(w);
 }
-void swap ( senial &lista , int i, int j) {
-    int k= lista [i];
-    lista [i]= lista [j];
-    lista [j]=k;
+
+
+senial filtrada(senial s, int r){ //O(n).                               ejercicio 3.
+    senial w; // 1
+    for (int i = 0; i < s.size(); ++i) { // n
+        if(!coincidenExtremos(s,i,r)){ // 1
+            w = ordenarSenialW(subSec(s,i-r,i+r+1)); // 1
+            s[i]=w[r]; // 1
+        }
+    }
+    return s;
 }

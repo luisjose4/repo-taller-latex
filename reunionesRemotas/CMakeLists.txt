@@ -10,6 +10,8 @@ add_executable(reunionesRemotas
         main.cpp
         src/auxiliares.cpp
         src/auxiliares.h
+        src/funciones_auxiliares.cpp
+        src/funciones_auxiliares.h
         src/definiciones.h
         src/solucion.h
         src/solucion.cpp

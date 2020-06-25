@@ -216,6 +216,33 @@ src/auxiliares.cpp.s:
 	$(MAKE) -f CMakeFiles\reunionesRemotas.dir\build.make CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.s
 .PHONY : src/auxiliares.cpp.s
 
+src/funciones_auxiliares.obj: src/funciones_auxiliares.cpp.obj
+
+.PHONY : src/funciones_auxiliares.obj
+
+# target to build an object file
+src/funciones_auxiliares.cpp.obj:
+	$(MAKE) -f CMakeFiles\reunionesRemotas.dir\build.make CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.obj
+.PHONY : src/funciones_auxiliares.cpp.obj
+
+src/funciones_auxiliares.i: src/funciones_auxiliares.cpp.i
+
+.PHONY : src/funciones_auxiliares.i
+
+# target to preprocess a source file
+src/funciones_auxiliares.cpp.i:
+	$(MAKE) -f CMakeFiles\reunionesRemotas.dir\build.make CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.i
+.PHONY : src/funciones_auxiliares.cpp.i
+
+src/funciones_auxiliares.s: src/funciones_auxiliares.cpp.s
+
+.PHONY : src/funciones_auxiliares.s
+
+# target to generate assembly for a file
+src/funciones_auxiliares.cpp.s:
+	$(MAKE) -f CMakeFiles\reunionesRemotas.dir\build.make CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.s
+.PHONY : src/funciones_auxiliares.cpp.s
+
 src/solucion.obj: src/solucion.cpp.obj
 
 .PHONY : src/solucion.obj
@@ -559,6 +586,9 @@ help:
 	@echo ... src/auxiliares.obj
 	@echo ... src/auxiliares.i
 	@echo ... src/auxiliares.s
+	@echo ... src/funciones_auxiliares.obj
+	@echo ... src/funciones_auxiliares.i
+	@echo ... src/funciones_auxiliares.s
 	@echo ... src/solucion.obj
 	@echo ... src/solucion.i
 	@echo ... src/solucion.s

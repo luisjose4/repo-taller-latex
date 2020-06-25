@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/reunionesRemotas.dir/main.cpp.obj"
   "CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.obj"
+  "CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.obj"
   "CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj"
   "CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj"
   "CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj"

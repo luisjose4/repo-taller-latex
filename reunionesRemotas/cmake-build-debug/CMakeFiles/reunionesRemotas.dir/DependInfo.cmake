@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/main.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/main.cpp.obj"
   "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/auxiliares.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.obj"
+  "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/funciones_auxiliares.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.obj"
   "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/solucion.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj"
   "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/acelerar.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj"
   "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/tests/esReunionValida.cpp" "G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj"

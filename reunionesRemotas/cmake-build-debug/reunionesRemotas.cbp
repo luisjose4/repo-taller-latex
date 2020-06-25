@@ -137,6 +137,12 @@
 		<Unit filename="G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/definiciones.h">
 			<Option target="reunionesRemotas"/>
 		</Unit>
+		<Unit filename="G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/funciones_auxiliares.cpp">
+			<Option target="reunionesRemotas"/>
+		</Unit>
+		<Unit filename="G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/funciones_auxiliares.h">
+			<Option target="reunionesRemotas"/>
+		</Unit>
 		<Unit filename="G:/Cosas/pedro/facu/algo1/trabajo practico 2/tp2/reunionesRemotas/src/solucion.cpp">
 			<Option target="reunionesRemotas"/>
 		</Unit>

@@ -82,9 +82,22 @@ CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\src\auxiliares.cpp" -o CMakeFiles\reunionesRemotas.dir\src\auxiliares.cpp.s
 
+CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
+CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.obj: ../src/funciones_auxiliares.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\src\funciones_auxiliares.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\src\funciones_auxiliares.cpp"
+
+CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\src\funciones_auxiliares.cpp" > CMakeFiles\reunionesRemotas.dir\src\funciones_auxiliares.cpp.i
+
+CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\src\funciones_auxiliares.cpp" -o CMakeFiles\reunionesRemotas.dir\src\funciones_auxiliares.cpp.s
+
 CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj: ../src/solucion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\src\solucion.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\src\solucion.cpp"
 
 CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.i: cmake_force
@@ -97,7 +110,7 @@ CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj: ../tests/acelerar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\acelerar.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\acelerar.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.i: cmake_force
@@ -110,7 +123,7 @@ CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj: ../tests/esReunionValida.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\esReunionValida.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\esReunionValida.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.i: cmake_force
@@ -123,7 +136,7 @@ CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.obj: ../tests/esSenial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\esSenial.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\esSenial.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.i: cmake_force
@@ -136,7 +149,7 @@ CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.obj: ../tests/filtradoMediana.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\filtradoMediana.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\filtradoMediana.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.i: cmake_force
@@ -149,7 +162,7 @@ CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.obj: ../tests/hablantesSuperpuestos.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\hablantesSuperpuestos.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\hablantesSuperpuestos.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.i: cmake_force
@@ -162,7 +175,7 @@ CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.obj: ../tests/ordenar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\ordenar.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\ordenar.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.i: cmake_force
@@ -175,7 +188,7 @@ CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.obj: ../tests/reconstruir.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\reconstruir.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\reconstruir.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.i: cmake_force
@@ -188,7 +201,7 @@ CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.obj: ../tests/ralentizar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\ralentizar.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\ralentizar.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.i: cmake_force
@@ -201,7 +214,7 @@ CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.obj: ../tests/seEnojo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\seEnojo.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\seEnojo.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.i: cmake_force
@@ -214,7 +227,7 @@ CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.obj: ../tests/silencios.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\silencios.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\silencios.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.i: cmake_force
@@ -227,7 +240,7 @@ CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.s: cmake_force
 
 CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.obj: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.obj: ../tests/tonosDeVozElevados.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\reunionesRemotas.dir\tests\tonosDeVozElevados.cpp.obj -c "G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\tests\tonosDeVozElevados.cpp"
 
 CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.i: cmake_force
@@ -242,6 +255,7 @@ CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.s: cmake_force
 reunionesRemotas_OBJECTS = \
 "CMakeFiles/reunionesRemotas.dir/main.cpp.obj" \
 "CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.obj" \
+"CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.obj" \
 "CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj" \
 "CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj" \
 "CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj" \
@@ -260,6 +274,7 @@ reunionesRemotas_EXTERNAL_OBJECTS =
 
 reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/main.cpp.obj
 reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.obj
+reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/src/funciones_auxiliares.cpp.obj
 reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.obj
 reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.obj
 reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.obj
@@ -277,7 +292,7 @@ reunionesRemotas.exe: libgtest.a
 reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/linklibs.rsp
 reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/objects1.rsp
 reunionesRemotas.exe: CMakeFiles/reunionesRemotas.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable reunionesRemotas.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="G:\Cosas\pedro\facu\algo1\trabajo practico 2\tp2\reunionesRemotas\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable reunionesRemotas.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\reunionesRemotas.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
