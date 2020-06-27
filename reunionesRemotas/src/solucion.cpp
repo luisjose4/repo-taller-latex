@@ -46,9 +46,7 @@ vector<intervalo > silencios(senial s, int prof, int freq, int umbral) {
 
 
 bool hablantesSuperpuestos(reunion r, int prof, int freq, int umbral) {
-    bool resp = false;
-    resp = hayHablantesSuperpuestos(r,freq,umbral);
-    return resp;
+    return hayHablantesSuperpuestos(r,freq,umbral);
 }
 
 senial reconstruir(senial s, int prof, int freq) {
@@ -56,6 +54,6 @@ senial reconstruir(senial s, int prof, int freq) {
 }
 
 void filtradoMediana(senial& s, int R, int prof, int freq){
-    filtrada(s,R);
+    s = filtrada(s,R);
 }
 

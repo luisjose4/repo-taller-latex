@@ -115,9 +115,9 @@ void acelerarSenial(senial& s, int prof, int freq){
 
 /************* Ejercicio 9 - hablantesSuperpuestos *************/
 
-int valorAbsoluto(int &x){
+int valorAbsoluto(int x){
     if(x<0){
-        x=-x;
+        return x=-x;
     }
 }
 
@@ -143,26 +143,28 @@ bool hayHablantesSuperpuestos(reunion r,int freq,int umbral){
 
 /************* Ejercicio 10 - reconstruir *************/
 
-int valor(senial s, int i){
-    int j = i-1;
-    int k = i+1;
-    for (j; j!=0 && s[j]==0 ; --j) {
-
+int valor(vector<int> s, int i){
+    int m = 0;
+    int n = 0;
+    for (int j = i-1; j!=0 && n==0 ; --j) {
+        if(s[j] == 0){
+            // skip
+        } else {
+            n = j;
+        }
     }
-    for (k ; k!= s.size()  ; ++k) {
-        // nada, solo queremos que vaya sumando.
+    for (int k = i+1; k!=s.size() && m==0 ; ++k) {
+        if(s[k] == 0){
+            // skip
+        } else {
+            m = k;
+        }
     }
 
-    return (s[k] + s[j]) / 2;
+    return (s[n] + s[m]) / 2;
 }
 
-int distancia(int j, int i){
-    if(j-i < 0){
-        return (j-i)*-1;
-    }else {
-        return j-i;
-    }
-}
+
 
 int signo(int k){
     if(k > 0){
@@ -174,34 +176,18 @@ int signo(int k){
     }
 }
 
-bool esPasajePorCero(senial s, int i){
+bool esPasajePorCero(vector<int> s, int i){
     return signo(s[i - 1])* signo(s[i + 1]) == -1;
 }
 
-bool masCercanosNoNulos(senial s, int i, int j, int k){
-    return distancia(j,k) <= 5;
-}
-
-bool esValorEnPosicion(senial s,int valor,int i){
-    int j = i-1;
-    int k = i+1;
-    while (j!=0 && s[j]==0){
-        --j;
-    }
-    while (k!= s.size() && s[k]==0){
-        ++k;
-    }
-    return masCercanosNoNulos(s,i,j,k);
-
-}
-
 senial reconstruirSenial(senial s){
-    for (int i = 0; i < s.size() ; ++i) {
+    vector <int> sCero = s;
+    for (int i = 0; i <= s.size() ; ++i) {
         if (s[i] == 0){
-            if(esPasajePorCero(s, i) && s[0] == 0){
-                // pasa al siguiente elemento.                                         queda raro...
-            } else if(!esPasajePorCero(s,i) && esValorEnPosicion(s,s[i],i)){
-                s[i] = valor(s,i);
+            if(esPasajePorCero(sCero, i)){
+                // skip
+            } else {
+                s[i] = valor(sCero,i);
             }
         }
     }
@@ -224,6 +210,7 @@ senial subSec(senial s,int i, int r){
     for (int j = i; j < r ; ++j) {
         w.push_back(s[j]);
     }
+    return w;
 }
 
 void swap ( senial &lista , int i, int j) {
@@ -253,11 +240,13 @@ senial ordenarSenialW (senial w){
 
 senial filtrada(senial s, int r){ //O(n).                               ejercicio 3.
     senial w; // 1
-    for (int i = 0; i < s.size(); ++i) { // n
-        if(!coincidenExtremos(s,i,r)){ // 1
-            w = ordenarSenialW(subSec(s,i-r,i+r+1)); // 1
+    senial sCero = s;
+    for(int i = 0; i < s.size(); ++i) { // n
+        if(!coincidenExtremos(sCero,i,r)){ // 1
+            w = ordenarSenialW(subSec(sCero,i-r,i+r+1)); // 1
             s[i]=w[r]; // 1
         }
     }
     return s;
 }
+
