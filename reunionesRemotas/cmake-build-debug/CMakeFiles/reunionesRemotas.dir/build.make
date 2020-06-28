@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas
+CMAKE_SOURCE_DIR = /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/reunionesRemotas.dir/depend.make
@@ -59,185 +59,185 @@ include CMakeFiles/reunionesRemotas.dir/flags.make
 
 CMakeFiles/reunionesRemotas.dir/main.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/reunionesRemotas.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/main.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/reunionesRemotas.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/main.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/main.cpp
 
 CMakeFiles/reunionesRemotas.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/main.cpp > CMakeFiles/reunionesRemotas.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/main.cpp > CMakeFiles/reunionesRemotas.dir/main.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/main.cpp -o CMakeFiles/reunionesRemotas.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/main.cpp -o CMakeFiles/reunionesRemotas.dir/main.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.o: ../src/auxiliares.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/src/auxiliares.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/auxiliares.cpp
 
 CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/src/auxiliares.cpp > CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/auxiliares.cpp > CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/src/auxiliares.cpp -o CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/auxiliares.cpp -o CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.o: ../src/solucion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/src/solucion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/solucion.cpp
 
 CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/src/solucion.cpp > CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/solucion.cpp > CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/src/solucion.cpp -o CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/solucion.cpp -o CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.o: ../tests/acelerar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/acelerar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/acelerar.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/acelerar.cpp > CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/acelerar.cpp > CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/acelerar.cpp -o CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/acelerar.cpp -o CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.o: ../tests/esReunionValida.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/esReunionValida.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/esReunionValida.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/esReunionValida.cpp > CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/esReunionValida.cpp > CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/esReunionValida.cpp -o CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/esReunionValida.cpp -o CMakeFiles/reunionesRemotas.dir/tests/esReunionValida.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.o: ../tests/esSenial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/esSenial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/esSenial.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/esSenial.cpp > CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/esSenial.cpp > CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/esSenial.cpp -o CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/esSenial.cpp -o CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.o: ../tests/filtradoMediana.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/filtradoMediana.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/filtradoMediana.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/filtradoMediana.cpp > CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/filtradoMediana.cpp > CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/filtradoMediana.cpp -o CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/filtradoMediana.cpp -o CMakeFiles/reunionesRemotas.dir/tests/filtradoMediana.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.o: ../tests/hablantesSuperpuestos.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/hablantesSuperpuestos.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/hablantesSuperpuestos.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/hablantesSuperpuestos.cpp > CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/hablantesSuperpuestos.cpp > CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/hablantesSuperpuestos.cpp -o CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/hablantesSuperpuestos.cpp -o CMakeFiles/reunionesRemotas.dir/tests/hablantesSuperpuestos.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.o: ../tests/ordenar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/ordenar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/ordenar.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/ordenar.cpp > CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/ordenar.cpp > CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/ordenar.cpp -o CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/ordenar.cpp -o CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.o: ../tests/reconstruir.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/reconstruir.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/reconstruir.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/reconstruir.cpp > CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/reconstruir.cpp > CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/reconstruir.cpp -o CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/reconstruir.cpp -o CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.o: ../tests/ralentizar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/ralentizar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/ralentizar.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/ralentizar.cpp > CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/ralentizar.cpp > CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/ralentizar.cpp -o CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/ralentizar.cpp -o CMakeFiles/reunionesRemotas.dir/tests/ralentizar.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.o: ../tests/seEnojo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/seEnojo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/seEnojo.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/seEnojo.cpp > CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/seEnojo.cpp > CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/seEnojo.cpp -o CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/seEnojo.cpp -o CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.o: ../tests/silencios.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/silencios.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/silencios.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/silencios.cpp > CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/silencios.cpp > CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/silencios.cpp -o CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/silencios.cpp -o CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.s
 
 CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.o: CMakeFiles/reunionesRemotas.dir/flags.make
 CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.o: ../tests/tonosDeVozElevados.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.o -c /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/tonosDeVozElevados.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.o -c /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/tonosDeVozElevados.cpp
 
 CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/tonosDeVozElevados.cpp > CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/tonosDeVozElevados.cpp > CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.i
 
 CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/tests/tonosDeVozElevados.cpp -o CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/tonosDeVozElevados.cpp -o CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.s
 
 # Object files for target reunionesRemotas
 reunionesRemotas_OBJECTS = \
@@ -276,7 +276,7 @@ reunionesRemotas: CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.o
 reunionesRemotas: CMakeFiles/reunionesRemotas.dir/build.make
 reunionesRemotas: libgtest.a
 reunionesRemotas: CMakeFiles/reunionesRemotas.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable reunionesRemotas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable reunionesRemotas"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/reunionesRemotas.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -289,6 +289,6 @@ CMakeFiles/reunionesRemotas.dir/clean:
 .PHONY : CMakeFiles/reunionesRemotas.dir/clean
 
 CMakeFiles/reunionesRemotas.dir/depend:
-	cd /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug /Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/reunionesRemotas.dir/depend
 

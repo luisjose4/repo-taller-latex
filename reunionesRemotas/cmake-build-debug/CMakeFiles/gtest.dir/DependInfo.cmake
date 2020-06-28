@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/lib/gtest-all.cc" "/Users/usuario/Desktop/LabAlgo1/TPI/CLion/reunionesRemotas/cmake-build-debug/CMakeFiles/gtest.dir/lib/gtest-all.cc.o"
+  "/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/lib/gtest-all.cc" "/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/gtest.dir/lib/gtest-all.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -1,2 +1,6 @@
-./reunionesRemotas/cmake-build-debug/
-./reunionesRemotas/CMakeLists.txt
+.metadata/
+reunionesRemotas/.cproject
+reunionesRemotas/.project
+reunionesRemotas/CMakeLists.txt
+reunionesRemotas/.settings/
+reunionesRemotas/.gitignore
