@@ -42,16 +42,16 @@ void agregarIntervalo(vector<intervalo> &listaDeSilencios, int inicioSilencio, i
 vector<intervalo> obtenerSilencios(senial s, int freq, int umbral);
 
 
-/****** hablantesSuperpuestos ******/
+/****** hablantesSuperpuestos ********/
 bool hayHablantesSuperpuestos(reunion r, int freq, int umbral);
 
 
-/*********** reconstruir ***********/
+/*********** reconstruir *************/
 senial reconstruirSenial(senial s);
 
 
-/********* filtradoMediana *********/
-bool filtrada(senial s, int R);
+/********* friltradoMediana **********/
+senial filtrada(senial s, int R);
 
 
 
