@@ -29,7 +29,7 @@ TEST(reconstruirTEST, reconstruirSenialSinCeros){
     ASSERT_HABLANTES_EQ(hablanteObtenido, hablante1Reconstruido);
 }
 
-TEST(reconstruirTEST, reconstruirSenialCerosYUnoss){
+TEST(reconstruirTEST, reconstruirSenialConDistanciaCinco){
     senial hablante1 = {6, 0, 0, 0, 0, -8, 0, 0, 0, 0, 6};
     int prof = 8;
     int freq = 10;

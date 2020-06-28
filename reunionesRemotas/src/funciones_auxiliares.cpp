@@ -243,7 +243,7 @@ senial filtrada(senial s, int r){ //O(n).                               ejercici
     senial sCero = s;
     for(int i = 0; i < s.size(); ++i) { // n
         if(!coincidenExtremos(sCero,i,r)){ // 1
-            w = ordenarSenialW(subSec(sCero,i-r,i+r+1)); // 1
+            w = ordenarSenialW(subSec(sCero,i-r,i+r+1)); //
             s[i]=w[r]; // 1
         }
     }
