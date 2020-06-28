@@ -51,7 +51,7 @@ senial reconstruirSenial(senial s);
 
 
 /********* filtradoMediana *********/
-bool filtrada(senial s, int R);
+bool filtrada(senial s, int r);
 
 
 

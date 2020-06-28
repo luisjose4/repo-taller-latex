@@ -44,7 +44,6 @@ vector<intervalo > silencios(senial s, int prof, int freq, int umbral) {
     return intervalos;
 }
 
-
 bool hablantesSuperpuestos(reunion r, int prof, int freq, int umbral) {
     return hayHablantesSuperpuestos(r,freq,umbral);
 }
