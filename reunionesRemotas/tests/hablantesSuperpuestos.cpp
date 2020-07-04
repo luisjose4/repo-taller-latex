@@ -65,3 +65,91 @@ TEST(hablantesSuperpuestosTEST, noHablantesSuperpuestosAlFinalPeroSuperanElUmbra
 
     ASSERT_FALSE(hablantesSuperpuestos(reunion, prof, freq, umbral));
 }
+
+TEST(hablantesSuperpuestosTEST, hablantesSuperpuestos2)
+{
+    senial hablante1 = { 9,0,0,0,0,0,9,0,0,0 };
+    senial hablante2 = { 0,9,0,0,0,0,0,9,0,0 };
+    senial hablante3 = { 0,0,9,0,0,0,0,0,9,0 };
+    senial hablante4 = { 0,0,0,9,0,0,0,0,0,9 };
+    senial hablante5 = { 0,0,0,0,9,0,0,0,0,0 };
+    senial hablante6 = { 0,0,0,0,0,9,0,0,0,0 };
+
+    reunion reunion = { make_pair(hablante1, 0),
+                        make_pair(hablante2, 1),
+                        make_pair(hablante3, 2),
+                        make_pair(hablante4, 3),
+                        make_pair(hablante5, 4),
+                        make_pair(hablante6, 5),};
+    int prof = 8;
+    int freq = 10;
+    int umbral = 3;
+
+    ASSERT_FALSE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+}
+
+TEST(hablantesSuperpuestosTEST, hablantesSuperpuestos3)
+{
+    senial hablante1 = { 9,9,0,0,0,0,9,0,0,0 };
+    senial hablante2 = { 0,-9,0,0,0,0,0,9,0,0 };
+    senial hablante3 = { 0,0,9,0,0,0,0,0,9,0 };
+    senial hablante4 = { 0,0,0,9,0,0,0,0,0,9 };
+    senial hablante5 = { 0,0,0,0,9,0,0,0,0,0 };
+    senial hablante6 = { 0,0,0,0,0,9,0,0,0,0 };
+
+    reunion reunion = { make_pair(hablante1, 0),
+                        make_pair(hablante2, 1),
+                        make_pair(hablante3, 2),
+                        make_pair(hablante4, 3),
+                        make_pair(hablante5, 4),
+                        make_pair(hablante6, 5),};
+    int prof = 8;
+    int freq = 10;
+    int umbral = 3;
+
+    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+}
+
+TEST(hablantesSuperpuestosTEST, hablantesSuperpuestos4)
+{
+    senial hablante1 = { 9,0,0,0,0,0,9,0,0,0 };
+    senial hablante2 = { 5,-2,3,-4,5,2,2,-10,15,20 };
+    senial hablante3 = { 5,10,-6,6,2,3,-5,4,1,2 };
+    senial hablante4 = { 2,-3,4,1,-2,3,-5,4,1,2 };
+    senial hablante5 = { 3,3,2,1,-70,3,1,2,3,1 };
+    senial hablante6 = { 0,0,0,0,0,-9,0,0,0,0 };
+
+    reunion reunion = { make_pair(hablante1, 0),
+                        make_pair(hablante2, 1),
+                        make_pair(hablante3, 2),
+                        make_pair(hablante4, 3),
+                        make_pair(hablante5, 4),
+                        make_pair(hablante6, 5),};
+    int prof = 8;
+    int freq = 10;
+    int umbral = 6;
+
+    ASSERT_FALSE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+}
+
+TEST(hablantesSuperpuestosTEST, hablantesSuperpuestos5)
+{
+    senial hablante1 = { 9,0,0,0,0,0,9,0,0,0 };
+    senial hablante2 = { 5,2,3,4,5,2,2,10,15,20 };
+    senial hablante3 = { 5,10,6,6,2,3,5,4,1,2 };
+    senial hablante4 = { 2,3,4,1,2,3,5,4,1,2 };
+    senial hablante5 = { 3,3,2,1,70,3,1,2,3,1 };
+    senial hablante6 = { 0,0,0,0,-7,9,0,0,0,0 };
+
+    reunion reunion = { make_pair(hablante1, 0),
+                        make_pair(hablante2, 1),
+                        make_pair(hablante3, 2),
+                        make_pair(hablante4, 3),
+                        make_pair(hablante5, 4),
+                        make_pair(hablante6, 5),};
+    int prof = 8;
+    int freq = 10;
+    int umbral = 6;
+
+    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+}

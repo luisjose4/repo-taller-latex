@@ -48,3 +48,64 @@ TEST(filtradoMedianaTEST, filtradoMedianaRigualDos)
 
     ASSERT_SENIAL_EQ(hablante, hablanteResultante);
 }
+
+TEST(filtradoMedianaTEST, filtradoMediana2)
+{
+    senial hablante = { 0, 1, -8, 8, -8, 1, 2, 3, 4, 5, -1, 2, -7, 8, 9 };
+
+    int prof = 8;
+    int freq = 10;
+    int R = 4;
+
+    senial hablanteResultante = { 0, 1, -8, 8, 1, 2, 2, 2, 2, 2, 3, 2, -7, 8, 9 };
+
+    filtradoMediana(hablante, R, prof, freq);
+
+    ASSERT_SENIAL_EQ(hablante, hablanteResultante);
+}
+
+TEST(filtradoMedianaTEST, filtradoMediana3)
+{
+    senial hablante = { 0, 1, -8, 8, -8, 1, 2, -3, 4, 5, -1, 2, -7, 8, 9 };
+
+    int prof = 8;
+    int freq = 10;
+    int R = 2;
+
+    senial
+    hablanteResultante = { 0, 1, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 8, 9 };
+
+    filtradoMediana(hablante, R, prof, freq);
+
+    ASSERT_SENIAL_EQ(hablante, hablanteResultante);
+}
+
+TEST(filtradoMedianaTEST, filtradoMediana4)
+{
+    senial hablante = { -1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0, 1 };
+
+    int prof = 8;
+    int freq = 10;
+    int R = 2;
+
+    senial hablanteResultante = { -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 };
+
+    filtradoMediana(hablante, R, prof, freq);
+
+    ASSERT_SENIAL_EQ(hablante, hablanteResultante);
+}
+
+TEST(filtradoMedianaTEST, filtradoMediana5)
+{
+    senial hablante = { -1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0, 1 };
+
+    int prof = 8;
+    int freq = 10;
+    int R = 4;
+
+    senial hablanteResultante = { -1, 0, 1, -1, 0, 0, 0, 0, 1, -1, 0, 1 };
+
+    filtradoMediana(hablante, R, prof, freq);
+
+    ASSERT_SENIAL_EQ(hablante, hablanteResultante);
+}

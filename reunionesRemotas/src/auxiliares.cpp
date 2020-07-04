@@ -150,7 +150,7 @@ void ralentizarSenial(senial &s, int prof, int freq)
         if (i % 2 == 0) {
             salida[i] = s[i / 2];
         } else {
-            salida[i] = (s[(i - 1) / 2] + s[(i + 1) / 2]) / 2;
+            salida[i] = (s[(i - 1) / 2] + s[(i + 1) / 2]) / 2; // C++ redondea los valores flotantes hacia abajo, cumpliendo la especificacion
         }
     }
 
@@ -323,7 +323,7 @@ int valor(vector<int> s, int i)
         }
     }
 
-    return (s[n] + s[m]) / 2;
+    return (s[n] + s[m]) / 2; // C++ redondea los valores flotantes hacia abajo, cumpliendo la especificacion
 }
 
 int signo(int k)
