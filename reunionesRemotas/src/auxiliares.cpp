@@ -137,6 +137,7 @@ void acelerarSenial(senial &s, int prof, int freq)
     for (int i = 0; i < s.size(); ++i) {
         s.erase(s.begin() + i);
     }
+
 }
 
 
@@ -147,13 +148,15 @@ void ralentizarSenial(senial &s, int prof, int freq)
     senial salida(longFinal, 0);
 
     for (int i = 0; i < salida.size(); ++i) {
+
         if (i % 2 == 0) {
+
             salida[i] = s[i / 2];
         } else {
-            salida[i] = (s[(i - 1) / 2] + s[(i + 1) / 2]) / 2; // C++ redondea los valores flotantes hacia abajo, cumpliendo la especificacion
+
+            salida[i] = (int) floor((float) (s[(i - 1) / 2] + s[(i + 1) / 2]) / 2); // C++ redondea los valores flotantes hacia abajo, cumpliendo la especificacion
         }
     }
-
     s = salida;
 }
 
@@ -323,7 +326,7 @@ int valor(vector<int> s, int i)
         }
     }
 
-    return (s[n] + s[m]) / 2; // C++ redondea los valores flotantes hacia abajo, cumpliendo la especificacion
+    return (int) floor((float) (s[n] + s[m]) / 2); // C++ redondea los valores flotantes hacia abajo, cumpliendo la especificacion
 }
 
 int signo(int k)

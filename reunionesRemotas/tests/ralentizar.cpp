@@ -45,7 +45,7 @@ TEST(ralentizarTEST, ralentizacionValidaSenialesDistintas){
     int freq = 10;
 
     senial hablante1Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15 };
-    senial hablante2Ralentizado = { 1, 3, 5, 0, -5, 5, 15, 13, 11, 9, 7, 3, -1, -4, -8, -6, -4, -2, -1, 1, 3 };
+    senial hablante2Ralentizado = { 1, 3, 5, 0, -5, 5, 15, 13, 11, 9, 7, 3, -1, -5, -8, -6, -4, -3, -1, 1, 3 };
     reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1) };
 
     ralentizar(reunionOriginal, prof, freq);
@@ -55,7 +55,7 @@ TEST(ralentizarTEST, ralentizacionValidaSenialesDistintas){
 
 TEST(ralentizarTEST, ralentizacionValida)
 {
-    senial hablante1 = { 1, 4, -3, 0, 6, 0, -4, 55, 9, -15 };
+    senial hablante1 = { 1, 4, -3, 0, 6, 0, -4, 55, 9, -16 };
     senial hablante2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     senial hablante3 = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
     senial hablante4 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
@@ -63,7 +63,7 @@ TEST(ralentizarTEST, ralentizacionValida)
     int prof = 8;
     int freq = 10;
 
-    senial hablante1Ralentizado = { 1, 2, 4, 0, -3, -1, 0, 3, 6, 3, 0, -2, -4, 25, 55, 32, 9, -3, -15 };
+    senial hablante1Ralentizado = { 1, 2, 4, 0, -3, -2, 0, 3, 6, 3, 0, -2, -4, 25, 55, 32, 9, -4, -16 };
     senial hablante2Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10 };
     senial hablante3Ralentizado = { 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1 };
     senial hablante4Ralentizado(19, 1);

@@ -10,7 +10,7 @@ TEST(reconstruirTEST, reconstruirValidos){
     int prof = 8;
     int freq = 10;
 
-    senial hablante1Reconstruido = { 1, 3, -3, 4, 6, -1, -1, -8, -11, -15 };
+    senial hablante1Reconstruido = { 1, 3, -3, 4, 6, -1, -1, -8, -12, -15 };
 
     senial hablanteObtenido = reconstruir(hablante1, prof, freq);
 
@@ -49,7 +49,7 @@ TEST(reconstruirTEST, reconstruirValidosConPasajePorCero)
     int prof = 8;
     int freq = 10;
 
-    senial hablante1Reconstruido = { 1, 0, -3, 4, 6, -1, -1, -8, -11, -15 };
+    senial hablante1Reconstruido = { 1, 0, -3, 4, 6, -1, -1, -8, -12, -15 };
 
     senial hablanteObtenido = reconstruir(hablante1, prof, freq);
 
@@ -88,7 +88,7 @@ TEST(reconstruirTEST, reconstruirValidos4)
     int prof = 8;
     int freq = 10;
 
-    senial hablante1Reconstruido = { 5, 5, 5, 5, -2, 0, 0, 10, 2, 2, 0, 0, -5 };
+    senial hablante1Reconstruido = { 5, 5, 5, 5, -2, 4, 4, 10, 2, 2, -2, -2, -5 };
 
     senial hablanteObtenido = reconstruir(hablante1, prof, freq);
 
@@ -97,11 +97,11 @@ TEST(reconstruirTEST, reconstruirValidos4)
 
 TEST(reconstruirTEST, reconstruirValidos5)
 {
-    senial hablante1 = { 5, 0, 0, 5, -5, 0, 0, 5, 5, 5, 0, 0, -5 };
+    senial hablante1 = { 5, 0, 0, 5, -5, 0, 0, 7, 5, 5, 0, 0, -5 };
     int prof = 8;
     int freq = 10;
 
-    senial hablante1Reconstruido = { 5, 5, 5, 5, -5, 0, 0, 5, 5, 5, 0, 0, -5 };
+    senial hablante1Reconstruido = { 5, 5, 5, 5, -5, 1, 1, 7, 5, 5, 0, 0, -5 };
 
     senial hablanteObtenido = reconstruir(hablante1, prof, freq);
 
@@ -114,7 +114,7 @@ TEST(reconstruirTEST, reconstruirValidos6)
     int prof = 8;
     int freq = 10;
 
-    senial hablante1Reconstruido = { 5, 7, 9, -6, -4, -2, -2, 0, 0, 10, 6, 2, 2, 2, 0, 0, -5, 0, 5 };
+    senial hablante1Reconstruido = { 5, 7, 9, -6, -4, -2, -2, 4, 4, 10, 6, 2, 2, 2, -2, -2, -5, 0, 5 };
 
     senial hablanteObtenido = reconstruir(hablante1, prof, freq);
 
