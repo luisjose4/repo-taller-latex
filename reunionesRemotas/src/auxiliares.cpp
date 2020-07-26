@@ -43,11 +43,9 @@ bool duraMasDe(senial s, int freq, float seg)
     return s.size() >= freq * seg;
 }
 
-bool esValida(senial s, int prof, int freq)
-{
+bool esValida(vector<int> s, int prof, int freq){
     return freqValida(freq)  &&  enRango(s, prof)  &&  profValida(prof)  &&  duraMasDe(s, freq, 1);
 }
-
 
 /************* seEnojo **************/
 float tono(senial s)
@@ -64,25 +62,6 @@ float tono(senial s)
 bool superaUmbral(senial s, int umbral)
 {
     return tono(s) > umbral;
-}
-
-bool existeSubseqEnojada(senial s, int umbral, int prof, int freq)
-{
-    int cantMinimaDeElementos = 2 * freq;
-
-    if ( s.size() < cantMinimaDeElementos ) return false;
-
-    bool res = false;
-
-    for (int i = 0; ( i <= s.size() - cantMinimaDeElementos ) && !res; ++i) {
-        for (int j = i + cantMinimaDeElementos; ( j <= s.size() ) && !res; ++j) {
-            senial subseq = subSeq(s, i, j);
-
-            res = superaUmbral(subseq, umbral);
-        }
-    }
-
-    return res;
 }
 
 
@@ -136,11 +115,6 @@ bool hablantesDeReunionValidos(reunion r, int prof, int freq)
     return res;
 }
 
-bool reunionValida(reunion r, int prof, int freq)
-{
-    return r.size() > 0  &&  esMatriz(r)  &&  senialesValidas(r, prof, freq)  &&  hablantesDeReunionValidos(r, prof, freq);
-}
-
 
 /************ acelerar *************/
 void acelerarSenial(senial &s, int prof, int freq)
@@ -172,25 +146,7 @@ void ralentizarSenial(senial &s, int prof, int freq)
 
 
 /********* tonosDeVozElevados ******/
-vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof)
-{
-    vector<hablante> hablantes = { };
-    float mayorTono = 0;
-
-    for (int i = 0; i < r.size(); ++i) {
-        float iesimoTono = tono(r[i].first);
-
-        if (iesimoTono > mayorTono) {
-            mayorTono = iesimoTono;
-            hablantes = { r[i].second };
-        }
-        else if (iesimoTono == mayorTono) {
-            hablantes.push_back(r[i].second);
-        }
-    }
-
-    return hablantes;
-}
+// Sin auxiliares
 
 
 /************* ordenar *************/
@@ -199,18 +155,6 @@ void swapPorTono(reunion &reunion, int i, int j)
     pair<senial, hablante> k = reunion[i];
     reunion[i] = reunion[j];
     reunion[j] = k;
-}
-
-void ordenarReunionAcordeAPromedios(reunion &r)
-{
-    for (int i = 1; i < r.size(); ++i) {
-        pair<senial, hablante> elementoAOrdenar = r[i];
-        for (int j = i-1; j >= 0; --j) {
-            if (tono(elementoAOrdenar.first) > tono(r[j].first)) {
-                swapPorTono(r, j+1, j);
-            }
-        }
-    }
 }
 
 
@@ -243,37 +187,6 @@ void agregarIntervalo(vector<intervalo> &listaDeSilencios, int inicioSilencio, i
     listaDeSilencios.push_back(silencio);
 }
 
-vector<intervalo> obtenerSilencios(senial s, int freq, int umbral)
-{
-    vector<intervalo> ret(0);
-    int inicioSilencio = 0;
-    bool candidatoASilencio = false;
-    bool esSilencio = false;
-
-
-    for (int i = 0; i < s.size(); i++) {
-
-        if (superaUmbral(s[i], umbral) == false) {
-            actualizarIndicesYFlags(inicioSilencio, i, candidatoASilencio, esSilencio, freq);
-        }
-
-        else {
-            if (esSilencio) {
-                agregarIntervalo(ret, inicioSilencio, i - 1);
-            }
-            esSilencio = false;
-            candidatoASilencio = false;
-        }
-    }
-
-
-    if (esSilencio) { /* agregar silencio en caso de que termine al final */
-        agregarIntervalo(ret, inicioSilencio, s.size() - 1);
-    }
-
-    return ret;
-}
-
 
 /****** hablantesSuperpuestos ********/
 int valorAbsoluto(int x)
@@ -281,7 +194,8 @@ int valorAbsoluto(int x)
     return (x < 0) ? (-x) : x;
 }
 
-bool estaHablando(senial s, int pos, int umbral){
+bool estaHablando(senial s, int pos, int umbral)
+{
     bool superaUmbral = valorAbsoluto( s[pos] )  >= umbral;
     bool algunoConsecutivoSuperaUmbral;
     if ( pos == 0 ) {
@@ -292,23 +206,6 @@ bool estaHablando(senial s, int pos, int umbral){
         algunoConsecutivoSuperaUmbral = ( valorAbsoluto( s[pos - 1] ) >= umbral && ( valorAbsoluto( s[pos + 1] ) >= umbral ) );
     }
     return ( superaUmbral || algunoConsecutivoSuperaUmbral );
-}
-
-bool hayHablantesSuperpuestos(reunion r, int freq, int umbral)
-{
-    for (int i = 0; i < r[0].first.size(); ++i) {
-        int personasHablando = 0;
-        for (int j = 0; j < r.size(); ++j) {
-            if ( estaHablando(r[j].first, i, umbral) ) {
-                ++personasHablando;
-            }
-            if (personasHablando == 2) {
-                return true;
-            }
-        }
-
-    }
-    return false;
 }
 
 
@@ -347,22 +244,8 @@ bool esPasajePorCero(vector<int> s, int i)
     return signo(s[i - 1]) * signo(s[i + 1]) == -1;
 }
 
-senial reconstruirSenial(senial s)
-{
-    vector<int> sCero = s;
-    for (int i = 0; i <= s.size(); ++i) {
-        if (s[i] == 0) {
-            if (!esPasajePorCero(sCero, i)) {
-                s[i] = valor(sCero, i);
-            }
-        }
-    }
 
-    return s;
-}
-
-
-/********* friltradoMediana **********/
+/********* filtradoMediana **********/
 bool coincidenExtremos(senial s, int i, int r)
 {
     return i < r || i >= s.size() - r;
@@ -395,21 +278,6 @@ senial ordenarSenialW(senial w)
 {
     return insertionSort(w);
 }
-
-senial filtrada(senial s, int r)
-{ //O(n).                               ejercicio 3.
-    senial w; // 1
-    senial sCero = s;
-    for (int i = 0; i < s.size(); ++i) { // n
-        if (!coincidenExtremos(sCero, i, r)) { // 1
-            w = ordenarSenialW(subSeq(sCero, i - r, i + r + 1)); //
-            s[i] = w[r]; // 1
-        }
-    }
-    return s;
-}
-
-
 
 
 /************* Ejercicio 4 *************/

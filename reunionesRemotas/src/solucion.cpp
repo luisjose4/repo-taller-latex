@@ -5,20 +5,36 @@
 // Ejercicios
 
 bool esSenial(vector<int> s, int prof, int freq) {
-    return esValida(s, prof, freq);
+    return freqValida(freq)  &&  enRango(s, prof)  &&  profValida(prof)  &&  duraMasDe(s, freq, 1);
 }
 
 bool seEnojo(senial s, int umbral, int prof, int freq) {
-    // o(s^3)?
-    return existeSubseqEnojada(s, umbral, prof, freq);
-}
+    int cantMinimaDeElementos = 2 * freq;
+
+    if ( s.size() < cantMinimaDeElementos ) return false;
+
+    bool res = false;
+
+    for (int i = 0; ( i <= s.size() - cantMinimaDeElementos ) && !res; ++i) {
+        for (int j = i + cantMinimaDeElementos; ( j <= s.size() ) && !res; ++j) {
+            senial subseq = subSeq(s, i, j);
+
+            res = superaUmbral(subseq, umbral);
+        }
+    }
+
+    return res;}
 
 bool esReunionValida(reunion r, int prof, int freq) {
-    return reunionValida(r, prof, freq);
+    return (
+                r.size() > 0  &&
+                esMatriz(r)  &&
+                senialesValidas(r, prof, freq)  &&
+                hablantesDeReunionValidos(r, prof, freq)
+            );
 }
 
 void acelerar(reunion& r, int prof, int freq) {
-    // O(m*n)?
     for (int i = 0; i < r.size(); ++i) {
         acelerarSenial(r[i].first, prof, freq);
     }
@@ -31,34 +47,102 @@ void ralentizar(reunion& r, int prof, int freq) {
 }
 
 vector<hablante> tonosDeVozElevados(reunion r, int freq, int prof) {
-    return hablantesConTonosElevados(r, freq, prof);
+    vector<hablante> hablantes = { };
+    float mayorTono = 0;
+
+    for (int i = 0; i < r.size(); ++i) {
+        float iesimoTono = tono(r[i].first);
+
+        if (iesimoTono > mayorTono) {
+            mayorTono = iesimoTono;
+            hablantes = { r[i].second };
+        }
+        else if (iesimoTono == mayorTono) {
+            hablantes.push_back(r[i].second);
+        }
+    }
+
+    return hablantes;
 }
 
 void ordenar(reunion& r, int freq, int prof) {
-    // Complejidad O(m*n + 2m^2) que es menor que O(m^2*n) para m >= 2 y n >= 10
-    //n >= 10 si o si ya que si no, no seria senial valida y no cumpliria la precondicion
-    // m == 0 o m == 1 el algoritmo no hace nada porque ya estan ordenadas las seniales
-    ordenarReunionAcordeAPromedios(r);
+    for (int i = 1; i < r.size(); ++i) {
+        pair<senial, hablante> elementoAOrdenar = r[i];
+        for (int j = i-1; j >= 0; --j) {
+            if (tono(elementoAOrdenar.first) > tono(r[j].first)) {
+                swapPorTono(r, j+1, j);
+            }
+        }
+    }
 }
 
 vector<intervalo> silencios(senial s, int prof, int freq, int umbral)
-{   // complejidad O(n)
-    vector<intervalo> intervalos;
-    intervalos = obtenerSilencios(s, freq, umbral);
-    return intervalos;
+{
+    vector<intervalo> ret(0);
+    int inicioSilencio = 0;
+    bool candidatoASilencio = false;
+    bool esSilencio = false;
+
+    for (int i = 0; i < s.size(); i++) {
+
+        if ( !superaUmbral(s[i], umbral) ) {
+            actualizarIndicesYFlags(inicioSilencio, i, candidatoASilencio, esSilencio, freq);
+        }
+
+        else {
+            if (esSilencio) {
+                agregarIntervalo(ret, inicioSilencio, i - 1);
+            }
+            esSilencio = false;
+            candidatoASilencio = false;
+        }
+    }
+
+    if (esSilencio) { /* agregar silencio en caso de que termine al final */
+        agregarIntervalo(ret, inicioSilencio, s.size() - 1);
+    }
+
+    return ret;
 }
 
 bool hablantesSuperpuestos(reunion r, int prof, int freq, int umbral)
 {
-    return hayHablantesSuperpuestos(r, freq, umbral);
+    for (int i = 0; i < r[0].first.size(); ++i) {
+        int personasHablando = 0;
+        for (int j = 0; j < r.size(); ++j) {
+            if ( estaHablando(r[j].first, i, umbral) ) {
+                ++personasHablando;
+            }
+            if (personasHablando == 2) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 senial reconstruir(senial s, int prof, int freq)
 {
-    return reconstruirSenial(s);
+    vector<int> sCero = s;
+    for (int i = 0; i <= s.size(); ++i) {
+        if (s[i] == 0) {
+            if (!esPasajePorCero(sCero, i)) {
+                s[i] = valor(sCero, i);
+            }
+        }
+    }
+
+    return s;
 }
 
 void filtradoMediana(senial &s, int R, int prof, int freq)
 {
-    s = filtrada(s, R);
+    senial w; // 1
+    senial sCero = s;
+    for (int i = 0; i < s.size(); ++i) { // n
+        if (!coincidenExtremos(sCero, i, R)) { // 1
+            w = ordenarSenialW(subSeq(sCero, i - R, i + R + 1)); //
+            s[i] = w[R]; // 1
+        }
+    }
 }
