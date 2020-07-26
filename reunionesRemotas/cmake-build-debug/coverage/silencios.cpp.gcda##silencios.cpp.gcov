@@ -1,0 +1,450 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/silencios.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/silencios.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../src/solucion.h"
+        -:    2:#include "../src/auxiliares.h"
+        -:    3:#include "../lib/gtest.h"
+        -:    4:
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+        1:    8:TEST(silenciosTEST, silenciosValidos){
+        1:    8-block  0
+        1:    8-block  1
+        1:    8-block  2
+        1:    8-block  3
+        1:    8-block  4
+        1:    8-block  5
+        1:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+    $$$$$:    8-block 12
+    $$$$$:    8-block 13
+    $$$$$:    8-block 14
+    $$$$$:    8-block 15
+    $$$$$:    8-block 16
+    $$$$$:    8-block 17
+    $$$$$:    8-block 18
+    $$$$$:    8-block 19
+    $$$$$:    8-block 20
+    $$$$$:    8-block 21
+    $$$$$:    8-block 22
+    $$$$$:    8-block 23
+    #####:    9:    senial hablante = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+    #####:   10:    int prof = 8;
+    #####:   11:    int freq = 10;
+    #####:   12:    int umbral = 3;
+        -:   13:
+    #####:   14:    vector<intervalo> intervalos = { make_pair(5, 6) };
+    $$$$$:   14-block  0
+    $$$$$:   14-block  1
+        -:   15:
+    #####:   16:    vector<intervalo> a = silencios(hablante, prof, freq, umbral);
+    $$$$$:   16-block  0
+    $$$$$:   16-block  1
+    $$$$$:   16-block  2
+        -:   17:
+    #####:   18:    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+    $$$$$:   18-block  0
+    $$$$$:   18-block  1
+    $$$$$:   18-block  2
+    $$$$$:   18-block  3
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+    $$$$$:   18-block  6
+    #####:   19:}
+    $$$$$:   19-block  0
+    $$$$$:   19-block  1
+    $$$$$:   19-block  2
+    $$$$$:   19-block  3
+    $$$$$:   19-block  4
+    $$$$$:   19-block  5
+    $$$$$:   19-block  6
+    $$$$$:   19-block  7
+    $$$$$:   19-block  8
+    $$$$$:   19-block  9
+        -:   20:
+        1:   21:TEST(silenciosTEST, silenciosValidos2)
+        1:   21-block  0
+        1:   21-block  1
+        1:   21-block  2
+        1:   21-block  3
+        1:   21-block  4
+        1:   21-block  5
+        1:   21-block  6
+    $$$$$:   21-block  7
+    $$$$$:   21-block  8
+    $$$$$:   21-block  9
+    $$$$$:   21-block 10
+    $$$$$:   21-block 11
+    $$$$$:   21-block 12
+    $$$$$:   21-block 13
+    $$$$$:   21-block 14
+    $$$$$:   21-block 15
+    $$$$$:   21-block 16
+    $$$$$:   21-block 17
+    $$$$$:   21-block 18
+    $$$$$:   21-block 19
+    $$$$$:   21-block 20
+    $$$$$:   21-block 21
+    $$$$$:   21-block 22
+    $$$$$:   21-block 23
+        -:   22:{
+    #####:   23:    senial hablante = { -1, 4, -1, -1, 0, -3, 0, -3, -5, -2, -4, -5, 3, 2, -4 };
+    #####:   24:    int prof = 8;
+    #####:   25:    int freq = 10;
+    #####:   26:    int umbral = 3;
+        -:   27:
+    #####:   28:    vector<intervalo> intervalos = { make_pair(2, 4) };
+    $$$$$:   28-block  0
+    $$$$$:   28-block  1
+        -:   29:
+    #####:   30:    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+    $$$$$:   30-block  0
+    $$$$$:   30-block  1
+    $$$$$:   30-block  2
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+    $$$$$:   30-block  5
+    $$$$$:   30-block  6
+    #####:   31:}
+    $$$$$:   31-block  0
+    $$$$$:   31-block  1
+    $$$$$:   31-block  2
+    $$$$$:   31-block  3
+    $$$$$:   31-block  4
+    $$$$$:   31-block  5
+    $$$$$:   31-block  6
+    $$$$$:   31-block  7
+        -:   32:
+        1:   33:TEST(silenciosTEST, silenciosValidos3)
+        1:   33-block  0
+        1:   33-block  1
+        1:   33-block  2
+        1:   33-block  3
+        1:   33-block  4
+        1:   33-block  5
+        1:   33-block  6
+    $$$$$:   33-block  7
+    $$$$$:   33-block  8
+    $$$$$:   33-block  9
+    $$$$$:   33-block 10
+    $$$$$:   33-block 11
+    $$$$$:   33-block 12
+    $$$$$:   33-block 13
+    $$$$$:   33-block 14
+    $$$$$:   33-block 15
+    $$$$$:   33-block 16
+    $$$$$:   33-block 17
+    $$$$$:   33-block 18
+    $$$$$:   33-block 19
+    $$$$$:   33-block 20
+    $$$$$:   33-block 21
+    $$$$$:   33-block 22
+    $$$$$:   33-block 23
+        -:   34:{
+    #####:   35:    senial hablante = { 4, 2, -4, 3, 0, -1, 4, -4, -4, 0, 3, 2, 4, 0, -4 };
+    #####:   36:    int prof = 8;
+    #####:   37:    int freq = 10;
+    #####:   38:    int umbral = 3;
+        -:   39:
+    #####:   40:    vector<intervalo> intervalos = { make_pair(4, 5) };
+    $$$$$:   40-block  0
+    $$$$$:   40-block  1
+        -:   41:
+    #####:   42:    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+    $$$$$:   42-block  0
+    $$$$$:   42-block  1
+    $$$$$:   42-block  2
+    $$$$$:   42-block  3
+    $$$$$:   42-block  4
+    $$$$$:   42-block  5
+    $$$$$:   42-block  6
+    #####:   43:}
+    $$$$$:   43-block  0
+    $$$$$:   43-block  1
+    $$$$$:   43-block  2
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+    $$$$$:   43-block  6
+    $$$$$:   43-block  7
+        -:   44:
+        1:   45:TEST(silenciosTEST, silenciosValidos4)
+        1:   45-block  0
+        1:   45-block  1
+        1:   45-block  2
+        1:   45-block  3
+        1:   45-block  4
+        1:   45-block  5
+        1:   45-block  6
+    $$$$$:   45-block  7
+    $$$$$:   45-block  8
+    $$$$$:   45-block  9
+    $$$$$:   45-block 10
+    $$$$$:   45-block 11
+    $$$$$:   45-block 12
+    $$$$$:   45-block 13
+    $$$$$:   45-block 14
+    $$$$$:   45-block 15
+    $$$$$:   45-block 16
+    $$$$$:   45-block 17
+    $$$$$:   45-block 18
+    $$$$$:   45-block 19
+    $$$$$:   45-block 20
+    $$$$$:   45-block 21
+    $$$$$:   45-block 22
+    $$$$$:   45-block 23
+        -:   46:{
+    #####:   47:    senial hablante = { 0, 2, -4, 3, 0, -1, 4, 0, 2, 0, -1, 2, 4, 0, -4 };
+    #####:   48:    int prof = 8;
+    #####:   49:    int freq = 10;
+    #####:   50:    int umbral = 3;
+        -:   51:
+    #####:   52:    vector<intervalo> intervalos = { make_pair(0, 1), make_pair(4, 5), make_pair(7, 11) };
+    $$$$$:   52-block  0
+    $$$$$:   52-block  1
+    $$$$$:   52-block  2
+    $$$$$:   52-block  3
+        -:   53:
+    #####:   54:    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+    $$$$$:   54-block  0
+    $$$$$:   54-block  1
+    $$$$$:   54-block  2
+    $$$$$:   54-block  3
+    $$$$$:   54-block  4
+    $$$$$:   54-block  5
+    $$$$$:   54-block  6
+    #####:   55:}
+    $$$$$:   55-block  0
+    $$$$$:   55-block  1
+    $$$$$:   55-block  2
+    $$$$$:   55-block  3
+    $$$$$:   55-block  4
+    $$$$$:   55-block  5
+    $$$$$:   55-block  6
+    $$$$$:   55-block  7
+        -:   56:
+        1:   57:TEST(silenciosTEST, silenciosValidos5)
+        1:   57-block  0
+        1:   57-block  1
+        1:   57-block  2
+        1:   57-block  3
+        1:   57-block  4
+        1:   57-block  5
+        1:   57-block  6
+    $$$$$:   57-block  7
+    $$$$$:   57-block  8
+    $$$$$:   57-block  9
+    $$$$$:   57-block 10
+    $$$$$:   57-block 11
+    $$$$$:   57-block 12
+    $$$$$:   57-block 13
+    $$$$$:   57-block 14
+    $$$$$:   57-block 15
+    $$$$$:   57-block 16
+    $$$$$:   57-block 17
+    $$$$$:   57-block 18
+    $$$$$:   57-block 19
+    $$$$$:   57-block 20
+    $$$$$:   57-block 21
+    $$$$$:   57-block 22
+    $$$$$:   57-block 23
+        -:   58:{
+    #####:   59:    senial hablante = { 0, 2, -4, 3, 0, -1, 4, 0, 2, 0, -1, 2, 0, 0, 0 };
+    #####:   60:    int prof = 8;
+    #####:   61:    int freq = 10;
+    #####:   62:    int umbral = 3;
+        -:   63:
+    #####:   64:    vector<intervalo> intervalos = { make_pair(0, 1), make_pair(4, 5), make_pair(7, 14) };
+    $$$$$:   64-block  0
+    $$$$$:   64-block  1
+    $$$$$:   64-block  2
+    $$$$$:   64-block  3
+        -:   65:
+    #####:   66:    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+    $$$$$:   66-block  0
+    $$$$$:   66-block  1
+    $$$$$:   66-block  2
+    $$$$$:   66-block  3
+    $$$$$:   66-block  4
+    $$$$$:   66-block  5
+    $$$$$:   66-block  6
+    #####:   67:}
+    $$$$$:   67-block  0
+    $$$$$:   67-block  1
+    $$$$$:   67-block  2
+    $$$$$:   67-block  3
+    $$$$$:   67-block  4
+    $$$$$:   67-block  5
+    $$$$$:   67-block  6
+    $$$$$:   67-block  7
+        -:   68:
+        1:   69:TEST(silenciosTEST, silenciosValidos6)
+        1:   69-block  0
+        1:   69-block  1
+        1:   69-block  2
+        1:   69-block  3
+        1:   69-block  4
+        1:   69-block  5
+        1:   69-block  6
+    $$$$$:   69-block  7
+    $$$$$:   69-block  8
+    $$$$$:   69-block  9
+    $$$$$:   69-block 10
+    $$$$$:   69-block 11
+    $$$$$:   69-block 12
+    $$$$$:   69-block 13
+    $$$$$:   69-block 14
+    $$$$$:   69-block 15
+    $$$$$:   69-block 16
+    $$$$$:   69-block 17
+    $$$$$:   69-block 18
+    $$$$$:   69-block 19
+    $$$$$:   69-block 20
+    $$$$$:   69-block 21
+    $$$$$:   69-block 22
+    $$$$$:   69-block 23
+        -:   70:{
+    #####:   71:    senial hablante = { 0, 0, 1, 6, 7, 4, 0, 7, 0, 9, 0, 4, 4, 1, 10, 4, 4 };
+    #####:   72:    int prof = 8;
+    #####:   73:    int freq = 10;
+    #####:   74:    int umbral = 5;
+        -:   75:
+    #####:   76:    vector<intervalo> intervalos = { make_pair(0, 2), make_pair(5, 6), make_pair(10, 13), make_pair(15, 16) };
+    $$$$$:   76-block  0
+    $$$$$:   76-block  1
+    $$$$$:   76-block  2
+    $$$$$:   76-block  3
+    $$$$$:   76-block  4
+        -:   77:
+    #####:   78:    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+    $$$$$:   78-block  0
+    $$$$$:   78-block  1
+    $$$$$:   78-block  2
+    $$$$$:   78-block  3
+    $$$$$:   78-block  4
+    $$$$$:   78-block  5
+    $$$$$:   78-block  6
+    #####:   79:}
+    $$$$$:   79-block  0
+    $$$$$:   79-block  1
+    $$$$$:   79-block  2
+    $$$$$:   79-block  3
+    $$$$$:   79-block  4
+    $$$$$:   79-block  5
+    $$$$$:   79-block  6
+    $$$$$:   79-block  7
+        -:   80:
+        1:   81:TEST(silenciosTEST, silenciosValidos7)
+        1:   81-block  0
+        1:   81-block  1
+        1:   81-block  2
+        1:   81-block  3
+        1:   81-block  4
+        1:   81-block  5
+        1:   81-block  6
+    $$$$$:   81-block  7
+    $$$$$:   81-block  8
+    $$$$$:   81-block  9
+    $$$$$:   81-block 10
+    $$$$$:   81-block 11
+    $$$$$:   81-block 12
+    $$$$$:   81-block 13
+    $$$$$:   81-block 14
+    $$$$$:   81-block 15
+    $$$$$:   81-block 16
+    $$$$$:   81-block 17
+    $$$$$:   81-block 18
+    $$$$$:   81-block 19
+    $$$$$:   81-block 20
+    $$$$$:   81-block 21
+    $$$$$:   81-block 22
+    $$$$$:   81-block 23
+        -:   82:{
+    #####:   83:    senial hablante = { 4, 0, 1, 4, 7, 4, 0, 7, 0, 9, 0, 4, 4, 1, 10, 4, 5 };
+    #####:   84:    int prof = 8;
+    #####:   85:    int freq = 10;
+    #####:   86:    int umbral = 5;
+        -:   87:
+    #####:   88:    vector<intervalo> intervalos = { make_pair(0, 3), make_pair(5, 6), make_pair(10, 13) };
+    $$$$$:   88-block  0
+    $$$$$:   88-block  1
+    $$$$$:   88-block  2
+    $$$$$:   88-block  3
+        -:   89:
+    #####:   90:    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+    $$$$$:   90-block  0
+    $$$$$:   90-block  1
+    $$$$$:   90-block  2
+    $$$$$:   90-block  3
+    $$$$$:   90-block  4
+    $$$$$:   90-block  5
+    $$$$$:   90-block  6
+    #####:   91:}
+    $$$$$:   91-block  0
+    $$$$$:   91-block  1
+    $$$$$:   91-block  2
+    $$$$$:   91-block  3
+    $$$$$:   91-block  4
+    $$$$$:   91-block  5
+    $$$$$:   91-block  6
+    $$$$$:   91-block  7
+        -:   92:
+        1:   93:TEST(silenciosTEST, silenciosValidos8)
+        1:   93-block  0
+        1:   93-block  1
+        1:   93-block  2
+        1:   93-block  3
+        1:   93-block  4
+        1:   93-block  5
+        1:   93-block  6
+    $$$$$:   93-block  7
+    $$$$$:   93-block  8
+    $$$$$:   93-block  9
+    $$$$$:   93-block 10
+    $$$$$:   93-block 11
+    $$$$$:   93-block 12
+    $$$$$:   93-block 13
+    $$$$$:   93-block 14
+    $$$$$:   93-block 15
+    $$$$$:   93-block 16
+    $$$$$:   93-block 17
+    $$$$$:   93-block 18
+    $$$$$:   93-block 19
+    $$$$$:   93-block 20
+    $$$$$:   93-block 21
+    $$$$$:   93-block 22
+    $$$$$:   93-block 23
+        -:   94:{
+    #####:   95:    senial hablante = { 4, 0, 1, 4, 7, 4, 0, 7, 0, 9, 0, 4, 4, 1, 10, 4, 5 };
+    #####:   96:    int prof = 8;
+    #####:   97:    int freq = 10;
+    #####:   98:    int umbral = 11;
+        -:   99:
+    #####:  100:    vector<intervalo> intervalos = { make_pair(0, 16) };
+    $$$$$:  100-block  0
+    $$$$$:  100-block  1
+        -:  101:
+    #####:  102:    ASSERT_INTERVALOS_EQ(silencios(hablante, prof, freq, umbral), intervalos);
+    $$$$$:  102-block  0
+    $$$$$:  102-block  1
+    $$$$$:  102-block  2
+    $$$$$:  102-block  3
+    $$$$$:  102-block  4
+    $$$$$:  102-block  5
+    $$$$$:  102-block  6
+    #####:  103:}
+    $$$$$:  103-block  0
+    $$$$$:  103-block  1
+    $$$$$:  103-block  2
+    $$$$$:  103-block  3
+    $$$$$:  103-block  4
+    $$$$$:  103-block  5
+    $$$$$:  103-block  6
+    $$$$$:  103-block  7

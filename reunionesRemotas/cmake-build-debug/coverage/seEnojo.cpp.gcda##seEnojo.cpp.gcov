@@ -1,0 +1,855 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/seEnojo.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/seEnojo.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../src/solucion.h"
+        -:    2:#include "../src/auxiliares.h"
+        -:    3:#include "../lib/gtest.h"
+        -:    4:
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+        7:    8:TEST(seEnojoTEST, senialMenorADosSegundos){
+        1:    8-block  0
+        1:    8-block  1
+        1:    8-block  2
+        1:    8-block  3
+        1:    8-block  4
+        1:    8-block  5
+        1:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+    $$$$$:    8-block 12
+        1:    8-block 13
+        1:    8-block 14
+        1:    8-block 15
+        1:    8-block 16
+        1:    8-block 17
+        1:    8-block 18
+        1:    8-block 19
+        1:    8-block 20
+        1:    8-block 21
+        1:    8-block 22
+        1:    8-block 23
+        1:    9:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+        1:   10:    int prof = 8;
+        1:   11:    int freq = 10;
+        1:   12:    int umbral = 3;
+        -:   13:
+        1:   14:    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+        1:   14-block  0
+        1:   14-block  1
+        1:   14-block  2
+        1:   14-block  3
+        1:   14-block  4
+        1:   14-block  5
+    $$$$$:   14-block  6
+    $$$$$:   14-block  7
+    $$$$$:   14-block  8
+    $$$$$:   14-block  9
+    $$$$$:   14-block 10
+    $$$$$:   14-block 11
+    $$$$$:   14-block 12
+    $$$$$:   14-block 13
+    $$$$$:   14-block 14
+        1:   14-block 15
+        1:   14-block 16
+    $$$$$:   14-block 17
+        1:   15:}
+    $$$$$:   15-block  0
+    $$$$$:   15-block  1
+    $$$$$:   15-block  2
+    $$$$$:   15-block  3
+        1:   15-block  4
+        1:   15-block  5
+        1:   15-block  6
+    $$$$$:   15-block  7
+    $$$$$:   15-block  8
+        -:   16:
+        7:   17:TEST(seEnojoTEST, senialMenorADosSegundosTonoSuperaElUmbral){
+        1:   17-block  0
+        1:   17-block  1
+        1:   17-block  2
+        1:   17-block  3
+        1:   17-block  4
+        1:   17-block  5
+        1:   17-block  6
+    $$$$$:   17-block  7
+    $$$$$:   17-block  8
+    $$$$$:   17-block  9
+    $$$$$:   17-block 10
+    $$$$$:   17-block 11
+    $$$$$:   17-block 12
+        1:   17-block 13
+        1:   17-block 14
+        1:   17-block 15
+        1:   17-block 16
+        1:   17-block 17
+        1:   17-block 18
+        1:   17-block 19
+        1:   17-block 20
+        1:   17-block 21
+        1:   17-block 22
+        1:   17-block 23
+        1:   18:    senial s = {11,33,-32,41,66,0,-21,-118,99,-15,7};
+        1:   19:    int prof = 8;
+        1:   20:    int freq = 10;
+        1:   21:    int umbral = 3;
+        -:   22:
+        1:   23:    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+        1:   23-block  0
+        1:   23-block  1
+        1:   23-block  2
+        1:   23-block  3
+        1:   23-block  4
+        1:   23-block  5
+    $$$$$:   23-block  6
+    $$$$$:   23-block  7
+    $$$$$:   23-block  8
+    $$$$$:   23-block  9
+    $$$$$:   23-block 10
+    $$$$$:   23-block 11
+    $$$$$:   23-block 12
+    $$$$$:   23-block 13
+    $$$$$:   23-block 14
+        1:   23-block 15
+        1:   23-block 16
+    $$$$$:   23-block 17
+        1:   24:}
+    $$$$$:   24-block  0
+    $$$$$:   24-block  1
+    $$$$$:   24-block  2
+    $$$$$:   24-block  3
+        1:   24-block  4
+        1:   24-block  5
+        1:   24-block  6
+    $$$$$:   24-block  7
+    $$$$$:   24-block  8
+        -:   25:
+        7:   26:TEST(seEnojoTEST, senialMenorADosSegundosTodosCeros){
+        1:   26-block  0
+        1:   26-block  1
+        1:   26-block  2
+        1:   26-block  3
+        1:   26-block  4
+        1:   26-block  5
+        1:   26-block  6
+    $$$$$:   26-block  7
+    $$$$$:   26-block  8
+    $$$$$:   26-block  9
+    $$$$$:   26-block 10
+    $$$$$:   26-block 11
+    $$$$$:   26-block 12
+        1:   26-block 13
+        1:   26-block 14
+        1:   26-block 15
+        1:   26-block 16
+        1:   26-block 17
+        1:   26-block 18
+        1:   26-block 19
+        1:   26-block 20
+        1:   26-block 21
+        1:   26-block 22
+        1:   26-block 23
+        1:   27:    senial s(15,0);
+        1:   28:    int prof = 8;
+        1:   29:    int freq = 10;
+        1:   30:    int umbral = 3;
+        -:   31:
+        1:   32:    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+        1:   32-block  0
+        1:   32-block  1
+        1:   32-block  2
+        1:   32-block  3
+        1:   32-block  4
+        1:   32-block  5
+    $$$$$:   32-block  6
+    $$$$$:   32-block  7
+    $$$$$:   32-block  8
+    $$$$$:   32-block  9
+    $$$$$:   32-block 10
+    $$$$$:   32-block 11
+    $$$$$:   32-block 12
+    $$$$$:   32-block 13
+    $$$$$:   32-block 14
+        1:   32-block 15
+        1:   32-block 16
+    $$$$$:   32-block 17
+        1:   33:}
+    $$$$$:   33-block  0
+    $$$$$:   33-block  1
+    $$$$$:   33-block  2
+    $$$$$:   33-block  3
+        1:   33-block  4
+        1:   33-block  5
+        1:   33-block  6
+    $$$$$:   33-block  7
+    $$$$$:   33-block  8
+        -:   34:
+        7:   35:TEST(seEnojoTEST, senialMayorADosSegundosTodosCeros){
+        1:   35-block  0
+        1:   35-block  1
+        1:   35-block  2
+        1:   35-block  3
+        1:   35-block  4
+        1:   35-block  5
+        1:   35-block  6
+    $$$$$:   35-block  7
+    $$$$$:   35-block  8
+    $$$$$:   35-block  9
+    $$$$$:   35-block 10
+    $$$$$:   35-block 11
+    $$$$$:   35-block 12
+        1:   35-block 13
+        1:   35-block 14
+        1:   35-block 15
+        1:   35-block 16
+        1:   35-block 17
+        1:   35-block 18
+        1:   35-block 19
+        1:   35-block 20
+        1:   35-block 21
+        1:   35-block 22
+        1:   35-block 23
+        1:   36:    senial s(25,0);
+        1:   37:    int prof = 8;
+        1:   38:    int freq = 10;
+        1:   39:    int umbral = 3;
+        -:   40:
+        1:   41:    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+        1:   41-block  0
+        1:   41-block  1
+        1:   41-block  2
+        1:   41-block  3
+        1:   41-block  4
+        1:   41-block  5
+    $$$$$:   41-block  6
+    $$$$$:   41-block  7
+    $$$$$:   41-block  8
+    $$$$$:   41-block  9
+    $$$$$:   41-block 10
+    $$$$$:   41-block 11
+    $$$$$:   41-block 12
+    $$$$$:   41-block 13
+    $$$$$:   41-block 14
+        1:   41-block 15
+        1:   41-block 16
+    $$$$$:   41-block 17
+        1:   42:}
+    $$$$$:   42-block  0
+    $$$$$:   42-block  1
+    $$$$$:   42-block  2
+    $$$$$:   42-block  3
+        1:   42-block  4
+        1:   42-block  5
+        1:   42-block  6
+    $$$$$:   42-block  7
+    $$$$$:   42-block  8
+        -:   43:
+        7:   44:TEST(seEnojoTEST, senialEnojadaCompleta){
+        1:   44-block  0
+        1:   44-block  1
+        1:   44-block  2
+        1:   44-block  3
+        1:   44-block  4
+        1:   44-block  5
+        1:   44-block  6
+    $$$$$:   44-block  7
+    $$$$$:   44-block  8
+    $$$$$:   44-block  9
+    $$$$$:   44-block 10
+    $$$$$:   44-block 11
+    $$$$$:   44-block 12
+        1:   44-block 13
+        1:   44-block 14
+        1:   44-block 15
+        1:   44-block 16
+        1:   44-block 17
+        1:   44-block 18
+        1:   44-block 19
+        1:   44-block 20
+        1:   44-block 21
+        1:   44-block 22
+        1:   44-block 23
+        1:   45:    senial s = {5,5,6,-8,123,14,11,-29,-29,-29,-8,9,-15,7,-12,65,24,34,24,5,5,6,-8,123,14,11,-29,-29,-29,-8,9,-15};
+        1:   46:    int prof = 8;
+        1:   47:    int freq = 10;
+        1:   48:    int umbral = 3;
+        -:   49:
+        1:   50:    ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+        1:   50-block  0
+        1:   50-block  1
+        1:   50-block  2
+        1:   50-block  3
+        1:   50-block  4
+        1:   50-block  5
+    $$$$$:   50-block  6
+    $$$$$:   50-block  7
+    $$$$$:   50-block  8
+    $$$$$:   50-block  9
+    $$$$$:   50-block 10
+    $$$$$:   50-block 11
+    $$$$$:   50-block 12
+    $$$$$:   50-block 13
+    $$$$$:   50-block 14
+        1:   50-block 15
+        1:   50-block 16
+    $$$$$:   50-block 17
+        1:   51:}
+    $$$$$:   51-block  0
+    $$$$$:   51-block  1
+    $$$$$:   51-block  2
+    $$$$$:   51-block  3
+        1:   51-block  4
+        1:   51-block  5
+        1:   51-block  6
+    $$$$$:   51-block  7
+    $$$$$:   51-block  8
+        -:   52:
+        7:   53:TEST(seEnojoTEST, senialConTonoIgualAlUmbral){
+        1:   53-block  0
+        1:   53-block  1
+        1:   53-block  2
+        1:   53-block  3
+        1:   53-block  4
+        1:   53-block  5
+        1:   53-block  6
+    $$$$$:   53-block  7
+    $$$$$:   53-block  8
+    $$$$$:   53-block  9
+    $$$$$:   53-block 10
+    $$$$$:   53-block 11
+    $$$$$:   53-block 12
+        1:   53-block 13
+        1:   53-block 14
+        1:   53-block 15
+        1:   53-block 16
+        1:   53-block 17
+        1:   53-block 18
+        1:   53-block 19
+        1:   53-block 20
+        1:   53-block 21
+        1:   53-block 22
+        1:   53-block 23
+        1:   54:    senial s(20,-3);
+        1:   55:    int prof = 8;
+        1:   56:    int freq = 10;
+        1:   57:    int umbral = 3;
+        -:   58:
+        1:   59:    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+        1:   59-block  0
+        1:   59-block  1
+        1:   59-block  2
+        1:   59-block  3
+        1:   59-block  4
+        1:   59-block  5
+    $$$$$:   59-block  6
+    $$$$$:   59-block  7
+    $$$$$:   59-block  8
+    $$$$$:   59-block  9
+    $$$$$:   59-block 10
+    $$$$$:   59-block 11
+    $$$$$:   59-block 12
+    $$$$$:   59-block 13
+    $$$$$:   59-block 14
+        1:   59-block 15
+        1:   59-block 16
+    $$$$$:   59-block 17
+        1:   60:}
+    $$$$$:   60-block  0
+    $$$$$:   60-block  1
+    $$$$$:   60-block  2
+    $$$$$:   60-block  3
+        1:   60-block  4
+        1:   60-block  5
+        1:   60-block  6
+    $$$$$:   60-block  7
+    $$$$$:   60-block  8
+        -:   61:
+        7:   62:TEST(seEnojoTEST, senialConTonoMayorAlUmbral)
+        1:   62-block  0
+        1:   62-block  1
+        1:   62-block  2
+        1:   62-block  3
+        1:   62-block  4
+        1:   62-block  5
+        1:   62-block  6
+    $$$$$:   62-block  7
+    $$$$$:   62-block  8
+    $$$$$:   62-block  9
+    $$$$$:   62-block 10
+    $$$$$:   62-block 11
+    $$$$$:   62-block 12
+        1:   62-block 13
+        1:   62-block 14
+        1:   62-block 15
+        1:   62-block 16
+        1:   62-block 17
+        1:   62-block 18
+        1:   62-block 19
+        1:   62-block 20
+        1:   62-block 21
+        1:   62-block 22
+        1:   62-block 23
+        -:   63:{
+        1:   64:    senial s(20, -4);
+        1:   65:    int prof = 8;
+        1:   66:    int freq = 10;
+        1:   67:    int umbral = 3;
+        -:   68:
+        1:   69:    ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+        1:   69-block  0
+        1:   69-block  1
+        1:   69-block  2
+        1:   69-block  3
+        1:   69-block  4
+        1:   69-block  5
+    $$$$$:   69-block  6
+    $$$$$:   69-block  7
+    $$$$$:   69-block  8
+    $$$$$:   69-block  9
+    $$$$$:   69-block 10
+    $$$$$:   69-block 11
+    $$$$$:   69-block 12
+    $$$$$:   69-block 13
+    $$$$$:   69-block 14
+        1:   69-block 15
+        1:   69-block 16
+    $$$$$:   69-block 17
+        1:   70:}
+    $$$$$:   70-block  0
+    $$$$$:   70-block  1
+    $$$$$:   70-block  2
+    $$$$$:   70-block  3
+        1:   70-block  4
+        1:   70-block  5
+        1:   70-block  6
+    $$$$$:   70-block  7
+    $$$$$:   70-block  8
+        -:   71:
+        7:   72:TEST(seEnojoTEST, senialConTonoMayorAlUmbra2)
+        1:   72-block  0
+        1:   72-block  1
+        1:   72-block  2
+        1:   72-block  3
+        1:   72-block  4
+        1:   72-block  5
+        1:   72-block  6
+    $$$$$:   72-block  7
+    $$$$$:   72-block  8
+    $$$$$:   72-block  9
+    $$$$$:   72-block 10
+    $$$$$:   72-block 11
+    $$$$$:   72-block 12
+        1:   72-block 13
+        1:   72-block 14
+        1:   72-block 15
+        1:   72-block 16
+        1:   72-block 17
+        1:   72-block 18
+        1:   72-block 19
+        1:   72-block 20
+        1:   72-block 21
+        1:   72-block 22
+        1:   72-block 23
+        -:   73:{
+        1:   74:    senial s { 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 };
+        1:   75:    int prof = 8;
+        1:   76:    int freq = 10;
+        1:   77:    int umbral = 3;
+        -:   78:
+        1:   79:    ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+        1:   79-block  0
+        1:   79-block  1
+        1:   79-block  2
+        1:   79-block  3
+        1:   79-block  4
+        1:   79-block  5
+    $$$$$:   79-block  6
+    $$$$$:   79-block  7
+    $$$$$:   79-block  8
+    $$$$$:   79-block  9
+    $$$$$:   79-block 10
+    $$$$$:   79-block 11
+    $$$$$:   79-block 12
+    $$$$$:   79-block 13
+    $$$$$:   79-block 14
+        1:   79-block 15
+        1:   79-block 16
+    $$$$$:   79-block 17
+        1:   80:}
+    $$$$$:   80-block  0
+    $$$$$:   80-block  1
+    $$$$$:   80-block  2
+    $$$$$:   80-block  3
+        1:   80-block  4
+        1:   80-block  5
+        1:   80-block  6
+    $$$$$:   80-block  7
+    $$$$$:   80-block  8
+        -:   81:
+        7:   82:TEST(seEnojoTEST, senialEnojadaConLongitudBorde)
+        1:   82-block  0
+        1:   82-block  1
+        1:   82-block  2
+        1:   82-block  3
+        1:   82-block  4
+        1:   82-block  5
+        1:   82-block  6
+    $$$$$:   82-block  7
+    $$$$$:   82-block  8
+    $$$$$:   82-block  9
+    $$$$$:   82-block 10
+    $$$$$:   82-block 11
+    $$$$$:   82-block 12
+        1:   82-block 13
+        1:   82-block 14
+        1:   82-block 15
+        1:   82-block 16
+        1:   82-block 17
+        1:   82-block 18
+        1:   82-block 19
+        1:   82-block 20
+        1:   82-block 21
+        1:   82-block 22
+        1:   82-block 23
+        -:   83:{
+        1:   84:    senial s(19, -5);
+        1:   85:    int prof = 8;
+        1:   86:    int freq = 10;
+        1:   87:    int umbral = 3;
+        -:   88:
+        1:   89:    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+        1:   89-block  0
+        1:   89-block  1
+        1:   89-block  2
+        1:   89-block  3
+        1:   89-block  4
+        1:   89-block  5
+    $$$$$:   89-block  6
+    $$$$$:   89-block  7
+    $$$$$:   89-block  8
+    $$$$$:   89-block  9
+    $$$$$:   89-block 10
+    $$$$$:   89-block 11
+    $$$$$:   89-block 12
+    $$$$$:   89-block 13
+    $$$$$:   89-block 14
+        1:   89-block 15
+        1:   89-block 16
+    $$$$$:   89-block 17
+        1:   90:}
+    $$$$$:   90-block  0
+    $$$$$:   90-block  1
+    $$$$$:   90-block  2
+    $$$$$:   90-block  3
+        1:   90-block  4
+        1:   90-block  5
+        1:   90-block  6
+    $$$$$:   90-block  7
+    $$$$$:   90-block  8
+        -:   91:
+        7:   92:TEST(seEnojoTEST, senialEnojadaConLongitudMinima){
+        1:   92-block  0
+        1:   92-block  1
+        1:   92-block  2
+        1:   92-block  3
+        1:   92-block  4
+        1:   92-block  5
+        1:   92-block  6
+    $$$$$:   92-block  7
+    $$$$$:   92-block  8
+    $$$$$:   92-block  9
+    $$$$$:   92-block 10
+    $$$$$:   92-block 11
+    $$$$$:   92-block 12
+        1:   92-block 13
+        1:   92-block 14
+        1:   92-block 15
+        1:   92-block 16
+        1:   92-block 17
+        1:   92-block 18
+        1:   92-block 19
+        1:   92-block 20
+        1:   92-block 21
+        1:   92-block 22
+        1:   92-block 23
+        1:   93:    senial s(20,-5) ;
+        1:   94:    int prof = 8;
+        1:   95:    int freq = 10;
+        1:   96:    int umbral = 3;
+        -:   97:
+        1:   98:    ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+        1:   98-block  0
+        1:   98-block  1
+        1:   98-block  2
+        1:   98-block  3
+        1:   98-block  4
+        1:   98-block  5
+    $$$$$:   98-block  6
+    $$$$$:   98-block  7
+    $$$$$:   98-block  8
+    $$$$$:   98-block  9
+    $$$$$:   98-block 10
+    $$$$$:   98-block 11
+    $$$$$:   98-block 12
+    $$$$$:   98-block 13
+    $$$$$:   98-block 14
+        1:   98-block 15
+        1:   98-block 16
+    $$$$$:   98-block 17
+        1:   99:}
+    $$$$$:   99-block  0
+    $$$$$:   99-block  1
+    $$$$$:   99-block  2
+    $$$$$:   99-block  3
+        1:   99-block  4
+        1:   99-block  5
+        1:   99-block  6
+    $$$$$:   99-block  7
+    $$$$$:   99-block  8
+        -:  100:
+        7:  101:TEST(seEnojoTEST, senialEnojadaConSubseqMinimaEnojada){
+        1:  101-block  0
+        1:  101-block  1
+        1:  101-block  2
+        1:  101-block  3
+        1:  101-block  4
+        1:  101-block  5
+        1:  101-block  6
+    $$$$$:  101-block  7
+    $$$$$:  101-block  8
+    $$$$$:  101-block  9
+    $$$$$:  101-block 10
+    $$$$$:  101-block 11
+    $$$$$:  101-block 12
+        1:  101-block 13
+        1:  101-block 14
+        1:  101-block 15
+        1:  101-block 16
+        1:  101-block 17
+        1:  101-block 18
+        1:  101-block 19
+        1:  101-block 20
+        1:  101-block 21
+        1:  101-block 22
+        1:  101-block 23
+        1:  102:    senial s = {0,0,0,0,3,3,3,3,3,3,3,3,4,3,3,3,3,3,3,3,3,3,3,3,0,0,0,0,0,0,1,-2,2,1,0,0,3};
+        1:  103:    int prof = 8;
+        1:  104:    int freq = 10;
+        1:  105:    int umbral = 3;
+        -:  106:
+        1:  107:    ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+        1:  107-block  0
+        1:  107-block  1
+        1:  107-block  2
+        1:  107-block  3
+        1:  107-block  4
+        1:  107-block  5
+    $$$$$:  107-block  6
+    $$$$$:  107-block  7
+    $$$$$:  107-block  8
+    $$$$$:  107-block  9
+    $$$$$:  107-block 10
+    $$$$$:  107-block 11
+    $$$$$:  107-block 12
+    $$$$$:  107-block 13
+    $$$$$:  107-block 14
+        1:  107-block 15
+        1:  107-block 16
+    $$$$$:  107-block 17
+        1:  108:}
+    $$$$$:  108-block  0
+    $$$$$:  108-block  1
+    $$$$$:  108-block  2
+    $$$$$:  108-block  3
+        1:  108-block  4
+        1:  108-block  5
+        1:  108-block  6
+    $$$$$:  108-block  7
+    $$$$$:  108-block  8
+        -:  109:
+        7:  110:TEST(seEnojoTEST, senialNoEnojadaConTodasMuestrasMenoresAlUmbral){
+        1:  110-block  0
+        1:  110-block  1
+        1:  110-block  2
+        1:  110-block  3
+        1:  110-block  4
+        1:  110-block  5
+        1:  110-block  6
+    $$$$$:  110-block  7
+    $$$$$:  110-block  8
+    $$$$$:  110-block  9
+    $$$$$:  110-block 10
+    $$$$$:  110-block 11
+    $$$$$:  110-block 12
+        1:  110-block 13
+        1:  110-block 14
+        1:  110-block 15
+        1:  110-block 16
+        1:  110-block 17
+        1:  110-block 18
+        1:  110-block 19
+        1:  110-block 20
+        1:  110-block 21
+        1:  110-block 22
+        1:  110-block 23
+        1:  111:    senial s(100,-2);
+        1:  112:    int prof = 8;
+        1:  113:    int freq = 10;
+        1:  114:    int umbral = 3;
+        -:  115:
+        1:  116:    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+        1:  116-block  0
+        1:  116-block  1
+        1:  116-block  2
+        1:  116-block  3
+        1:  116-block  4
+        1:  116-block  5
+    $$$$$:  116-block  6
+    $$$$$:  116-block  7
+    $$$$$:  116-block  8
+    $$$$$:  116-block  9
+    $$$$$:  116-block 10
+    $$$$$:  116-block 11
+    $$$$$:  116-block 12
+    $$$$$:  116-block 13
+    $$$$$:  116-block 14
+        1:  116-block 15
+        1:  116-block 16
+    $$$$$:  116-block 17
+        1:  117:}
+    $$$$$:  117-block  0
+    $$$$$:  117-block  1
+    $$$$$:  117-block  2
+    $$$$$:  117-block  3
+        1:  117-block  4
+        1:  117-block  5
+        1:  117-block  6
+    $$$$$:  117-block  7
+    $$$$$:  117-block  8
+        -:  118:
+        7:  119:TEST(seEnojoTEST, senialEnojadaConMayoriaDeMuestrasIgualesACero){
+        1:  119-block  0
+        1:  119-block  1
+        1:  119-block  2
+        1:  119-block  3
+        1:  119-block  4
+        1:  119-block  5
+        1:  119-block  6
+    $$$$$:  119-block  7
+    $$$$$:  119-block  8
+    $$$$$:  119-block  9
+    $$$$$:  119-block 10
+    $$$$$:  119-block 11
+    $$$$$:  119-block 12
+        1:  119-block 13
+        1:  119-block 14
+        1:  119-block 15
+        1:  119-block 16
+        1:  119-block 17
+        1:  119-block 18
+        1:  119-block 19
+        1:  119-block 20
+        1:  119-block 21
+        1:  119-block 22
+        1:  119-block 23
+        1:  120:    senial s = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        1:  121:    int prof = 8;
+        1:  122:    int freq = 10;
+        1:  123:    int umbral = 3;
+        -:  124:
+        1:  125:    ASSERT_TRUE(seEnojo(s, umbral, prof, freq));
+        1:  125-block  0
+        1:  125-block  1
+        1:  125-block  2
+        1:  125-block  3
+        1:  125-block  4
+        1:  125-block  5
+    $$$$$:  125-block  6
+    $$$$$:  125-block  7
+    $$$$$:  125-block  8
+    $$$$$:  125-block  9
+    $$$$$:  125-block 10
+    $$$$$:  125-block 11
+    $$$$$:  125-block 12
+    $$$$$:  125-block 13
+    $$$$$:  125-block 14
+        1:  125-block 15
+        1:  125-block 16
+    $$$$$:  125-block 17
+        1:  126:}
+    $$$$$:  126-block  0
+    $$$$$:  126-block  1
+    $$$$$:  126-block  2
+    $$$$$:  126-block  3
+        1:  126-block  4
+        1:  126-block  5
+        1:  126-block  6
+    $$$$$:  126-block  7
+    $$$$$:  126-block  8
+        -:  127:
+        7:  128:TEST(seEnojoTEST, senialEnojadaConMayoriaDeMuestrasBajas)
+        1:  128-block  0
+        1:  128-block  1
+        1:  128-block  2
+        1:  128-block  3
+        1:  128-block  4
+        1:  128-block  5
+        1:  128-block  6
+    $$$$$:  128-block  7
+    $$$$$:  128-block  8
+    $$$$$:  128-block  9
+    $$$$$:  128-block 10
+    $$$$$:  128-block 11
+    $$$$$:  128-block 12
+        1:  128-block 13
+        1:  128-block 14
+        1:  128-block 15
+        1:  128-block 16
+        1:  128-block 17
+        1:  128-block 18
+        1:  128-block 19
+        1:  128-block 20
+        1:  128-block 21
+        1:  128-block 22
+        1:  128-block 23
+        -:  129:{
+        1:  130:    senial s = { 0, 0, 1, 0, 4, 0, 0, 4, 2, 0, 0, 0, 0, 0, 2, 0, 1, 0, -1, 0, 0, 5, 0, -5, 0, 0, 0, 0, 0 };
+        1:  131:    int prof = 8;
+        1:  132:    int freq = 10;
+        1:  133:    int umbral = 3;
+        -:  134:
+        1:  135:    ASSERT_FALSE(seEnojo(s, umbral, prof, freq));
+        1:  135-block  0
+        1:  135-block  1
+        1:  135-block  2
+        1:  135-block  3
+        1:  135-block  4
+        1:  135-block  5
+    $$$$$:  135-block  6
+    $$$$$:  135-block  7
+    $$$$$:  135-block  8
+    $$$$$:  135-block  9
+    $$$$$:  135-block 10
+    $$$$$:  135-block 11
+    $$$$$:  135-block 12
+    $$$$$:  135-block 13
+    $$$$$:  135-block 14
+        1:  135-block 15
+        1:  135-block 16
+    $$$$$:  135-block 17
+        1:  136:}
+    $$$$$:  136-block  0
+    $$$$$:  136-block  1
+    $$$$$:  136-block  2
+    $$$$$:  136-block  3
+        1:  136-block  4
+        1:  136-block  5
+        1:  136-block  6
+    $$$$$:  136-block  7
+    $$$$$:  136-block  8

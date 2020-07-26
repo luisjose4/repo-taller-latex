@@ -3,6 +3,17 @@
 #include "auxiliares.h"
 #include <fstream>
 
+
+senial subSeq(senial s, int i, int r)
+{
+    senial w;
+    for (int j = i; j < r; ++j) {
+        w.push_back(s[j]);
+    }
+    return w;
+}
+
+
 /************* esSenial *************/
 bool freqValida(int freq)
 {
@@ -61,11 +72,11 @@ bool existeSubseqEnojada(senial s, int umbral, int prof, int freq)
 
     if ( s.size() < cantMinimaDeElementos ) return false;
 
-    bool res = superaUmbral(s, umbral);
+    bool res = false;
 
     for (int i = 0; ( i <= s.size() - cantMinimaDeElementos ) && !res; ++i) {
         for (int j = i + cantMinimaDeElementos; ( j <= s.size() ) && !res; ++j) {
-            senial subseq = senial(s.begin() + i, s.begin() + j);
+            senial subseq = subSeq(s, i, j);
 
             res = superaUmbral(subseq, umbral);
         }
@@ -134,9 +145,11 @@ bool reunionValida(reunion r, int prof, int freq)
 /************ acelerar *************/
 void acelerarSenial(senial &s, int prof, int freq)
 {
-    for (int i = 0; i < s.size(); ++i) {
-        s.erase(s.begin() + i);
+    senial salida;
+    for (int i = 1; i < s.size(); i = i+2) {
+        salida.push_back(s[i]);
     }
+    s = salida;
 }
 
 
@@ -190,31 +203,44 @@ void agregarParHablanteTono(vector<pair<hablante, float>> &listaDeTonos, reunion
     listaDeTonos.push_back(parHablanteTono);
 }
 
+void swapParHablanteTono(vector<pair<hablante, float>> &lista, int i, int j)
+{
+    pair<hablante, float> k = lista[i];
+    lista[i] = lista[j];
+    lista[j] = k;
+}
+
+void swapPorTono(reunion &reunion, int i, int j)
+{
+    pair<senial, hablante> k = reunion[i];
+    reunion[i] = reunion[j];
+    reunion[j] = k;
+}
+
+void ordenarUltimoElementoEnListaOrdenada(vector<pair<hablante, float>> &listaDeHablantesYTonos)
+{
+    for (int j = listaDeHablantesYTonos.size() - 1; j > 0 && listaDeHablantesYTonos[j - 1].second < listaDeHablantesYTonos[j].second; j--) {
+        swapParHablanteTono(listaDeHablantesYTonos, j-1, j);
+    }
+}
+
 void ordenarReunionAcordeAPromedios(reunion &r)
 {
-    vector<pair<hablante, float>> listaDeTonos;
-
-    if (r.size() == 0 || r.size() == 1) {
-        return;
-    }
-
-    for (int i = 0; i < r.size(); i++) {
-        agregarParHablanteTono(listaDeTonos, r, i);
-
-        //insertion sort para ordenar la listaDeTonos por numero de hablante
-        for (int j = i; j > 0 && listaDeTonos[j - 1].first > listaDeTonos[j].first; j--) {
-            iter_swap(listaDeTonos.begin() + j - 1, listaDeTonos.begin() + j);
+    for (int i = 1; i < r.size(); ++i) {
+        pair<senial, hablante> elementoAOrdenar = r[i];
+        for (int j = i-1; j >= 0; --j) {
+            if (tono(elementoAOrdenar.first) > tono(r[j].first)) {
+                swapPorTono(r, j+1, j);
+            }
         }
     }
 
-    
-    for (int i = 1; i < r.size(); i++) {
-        //insertion sort
-        for (int j = i; j > 0 && listaDeTonos[r[j - 1].second].second < listaDeTonos[r[j].second].second; j--) {
-            iter_swap(r.begin() + j - 1, r.begin() + j);
-        }
-    }
-    
+/*    vector<pair<hablante, float>> listaDeHablantesYTonos;
+
+    for (int k = 0; k < r.size(); k++) {
+            agregarParHablanteTono(listaDeHablantesYTonos, r, k);
+        ordenarUltimoElementoEnListaOrdenada(listaDeHablantesYTonos);
+    }*/
 }
 
 
@@ -365,15 +391,6 @@ bool coincidenExtremos(senial s, int i, int r)
     return i < r || i >= s.size() - r;
 }
 
-senial subSec(senial s, int i, int r)
-{
-    senial w;
-    for (int j = i; j < r; ++j) {
-        w.push_back(s[j]);
-    }
-    return w;
-}
-
 void swap(senial &lista, int i, int j)
 {
     int k = lista[i];
@@ -408,7 +425,7 @@ senial filtrada(senial s, int r)
     senial sCero = s;
     for (int i = 0; i < s.size(); ++i) { // n
         if (!coincidenExtremos(sCero, i, r)) { // 1
-            w = ordenarSenialW(subSec(sCero, i - r, i + r + 1)); //
+            w = ordenarSenialW(subSeq(sCero, i - r, i + r + 1)); //
             s[i] = w[r]; // 1
         }
     }

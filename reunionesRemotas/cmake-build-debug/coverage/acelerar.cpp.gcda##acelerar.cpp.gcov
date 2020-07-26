@@ -1,0 +1,703 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/acelerar.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/acelerar.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../src/solucion.h"
+        -:    2:#include "../src/auxiliares.h"
+        -:    3:#include "../lib/gtest.h"
+        -:    4:
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+        1:    8:TEST(acelerarTEST, aceleracionValidaSenialesLongitudImpar){
+        1:    8-block  0
+        1:    8-block  1
+        1:    8-block  2
+        1:    8-block  3
+        1:    8-block  4
+        1:    8-block  5
+        1:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+    $$$$$:    8-block 12
+    $$$$$:    8-block 13
+    $$$$$:    8-block 14
+    $$$$$:    8-block 15
+    $$$$$:    8-block 16
+    $$$$$:    8-block 17
+    $$$$$:    8-block 18
+    $$$$$:    8-block 19
+    $$$$$:    8-block 20
+    $$$$$:    8-block 21
+    $$$$$:    8-block 22
+    $$$$$:    8-block 23
+    #####:    9:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+    #####:   10:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+    $$$$$:   10-block  0
+    #####:   11:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+    $$$$$:   11-block  0
+    $$$$$:   11-block  1
+    $$$$$:   11-block  2
+    $$$$$:   11-block  3
+    $$$$$:   11-block  4
+    $$$$$:   11-block  5
+    $$$$$:   11-block  6
+    $$$$$:   11-block  7
+    $$$$$:   11-block  8
+    $$$$$:   11-block  9
+    $$$$$:   11-block 10
+    #####:   12:    int prof = 8;
+    #####:   13:    int freq = 10;
+        -:   14:
+    #####:   15:    senial hablante1Acelerado = {3, 4, 0, -8, -15, 1, -3, 6, -2, 9};
+    $$$$$:   15-block  0
+    #####:   16:    senial hablante2Acelerado = {3, 4, 0, -8, -15, 1, -3, 6, -2, 9};
+    $$$$$:   16-block  0
+    #####:   17:    reunion reunionAcelerada = {make_pair(hablante1Acelerado, 0), make_pair(hablante2Acelerado, 1)};
+    $$$$$:   17-block  0
+    $$$$$:   17-block  1
+    $$$$$:   17-block  2
+    $$$$$:   17-block  3
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+    $$$$$:   17-block  6
+    $$$$$:   17-block  7
+    $$$$$:   17-block  8
+    $$$$$:   17-block  9
+    $$$$$:   17-block 10
+        -:   18:
+    #####:   19:    acelerar(reunionOriginal, prof, freq);
+    $$$$$:   19-block  0
+        -:   20:
+    #####:   21:    ASSERT_REUNION_EQ(reunionOriginal, reunionAcelerada);
+    $$$$$:   21-block  0
+    $$$$$:   21-block  1
+    $$$$$:   21-block  2
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+    #####:   22:}
+    $$$$$:   22-block  0
+    $$$$$:   22-block  1
+    $$$$$:   22-block  2
+    $$$$$:   22-block  3
+    $$$$$:   22-block  4
+    $$$$$:   22-block  5
+    $$$$$:   22-block  6
+    $$$$$:   22-block  7
+    $$$$$:   22-block  8
+    $$$$$:   22-block  9
+    $$$$$:   22-block 10
+    $$$$$:   22-block 11
+    $$$$$:   22-block 12
+        -:   23:
+        1:   24:TEST(acelerarTEST, aceleracionValidaSenialesLongitudPar){
+        1:   24-block  0
+        1:   24-block  1
+        1:   24-block  2
+        1:   24-block  3
+        1:   24-block  4
+        1:   24-block  5
+        1:   24-block  6
+    $$$$$:   24-block  7
+    $$$$$:   24-block  8
+    $$$$$:   24-block  9
+    $$$$$:   24-block 10
+    $$$$$:   24-block 11
+    $$$$$:   24-block 12
+    $$$$$:   24-block 13
+    $$$$$:   24-block 14
+    $$$$$:   24-block 15
+    $$$$$:   24-block 16
+    $$$$$:   24-block 17
+    $$$$$:   24-block 18
+    $$$$$:   24-block 19
+    $$$$$:   24-block 20
+    $$$$$:   24-block 21
+    $$$$$:   24-block 22
+    $$$$$:   24-block 23
+    #####:   25:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 0};
+    #####:   26:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 0};
+    $$$$$:   26-block  0
+    #####:   27:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+    $$$$$:   27-block  0
+    $$$$$:   27-block  1
+    $$$$$:   27-block  2
+    $$$$$:   27-block  3
+    $$$$$:   27-block  4
+    $$$$$:   27-block  5
+    $$$$$:   27-block  6
+    $$$$$:   27-block  7
+    $$$$$:   27-block  8
+    $$$$$:   27-block  9
+    $$$$$:   27-block 10
+    #####:   28:    int prof = 8;
+    #####:   29:    int freq = 10;
+        -:   30:
+    #####:   31:    senial hablante1Acelerado = {3, 4, 0, -8, -15, 1, -3, 6, -2, 9, 0};
+    $$$$$:   31-block  0
+    #####:   32:    senial hablante2Acelerado = {3, 4, 0, -8, -15, 1, -3, 6, -2, 9, 0};
+    $$$$$:   32-block  0
+    #####:   33:    reunion reunionAcelerada = {make_pair(hablante1Acelerado, 0), make_pair(hablante2Acelerado, 1)};
+    $$$$$:   33-block  0
+    $$$$$:   33-block  1
+    $$$$$:   33-block  2
+    $$$$$:   33-block  3
+    $$$$$:   33-block  4
+    $$$$$:   33-block  5
+    $$$$$:   33-block  6
+    $$$$$:   33-block  7
+    $$$$$:   33-block  8
+    $$$$$:   33-block  9
+    $$$$$:   33-block 10
+        -:   34:
+    #####:   35:    acelerar(reunionOriginal, prof, freq);
+    $$$$$:   35-block  0
+        -:   36:
+    #####:   37:    ASSERT_REUNION_EQ(reunionOriginal, reunionAcelerada);
+    $$$$$:   37-block  0
+    $$$$$:   37-block  1
+    $$$$$:   37-block  2
+    $$$$$:   37-block  3
+    $$$$$:   37-block  4
+    #####:   38:}
+    $$$$$:   38-block  0
+    $$$$$:   38-block  1
+    $$$$$:   38-block  2
+    $$$$$:   38-block  3
+    $$$$$:   38-block  4
+    $$$$$:   38-block  5
+    $$$$$:   38-block  6
+    $$$$$:   38-block  7
+    $$$$$:   38-block  8
+    $$$$$:   38-block  9
+    $$$$$:   38-block 10
+    $$$$$:   38-block 11
+    $$$$$:   38-block 12
+        -:   39:
+        1:   40:TEST(acelerarTEST, aceleracionValida1)
+        1:   40-block  0
+        1:   40-block  1
+        1:   40-block  2
+        1:   40-block  3
+        1:   40-block  4
+        1:   40-block  5
+        1:   40-block  6
+    $$$$$:   40-block  7
+    $$$$$:   40-block  8
+    $$$$$:   40-block  9
+    $$$$$:   40-block 10
+    $$$$$:   40-block 11
+    $$$$$:   40-block 12
+    $$$$$:   40-block 13
+    $$$$$:   40-block 14
+    $$$$$:   40-block 15
+    $$$$$:   40-block 16
+    $$$$$:   40-block 17
+    $$$$$:   40-block 18
+    $$$$$:   40-block 19
+    $$$$$:   40-block 20
+    $$$$$:   40-block 21
+    $$$$$:   40-block 22
+    $$$$$:   40-block 23
+        -:   41:{
+    #####:   42:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    #####:   43:    senial hablante2 = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
+    $$$$$:   43-block  0
+    #####:   44:    senial hablante3 = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+    $$$$$:   44-block  0
+    #####:   45:    senial hablante4 = { -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1 };
+    $$$$$:   45-block  0
+    #####:   46:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2), make_pair(hablante4, 3) };
+    $$$$$:   46-block  0
+    $$$$$:   46-block  1
+    $$$$$:   46-block  2
+    $$$$$:   46-block  3
+    $$$$$:   46-block  4
+    $$$$$:   46-block  5
+    $$$$$:   46-block  6
+    $$$$$:   46-block  7
+    $$$$$:   46-block  8
+    $$$$$:   46-block  9
+    $$$$$:   46-block 10
+    $$$$$:   46-block 11
+    $$$$$:   46-block 12
+    #####:   47:    int prof = 8;
+    #####:   48:    int freq = 10;
+        -:   49:
+    #####:   50:    senial hablante1Acelerado = { 2, 4, 6, 8, 10, 2, 4, 6, 8, 10 };
+    $$$$$:   50-block  0
+    #####:   51:    senial hablante2Acelerado = { 3, 5, 7, 9, 11, 3, 5, 7, 9, 11 };
+    $$$$$:   51-block  0
+    #####:   52:    senial hablante3Acelerado = { 9, 7, 5, 3, 1, 9, 7, 5, 3, 1 };
+    $$$$$:   52-block  0
+    #####:   53:    senial hablante4Acelerado = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   53-block  0
+    #####:   54:    reunion reunionAcelerada = { make_pair(hablante1Acelerado, 0), make_pair(hablante2Acelerado, 1), make_pair(hablante3Acelerado, 2), make_pair(
+    $$$$$:   54-block  0
+    $$$$$:   54-block  1
+    $$$$$:   54-block  2
+    $$$$$:   54-block  3
+    $$$$$:   54-block  4
+    $$$$$:   54-block  5
+    $$$$$:   54-block  6
+    $$$$$:   54-block  7
+    $$$$$:   54-block  8
+    $$$$$:   54-block  9
+    $$$$$:   54-block 10
+    $$$$$:   54-block 11
+    $$$$$:   54-block 12
+    $$$$$:   54-block 13
+    #####:   55:            hablante4Acelerado, 3) };
+        -:   56:
+    #####:   57:    acelerar(reunionOriginal, prof, freq);
+    $$$$$:   57-block  0
+        -:   58:
+    #####:   59:    ASSERT_REUNION_EQ(reunionOriginal, reunionAcelerada);
+    $$$$$:   59-block  0
+    $$$$$:   59-block  1
+    $$$$$:   59-block  2
+    $$$$$:   59-block  3
+    $$$$$:   59-block  4
+    #####:   60:}
+    $$$$$:   60-block  0
+    $$$$$:   60-block  1
+    $$$$$:   60-block  2
+    $$$$$:   60-block  3
+    $$$$$:   60-block  4
+    $$$$$:   60-block  5
+    $$$$$:   60-block  6
+    $$$$$:   60-block  7
+    $$$$$:   60-block  8
+    $$$$$:   60-block  9
+    $$$$$:   60-block 10
+    $$$$$:   60-block 11
+    $$$$$:   60-block 12
+    $$$$$:   60-block 13
+    $$$$$:   60-block 14
+    $$$$$:   60-block 15
+    $$$$$:   60-block 16
+    $$$$$:   60-block 17
+    $$$$$:   60-block 18
+    $$$$$:   60-block 19
+    $$$$$:   60-block 20
+        -:   61:
+        1:   62:TEST(acelerarTEST, aceleracionValida2)
+        1:   62-block  0
+        1:   62-block  1
+        1:   62-block  2
+        1:   62-block  3
+        1:   62-block  4
+        1:   62-block  5
+        1:   62-block  6
+    $$$$$:   62-block  7
+    $$$$$:   62-block  8
+    $$$$$:   62-block  9
+    $$$$$:   62-block 10
+    $$$$$:   62-block 11
+    $$$$$:   62-block 12
+    $$$$$:   62-block 13
+    $$$$$:   62-block 14
+    $$$$$:   62-block 15
+    $$$$$:   62-block 16
+    $$$$$:   62-block 17
+    $$$$$:   62-block 18
+    $$$$$:   62-block 19
+    $$$$$:   62-block 20
+    $$$$$:   62-block 21
+    $$$$$:   62-block 22
+    $$$$$:   62-block 23
+        -:   63:{
+    #####:   64:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+    #####:   65:    reunion reunionOriginal = { make_pair(hablante1, 0) };
+    $$$$$:   65-block  0
+    $$$$$:   65-block  1
+    $$$$$:   65-block  2
+    $$$$$:   65-block  3
+    $$$$$:   65-block  4
+    $$$$$:   65-block  5
+    $$$$$:   65-block  6
+    $$$$$:   65-block  7
+    $$$$$:   65-block  8
+    $$$$$:   65-block  9
+    #####:   66:    int prof = 8;
+    #####:   67:    int freq = 10;
+        -:   68:
+    #####:   69:    senial hablante1Acelerado = { 2, 4, 6, 8, 10, 9, 7, 5, 3, 1 };
+    $$$$$:   69-block  0
+    #####:   70:    reunion reunionAcelerada = { make_pair(hablante1Acelerado, 0) };
+    $$$$$:   70-block  0
+    $$$$$:   70-block  1
+    $$$$$:   70-block  2
+    $$$$$:   70-block  3
+    $$$$$:   70-block  4
+    $$$$$:   70-block  5
+    $$$$$:   70-block  6
+    $$$$$:   70-block  7
+    $$$$$:   70-block  8
+    $$$$$:   70-block  9
+        -:   71:
+    #####:   72:    acelerar(reunionOriginal, prof, freq);
+    $$$$$:   72-block  0
+        -:   73:
+    #####:   74:    ASSERT_REUNION_EQ(reunionOriginal, reunionAcelerada);
+    $$$$$:   74-block  0
+    $$$$$:   74-block  1
+    $$$$$:   74-block  2
+    $$$$$:   74-block  3
+    $$$$$:   74-block  4
+    #####:   75:}
+    $$$$$:   75-block  0
+    $$$$$:   75-block  1
+    $$$$$:   75-block  2
+    $$$$$:   75-block  3
+    $$$$$:   75-block  4
+    $$$$$:   75-block  5
+    $$$$$:   75-block  6
+    $$$$$:   75-block  7
+    $$$$$:   75-block  8
+        -:   76:
+        1:   77:TEST(acelerarTEST, aceleracionValida3)
+        1:   77-block  0
+        1:   77-block  1
+        1:   77-block  2
+        1:   77-block  3
+        1:   77-block  4
+        1:   77-block  5
+        1:   77-block  6
+    $$$$$:   77-block  7
+    $$$$$:   77-block  8
+    $$$$$:   77-block  9
+    $$$$$:   77-block 10
+    $$$$$:   77-block 11
+    $$$$$:   77-block 12
+    $$$$$:   77-block 13
+    $$$$$:   77-block 14
+    $$$$$:   77-block 15
+    $$$$$:   77-block 16
+    $$$$$:   77-block 17
+    $$$$$:   77-block 18
+    $$$$$:   77-block 19
+    $$$$$:   77-block 20
+    $$$$$:   77-block 21
+    $$$$$:   77-block 22
+    $$$$$:   77-block 23
+        -:   78:{
+    #####:   79:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 30 };
+    #####:   80:    reunion reunionOriginal = { make_pair(hablante1, 0) };
+    $$$$$:   80-block  0
+    $$$$$:   80-block  1
+    $$$$$:   80-block  2
+    $$$$$:   80-block  3
+    $$$$$:   80-block  4
+    $$$$$:   80-block  5
+    $$$$$:   80-block  6
+    $$$$$:   80-block  7
+    $$$$$:   80-block  8
+    $$$$$:   80-block  9
+    #####:   81:    int prof = 8;
+    #####:   82:    int freq = 10;
+        -:   83:
+    #####:   84:    senial hablante1Acelerado = { 2, 4, 6, 8, 10, 9, 7, 5, 3, 1 };
+    $$$$$:   84-block  0
+    #####:   85:    reunion reunionAcelerada = { make_pair(hablante1Acelerado, 0) };
+    $$$$$:   85-block  0
+    $$$$$:   85-block  1
+    $$$$$:   85-block  2
+    $$$$$:   85-block  3
+    $$$$$:   85-block  4
+    $$$$$:   85-block  5
+    $$$$$:   85-block  6
+    $$$$$:   85-block  7
+    $$$$$:   85-block  8
+    $$$$$:   85-block  9
+        -:   86:
+    #####:   87:    acelerar(reunionOriginal, prof, freq);
+    $$$$$:   87-block  0
+        -:   88:
+    #####:   89:    ASSERT_REUNION_EQ(reunionOriginal, reunionAcelerada);
+    $$$$$:   89-block  0
+    $$$$$:   89-block  1
+    $$$$$:   89-block  2
+    $$$$$:   89-block  3
+    $$$$$:   89-block  4
+    #####:   90:}
+    $$$$$:   90-block  0
+    $$$$$:   90-block  1
+    $$$$$:   90-block  2
+    $$$$$:   90-block  3
+    $$$$$:   90-block  4
+    $$$$$:   90-block  5
+    $$$$$:   90-block  6
+    $$$$$:   90-block  7
+    $$$$$:   90-block  8
+        -:   91:
+        1:   92:TEST(acelerarTEST, aceleracionValida4)
+        1:   92-block  0
+        1:   92-block  1
+        1:   92-block  2
+        1:   92-block  3
+        1:   92-block  4
+        1:   92-block  5
+        1:   92-block  6
+    $$$$$:   92-block  7
+    $$$$$:   92-block  8
+    $$$$$:   92-block  9
+    $$$$$:   92-block 10
+    $$$$$:   92-block 11
+    $$$$$:   92-block 12
+    $$$$$:   92-block 13
+    $$$$$:   92-block 14
+    $$$$$:   92-block 15
+    $$$$$:   92-block 16
+    $$$$$:   92-block 17
+    $$$$$:   92-block 18
+    $$$$$:   92-block 19
+    $$$$$:   92-block 20
+    $$$$$:   92-block 21
+    $$$$$:   92-block 22
+    $$$$$:   92-block 23
+        -:   93:{
+    #####:   94:    senial hablante1 = { 1, -2, 3, 4, 5, -6, 7, 8, 9, -10, 10, 9, 8, -7, 6, 5, 4, -3, 2, 1, 30 };
+    #####:   95:    reunion reunionOriginal = { make_pair(hablante1, 0) };
+    $$$$$:   95-block  0
+    $$$$$:   95-block  1
+    $$$$$:   95-block  2
+    $$$$$:   95-block  3
+    $$$$$:   95-block  4
+    $$$$$:   95-block  5
+    $$$$$:   95-block  6
+    $$$$$:   95-block  7
+    $$$$$:   95-block  8
+    $$$$$:   95-block  9
+    #####:   96:    int prof = 8;
+    #####:   97:    int freq = 10;
+        -:   98:
+    #####:   99:    senial hablante1Acelerado = { -2, 4, -6, 8, -10, 9, -7, 5, -3, 1 };
+    $$$$$:   99-block  0
+    #####:  100:    reunion reunionAcelerada = { make_pair(hablante1Acelerado, 0) };
+    $$$$$:  100-block  0
+    $$$$$:  100-block  1
+    $$$$$:  100-block  2
+    $$$$$:  100-block  3
+    $$$$$:  100-block  4
+    $$$$$:  100-block  5
+    $$$$$:  100-block  6
+    $$$$$:  100-block  7
+    $$$$$:  100-block  8
+    $$$$$:  100-block  9
+        -:  101:
+    #####:  102:    acelerar(reunionOriginal, prof, freq);
+    $$$$$:  102-block  0
+        -:  103:
+    #####:  104:    ASSERT_REUNION_EQ(reunionOriginal, reunionAcelerada);
+    $$$$$:  104-block  0
+    $$$$$:  104-block  1
+    $$$$$:  104-block  2
+    $$$$$:  104-block  3
+    $$$$$:  104-block  4
+    #####:  105:}
+    $$$$$:  105-block  0
+    $$$$$:  105-block  1
+    $$$$$:  105-block  2
+    $$$$$:  105-block  3
+    $$$$$:  105-block  4
+    $$$$$:  105-block  5
+    $$$$$:  105-block  6
+    $$$$$:  105-block  7
+    $$$$$:  105-block  8
+        -:  106:
+        1:  107:TEST(acelerarTEST, aceleracionValida5)
+        1:  107-block  0
+        1:  107-block  1
+        1:  107-block  2
+        1:  107-block  3
+        1:  107-block  4
+        1:  107-block  5
+        1:  107-block  6
+    $$$$$:  107-block  7
+    $$$$$:  107-block  8
+    $$$$$:  107-block  9
+    $$$$$:  107-block 10
+    $$$$$:  107-block 11
+    $$$$$:  107-block 12
+    $$$$$:  107-block 13
+    $$$$$:  107-block 14
+    $$$$$:  107-block 15
+    $$$$$:  107-block 16
+    $$$$$:  107-block 17
+    $$$$$:  107-block 18
+    $$$$$:  107-block 19
+    $$$$$:  107-block 20
+    $$$$$:  107-block 21
+    $$$$$:  107-block 22
+    $$$$$:  107-block 23
+        -:  108:{
+    #####:  109:    senial hablante1 = { 1, -2, 3, 4, 5, -6, 7, 8, 9, -10, 10, 9, 8, -7, 6, 5, 4, -3, 2, 1, 30 };
+    #####:  110:    senial hablante2 = { 1, 10, 3, 4, 5, -6, 7, 8, 9, -10, 10, 9, 8, -7, 6, 5, 4, -3, 2, 1, 30 };
+    $$$$$:  110-block  0
+    #####:  111:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante1, 1) };
+    $$$$$:  111-block  0
+    $$$$$:  111-block  1
+    $$$$$:  111-block  2
+    $$$$$:  111-block  3
+    $$$$$:  111-block  4
+    $$$$$:  111-block  5
+    $$$$$:  111-block  6
+    $$$$$:  111-block  7
+    $$$$$:  111-block  8
+    $$$$$:  111-block  9
+    $$$$$:  111-block 10
+    #####:  112:    int prof = 8;
+    #####:  113:    int freq = 10;
+        -:  114:
+    #####:  115:    senial hablante1Acelerado = { -2, 4, -6, 8, -10, 9, -7, 5, -3, 1 };
+    $$$$$:  115-block  0
+    #####:  116:    senial hablante2Acelerado = { 10, 4, -6, 8, -10, 9, -7, 5, -3, 1 };
+    $$$$$:  116-block  0
+    #####:  117:    reunion reunionAcelerada = { make_pair(hablante1Acelerado, 0), make_pair(hablante1Acelerado, 1) };
+    $$$$$:  117-block  0
+    $$$$$:  117-block  1
+    $$$$$:  117-block  2
+    $$$$$:  117-block  3
+    $$$$$:  117-block  4
+    $$$$$:  117-block  5
+    $$$$$:  117-block  6
+    $$$$$:  117-block  7
+    $$$$$:  117-block  8
+    $$$$$:  117-block  9
+    $$$$$:  117-block 10
+        -:  118:
+    #####:  119:    acelerar(reunionOriginal, prof, freq);
+    $$$$$:  119-block  0
+        -:  120:
+    #####:  121:    ASSERT_REUNION_EQ(reunionOriginal, reunionAcelerada);
+    $$$$$:  121-block  0
+    $$$$$:  121-block  1
+    $$$$$:  121-block  2
+    $$$$$:  121-block  3
+    $$$$$:  121-block  4
+    #####:  122:}
+    $$$$$:  122-block  0
+    $$$$$:  122-block  1
+    $$$$$:  122-block  2
+    $$$$$:  122-block  3
+    $$$$$:  122-block  4
+    $$$$$:  122-block  5
+    $$$$$:  122-block  6
+    $$$$$:  122-block  7
+    $$$$$:  122-block  8
+    $$$$$:  122-block  9
+    $$$$$:  122-block 10
+    $$$$$:  122-block 11
+    $$$$$:  122-block 12
+        -:  123:
+        1:  124:TEST(acelerarTEST, aceleracionValida6)
+        1:  124-block  0
+        1:  124-block  1
+        1:  124-block  2
+        1:  124-block  3
+        1:  124-block  4
+        1:  124-block  5
+        1:  124-block  6
+    $$$$$:  124-block  7
+    $$$$$:  124-block  8
+    $$$$$:  124-block  9
+    $$$$$:  124-block 10
+    $$$$$:  124-block 11
+    $$$$$:  124-block 12
+    $$$$$:  124-block 13
+    $$$$$:  124-block 14
+    $$$$$:  124-block 15
+    $$$$$:  124-block 16
+    $$$$$:  124-block 17
+    $$$$$:  124-block 18
+    $$$$$:  124-block 19
+    $$$$$:  124-block 20
+    $$$$$:  124-block 21
+    $$$$$:  124-block 22
+    $$$$$:  124-block 23
+        -:  125:{
+    #####:  126:    senial hablante1 = { 1, -2, 3, 4, 5, -6, 7, 8, 9, -10, 10, 9, 8, -7, 6, 5, 4, -3, 2, 1, 30 };
+    #####:  127:    senial hablante2 = { 1, 10, 3, 4, 5, -6, 7, 8, 9, -10, 10, 9, 8, -7, 6, 5, 4, -3, 2, 1, 30 };
+    $$$$$:  127-block  0
+    #####:  128:    senial hablante3 = { 1, 15, 3, 4, 5, -6, 7, 8, 9, -10, 10, 9, 8, -7, 6, 5, 4, -3, 2, 1, 30 };
+    $$$$$:  128-block  0
+    #####:  129:    senial hablante4 = { 1, 40, 3, 4, 5, -6, 7, 8, 9, -10, 10, 9, 8, -7, 6, 5, 4, -3, 2, 1, 30 };
+    $$$$$:  129-block  0
+    #####:  130:    reunion reunionOriginal = { make_pair(hablante1, 2), make_pair(hablante2, 3), make_pair(hablante3, 0), make_pair(hablante4, 1) };
+    $$$$$:  130-block  0
+    $$$$$:  130-block  1
+    $$$$$:  130-block  2
+    $$$$$:  130-block  3
+    $$$$$:  130-block  4
+    $$$$$:  130-block  5
+    $$$$$:  130-block  6
+    $$$$$:  130-block  7
+    $$$$$:  130-block  8
+    $$$$$:  130-block  9
+    $$$$$:  130-block 10
+    $$$$$:  130-block 11
+    $$$$$:  130-block 12
+    #####:  131:    int prof = 8;
+    #####:  132:    int freq = 10;
+        -:  133:
+    #####:  134:    senial hablante1Acelerado = { -2, 4, -6, 8, -10, 9, -7, 5, -3, 1 };
+    $$$$$:  134-block  0
+    #####:  135:    senial hablante2Acelerado = { 10, 4, -6, 8, -10, 9, -7, 5, -3, 1 };
+    $$$$$:  135-block  0
+    #####:  136:    senial hablante3Acelerado = { 15, 4, -6, 8, -10, 9, -7, 5, -3, 1 };
+    $$$$$:  136-block  0
+    #####:  137:    senial hablante4Acelerado = { 40, 4, -6, 8, -10, 9, -7, 5, -3, 1 };
+    $$$$$:  137-block  0
+    #####:  138:    reunion reunionAcelerada = { make_pair(hablante1Acelerado, 2), make_pair(hablante2Acelerado, 3), make_pair(hablante3Acelerado, 0), make_pair(
+    $$$$$:  138-block  0
+    $$$$$:  138-block  1
+    $$$$$:  138-block  2
+    $$$$$:  138-block  3
+    $$$$$:  138-block  4
+    $$$$$:  138-block  5
+    $$$$$:  138-block  6
+    $$$$$:  138-block  7
+    $$$$$:  138-block  8
+    $$$$$:  138-block  9
+    $$$$$:  138-block 10
+    $$$$$:  138-block 11
+    $$$$$:  138-block 12
+    $$$$$:  138-block 13
+    #####:  139:            hablante4Acelerado, 1) };
+        -:  140:
+    #####:  141:    acelerar(reunionOriginal, prof, freq);
+    $$$$$:  141-block  0
+        -:  142:
+    #####:  143:    ASSERT_REUNION_EQ(reunionOriginal, reunionAcelerada);
+    $$$$$:  143-block  0
+    $$$$$:  143-block  1
+    $$$$$:  143-block  2
+    $$$$$:  143-block  3
+    $$$$$:  143-block  4
+    #####:  144:}
+    $$$$$:  144-block  0
+    $$$$$:  144-block  1
+    $$$$$:  144-block  2
+    $$$$$:  144-block  3
+    $$$$$:  144-block  4
+    $$$$$:  144-block  5
+    $$$$$:  144-block  6
+    $$$$$:  144-block  7
+    $$$$$:  144-block  8
+    $$$$$:  144-block  9
+    $$$$$:  144-block 10
+    $$$$$:  144-block 11
+    $$$$$:  144-block 12
+    $$$$$:  144-block 13
+    $$$$$:  144-block 14
+    $$$$$:  144-block 15
+    $$$$$:  144-block 16
+    $$$$$:  144-block 17
+    $$$$$:  144-block 18
+    $$$$$:  144-block 19
+    $$$$$:  144-block 20

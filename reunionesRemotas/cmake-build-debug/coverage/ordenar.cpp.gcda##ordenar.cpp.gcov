@@ -1,0 +1,768 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/ordenar.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/ordenar.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../src/solucion.h"
+        -:    2:#include "../src/auxiliares.h"
+        -:    3:#include "../lib/gtest.h"
+        -:    4:
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+        1:    8:TEST(ordenarTEST, ordenarValido)
+        1:    8-block  0
+        1:    8-block  1
+        1:    8-block  2
+        1:    8-block  3
+        1:    8-block  4
+        1:    8-block  5
+        1:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+    $$$$$:    8-block 12
+    $$$$$:    8-block 13
+    $$$$$:    8-block 14
+    $$$$$:    8-block 15
+    $$$$$:    8-block 16
+    $$$$$:    8-block 17
+    $$$$$:    8-block 18
+    $$$$$:    8-block 19
+    $$$$$:    8-block 20
+    $$$$$:    8-block 21
+    $$$$$:    8-block 22
+    $$$$$:    8-block 23
+        -:    9:{
+    #####:   10:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+    #####:   11:    senial hablante2 = {2, 6, 3, 8, 6, 10, 2, 12, 10, -15};
+    $$$$$:   11-block  0
+    #####:   12:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+    $$$$$:   12-block  0
+    $$$$$:   12-block  1
+    $$$$$:   12-block  2
+    $$$$$:   12-block  3
+    $$$$$:   12-block  4
+    $$$$$:   12-block  5
+    $$$$$:   12-block  6
+    $$$$$:   12-block  7
+    $$$$$:   12-block  8
+    $$$$$:   12-block  9
+    $$$$$:   12-block 10
+    #####:   13:    int prof = 8;
+    #####:   14:    int freq = 10;
+        -:   15:
+    #####:   16:    reunion reunionOrdenada = {make_pair(hablante2, 1), make_pair(hablante1, 0)};
+    $$$$$:   16-block  0
+    $$$$$:   16-block  1
+    $$$$$:   16-block  2
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+    $$$$$:   16-block  6
+    $$$$$:   16-block  7
+    $$$$$:   16-block  8
+    $$$$$:   16-block  9
+    $$$$$:   16-block 10
+        -:   17:
+    #####:   18:    ordenar(reunionOriginal, prof, freq);
+    $$$$$:   18-block  0
+        -:   19:
+    #####:   20:    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+    $$$$$:   20-block  0
+    $$$$$:   20-block  1
+    $$$$$:   20-block  2
+    $$$$$:   20-block  3
+    $$$$$:   20-block  4
+    #####:   21:}
+    $$$$$:   21-block  0
+    $$$$$:   21-block  1
+    $$$$$:   21-block  2
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+    $$$$$:   21-block  6
+    $$$$$:   21-block  7
+    $$$$$:   21-block  8
+        -:   22:
+        1:   23:TEST(ordenarTEST, ordenarValido2)
+        1:   23-block  0
+        1:   23-block  1
+        1:   23-block  2
+        1:   23-block  3
+        1:   23-block  4
+        1:   23-block  5
+        1:   23-block  6
+    $$$$$:   23-block  7
+    $$$$$:   23-block  8
+    $$$$$:   23-block  9
+    $$$$$:   23-block 10
+    $$$$$:   23-block 11
+    $$$$$:   23-block 12
+    $$$$$:   23-block 13
+    $$$$$:   23-block 14
+    $$$$$:   23-block 15
+    $$$$$:   23-block 16
+    $$$$$:   23-block 17
+    $$$$$:   23-block 18
+    $$$$$:   23-block 19
+    $$$$$:   23-block 20
+    $$$$$:   23-block 21
+    $$$$$:   23-block 22
+    $$$$$:   23-block 23
+        -:   24:{
+    #####:   25:    senial hablante = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    #####:   26:    reunion reunionOriginal = { make_pair(hablante, 0) };
+    $$$$$:   26-block  0
+    $$$$$:   26-block  1
+    $$$$$:   26-block  2
+    $$$$$:   26-block  3
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+    $$$$$:   26-block  6
+    $$$$$:   26-block  7
+    $$$$$:   26-block  8
+    $$$$$:   26-block  9
+    #####:   27:    int prof = 32;
+    #####:   28:    int freq = 10;
+        -:   29:
+    #####:   30:    reunion reunionOrdenada = { make_pair(hablante, 0) };
+    $$$$$:   30-block  0
+    $$$$$:   30-block  1
+    $$$$$:   30-block  2
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+    $$$$$:   30-block  5
+    $$$$$:   30-block  6
+    $$$$$:   30-block  7
+    $$$$$:   30-block  8
+    $$$$$:   30-block  9
+        -:   31:
+    #####:   32:    ordenar(reunionOriginal, prof, freq);
+    $$$$$:   32-block  0
+        -:   33:
+    #####:   34:    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+    $$$$$:   34-block  0
+    $$$$$:   34-block  1
+    $$$$$:   34-block  2
+    $$$$$:   34-block  3
+    $$$$$:   34-block  4
+    #####:   35:}
+    $$$$$:   35-block  0
+    $$$$$:   35-block  1
+    $$$$$:   35-block  2
+    $$$$$:   35-block  3
+    $$$$$:   35-block  4
+    $$$$$:   35-block  5
+    $$$$$:   35-block  6
+        -:   36:
+        1:   37:TEST(ordenarTEST, ordenarValido3)
+        1:   37-block  0
+        1:   37-block  1
+        1:   37-block  2
+        1:   37-block  3
+        1:   37-block  4
+        1:   37-block  5
+        1:   37-block  6
+    $$$$$:   37-block  7
+    $$$$$:   37-block  8
+    $$$$$:   37-block  9
+    $$$$$:   37-block 10
+    $$$$$:   37-block 11
+    $$$$$:   37-block 12
+    $$$$$:   37-block 13
+    $$$$$:   37-block 14
+    $$$$$:   37-block 15
+    $$$$$:   37-block 16
+    $$$$$:   37-block 17
+    $$$$$:   37-block 18
+    $$$$$:   37-block 19
+    $$$$$:   37-block 20
+    $$$$$:   37-block 21
+    $$$$$:   37-block 22
+    $$$$$:   37-block 23
+        -:   38:{
+    #####:   39:    senial hablante = { };
+    #####:   40:    reunion reunionOriginal = { make_pair(hablante, 0) };
+    $$$$$:   40-block  0
+    $$$$$:   40-block  1
+    $$$$$:   40-block  2
+    $$$$$:   40-block  3
+    $$$$$:   40-block  4
+    $$$$$:   40-block  5
+    $$$$$:   40-block  6
+    $$$$$:   40-block  7
+    $$$$$:   40-block  8
+    $$$$$:   40-block  9
+    #####:   41:    int prof = 32;
+    #####:   42:    int freq = 10;
+        -:   43:
+    #####:   44:    reunion reunionOrdenada = { make_pair(hablante, 0) };
+    $$$$$:   44-block  0
+    $$$$$:   44-block  1
+    $$$$$:   44-block  2
+    $$$$$:   44-block  3
+    $$$$$:   44-block  4
+    $$$$$:   44-block  5
+    $$$$$:   44-block  6
+    $$$$$:   44-block  7
+    $$$$$:   44-block  8
+    $$$$$:   44-block  9
+        -:   45:
+    #####:   46:    ordenar(reunionOriginal, prof, freq);
+    $$$$$:   46-block  0
+        -:   47:
+    #####:   48:    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+    $$$$$:   48-block  0
+    $$$$$:   48-block  1
+    $$$$$:   48-block  2
+    $$$$$:   48-block  3
+    $$$$$:   48-block  4
+    #####:   49:}
+    $$$$$:   49-block  0
+    $$$$$:   49-block  1
+    $$$$$:   49-block  2
+    $$$$$:   49-block  3
+    $$$$$:   49-block  4
+    $$$$$:   49-block  5
+    $$$$$:   49-block  6
+        -:   50:
+        1:   51:TEST(ordenarTEST, ordenarValido4)
+        1:   51-block  0
+        1:   51-block  1
+        1:   51-block  2
+        1:   51-block  3
+        1:   51-block  4
+        1:   51-block  5
+        1:   51-block  6
+    $$$$$:   51-block  7
+    $$$$$:   51-block  8
+    $$$$$:   51-block  9
+    $$$$$:   51-block 10
+    $$$$$:   51-block 11
+    $$$$$:   51-block 12
+    $$$$$:   51-block 13
+    $$$$$:   51-block 14
+    $$$$$:   51-block 15
+    $$$$$:   51-block 16
+    $$$$$:   51-block 17
+    $$$$$:   51-block 18
+    $$$$$:   51-block 19
+    $$$$$:   51-block 20
+    $$$$$:   51-block 21
+    $$$$$:   51-block 22
+    $$$$$:   51-block 23
+        -:   52:{
+    #####:   53:    senial hablante1 = { 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    #####:   54:    senial hablante2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    $$$$$:   54-block  0
+    #####:   55:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
+    $$$$$:   55-block  0
+    $$$$$:   55-block  1
+    $$$$$:   55-block  2
+    $$$$$:   55-block  3
+    $$$$$:   55-block  4
+    $$$$$:   55-block  5
+    $$$$$:   55-block  6
+    $$$$$:   55-block  7
+    $$$$$:   55-block  8
+    $$$$$:   55-block  9
+    $$$$$:   55-block 10
+    #####:   56:    int prof = 32;
+    #####:   57:    int freq = 10;
+        -:   58:
+    #####:   59:    reunion reunionOrdenada = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
+    $$$$$:   59-block  0
+    $$$$$:   59-block  1
+    $$$$$:   59-block  2
+    $$$$$:   59-block  3
+    $$$$$:   59-block  4
+    $$$$$:   59-block  5
+    $$$$$:   59-block  6
+    $$$$$:   59-block  7
+    $$$$$:   59-block  8
+    $$$$$:   59-block  9
+    $$$$$:   59-block 10
+        -:   60:
+    #####:   61:    ordenar(reunionOriginal, prof, freq);
+    $$$$$:   61-block  0
+        -:   62:
+    #####:   63:    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+    $$$$$:   63-block  0
+    $$$$$:   63-block  1
+    $$$$$:   63-block  2
+    $$$$$:   63-block  3
+    $$$$$:   63-block  4
+    #####:   64:}
+    $$$$$:   64-block  0
+    $$$$$:   64-block  1
+    $$$$$:   64-block  2
+    $$$$$:   64-block  3
+    $$$$$:   64-block  4
+    $$$$$:   64-block  5
+    $$$$$:   64-block  6
+    $$$$$:   64-block  7
+    $$$$$:   64-block  8
+        -:   65:
+        1:   66:TEST(ordenarTEST, ordenarValido5)
+        1:   66-block  0
+        1:   66-block  1
+        1:   66-block  2
+        1:   66-block  3
+        1:   66-block  4
+        1:   66-block  5
+        1:   66-block  6
+    $$$$$:   66-block  7
+    $$$$$:   66-block  8
+    $$$$$:   66-block  9
+    $$$$$:   66-block 10
+    $$$$$:   66-block 11
+    $$$$$:   66-block 12
+    $$$$$:   66-block 13
+    $$$$$:   66-block 14
+    $$$$$:   66-block 15
+    $$$$$:   66-block 16
+    $$$$$:   66-block 17
+    $$$$$:   66-block 18
+    $$$$$:   66-block 19
+    $$$$$:   66-block 20
+    $$$$$:   66-block 21
+    $$$$$:   66-block 22
+    $$$$$:   66-block 23
+        -:   67:{
+    #####:   68:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    #####:   69:    senial hablante2 = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    $$$$$:   69-block  0
+    #####:   70:    senial hablante3 = { 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    $$$$$:   70-block  0
+    #####:   71:    senial hablante4 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    $$$$$:   71-block  0
+    #####:   72:    senial hablante5 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    $$$$$:   72-block  0
+    #####:   73:    senial hablante6 = { 20, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    $$$$$:   73-block  0
+    #####:   74:    senial hablante7 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    $$$$$:   74-block  0
+        -:   75:    
+        -:   76:    
+    #####:   77:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2), make_pair(hablante4, 3), make_pair(
+    $$$$$:   77-block  0
+    $$$$$:   77-block  1
+    $$$$$:   77-block  2
+    $$$$$:   77-block  3
+    $$$$$:   77-block  4
+    $$$$$:   77-block  5
+    $$$$$:   77-block  6
+    $$$$$:   77-block  7
+    $$$$$:   77-block  8
+    $$$$$:   77-block  9
+    $$$$$:   77-block 10
+    $$$$$:   77-block 11
+    $$$$$:   77-block 12
+    $$$$$:   77-block 13
+    $$$$$:   77-block 14
+    #####:   78:            hablante5, 4), make_pair(hablante6, 5), make_pair(hablante7, 6), };
+    $$$$$:   78-block  0
+    $$$$$:   78-block  1
+    #####:   79:    int prof = 32;
+    #####:   80:    int freq = 10;
+        -:   81:
+    #####:   82:    reunion reunionOrdenada = { make_pair(hablante7, 6), make_pair(hablante6, 5), make_pair(hablante5, 4), make_pair(hablante1, 0), make_pair(
+    $$$$$:   82-block  0
+    $$$$$:   82-block  1
+    $$$$$:   82-block  2
+    $$$$$:   82-block  3
+    $$$$$:   82-block  4
+    $$$$$:   82-block  5
+    $$$$$:   82-block  6
+    $$$$$:   82-block  7
+    $$$$$:   82-block  8
+    $$$$$:   82-block  9
+    $$$$$:   82-block 10
+    $$$$$:   82-block 11
+    $$$$$:   82-block 12
+    $$$$$:   82-block 13
+    $$$$$:   82-block 14
+    #####:   83:            hablante4, 3), make_pair(hablante3, 2), make_pair(hablante2, 1), };
+    $$$$$:   83-block  0
+    $$$$$:   83-block  1
+        -:   84:
+    #####:   85:    ordenar(reunionOriginal, prof, freq);
+    $$$$$:   85-block  0
+        -:   86:
+    #####:   87:    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+    $$$$$:   87-block  0
+    $$$$$:   87-block  1
+    $$$$$:   87-block  2
+    $$$$$:   87-block  3
+    $$$$$:   87-block  4
+    #####:   88:}
+    $$$$$:   88-block  0
+    $$$$$:   88-block  1
+    $$$$$:   88-block  2
+    $$$$$:   88-block  3
+    $$$$$:   88-block  4
+    $$$$$:   88-block  5
+    $$$$$:   88-block  6
+    $$$$$:   88-block  7
+    $$$$$:   88-block  8
+    $$$$$:   88-block  9
+    $$$$$:   88-block 10
+    $$$$$:   88-block 11
+    $$$$$:   88-block 12
+    $$$$$:   88-block 13
+    $$$$$:   88-block 14
+    $$$$$:   88-block 15
+    $$$$$:   88-block 16
+    $$$$$:   88-block 17
+    $$$$$:   88-block 18
+        -:   89:
+        1:   90:TEST(ordenarTEST, ordenarValido6)
+        1:   90-block  0
+        1:   90-block  1
+        1:   90-block  2
+        1:   90-block  3
+        1:   90-block  4
+        1:   90-block  5
+        1:   90-block  6
+    $$$$$:   90-block  7
+    $$$$$:   90-block  8
+    $$$$$:   90-block  9
+    $$$$$:   90-block 10
+    $$$$$:   90-block 11
+    $$$$$:   90-block 12
+    $$$$$:   90-block 13
+    $$$$$:   90-block 14
+    $$$$$:   90-block 15
+    $$$$$:   90-block 16
+    $$$$$:   90-block 17
+    $$$$$:   90-block 18
+    $$$$$:   90-block 19
+    $$$$$:   90-block 20
+    $$$$$:   90-block 21
+    $$$$$:   90-block 22
+    $$$$$:   90-block 23
+        -:   91:{
+    #####:   92:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    #####:   93:    senial hablante2 = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    $$$$$:   93-block  0
+    #####:   94:    senial hablante3 = { 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    $$$$$:   94-block  0
+    #####:   95:    senial hablante4 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    $$$$$:   95-block  0
+    #####:   96:    senial hablante5 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    $$$$$:   96-block  0
+    #####:   97:    senial hablante6 = { 20, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    $$$$$:   97-block  0
+    #####:   98:    senial hablante7 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    $$$$$:   98-block  0
+        -:   99:
+    #####:  100:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante5, 4), make_pair(hablante7, 6), make_pair(hablante4, 3), make_pair(
+    $$$$$:  100-block  0
+    $$$$$:  100-block  1
+    $$$$$:  100-block  2
+    $$$$$:  100-block  3
+    $$$$$:  100-block  4
+    $$$$$:  100-block  5
+    $$$$$:  100-block  6
+    $$$$$:  100-block  7
+    $$$$$:  100-block  8
+    $$$$$:  100-block  9
+    $$$$$:  100-block 10
+    $$$$$:  100-block 11
+    $$$$$:  100-block 12
+    $$$$$:  100-block 13
+    $$$$$:  100-block 14
+    #####:  101:            hablante6, 5), make_pair(hablante2, 1), make_pair(hablante3, 2), };
+    $$$$$:  101-block  0
+    $$$$$:  101-block  1
+    #####:  102:    int prof = 32;
+    #####:  103:    int freq = 10;
+        -:  104:
+    #####:  105:    reunion reunionOrdenada = { make_pair(hablante7, 6), make_pair(hablante6, 5), make_pair(hablante5, 4), make_pair(hablante1, 0), make_pair(
+    $$$$$:  105-block  0
+    $$$$$:  105-block  1
+    $$$$$:  105-block  2
+    $$$$$:  105-block  3
+    $$$$$:  105-block  4
+    $$$$$:  105-block  5
+    $$$$$:  105-block  6
+    $$$$$:  105-block  7
+    $$$$$:  105-block  8
+    $$$$$:  105-block  9
+    $$$$$:  105-block 10
+    $$$$$:  105-block 11
+    $$$$$:  105-block 12
+    $$$$$:  105-block 13
+    $$$$$:  105-block 14
+    #####:  106:            hablante4, 3), make_pair(hablante3, 2), make_pair(hablante2, 1), };
+    $$$$$:  106-block  0
+    $$$$$:  106-block  1
+        -:  107:
+    #####:  108:    ordenar(reunionOriginal, prof, freq);
+    $$$$$:  108-block  0
+        -:  109:
+    #####:  110:    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+    $$$$$:  110-block  0
+    $$$$$:  110-block  1
+    $$$$$:  110-block  2
+    $$$$$:  110-block  3
+    $$$$$:  110-block  4
+    #####:  111:}
+    $$$$$:  111-block  0
+    $$$$$:  111-block  1
+    $$$$$:  111-block  2
+    $$$$$:  111-block  3
+    $$$$$:  111-block  4
+    $$$$$:  111-block  5
+    $$$$$:  111-block  6
+    $$$$$:  111-block  7
+    $$$$$:  111-block  8
+    $$$$$:  111-block  9
+    $$$$$:  111-block 10
+    $$$$$:  111-block 11
+    $$$$$:  111-block 12
+    $$$$$:  111-block 13
+    $$$$$:  111-block 14
+    $$$$$:  111-block 15
+    $$$$$:  111-block 16
+    $$$$$:  111-block 17
+    $$$$$:  111-block 18
+        -:  112:
+        1:  113:TEST(ordenarTEST, ordenarValido7)
+        1:  113-block  0
+        1:  113-block  1
+        1:  113-block  2
+        1:  113-block  3
+        1:  113-block  4
+        1:  113-block  5
+        1:  113-block  6
+    $$$$$:  113-block  7
+    $$$$$:  113-block  8
+    $$$$$:  113-block  9
+    $$$$$:  113-block 10
+    $$$$$:  113-block 11
+    $$$$$:  113-block 12
+    $$$$$:  113-block 13
+    $$$$$:  113-block 14
+    $$$$$:  113-block 15
+    $$$$$:  113-block 16
+    $$$$$:  113-block 17
+    $$$$$:  113-block 18
+    $$$$$:  113-block 19
+    $$$$$:  113-block 20
+    $$$$$:  113-block 21
+    $$$$$:  113-block 22
+    $$$$$:  113-block 23
+        -:  114:{
+    #####:  115:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    #####:  116:    senial hablante2 = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    $$$$$:  116-block  0
+    #####:  117:    senial hablante3 = { 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    $$$$$:  117-block  0
+    #####:  118:    senial hablante4 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    $$$$$:  118-block  0
+    #####:  119:    senial hablante5 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    $$$$$:  119-block  0
+    #####:  120:    senial hablante6 = { 20, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    $$$$$:  120-block  0
+    #####:  121:    senial hablante7 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    $$$$$:  121-block  0
+    #####:  122:    senial hablante8 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    $$$$$:  122-block  0
+        -:  123:
+    #####:  124:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante5, 4), make_pair(hablante7, 6), make_pair(hablante4, 3), make_pair(
+    $$$$$:  124-block  0
+    $$$$$:  124-block  1
+    $$$$$:  124-block  2
+    $$$$$:  124-block  3
+    $$$$$:  124-block  4
+    $$$$$:  124-block  5
+    $$$$$:  124-block  6
+    $$$$$:  124-block  7
+    $$$$$:  124-block  8
+    $$$$$:  124-block  9
+    $$$$$:  124-block 10
+    $$$$$:  124-block 11
+    $$$$$:  124-block 12
+    $$$$$:  124-block 13
+    $$$$$:  124-block 14
+    #####:  125:            hablante6, 5), make_pair(hablante2, 1), make_pair(hablante3, 2), make_pair(hablante8, 7) };
+    $$$$$:  125-block  0
+    $$$$$:  125-block  1
+    $$$$$:  125-block  2
+    #####:  126:    int prof = 32;
+    #####:  127:    int freq = 10;
+        -:  128:
+    #####:  129:    reunion reunionOrdenada = { make_pair(hablante7, 6), make_pair(hablante8, 7), make_pair(hablante6, 5), make_pair(hablante5, 4), make_pair(
+    $$$$$:  129-block  0
+    $$$$$:  129-block  1
+    $$$$$:  129-block  2
+    $$$$$:  129-block  3
+    $$$$$:  129-block  4
+    $$$$$:  129-block  5
+    $$$$$:  129-block  6
+    $$$$$:  129-block  7
+    $$$$$:  129-block  8
+    $$$$$:  129-block  9
+    $$$$$:  129-block 10
+    $$$$$:  129-block 11
+    $$$$$:  129-block 12
+    $$$$$:  129-block 13
+    $$$$$:  129-block 14
+    #####:  130:            hablante1, 0), make_pair(hablante4, 3), make_pair(hablante3, 2), make_pair(hablante2, 1), };
+    $$$$$:  130-block  0
+    $$$$$:  130-block  1
+    $$$$$:  130-block  2
+        -:  131:
+    #####:  132:    ordenar(reunionOriginal, prof, freq);
+    $$$$$:  132-block  0
+        -:  133:
+    #####:  134:    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+    $$$$$:  134-block  0
+    $$$$$:  134-block  1
+    $$$$$:  134-block  2
+    $$$$$:  134-block  3
+    $$$$$:  134-block  4
+    #####:  135:}
+    $$$$$:  135-block  0
+    $$$$$:  135-block  1
+    $$$$$:  135-block  2
+    $$$$$:  135-block  3
+    $$$$$:  135-block  4
+    $$$$$:  135-block  5
+    $$$$$:  135-block  6
+    $$$$$:  135-block  7
+    $$$$$:  135-block  8
+    $$$$$:  135-block  9
+    $$$$$:  135-block 10
+    $$$$$:  135-block 11
+    $$$$$:  135-block 12
+    $$$$$:  135-block 13
+    $$$$$:  135-block 14
+    $$$$$:  135-block 15
+    $$$$$:  135-block 16
+    $$$$$:  135-block 17
+    $$$$$:  135-block 18
+    $$$$$:  135-block 19
+    $$$$$:  135-block 20
+        -:  136:
+        1:  137:TEST(ordenarTEST, ordenarValido8)
+        1:  137-block  0
+        1:  137-block  1
+        1:  137-block  2
+        1:  137-block  3
+        1:  137-block  4
+        1:  137-block  5
+        1:  137-block  6
+    $$$$$:  137-block  7
+    $$$$$:  137-block  8
+    $$$$$:  137-block  9
+    $$$$$:  137-block 10
+    $$$$$:  137-block 11
+    $$$$$:  137-block 12
+    $$$$$:  137-block 13
+    $$$$$:  137-block 14
+    $$$$$:  137-block 15
+    $$$$$:  137-block 16
+    $$$$$:  137-block 17
+    $$$$$:  137-block 18
+    $$$$$:  137-block 19
+    $$$$$:  137-block 20
+    $$$$$:  137-block 21
+    $$$$$:  137-block 22
+    $$$$$:  137-block 23
+        -:  138:{
+    #####:  139:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    #####:  140:    senial hablante2 = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    $$$$$:  140-block  0
+    #####:  141:    senial hablante3 = { 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+    $$$$$:  141-block  0
+    #####:  142:    senial hablante4 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+    $$$$$:  142-block  0
+    #####:  143:    senial hablante5 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    $$$$$:  143-block  0
+    #####:  144:    senial hablante6 = { 20, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    $$$$$:  144-block  0
+    #####:  145:    senial hablante7 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    $$$$$:  145-block  0
+    #####:  146:    senial hablante8 = { 20000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    $$$$$:  146-block  0
+        -:  147:
+    #####:  148:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante5, 4), make_pair(hablante7, 6), make_pair(hablante4, 3), make_pair(
+    $$$$$:  148-block  0
+    $$$$$:  148-block  1
+    $$$$$:  148-block  2
+    $$$$$:  148-block  3
+    $$$$$:  148-block  4
+    $$$$$:  148-block  5
+    $$$$$:  148-block  6
+    $$$$$:  148-block  7
+    $$$$$:  148-block  8
+    $$$$$:  148-block  9
+    $$$$$:  148-block 10
+    $$$$$:  148-block 11
+    $$$$$:  148-block 12
+    $$$$$:  148-block 13
+    $$$$$:  148-block 14
+    #####:  149:            hablante6, 5), make_pair(hablante3, 2), make_pair(hablante2, 1), make_pair(hablante8, 7) };
+    $$$$$:  149-block  0
+    $$$$$:  149-block  1
+    $$$$$:  149-block  2
+    #####:  150:    int prof = 32;
+    #####:  151:    int freq = 10;
+        -:  152:
+    #####:  153:    reunion reunionOrdenada = { make_pair(hablante7, 6), make_pair(hablante8, 7), make_pair(hablante6, 5), make_pair(hablante5, 4), make_pair(
+    $$$$$:  153-block  0
+    $$$$$:  153-block  1
+    $$$$$:  153-block  2
+    $$$$$:  153-block  3
+    $$$$$:  153-block  4
+    $$$$$:  153-block  5
+    $$$$$:  153-block  6
+    $$$$$:  153-block  7
+    $$$$$:  153-block  8
+    $$$$$:  153-block  9
+    $$$$$:  153-block 10
+    $$$$$:  153-block 11
+    $$$$$:  153-block 12
+    $$$$$:  153-block 13
+    $$$$$:  153-block 14
+    #####:  154:            hablante1, 0), make_pair(hablante4, 3), make_pair(hablante3, 2), make_pair(hablante2, 1), };
+    $$$$$:  154-block  0
+    $$$$$:  154-block  1
+    $$$$$:  154-block  2
+        -:  155:
+    #####:  156:    ordenar(reunionOriginal, prof, freq);
+    $$$$$:  156-block  0
+        -:  157:
+    #####:  158:    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
+    $$$$$:  158-block  0
+    $$$$$:  158-block  1
+    $$$$$:  158-block  2
+    $$$$$:  158-block  3
+    $$$$$:  158-block  4
+    #####:  159:}
+    $$$$$:  159-block  0
+    $$$$$:  159-block  1
+    $$$$$:  159-block  2
+    $$$$$:  159-block  3
+    $$$$$:  159-block  4
+    $$$$$:  159-block  5
+    $$$$$:  159-block  6
+    $$$$$:  159-block  7
+    $$$$$:  159-block  8
+    $$$$$:  159-block  9
+    $$$$$:  159-block 10
+    $$$$$:  159-block 11
+    $$$$$:  159-block 12
+    $$$$$:  159-block 13
+    $$$$$:  159-block 14
+    $$$$$:  159-block 15
+    $$$$$:  159-block 16
+    $$$$$:  159-block 17
+    $$$$$:  159-block 18
+    $$$$$:  159-block 19
+    $$$$$:  159-block 20

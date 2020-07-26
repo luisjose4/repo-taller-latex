@@ -1,0 +1,128 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/solucion.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/solucion.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "solucion.h"
+        -:    2:#include "auxiliares.h"
+        -:    3:#include "definiciones.h"
+        -:    4:
+        -:    5:// Ejercicios
+        -:    6:
+    #####:    7:bool esSenial(vector<int> s, int prof, int freq) {
+    $$$$$:    7-block  0
+    #####:    8:    return esValida(s, prof, freq);
+    $$$$$:    8-block  0
+    $$$$$:    8-block  1
+    $$$$$:    8-block  2
+    $$$$$:    8-block  3
+    #####:    9:}
+        -:   10:
+       14:   11:bool seEnojo(senial s, int umbral, int prof, int freq) {
+       14:   11-block  0
+        -:   12:    // o(s^3)?
+       14:   13:    return existeSubseqEnojada(s, umbral, prof, freq);
+       14:   13-block  0
+       14:   13-block  1
+    $$$$$:   13-block  2
+    $$$$$:   13-block  3
+    #####:   14:}
+        -:   15:
+    #####:   16:bool esReunionValida(reunion r, int prof, int freq) {
+    $$$$$:   16-block  0
+    #####:   17:    return reunionValida(r, prof, freq);
+    $$$$$:   17-block  0
+    $$$$$:   17-block  1
+    $$$$$:   17-block  2
+    $$$$$:   17-block  3
+    #####:   18:}
+        -:   19:
+    #####:   20:void acelerar(reunion& r, int prof, int freq) {
+    $$$$$:   20-block  0
+        -:   21:    // O(m*n)?
+    #####:   22:    for (int i = 0; i < r.size(); ++i) {
+    $$$$$:   22-block  0
+    $$$$$:   22-block  1
+    $$$$$:   22-block  2
+    #####:   23:        acelerarSenial(r[i].first, prof, freq);
+    #####:   24:    }
+    $$$$$:   24-block  0
+    #####:   25:}
+    $$$$$:   25-block  0
+        -:   26:
+    #####:   27:void ralentizar(reunion& r, int prof, int freq) {
+    $$$$$:   27-block  0
+    #####:   28:    for (int i = 0; i < r.size(); ++i) {
+    $$$$$:   28-block  0
+    $$$$$:   28-block  1
+    $$$$$:   28-block  2
+    #####:   29:        ralentizarSenial(r[i].first, prof, freq);
+    #####:   30:    }
+    $$$$$:   30-block  0
+    #####:   31:}
+    $$$$$:   31-block  0
+        -:   32:
+    #####:   33:vector<hablante> tonosDeVozElevados(reunion r, int freq, int prof) {
+    $$$$$:   33-block  0
+    #####:   34:    return hablantesConTonosElevados(r, freq, prof);
+    $$$$$:   34-block  0
+    $$$$$:   34-block  1
+    $$$$$:   34-block  2
+    $$$$$:   34-block  3
+    #####:   35:}
+        -:   36:
+    #####:   37:void ordenar(reunion& r, int freq, int prof) {
+    $$$$$:   37-block  0
+        -:   38:    // Complejidad O(m*n + 2m^2) que es menor que O(m^2*n) para m >= 2 y n >= 10
+        -:   39:    //n >= 10 si o si ya que si no, no seria senial valida y no cumpliria la precondicion
+        -:   40:    // m == 0 o m == 1 el algoritmo no hace nada porque ya estan ordenadas las seniales
+    #####:   41:    ordenarReunionAcordeAPromedios(r);
+    #####:   42:}
+    $$$$$:   42-block  0
+        -:   43:
+    #####:   44:vector<intervalo> silencios(senial s, int prof, int freq, int umbral)
+    $$$$$:   44-block  0
+        -:   45:{   // complejidad O(n)
+    #####:   46:    vector<intervalo> intervalos;
+    #####:   47:    intervalos = obtenerSilencios(s, freq, umbral);
+    $$$$$:   47-block  0
+    $$$$$:   47-block  1
+    $$$$$:   47-block  2
+    #####:   48:    return intervalos;
+    #####:   49:}
+    $$$$$:   49-block  0
+    $$$$$:   49-block  1
+    $$$$$:   49-block  2
+    $$$$$:   49-block  3
+    $$$$$:   49-block  4
+    $$$$$:   49-block  5
+        -:   50:
+    #####:   51:bool hablantesSuperpuestos(reunion r, int prof, int freq, int umbral)
+    $$$$$:   51-block  0
+        -:   52:{
+    #####:   53:    return hayHablantesSuperpuestos(r, freq, umbral);
+    $$$$$:   53-block  0
+    $$$$$:   53-block  1
+    $$$$$:   53-block  2
+    $$$$$:   53-block  3
+    #####:   54:}
+        -:   55:
+    #####:   56:senial reconstruir(senial s, int prof, int freq)
+    $$$$$:   56-block  0
+        -:   57:{
+    #####:   58:    return reconstruirSenial(s);
+    $$$$$:   58-block  0
+    $$$$$:   58-block  1
+    $$$$$:   58-block  2
+    $$$$$:   58-block  3
+    #####:   59:}
+        -:   60:
+    #####:   61:void filtradoMediana(senial &s, int R, int prof, int freq)
+    $$$$$:   61-block  0
+        -:   62:{
+    #####:   63:    s = filtrada(s, R);
+    $$$$$:   63-block  0
+    $$$$$:   63-block  1
+    $$$$$:   63-block  2
+    #####:   64:}
+    $$$$$:   64-block  0

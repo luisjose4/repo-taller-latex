@@ -1,0 +1,557 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/tonosDeVozElevados.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/tonosDeVozElevados.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../src/solucion.h"
+        -:    2:#include "../src/auxiliares.h"
+        -:    3:#include "../lib/gtest.h"
+        -:    4:
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+        1:    8:TEST(tonosDeVozElevadosTEST, tonosDeVozElevadosValido){
+        1:    8-block  0
+        1:    8-block  1
+        1:    8-block  2
+        1:    8-block  3
+        1:    8-block  4
+        1:    8-block  5
+        1:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+    $$$$$:    8-block 12
+    $$$$$:    8-block 13
+    $$$$$:    8-block 14
+    $$$$$:    8-block 15
+    $$$$$:    8-block 16
+    $$$$$:    8-block 17
+    $$$$$:    8-block 18
+    $$$$$:    8-block 19
+    $$$$$:    8-block 20
+    $$$$$:    8-block 21
+    $$$$$:    8-block 22
+    $$$$$:    8-block 23
+    #####:    9:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+    #####:   10:    senial hablante2 = {2, 6, 3, 8, 6, 10, 2, 12, 10, -15};
+    $$$$$:   10-block  0
+    #####:   11:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+    $$$$$:   11-block  0
+    $$$$$:   11-block  1
+    $$$$$:   11-block  2
+    $$$$$:   11-block  3
+    $$$$$:   11-block  4
+    $$$$$:   11-block  5
+    $$$$$:   11-block  6
+    $$$$$:   11-block  7
+    $$$$$:   11-block  8
+    $$$$$:   11-block  9
+    $$$$$:   11-block 10
+    #####:   12:    int prof = 8;
+    #####:   13:    int freq = 10;
+        -:   14:
+    #####:   15:    ASSERT_HABLANTES_EQ(tonosDeVozElevados(reunion, prof, freq), {1});
+    $$$$$:   15-block  0
+    $$$$$:   15-block  1
+    $$$$$:   15-block  2
+    $$$$$:   15-block  3
+    $$$$$:   15-block  4
+    $$$$$:   15-block  5
+    $$$$$:   15-block  6
+    #####:   16:}
+    $$$$$:   16-block  0
+    $$$$$:   16-block  1
+    $$$$$:   16-block  2
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+    $$$$$:   16-block  6
+    $$$$$:   16-block  7
+    $$$$$:   16-block  8
+        -:   17:
+        1:   18:TEST(tonosDeVozElevadosTEST, tonosDeVozElevadosValido2)
+        1:   18-block  0
+        1:   18-block  1
+        1:   18-block  2
+        1:   18-block  3
+        1:   18-block  4
+        1:   18-block  5
+        1:   18-block  6
+    $$$$$:   18-block  7
+    $$$$$:   18-block  8
+    $$$$$:   18-block  9
+    $$$$$:   18-block 10
+    $$$$$:   18-block 11
+    $$$$$:   18-block 12
+    $$$$$:   18-block 13
+    $$$$$:   18-block 14
+    $$$$$:   18-block 15
+    $$$$$:   18-block 16
+    $$$$$:   18-block 17
+    $$$$$:   18-block 18
+    $$$$$:   18-block 19
+    $$$$$:   18-block 20
+    $$$$$:   18-block 21
+    $$$$$:   18-block 22
+    $$$$$:   18-block 23
+        -:   19:{
+    #####:   20:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15 };
+    #####:   21:    reunion reunion = { make_pair(hablante1, 0) };
+    $$$$$:   21-block  0
+    $$$$$:   21-block  1
+    $$$$$:   21-block  2
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+    $$$$$:   21-block  6
+    $$$$$:   21-block  7
+    $$$$$:   21-block  8
+    $$$$$:   21-block  9
+    #####:   22:    int prof = 8;
+    #####:   23:    int freq = 10;
+        -:   24:
+    #####:   25:    ASSERT_HABLANTES_EQ(tonosDeVozElevados(reunion, prof, freq), { 0 });
+    $$$$$:   25-block  0
+    $$$$$:   25-block  1
+    $$$$$:   25-block  2
+    $$$$$:   25-block  3
+    $$$$$:   25-block  4
+    $$$$$:   25-block  5
+    $$$$$:   25-block  6
+    #####:   26:}
+    $$$$$:   26-block  0
+    $$$$$:   26-block  1
+    $$$$$:   26-block  2
+    $$$$$:   26-block  3
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+    $$$$$:   26-block  6
+        -:   27:
+        1:   28:TEST(tonosDeVozElevadosTEST, tonosDeVozElevadosValido3)
+        1:   28-block  0
+        1:   28-block  1
+        1:   28-block  2
+        1:   28-block  3
+        1:   28-block  4
+        1:   28-block  5
+        1:   28-block  6
+    $$$$$:   28-block  7
+    $$$$$:   28-block  8
+    $$$$$:   28-block  9
+    $$$$$:   28-block 10
+    $$$$$:   28-block 11
+    $$$$$:   28-block 12
+    $$$$$:   28-block 13
+    $$$$$:   28-block 14
+    $$$$$:   28-block 15
+    $$$$$:   28-block 16
+    $$$$$:   28-block 17
+    $$$$$:   28-block 18
+    $$$$$:   28-block 19
+    $$$$$:   28-block 20
+    $$$$$:   28-block 21
+    $$$$$:   28-block 22
+    $$$$$:   28-block 23
+        -:   29:{
+    #####:   30:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15 };
+    #####:   31:    senial hablante2 = { 2, 6, 3, 8, 6, 10, 2, 12, 10, -15 };
+    $$$$$:   31-block  0
+    #####:   32:    reunion reunion = { make_pair(hablante2, 1), make_pair(hablante1, 0) };
+    $$$$$:   32-block  0
+    $$$$$:   32-block  1
+    $$$$$:   32-block  2
+    $$$$$:   32-block  3
+    $$$$$:   32-block  4
+    $$$$$:   32-block  5
+    $$$$$:   32-block  6
+    $$$$$:   32-block  7
+    $$$$$:   32-block  8
+    $$$$$:   32-block  9
+    $$$$$:   32-block 10
+    #####:   33:    int prof = 8;
+    #####:   34:    int freq = 10;
+        -:   35:
+    #####:   36:    ASSERT_HABLANTES_EQ(tonosDeVozElevados(reunion, prof, freq), { 1 });
+    $$$$$:   36-block  0
+    $$$$$:   36-block  1
+    $$$$$:   36-block  2
+    $$$$$:   36-block  3
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+    $$$$$:   36-block  6
+    #####:   37:}
+    $$$$$:   37-block  0
+    $$$$$:   37-block  1
+    $$$$$:   37-block  2
+    $$$$$:   37-block  3
+    $$$$$:   37-block  4
+    $$$$$:   37-block  5
+    $$$$$:   37-block  6
+    $$$$$:   37-block  7
+    $$$$$:   37-block  8
+        -:   38:
+        1:   39:TEST(tonosDeVozElevadosTEST, tonosDeVozElevadosValido4)
+        1:   39-block  0
+        1:   39-block  1
+        1:   39-block  2
+        1:   39-block  3
+        1:   39-block  4
+        1:   39-block  5
+        1:   39-block  6
+    $$$$$:   39-block  7
+    $$$$$:   39-block  8
+    $$$$$:   39-block  9
+    $$$$$:   39-block 10
+    $$$$$:   39-block 11
+    $$$$$:   39-block 12
+    $$$$$:   39-block 13
+    $$$$$:   39-block 14
+    $$$$$:   39-block 15
+    $$$$$:   39-block 16
+    $$$$$:   39-block 17
+    $$$$$:   39-block 18
+    $$$$$:   39-block 19
+    $$$$$:   39-block 20
+    $$$$$:   39-block 21
+    $$$$$:   39-block 22
+    $$$$$:   39-block 23
+        -:   40:{
+    #####:   41:    senial hablante1 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    #####:   42:    senial hablante2 = { 2, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   42-block  0
+    #####:   43:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
+    $$$$$:   43-block  0
+    $$$$$:   43-block  1
+    $$$$$:   43-block  2
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+    $$$$$:   43-block  6
+    $$$$$:   43-block  7
+    $$$$$:   43-block  8
+    $$$$$:   43-block  9
+    $$$$$:   43-block 10
+    #####:   44:    int prof = 8;
+    #####:   45:    int freq = 10;
+        -:   46:
+    #####:   47:    ASSERT_HABLANTES_EQ(tonosDeVozElevados(reunion, prof, freq), { 1 });
+    $$$$$:   47-block  0
+    $$$$$:   47-block  1
+    $$$$$:   47-block  2
+    $$$$$:   47-block  3
+    $$$$$:   47-block  4
+    $$$$$:   47-block  5
+    $$$$$:   47-block  6
+    #####:   48:}
+    $$$$$:   48-block  0
+    $$$$$:   48-block  1
+    $$$$$:   48-block  2
+    $$$$$:   48-block  3
+    $$$$$:   48-block  4
+    $$$$$:   48-block  5
+    $$$$$:   48-block  6
+    $$$$$:   48-block  7
+    $$$$$:   48-block  8
+        -:   49:
+        1:   50:TEST(tonosDeVozElevadosTEST, tonosDeVozElevadosValido5)
+        1:   50-block  0
+        1:   50-block  1
+        1:   50-block  2
+        1:   50-block  3
+        1:   50-block  4
+        1:   50-block  5
+        1:   50-block  6
+    $$$$$:   50-block  7
+    $$$$$:   50-block  8
+    $$$$$:   50-block  9
+    $$$$$:   50-block 10
+    $$$$$:   50-block 11
+    $$$$$:   50-block 12
+    $$$$$:   50-block 13
+    $$$$$:   50-block 14
+    $$$$$:   50-block 15
+    $$$$$:   50-block 16
+    $$$$$:   50-block 17
+    $$$$$:   50-block 18
+    $$$$$:   50-block 19
+    $$$$$:   50-block 20
+    $$$$$:   50-block 21
+    $$$$$:   50-block 22
+    $$$$$:   50-block 23
+        -:   51:{
+    #####:   52:    senial hablante1 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    #####:   53:    senial hablante2 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   53-block  0
+    #####:   54:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
+    $$$$$:   54-block  0
+    $$$$$:   54-block  1
+    $$$$$:   54-block  2
+    $$$$$:   54-block  3
+    $$$$$:   54-block  4
+    $$$$$:   54-block  5
+    $$$$$:   54-block  6
+    $$$$$:   54-block  7
+    $$$$$:   54-block  8
+    $$$$$:   54-block  9
+    $$$$$:   54-block 10
+    #####:   55:    int prof = 8;
+    #####:   56:    int freq = 10;
+        -:   57:
+    #####:   58:    ASSERT_HABLANTES_EQ(tonosDeVozElevados(reunion, prof, freq), { 0, 1 });
+    $$$$$:   58-block  0
+    $$$$$:   58-block  1
+    $$$$$:   58-block  2
+    $$$$$:   58-block  3
+    $$$$$:   58-block  4
+    $$$$$:   58-block  5
+    $$$$$:   58-block  6
+    #####:   59:}
+    $$$$$:   59-block  0
+    $$$$$:   59-block  1
+    $$$$$:   59-block  2
+    $$$$$:   59-block  3
+    $$$$$:   59-block  4
+    $$$$$:   59-block  5
+    $$$$$:   59-block  6
+    $$$$$:   59-block  7
+    $$$$$:   59-block  8
+        -:   60:
+        1:   61:TEST(tonosDeVozElevadosTEST, tonosDeVozElevadosValido6)
+        1:   61-block  0
+        1:   61-block  1
+        1:   61-block  2
+        1:   61-block  3
+        1:   61-block  4
+        1:   61-block  5
+        1:   61-block  6
+    $$$$$:   61-block  7
+    $$$$$:   61-block  8
+    $$$$$:   61-block  9
+    $$$$$:   61-block 10
+    $$$$$:   61-block 11
+    $$$$$:   61-block 12
+    $$$$$:   61-block 13
+    $$$$$:   61-block 14
+    $$$$$:   61-block 15
+    $$$$$:   61-block 16
+    $$$$$:   61-block 17
+    $$$$$:   61-block 18
+    $$$$$:   61-block 19
+    $$$$$:   61-block 20
+    $$$$$:   61-block 21
+    $$$$$:   61-block 22
+    $$$$$:   61-block 23
+        -:   62:{
+    #####:   63:    senial hablante1 = { 1, 1, 1, 1, 1, 1, 1, 1, 0, 6 };
+    #####:   64:    senial hablante2 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   64-block  0
+    #####:   65:    senial hablante3 = { 1, 1, 1, 1, 5, 1, 1, 1, 1, 1 };
+    $$$$$:   65-block  0
+    #####:   66:    senial hablante4 = { 1, 1, 1, 5, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   66-block  0
+    #####:   67:    senial hablante5 = { 2, 2, 2, 2, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   67-block  0
+        -:   68:
+    #####:   69:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2), make_pair(hablante4, 3), make_pair(hablante5, 4), };
+    $$$$$:   69-block  0
+    $$$$$:   69-block  1
+    $$$$$:   69-block  2
+    $$$$$:   69-block  3
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+    $$$$$:   69-block  6
+    $$$$$:   69-block  7
+    $$$$$:   69-block  8
+    $$$$$:   69-block  9
+    $$$$$:   69-block 10
+    $$$$$:   69-block 11
+    $$$$$:   69-block 12
+    $$$$$:   69-block 13
+    #####:   70:    int prof = 8;
+    #####:   71:    int freq = 10;
+        -:   72:    
+    #####:   73:    ASSERT_HABLANTES_EQ(tonosDeVozElevados(reunion, prof, freq), { 0, 2, 3, 4 });
+    $$$$$:   73-block  0
+    $$$$$:   73-block  1
+    $$$$$:   73-block  2
+    $$$$$:   73-block  3
+    $$$$$:   73-block  4
+    $$$$$:   73-block  5
+    $$$$$:   73-block  6
+    #####:   74:}
+    $$$$$:   74-block  0
+    $$$$$:   74-block  1
+    $$$$$:   74-block  2
+    $$$$$:   74-block  3
+    $$$$$:   74-block  4
+    $$$$$:   74-block  5
+    $$$$$:   74-block  6
+    $$$$$:   74-block  7
+    $$$$$:   74-block  8
+    $$$$$:   74-block  9
+    $$$$$:   74-block 10
+    $$$$$:   74-block 11
+    $$$$$:   74-block 12
+    $$$$$:   74-block 13
+    $$$$$:   74-block 14
+        -:   75:
+        1:   76:TEST(tonosDeVozElevadosTEST, tonosDeVozElevadosValido7)
+        1:   76-block  0
+        1:   76-block  1
+        1:   76-block  2
+        1:   76-block  3
+        1:   76-block  4
+        1:   76-block  5
+        1:   76-block  6
+    $$$$$:   76-block  7
+    $$$$$:   76-block  8
+    $$$$$:   76-block  9
+    $$$$$:   76-block 10
+    $$$$$:   76-block 11
+    $$$$$:   76-block 12
+    $$$$$:   76-block 13
+    $$$$$:   76-block 14
+    $$$$$:   76-block 15
+    $$$$$:   76-block 16
+    $$$$$:   76-block 17
+    $$$$$:   76-block 18
+    $$$$$:   76-block 19
+    $$$$$:   76-block 20
+    $$$$$:   76-block 21
+    $$$$$:   76-block 22
+    $$$$$:   76-block 23
+        -:   77:{
+    #####:   78:    senial hablante1 = { 1, 1, 1, 1, 1, 1, 1, 1, 0, 6 };
+    #####:   79:    senial hablante2 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   79-block  0
+    #####:   80:    senial hablante3 = { 1, 1, 1, 1, 5, 1, 1, 1, 1, 1 };
+    $$$$$:   80-block  0
+    #####:   81:    senial hablante4 = { 1, 1, 1, 5, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   81-block  0
+    #####:   82:    senial hablante5 = { 2, 2, 2, 2, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   82-block  0
+        -:   83:
+    #####:   84:    reunion reunion = { make_pair(hablante4, 3), make_pair(hablante2, 1), make_pair(hablante5, 4), make_pair(hablante1, 0), make_pair(hablante3, 2), };
+    $$$$$:   84-block  0
+    $$$$$:   84-block  1
+    $$$$$:   84-block  2
+    $$$$$:   84-block  3
+    $$$$$:   84-block  4
+    $$$$$:   84-block  5
+    $$$$$:   84-block  6
+    $$$$$:   84-block  7
+    $$$$$:   84-block  8
+    $$$$$:   84-block  9
+    $$$$$:   84-block 10
+    $$$$$:   84-block 11
+    $$$$$:   84-block 12
+    $$$$$:   84-block 13
+    #####:   85:    int prof = 8;
+    #####:   86:    int freq = 10;
+        -:   87:
+    #####:   88:    ASSERT_HABLANTES_EQ(tonosDeVozElevados(reunion, prof, freq), { 3, 4, 0, 2 });
+    $$$$$:   88-block  0
+    $$$$$:   88-block  1
+    $$$$$:   88-block  2
+    $$$$$:   88-block  3
+    $$$$$:   88-block  4
+    $$$$$:   88-block  5
+    $$$$$:   88-block  6
+    #####:   89:}
+    $$$$$:   89-block  0
+    $$$$$:   89-block  1
+    $$$$$:   89-block  2
+    $$$$$:   89-block  3
+    $$$$$:   89-block  4
+    $$$$$:   89-block  5
+    $$$$$:   89-block  6
+    $$$$$:   89-block  7
+    $$$$$:   89-block  8
+    $$$$$:   89-block  9
+    $$$$$:   89-block 10
+    $$$$$:   89-block 11
+    $$$$$:   89-block 12
+    $$$$$:   89-block 13
+    $$$$$:   89-block 14
+        -:   90:
+        1:   91:TEST(tonosDeVozElevadosTEST, tonosDeVozElevadosValido8)
+        1:   91-block  0
+        1:   91-block  1
+        1:   91-block  2
+        1:   91-block  3
+        1:   91-block  4
+        1:   91-block  5
+        1:   91-block  6
+    $$$$$:   91-block  7
+    $$$$$:   91-block  8
+    $$$$$:   91-block  9
+    $$$$$:   91-block 10
+    $$$$$:   91-block 11
+    $$$$$:   91-block 12
+    $$$$$:   91-block 13
+    $$$$$:   91-block 14
+    $$$$$:   91-block 15
+    $$$$$:   91-block 16
+    $$$$$:   91-block 17
+    $$$$$:   91-block 18
+    $$$$$:   91-block 19
+    $$$$$:   91-block 20
+    $$$$$:   91-block 21
+    $$$$$:   91-block 22
+    $$$$$:   91-block 23
+        -:   92:{
+    #####:   93:    senial hablante1 = { 1, 1, 1, -2, 1, 1, 1, 1, 0, 6 };
+    #####:   94:    senial hablante2 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   94-block  0
+    #####:   95:    senial hablante3 = { 1, 1, 1, 1, 5, 1, 1, 1, 1, 1 };
+    $$$$$:   95-block  0
+    #####:   96:    senial hablante4 = { 1, 1, 1, 5, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   96-block  0
+    #####:   97:    senial hablante5 = { 2, 2, 2, 1, 1, 1, 1, 1, 1, 1 };
+    $$$$$:   97-block  0
+        -:   98:
+    #####:   99:    reunion reunion = { make_pair(hablante4, 3), make_pair(hablante2, 1), make_pair(hablante5, 4), make_pair(hablante1, 0), make_pair(hablante3, 2), };
+    $$$$$:   99-block  0
+    $$$$$:   99-block  1
+    $$$$$:   99-block  2
+    $$$$$:   99-block  3
+    $$$$$:   99-block  4
+    $$$$$:   99-block  5
+    $$$$$:   99-block  6
+    $$$$$:   99-block  7
+    $$$$$:   99-block  8
+    $$$$$:   99-block  9
+    $$$$$:   99-block 10
+    $$$$$:   99-block 11
+    $$$$$:   99-block 12
+    $$$$$:   99-block 13
+    #####:  100:    int prof = 8;
+    #####:  101:    int freq = 10;
+        -:  102:
+    #####:  103:    ASSERT_HABLANTES_EQ(tonosDeVozElevados(reunion, prof, freq), { 0 });
+    $$$$$:  103-block  0
+    $$$$$:  103-block  1
+    $$$$$:  103-block  2
+    $$$$$:  103-block  3
+    $$$$$:  103-block  4
+    $$$$$:  103-block  5
+    $$$$$:  103-block  6
+    #####:  104:}
+    $$$$$:  104-block  0
+    $$$$$:  104-block  1
+    $$$$$:  104-block  2
+    $$$$$:  104-block  3
+    $$$$$:  104-block  4
+    $$$$$:  104-block  5
+    $$$$$:  104-block  6
+    $$$$$:  104-block  7
+    $$$$$:  104-block  8
+    $$$$$:  104-block  9
+    $$$$$:  104-block 10
+    $$$$$:  104-block 11
+    $$$$$:  104-block 12
+    $$$$$:  104-block 13
+    $$$$$:  104-block 14
