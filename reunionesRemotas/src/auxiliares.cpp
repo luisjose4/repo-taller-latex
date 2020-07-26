@@ -194,34 +194,11 @@ vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof)
 
 
 /************* ordenar *************/
-void agregarParHablanteTono(vector<pair<hablante, float>> &listaDeTonos, reunion r, int posicion)
-{
-    pair<hablante, float> parHablanteTono;
-    parHablanteTono.first = r[posicion].second;
-    parHablanteTono.second = tono(r[posicion].first);
-
-    listaDeTonos.push_back(parHablanteTono);
-}
-
-void swapParHablanteTono(vector<pair<hablante, float>> &lista, int i, int j)
-{
-    pair<hablante, float> k = lista[i];
-    lista[i] = lista[j];
-    lista[j] = k;
-}
-
 void swapPorTono(reunion &reunion, int i, int j)
 {
     pair<senial, hablante> k = reunion[i];
     reunion[i] = reunion[j];
     reunion[j] = k;
-}
-
-void ordenarUltimoElementoEnListaOrdenada(vector<pair<hablante, float>> &listaDeHablantesYTonos)
-{
-    for (int j = listaDeHablantesYTonos.size() - 1; j > 0 && listaDeHablantesYTonos[j - 1].second < listaDeHablantesYTonos[j].second; j--) {
-        swapParHablanteTono(listaDeHablantesYTonos, j-1, j);
-    }
 }
 
 void ordenarReunionAcordeAPromedios(reunion &r)
@@ -234,13 +211,6 @@ void ordenarReunionAcordeAPromedios(reunion &r)
             }
         }
     }
-
-/*    vector<pair<hablante, float>> listaDeHablantesYTonos;
-
-    for (int k = 0; k < r.size(); k++) {
-            agregarParHablanteTono(listaDeHablantesYTonos, r, k);
-        ordenarUltimoElementoEnListaOrdenada(listaDeHablantesYTonos);
-    }*/
 }
 
 
@@ -311,12 +281,25 @@ int valorAbsoluto(int x)
     return (x < 0) ? (-x) : x;
 }
 
+bool estaHablando(senial s, int pos, int umbral){
+    bool superaUmbral = valorAbsoluto( s[pos] )  >= umbral;
+    bool algunoConsecutivoSuperaUmbral;
+    if ( pos == 0 ) {
+        algunoConsecutivoSuperaUmbral = (valorAbsoluto(s[pos + 1]) >= umbral);
+    } else if ( pos == s.size() - 1 ) {
+        algunoConsecutivoSuperaUmbral = (valorAbsoluto(s[pos - 1]) >= umbral);
+    } else {
+        algunoConsecutivoSuperaUmbral = ( valorAbsoluto( s[pos - 1] ) >= umbral && ( valorAbsoluto( s[pos + 1] ) >= umbral ) );
+    }
+    return ( superaUmbral || algunoConsecutivoSuperaUmbral );
+}
+
 bool hayHablantesSuperpuestos(reunion r, int freq, int umbral)
 {
     for (int i = 0; i < r[0].first.size(); ++i) {
         int personasHablando = 0;
         for (int j = 0; j < r.size(); ++j) {
-            if (valorAbsoluto(r[j].first[i]) >= umbral) {
+            if ( estaHablando(r[j].first, i, umbral) ) {
                 ++personasHablando;
             }
             if (personasHablando == 2) {
@@ -335,16 +318,12 @@ int valor(vector<int> s, int i)
     int m = 0;
     int n = 0;
     for (int j = i - 1; j != 0 && n == 0; --j) {
-        if (s[j] == 0) {
-            // skip
-        } else {
+        if (s[j] != 0) {
             n = j;
         }
     }
     for (int k = i + 1; k != s.size() && m == 0; ++k) {
-        if (s[k] == 0) {
-            // skip
-        } else {
+        if (s[k] != 0) {
             m = k;
         }
     }
@@ -373,9 +352,7 @@ senial reconstruirSenial(senial s)
     vector<int> sCero = s;
     for (int i = 0; i <= s.size(); ++i) {
         if (s[i] == 0) {
-            if (esPasajePorCero(sCero, i)) {
-                // skip
-            } else {
+            if (!esPasajePorCero(sCero, i)) {
                 s[i] = valor(sCero, i);
             }
         }
