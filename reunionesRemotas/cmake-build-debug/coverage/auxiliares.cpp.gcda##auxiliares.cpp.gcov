@@ -1,0 +1,1162 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/auxiliares.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/src/auxiliares.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../lib/gtest.h"
+        -:    2:#include "definiciones.h"
+        -:    3:#include "auxiliares.h"
+        -:    4:#include <fstream>
+        -:    5:
+        -:    6:
+     3470:    7:senial subSeq(senial s, int i, int r)
+     3470:    7-block  0
+        -:    8:{
+     3470:    9:    senial w;
+   162144:   10:    for (int j = i; j < r; ++j) {
+     3470:   10-block  0
+   162144:   10-block  1
+   158674:   10-block  2
+   158674:   11:        w.push_back(s[j]);
+   158674:   11-block  0
+   158674:   11-block  1
+   158674:   12:    }
+   158674:   12-block  0
+     3470:   13:    return w;
+     3470:   14:}
+    $$$$$:   14-block  0
+     3470:   14-block  1
+    $$$$$:   14-block  2
+     3470:   14-block  3
+    $$$$$:   14-block  4
+        -:   15:
+        -:   16:
+        -:   17:/************* esSenial *************/
+    #####:   18:bool freqValida(int freq)
+    $$$$$:   18-block  0
+        -:   19:{
+    #####:   20:    return freq == 10;
+    $$$$$:   20-block  0
+        -:   21:}
+        -:   22:
+    #####:   23:bool enRango(senial s, int prof)
+    $$$$$:   23-block  0
+        -:   24:{
+    #####:   25:    int umbralSuperior = pow(2, prof - 1) - 1;
+    #####:   26:    int umbralInferior = -pow(2, prof - 1);
+    #####:   27:    bool res = true;
+        -:   28:
+    #####:   29:    for (int i = 0; i < s.size() && res; i++) {
+    $$$$$:   29-block  0
+    $$$$$:   29-block  1
+    $$$$$:   29-block  2
+    $$$$$:   29-block  3
+    $$$$$:   29-block  4
+    #####:   30:        res = ( umbralInferior <= s[i]  &&  s[i] <= umbralSuperior );
+    $$$$$:   30-block  0
+    $$$$$:   30-block  1
+    #####:   31:    }
+    $$$$$:   31-block  0
+        -:   32:
+    #####:   33:    return res;
+    $$$$$:   33-block  0
+        -:   34:}
+        -:   35:
+    #####:   36:bool profValida(int prof)
+    $$$$$:   36-block  0
+        -:   37:{
+    #####:   38:    return prof == 8 || prof == 16 || prof == 32;
+    $$$$$:   38-block  0
+    $$$$$:   38-block  1
+    $$$$$:   38-block  2
+    $$$$$:   38-block  3
+        -:   39:}
+        -:   40:
+    #####:   41:bool duraMasDe(senial s, int freq, float seg)
+    $$$$$:   41-block  0
+        -:   42:{
+    #####:   43:    return s.size() >= freq * seg;
+    $$$$$:   43-block  0
+        -:   44:}
+        -:   45:
+    #####:   46:bool esValida(senial s, int prof, int freq)
+    $$$$$:   46-block  0
+        -:   47:{
+    #####:   48:    return freqValida(freq)  &&  enRango(s, prof)  &&  profValida(prof)  &&  duraMasDe(s, freq, 1);
+    $$$$$:   48-block  0
+    $$$$$:   48-block  1
+    $$$$$:   48-block  2
+    $$$$$:   48-block  3
+    $$$$$:   48-block  4
+    $$$$$:   48-block  5
+    $$$$$:   48-block  6
+    $$$$$:   48-block  7
+    $$$$$:   48-block  8
+    $$$$$:   48-block  9
+    $$$$$:   48-block 10
+    $$$$$:   48-block 11
+    $$$$$:   48-block 12
+    $$$$$:   48-block 13
+    $$$$$:   48-block 14
+    $$$$$:   48-block 15
+    $$$$$:   48-block 16
+    $$$$$:   48-block 17
+    $$$$$:   48-block 18
+    #####:   49:}
+    $$$$$:   49-block  0
+        -:   50:
+        -:   51:
+        -:   52:/************* seEnojo **************/
+     3470:   53:float tono(senial s)
+        -:   54:{
+     3470:   55:    float sum = 0;
+     3470:   55-block  0
+        -:   56:
+   162144:   57:    for (int i = 0; i < s.size(); i++) {
+     3470:   57-block  0
+   162144:   57-block  1
+   158674:   57-block  2
+   158674:   58:        sum += abs(s[i]);
+   158674:   59:    }
+   158674:   59-block  0
+        -:   60:
+     3470:   61:    return sum / s.size();
+     3470:   61-block  0
+        -:   62:}
+        -:   63:
+     3470:   64:bool superaUmbral(senial s, int umbral)
+     3470:   64-block  0
+        -:   65:{
+     3470:   66:    return tono(s) > umbral;
+     3470:   66-block  0
+     3470:   66-block  1
+    $$$$$:   66-block  2
+    $$$$$:   66-block  3
+    #####:   67:}
+        -:   68:
+       14:   69:bool existeSubseqEnojada(senial s, int umbral, int prof, int freq)
+       14:   69-block  0
+        -:   70:{
+       14:   71:    int cantMinimaDeElementos = 2 * freq;
+        -:   72:
+       14:   73:    if ( s.size() < cantMinimaDeElementos ) return false;
+       14:   73-block  0
+        4:   73-block  1
+        -:   74:
+       10:   75:    bool res = false;
+        -:   76:
+      118:   77:    for (int i = 0; ( i <= s.size() - cantMinimaDeElementos ) && !res; ++i) {
+       10:   77-block  0
+      118:   77-block  1
+      111:   77-block  2
+      118:   77-block  3
+      108:   77-block  4
+     3578:   78:        for (int j = i + cantMinimaDeElementos; ( j <= s.size() ) && !res; ++j) {
+      108:   78-block  0
+     3578:   78-block  1
+     3473:   78-block  2
+     3578:   78-block  3
+     3470:   78-block  4
+     3470:   79:            senial subseq = subSeq(s, i, j);
+     3470:   79-block  0
+    $$$$$:   79-block  1
+    $$$$$:   79-block  2
+        -:   80:
+     3470:   81:            res = superaUmbral(subseq, umbral);
+     3470:   81-block  0
+     3470:   81-block  1
+    $$$$$:   81-block  2
+     3470:   82:        }
+     3470:   82-block  0
+    $$$$$:   82-block  1
+      108:   83:    }
+      108:   83-block  0
+        -:   84:
+       10:   85:    return res;
+       10:   85-block  0
+       14:   86:}
+    $$$$$:   86-block  0
+       14:   86-block  1
+        -:   87:
+        -:   88:
+        -:   89:/************ esReunionValida ******/
+    #####:   90:bool esMatriz(reunion r)
+        -:   91:{
+    #####:   92:    bool res = true;
+    $$$$$:   92-block  0
+    #####:   93:    senial senialModelo = r[0].first;
+        -:   94:
+    #####:   95:    for (int i = 1; i < r.size() && res; ++i) {
+    $$$$$:   95-block  0
+    $$$$$:   95-block  1
+    $$$$$:   95-block  2
+    $$$$$:   95-block  3
+    $$$$$:   95-block  4
+    #####:   96:        senial senial_i = r[i].first;
+    $$$$$:   96-block  0
+    $$$$$:   96-block  1
+        -:   97:
+    #####:   98:        res = ( senialModelo.size() == senial_i.size() );
+    #####:   99:    }
+    $$$$$:   99-block  0
+        -:  100:
+    #####:  101:    return res;
+    #####:  102:}
+    $$$$$:  102-block  0
+    $$$$$:  102-block  1
+    $$$$$:  102-block  2
+        -:  103:
+    #####:  104:bool senialesValidas(reunion r, int prof, int freq)
+    $$$$$:  104-block  0
+        -:  105:{
+    #####:  106:    bool res = true;
+        -:  107:
+    #####:  108:    for (int i = 0; i < r.size() && res; ++i) {
+    $$$$$:  108-block  0
+    $$$$$:  108-block  1
+    $$$$$:  108-block  2
+    $$$$$:  108-block  3
+    $$$$$:  108-block  4
+    #####:  109:        res = esValida(r[i].first, prof, freq);
+    $$$$$:  109-block  0
+    $$$$$:  109-block  1
+    $$$$$:  109-block  2
+    #####:  110:    }
+    $$$$$:  110-block  0
+        -:  111:
+    #####:  112:    return res;
+    $$$$$:  112-block  0
+    #####:  113:}
+        -:  114:
+    #####:  115:bool todosHablantesDistintos(reunion r)
+        -:  116:{
+    #####:  117:    bool res = true;
+    $$$$$:  117-block  0
+        -:  118:
+    #####:  119:    for (int i = 0; i < r.size() && res; ++i) {
+    $$$$$:  119-block  0
+    $$$$$:  119-block  1
+    $$$$$:  119-block  2
+    $$$$$:  119-block  3
+    $$$$$:  119-block  4
+    #####:  120:        for (int j = i + 1; j < r.size() && res; ++j) {
+    $$$$$:  120-block  0
+    $$$$$:  120-block  1
+    $$$$$:  120-block  2
+    $$$$$:  120-block  3
+    $$$$$:  120-block  4
+    #####:  121:            res = ( r[i].second != r[j].second );
+    #####:  122:        }
+    $$$$$:  122-block  0
+    #####:  123:    }
+    $$$$$:  123-block  0
+        -:  124:
+    #####:  125:    return res;
+    $$$$$:  125-block  0
+        -:  126:}
+        -:  127:
+    #####:  128:bool hablantesDeReunionValidos(reunion r, int prof, int freq)
+    $$$$$:  128-block  0
+        -:  129:{
+    #####:  130:    bool res = todosHablantesDistintos(r);
+    $$$$$:  130-block  0
+    $$$$$:  130-block  1
+    $$$$$:  130-block  2
+        -:  131:
+    #####:  132:    for (int i = 0; i < r.size() && res; ++i) {
+    $$$$$:  132-block  0
+    $$$$$:  132-block  1
+    $$$$$:  132-block  2
+    $$$$$:  132-block  3
+    $$$$$:  132-block  4
+    #####:  133:        res = ( 0 <= r[i].second  &&  r[i].second < r.size() );
+    $$$$$:  133-block  0
+    $$$$$:  133-block  1
+    #####:  134:    }
+    $$$$$:  134-block  0
+        -:  135:
+    #####:  136:    return res;
+    $$$$$:  136-block  0
+    #####:  137:}
+        -:  138:
+    #####:  139:bool reunionValida(reunion r, int prof, int freq)
+    $$$$$:  139-block  0
+        -:  140:{
+    #####:  141:    return r.size() > 0  &&  esMatriz(r)  &&  senialesValidas(r, prof, freq)  &&  hablantesDeReunionValidos(r, prof, freq);
+    $$$$$:  141-block  0
+    $$$$$:  141-block  1
+    $$$$$:  141-block  2
+    $$$$$:  141-block  3
+    $$$$$:  141-block  4
+    $$$$$:  141-block  5
+    $$$$$:  141-block  6
+    $$$$$:  141-block  7
+    $$$$$:  141-block  8
+    $$$$$:  141-block  9
+    $$$$$:  141-block 10
+    $$$$$:  141-block 11
+    $$$$$:  141-block 12
+    $$$$$:  141-block 13
+    $$$$$:  141-block 14
+    $$$$$:  141-block 15
+    $$$$$:  141-block 16
+    $$$$$:  141-block 17
+    $$$$$:  141-block 18
+    $$$$$:  141-block 19
+    $$$$$:  141-block 20
+    $$$$$:  141-block 21
+    $$$$$:  141-block 22
+    $$$$$:  141-block 23
+    $$$$$:  141-block 24
+    #####:  142:}
+    $$$$$:  142-block  0
+    $$$$$:  142-block  1
+        -:  143:
+        -:  144:
+        -:  145:/************ acelerar *************/
+    #####:  146:void acelerarSenial(senial &s, int prof, int freq)
+    $$$$$:  146-block  0
+        -:  147:{
+    #####:  148:    for (int i = 0; i < s.size(); ++i) {
+    $$$$$:  148-block  0
+    $$$$$:  148-block  1
+    $$$$$:  148-block  2
+    #####:  149:        s.erase(s.begin() + i);
+    #####:  150:    }
+    $$$$$:  150-block  0
+    #####:  151:}
+    $$$$$:  151-block  0
+        -:  152:
+        -:  153:
+        -:  154:/*********** ralentizar ************/
+    #####:  155:void ralentizarSenial(senial &s, int prof, int freq)
+    $$$$$:  155-block  0
+        -:  156:{
+    #####:  157:    int longFinal = 2 * s.size() - 1;
+    #####:  158:    senial salida(longFinal, 0);
+        -:  159:
+    #####:  160:    for (int i = 0; i < salida.size(); ++i) {
+    $$$$$:  160-block  0
+    $$$$$:  160-block  1
+    $$$$$:  160-block  2
+    #####:  161:        if (i % 2 == 0) {
+    $$$$$:  161-block  0
+    #####:  162:            salida[i] = s[i / 2];
+    $$$$$:  162-block  0
+    $$$$$:  162-block  1
+    #####:  163:        } else {
+    $$$$$:  163-block  0
+    #####:  164:            salida[i] = (s[(i - 1) / 2] + s[(i + 1) / 2]) / 2;
+    $$$$$:  164-block  0
+    $$$$$:  164-block  1
+    $$$$$:  164-block  2
+    $$$$$:  164-block  3
+        -:  165:        }
+    #####:  166:    }
+    $$$$$:  166-block  0
+        -:  167:
+    #####:  168:    s = salida;
+    $$$$$:  168-block  0
+    #####:  169:}
+    $$$$$:  169-block  0
+    $$$$$:  169-block  1
+    $$$$$:  169-block  2
+        -:  170:
+        -:  171:
+        -:  172:/********* tonosDeVozElevados ******/
+    #####:  173:vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof)
+    $$$$$:  173-block  0
+        -:  174:{
+    #####:  175:    vector<hablante> hablantes = { };
+    #####:  176:    float mayorTono = 0;
+        -:  177:
+    #####:  178:    for (int i = 0; i < r.size(); ++i) {
+    $$$$$:  178-block  0
+    $$$$$:  178-block  1
+    $$$$$:  178-block  2
+    #####:  179:        float iesimoTono = tono(r[i].first);
+    $$$$$:  179-block  0
+    $$$$$:  179-block  1
+    $$$$$:  179-block  2
+    $$$$$:  179-block  3
+        -:  180:
+    #####:  181:        if (iesimoTono > mayorTono) {
+    $$$$$:  181-block  0
+    #####:  182:            mayorTono = iesimoTono;
+    #####:  183:            hablantes = { r[i].second };
+    $$$$$:  183-block  0
+    $$$$$:  183-block  1
+    #####:  184:        }
+    $$$$$:  184-block  0
+    #####:  185:        else if (iesimoTono == mayorTono) {
+    $$$$$:  185-block  0
+    #####:  186:            hablantes.push_back(r[i].second);
+    $$$$$:  186-block  0
+    $$$$$:  186-block  1
+    #####:  187:        }
+    $$$$$:  187-block  0
+    #####:  188:    }
+    $$$$$:  188-block  0
+        -:  189:
+    #####:  190:    return hablantes;
+    #####:  191:}
+    $$$$$:  191-block  0
+    $$$$$:  191-block  1
+    $$$$$:  191-block  2
+    $$$$$:  191-block  3
+    $$$$$:  191-block  4
+    $$$$$:  191-block  5
+        -:  192:
+        -:  193:
+        -:  194:/************* ordenar *************/
+    #####:  195:void agregarParHablanteTono(vector<pair<hablante, float>> &listaDeTonos, reunion r, int posicion)
+    $$$$$:  195-block  0
+        -:  196:{
+    #####:  197:    pair<hablante, float> parHablanteTono;
+    #####:  198:    parHablanteTono.first = r[posicion].second;
+    #####:  199:    parHablanteTono.second = tono(r[posicion].first);
+    $$$$$:  199-block  0
+    $$$$$:  199-block  1
+    $$$$$:  199-block  2
+        -:  200:
+    #####:  201:    listaDeTonos.push_back(parHablanteTono);
+    #####:  202:}
+    $$$$$:  202-block  0
+        -:  203:
+    #####:  204:void ordenarReunionAcordeAPromedios(reunion &r)
+    $$$$$:  204-block  0
+        -:  205:{
+    #####:  206:    vector<pair<hablante, float>> listaDeTonos;
+        -:  207:
+    #####:  208:    if (r.size() == 0 || r.size() == 1) {
+    $$$$$:  208-block  0
+    $$$$$:  208-block  1
+    #####:  209:        return;
+    $$$$$:  209-block  0
+        -:  210:    }
+        -:  211:
+    #####:  212:    for (int i = 0; i < r.size(); i++) {
+    $$$$$:  212-block  0
+    $$$$$:  212-block  1
+    $$$$$:  212-block  2
+    #####:  213:        agregarParHablanteTono(listaDeTonos, r, i);
+    $$$$$:  213-block  0
+    $$$$$:  213-block  1
+    $$$$$:  213-block  2
+        -:  214:
+        -:  215:        //insertion sort para ordenar la listaDeTonos por numero de hablante
+    #####:  216:        for (int j = i; j > 0 && listaDeTonos[j - 1].first > listaDeTonos[j].first; j--) {
+    $$$$$:  216-block  0
+    $$$$$:  216-block  1
+    $$$$$:  216-block  2
+    $$$$$:  216-block  3
+    $$$$$:  216-block  4
+    $$$$$:  216-block  5
+    $$$$$:  216-block  6
+    #####:  217:            iter_swap(listaDeTonos.begin() + j - 1, listaDeTonos.begin() + j);
+    #####:  218:        }
+    $$$$$:  218-block  0
+    #####:  219:    }
+    $$$$$:  219-block  0
+        -:  220:
+        -:  221:    
+    #####:  222:    for (int i = 1; i < r.size(); i++) {
+    $$$$$:  222-block  0
+    $$$$$:  222-block  1
+    $$$$$:  222-block  2
+        -:  223:        //insertion sort
+    #####:  224:        for (int j = i; j > 0 && listaDeTonos[r[j - 1].second].second < listaDeTonos[r[j].second].second; j--) {
+    $$$$$:  224-block  0
+    $$$$$:  224-block  1
+    $$$$$:  224-block  2
+    $$$$$:  224-block  3
+    $$$$$:  224-block  4
+    $$$$$:  224-block  5
+    $$$$$:  224-block  6
+    $$$$$:  224-block  7
+    $$$$$:  224-block  8
+    #####:  225:            iter_swap(r.begin() + j - 1, r.begin() + j);
+    #####:  226:        }
+    $$$$$:  226-block  0
+    #####:  227:    }
+    $$$$$:  227-block  0
+        -:  228:    
+    #####:  229:}
+    $$$$$:  229-block  0
+    $$$$$:  229-block  1
+    $$$$$:  229-block  2
+    $$$$$:  229-block  3
+    $$$$$:  229-block  4
+    $$$$$:  229-block  5
+        -:  230:
+        -:  231:
+        -:  232:/************* silencios *************/
+    #####:  233:bool superaUmbral(int valor, int umbral)
+    $$$$$:  233-block  0
+        -:  234:{
+    #####:  235:    return abs(valor) >= umbral;
+    $$$$$:  235-block  0
+        -:  236:}
+        -:  237:
+    #####:  238:void actualizarIndicesYFlags(int &outInicioSilencio, int indiceActual, bool &outCandidatoSilencio, bool &outEsSilencio, int freq)
+    $$$$$:  238-block  0
+        -:  239:{
+    #####:  240:    if ( !outCandidatoSilencio ) {
+    $$$$$:  240-block  0
+    #####:  241:        outInicioSilencio = indiceActual;
+    #####:  242:    }
+    $$$$$:  242-block  0
+        -:  243:
+    #####:  244:    outCandidatoSilencio = true;
+        -:  245:
+    #####:  246:    if (indiceActual - outInicioSilencio + 1 >= freq * 0.2) {
+    $$$$$:  246-block  0
+    #####:  247:        outEsSilencio = true;
+    #####:  248:    }
+    $$$$$:  248-block  0
+    #####:  249:}
+    $$$$$:  249-block  0
+        -:  250:
+    #####:  251:void agregarIntervalo(vector<intervalo> &listaDeSilencios, int inicioSilencio, int finSilencio)
+    $$$$$:  251-block  0
+        -:  252:{
+    #####:  253:    intervalo silencio;
+        -:  254:
+    #####:  255:    silencio.first = inicioSilencio;
+    #####:  256:    silencio.second = finSilencio;
+        -:  257:
+    #####:  258:    listaDeSilencios.push_back(silencio);
+    #####:  259:}
+    $$$$$:  259-block  0
+        -:  260:
+    #####:  261:vector<intervalo> obtenerSilencios(senial s, int freq, int umbral)
+    $$$$$:  261-block  0
+        -:  262:{
+    #####:  263:    vector<intervalo> ret(0);
+    #####:  264:    int inicioSilencio = 0;
+    #####:  265:    bool candidatoASilencio = false;
+    #####:  266:    bool esSilencio = false;
+        -:  267:
+        -:  268:
+    #####:  269:    for (int i = 0; i < s.size(); i++) {
+    $$$$$:  269-block  0
+    $$$$$:  269-block  1
+    $$$$$:  269-block  2
+        -:  270:
+    #####:  271:        if (superaUmbral(s[i], umbral) == false) {
+    $$$$$:  271-block  0
+    $$$$$:  271-block  1
+    $$$$$:  271-block  2
+    #####:  272:            actualizarIndicesYFlags(inicioSilencio, i, candidatoASilencio, esSilencio, freq);
+    $$$$$:  272-block  0
+    #####:  273:        }
+    $$$$$:  273-block  0
+        -:  274:
+        -:  275:        else {
+    #####:  276:            if (esSilencio) {
+    $$$$$:  276-block  0
+    #####:  277:                agregarIntervalo(ret, inicioSilencio, i - 1);
+    $$$$$:  277-block  0
+    #####:  278:            }
+    $$$$$:  278-block  0
+    #####:  279:            esSilencio = false;
+    #####:  280:            candidatoASilencio = false;
+    $$$$$:  280-block  0
+        -:  281:        }
+    #####:  282:    }
+    $$$$$:  282-block  0
+        -:  283:
+        -:  284:
+    #####:  285:    if (esSilencio) { /* agregar silencio en caso de que termine al final */
+    $$$$$:  285-block  0
+    #####:  286:        agregarIntervalo(ret, inicioSilencio, s.size() - 1);
+    $$$$$:  286-block  0
+    #####:  287:    }
+    $$$$$:  287-block  0
+        -:  288:
+    #####:  289:    return ret;
+    #####:  290:}
+    $$$$$:  290-block  0
+    $$$$$:  290-block  1
+    $$$$$:  290-block  2
+    $$$$$:  290-block  3
+    $$$$$:  290-block  4
+        -:  291:
+        -:  292:
+        -:  293:/****** hablantesSuperpuestos ********/
+    #####:  294:int valorAbsoluto(int x)
+    $$$$$:  294-block  0
+        -:  295:{
+    #####:  296:    return (x < 0) ? (-x) : x;
+    $$$$$:  296-block  0
+    $$$$$:  296-block  1
+    $$$$$:  296-block  2
+    $$$$$:  296-block  3
+        -:  297:}
+        -:  298:
+    #####:  299:bool hayHablantesSuperpuestos(reunion r, int freq, int umbral)
+    $$$$$:  299-block  0
+        -:  300:{
+    #####:  301:    for (int i = 0; i < r[0].first.size(); ++i) {
+    $$$$$:  301-block  0
+    $$$$$:  301-block  1
+    $$$$$:  301-block  2
+    #####:  302:        int personasHablando = 0;
+    #####:  303:        for (int j = 0; j < r.size(); ++j) {
+    $$$$$:  303-block  0
+    $$$$$:  303-block  1
+    $$$$$:  303-block  2
+    #####:  304:            if (valorAbsoluto(r[j].first[i]) >= umbral) {
+    $$$$$:  304-block  0
+    #####:  305:                ++personasHablando;
+    #####:  306:            }
+    $$$$$:  306-block  0
+    #####:  307:            if (personasHablando == 2) {
+    $$$$$:  307-block  0
+    #####:  308:                return true;
+    $$$$$:  308-block  0
+        -:  309:            }
+    #####:  310:        }
+    $$$$$:  310-block  0
+        -:  311:
+    #####:  312:    }
+    $$$$$:  312-block  0
+    #####:  313:    return false;
+    $$$$$:  313-block  0
+    #####:  314:}
+    $$$$$:  314-block  0
+        -:  315:
+        -:  316:
+        -:  317:/*********** reconstruir *************/
+    #####:  318:int valor(vector<int> s, int i)
+    $$$$$:  318-block  0
+        -:  319:{
+    #####:  320:    int m = 0;
+    #####:  321:    int n = 0;
+    #####:  322:    for (int j = i - 1; j != 0 && n == 0; --j) {
+    $$$$$:  322-block  0
+    $$$$$:  322-block  1
+    $$$$$:  322-block  2
+    $$$$$:  322-block  3
+    $$$$$:  322-block  4
+    #####:  323:        if (s[j] == 0) {
+    $$$$$:  323-block  0
+        -:  324:            // skip
+    #####:  325:        } else {
+    $$$$$:  325-block  0
+    #####:  326:            n = j;
+    $$$$$:  326-block  0
+        -:  327:        }
+    #####:  328:    }
+    $$$$$:  328-block  0
+    #####:  329:    for (int k = i + 1; k != s.size() && m == 0; ++k) {
+    $$$$$:  329-block  0
+    $$$$$:  329-block  1
+    $$$$$:  329-block  2
+    $$$$$:  329-block  3
+    $$$$$:  329-block  4
+    #####:  330:        if (s[k] == 0) {
+    $$$$$:  330-block  0
+        -:  331:            // skip
+    #####:  332:        } else {
+    $$$$$:  332-block  0
+    #####:  333:            m = k;
+    $$$$$:  333-block  0
+        -:  334:        }
+    #####:  335:    }
+    $$$$$:  335-block  0
+        -:  336:
+    #####:  337:    return (s[n] + s[m]) / 2;
+    $$$$$:  337-block  0
+        -:  338:}
+        -:  339:
+    #####:  340:int signo(int k)
+    $$$$$:  340-block  0
+        -:  341:{
+    #####:  342:    if (k > 0) {
+    $$$$$:  342-block  0
+    #####:  343:        return 1;
+    $$$$$:  343-block  0
+    #####:  344:    } else if (k < 0) {
+    $$$$$:  344-block  0
+    #####:  345:        return -1;
+    $$$$$:  345-block  0
+        -:  346:    } else {
+    #####:  347:        return 0;
+    $$$$$:  347-block  0
+        -:  348:    }
+    #####:  349:}
+    $$$$$:  349-block  0
+        -:  350:
+    #####:  351:bool esPasajePorCero(vector<int> s, int i)
+    $$$$$:  351-block  0
+        -:  352:{
+    #####:  353:    return signo(s[i - 1]) * signo(s[i + 1]) == -1;
+    $$$$$:  353-block  0
+        -:  354:}
+        -:  355:
+    #####:  356:senial reconstruirSenial(senial s)
+        -:  357:{
+    #####:  358:    vector<int> sCero = s;
+    $$$$$:  358-block  0
+    #####:  359:    for (int i = 0; i <= s.size(); ++i) {
+    $$$$$:  359-block  0
+    $$$$$:  359-block  1
+    $$$$$:  359-block  2
+    #####:  360:        if (s[i] == 0) {
+    $$$$$:  360-block  0
+    $$$$$:  360-block  1
+    #####:  361:            if (esPasajePorCero(sCero, i)) {
+    $$$$$:  361-block  0
+    $$$$$:  361-block  1
+    $$$$$:  361-block  2
+    $$$$$:  361-block  3
+        -:  362:                // skip
+    #####:  363:            } else {
+    $$$$$:  363-block  0
+    #####:  364:                s[i] = valor(sCero, i);
+    $$$$$:  364-block  0
+    $$$$$:  364-block  1
+    $$$$$:  364-block  2
+    $$$$$:  364-block  3
+    $$$$$:  364-block  4
+        -:  365:            }
+    #####:  366:        }
+    $$$$$:  366-block  0
+    #####:  367:    }
+    $$$$$:  367-block  0
+        -:  368:
+    #####:  369:    return s;
+    #####:  370:}
+    $$$$$:  370-block  0
+    $$$$$:  370-block  1
+    $$$$$:  370-block  2
+    $$$$$:  370-block  3
+        -:  371:
+        -:  372:
+        -:  373:/********* friltradoMediana **********/
+    #####:  374:bool coincidenExtremos(senial s, int i, int r)
+    $$$$$:  374-block  0
+        -:  375:{
+    #####:  376:    return i < r || i >= s.size() - r;
+    $$$$$:  376-block  0
+    $$$$$:  376-block  1
+    $$$$$:  376-block  2
+        -:  377:}
+        -:  378:
+    #####:  379:void swap(senial &lista, int i, int j)
+    $$$$$:  379-block  0
+        -:  380:{
+    #####:  381:    int k = lista[i];
+    #####:  382:    lista[i] = lista[j];
+    #####:  383:    lista[j] = k;
+    #####:  384:}
+    $$$$$:  384-block  0
+        -:  385:
+    #####:  386:void insertar(senial &lista, int i)
+    $$$$$:  386-block  0
+        -:  387:{
+    #####:  388:    while (i > 0 && lista[i] < lista[i - 1]) {
+    $$$$$:  388-block  0
+    $$$$$:  388-block  1
+    $$$$$:  388-block  2
+    $$$$$:  388-block  3
+    $$$$$:  388-block  4
+    #####:  389:        swap(lista, i, i - 1);
+    #####:  390:        i--;
+        -:  391:    }
+    #####:  392:}
+    $$$$$:  392-block  0
+        -:  393:
+    #####:  394:senial insertionSort(senial lista)
+        -:  395:{
+    #####:  396:    for (int i = 0; i < lista.size(); i++) {
+    $$$$$:  396-block  0
+    $$$$$:  396-block  1
+    $$$$$:  396-block  2
+    $$$$$:  396-block  3
+    #####:  397:        insertar(lista, i);
+    #####:  398:    }
+    $$$$$:  398-block  0
+    #####:  399:    return lista;
+    $$$$$:  399-block  0
+        -:  400:}
+        -:  401:
+    #####:  402:senial ordenarSenialW(senial w)
+        -:  403:{
+    #####:  404:    return insertionSort(w);
+    $$$$$:  404-block  0
+    $$$$$:  404-block  1
+    $$$$$:  404-block  2
+    $$$$$:  404-block  3
+    $$$$$:  404-block  4
+    #####:  405:}
+        -:  406:
+    #####:  407:senial filtrada(senial s, int r)
+    $$$$$:  407-block  0
+        -:  408:{ //O(n).                               ejercicio 3.
+    #####:  409:    senial w; // 1
+    #####:  410:    senial sCero = s;
+    $$$$$:  410-block  0
+    #####:  411:    for (int i = 0; i < s.size(); ++i) { // n
+    $$$$$:  411-block  0
+    $$$$$:  411-block  1
+    $$$$$:  411-block  2
+    #####:  412:        if (!coincidenExtremos(sCero, i, r)) { // 1
+    $$$$$:  412-block  0
+    $$$$$:  412-block  1
+    $$$$$:  412-block  2
+    $$$$$:  412-block  3
+    #####:  413:            w = ordenarSenialW(subSeq(sCero, i - r, i + r + 1)); //
+    $$$$$:  413-block  0
+    $$$$$:  413-block  1
+    $$$$$:  413-block  2
+    $$$$$:  413-block  3
+    $$$$$:  413-block  4
+    #####:  414:            s[i] = w[r]; // 1
+    $$$$$:  414-block  0
+    $$$$$:  414-block  1
+    #####:  415:        }
+    $$$$$:  415-block  0
+    #####:  416:    }
+    $$$$$:  416-block  0
+    #####:  417:    return s;
+    #####:  418:}
+    $$$$$:  418-block  0
+    $$$$$:  418-block  1
+    $$$$$:  418-block  2
+    $$$$$:  418-block  3
+    $$$$$:  418-block  4
+    $$$$$:  418-block  5
+    $$$$$:  418-block  6
+        -:  419:
+        -:  420:
+        -:  421:
+        -:  422:
+        -:  423:/************* Ejercicio 4 *************/
+    #####:  424:senial leerSenial(string nombreArchivo)
+        -:  425:{
+    #####:  426:    senial s(0);
+    $$$$$:  426-block  0
+    #####:  427:    string StringDeLaSenial;
+    #####:  428:    ifstream inputArchivo;
+    $$$$$:  428-block  0
+        -:  429:
+        -:  430:
+    #####:  431:    inputArchivo.open(nombreArchivo.c_str(), ios_base::in);
+    $$$$$:  431-block  0
+    #####:  432:    if (inputArchivo.is_open() == false) {
+    $$$$$:  432-block  0
+    $$$$$:  432-block  1
+    #####:  433:        return s;
+    $$$$$:  433-block  0
+        -:  434:    }
+        -:  435:
+    #####:  436:    getline(inputArchivo, StringDeLaSenial);
+    $$$$$:  436-block  0
+        -:  437:
+    #####:  438:    for (int k = 0; k < StringDeLaSenial.size(); k++) {
+    $$$$$:  438-block  0
+    $$$$$:  438-block  1
+    $$$$$:  438-block  2
+        -:  439:
+    #####:  440:        int numeroDeSenial = 0;
+        -:  441:
+    #####:  442:        if (StringDeLaSenial[k] != ' ') {
+    $$$$$:  442-block  0
+    #####:  443:            numeroDeSenial *= 10;
+    #####:  444:            numeroDeSenial += StringDeLaSenial[k] - '0';
+    #####:  445:        }
+    $$$$$:  445-block  0
+        -:  446:        else {
+    #####:  447:            s.push_back(numeroDeSenial);
+    $$$$$:  447-block  0
+    #####:  448:            numeroDeSenial = 0;
+    $$$$$:  448-block  0
+        -:  449:        }
+    #####:  450:    }
+    $$$$$:  450-block  0
+        -:  451:
+    #####:  452:    inputArchivo.close();
+    $$$$$:  452-block  0
+    #####:  453:    return s;
+    $$$$$:  453-block  0
+    #####:  454:}
+    $$$$$:  454-block  0
+    $$$$$:  454-block  1
+    $$$$$:  454-block  2
+    $$$$$:  454-block  3
+    $$$$$:  454-block  4
+    $$$$$:  454-block  5
+    $$$$$:  454-block  6
+        -:  455:
+    #####:  456:void escribirSenial(senial s, string nombreArchivo)
+        -:  457:{
+    #####:  458:    ofstream outputArchivo;
+    $$$$$:  458-block  0
+        -:  459:
+    #####:  460:    outputArchivo.open(nombreArchivo.c_str(), ios_base::app);
+    $$$$$:  460-block  0
+    #####:  461:    if ( !outputArchivo.is_open() ) {
+    $$$$$:  461-block  0
+    $$$$$:  461-block  1
+    #####:  462:        return;
+    $$$$$:  462-block  0
+        -:  463:    }
+        -:  464:
+    #####:  465:    for (int k = 0; k < s.size(); k++) {
+    $$$$$:  465-block  0
+    $$$$$:  465-block  1
+    $$$$$:  465-block  2
+    #####:  466:        outputArchivo << s[k] << ' ';
+    $$$$$:  466-block  0
+    $$$$$:  466-block  1
+    $$$$$:  466-block  2
+    #####:  467:    }
+    $$$$$:  467-block  0
+        -:  468:
+    #####:  469:    outputArchivo.close();
+    $$$$$:  469-block  0
+    #####:  470:}
+    $$$$$:  470-block  0
+    $$$$$:  470-block  1
+    $$$$$:  470-block  2
+    $$$$$:  470-block  3
+    $$$$$:  470-block  4
+        -:  471:
+        -:  472:/************* Ejercicio 4 *************/
+        -:  473:
+        -:  474:
+        -:  475:
+    #####:  476:bool senialesOrdenadasIguales(senial s1, senial s2){
+        -:  477:
+    #####:  478:    if(s1.size() != s2.size())
+    $$$$$:  478-block  0
+    $$$$$:  478-block  1
+    #####:  479:        return false;
+    $$$$$:  479-block  0
+        -:  480:
+    #####:  481:    for (int i = 0; i < s1.size(); ++i){
+    $$$$$:  481-block  0
+    $$$$$:  481-block  1
+    $$$$$:  481-block  2
+    #####:  482:        if (s1[i] != s2[i]){
+    $$$$$:  482-block  0
+    #####:  483:        	return false;
+    $$$$$:  483-block  0
+        -:  484:        }
+    #####:  485:    }
+    $$$$$:  485-block  0
+        -:  486:
+    #####:  487:    return true;
+    $$$$$:  487-block  0
+    #####:  488:}
+    $$$$$:  488-block  0
+        -:  489:
+    #####:  490:bool reunionesIguales(reunion reunion1, reunion reunion2){
+    #####:  491:    if(reunion1.size() != reunion2.size())
+    $$$$$:  491-block  0
+    $$$$$:  491-block  1
+    #####:  492:        return false;
+    $$$$$:  492-block  0
+        -:  493:
+    #####:  494:    for (int i = 0; i < reunion1.size(); ++i) {
+    $$$$$:  494-block  0
+    $$$$$:  494-block  1
+    $$$$$:  494-block  2
+    #####:  495:        if(reunion1[i].second != reunion2[i].second)
+    $$$$$:  495-block  0
+    #####:  496:            return false;
+    $$$$$:  496-block  0
+        -:  497:
+    #####:  498:        if(reunion1[i].first.size() != reunion2[i].first.size())
+    $$$$$:  498-block  0
+    #####:  499:            return false;
+    $$$$$:  499-block  0
+        -:  500:
+    #####:  501:        if(!senialesOrdenadasIguales(reunion1[i].first, reunion2[i].first))
+    $$$$$:  501-block  0
+    $$$$$:  501-block  1
+    $$$$$:  501-block  2
+    $$$$$:  501-block  3
+    $$$$$:  501-block  4
+    $$$$$:  501-block  5
+    $$$$$:  501-block  6
+    #####:  502:            return false;
+    $$$$$:  502-block  0
+    #####:  503:    }
+    $$$$$:  503-block  0
+        -:  504:
+    #####:  505:    return true;
+    $$$$$:  505-block  0
+    #####:  506:}
+    $$$$$:  506-block  0
+    $$$$$:  506-block  1
+        -:  507:
+    #####:  508:bool hablantesOrdenadosIguales(vector<hablante> s1, vector<hablante> s2){
+    #####:  509:    if(s1.size() != s2.size())
+    $$$$$:  509-block  0
+    $$$$$:  509-block  1
+    #####:  510:        return false;
+    $$$$$:  510-block  0
+        -:  511:
+    #####:  512:    sort(s1.begin(), s1.end());
+    #####:  513:    sort(s2.begin(), s2.end());
+        -:  514:
+    #####:  515:    for (int i = 0; i < s1.size(); ++i)
+    $$$$$:  515-block  0
+    $$$$$:  515-block  1
+    $$$$$:  515-block  2
+    #####:  516:        if (s1[i] != s2[i]){return false;}
+    $$$$$:  516-block  0
+    $$$$$:  516-block  1
+    $$$$$:  516-block  2
+        -:  517:
+    #####:  518:    return true;
+    $$$$$:  518-block  0
+    #####:  519:}
+    $$$$$:  519-block  0
+        -:  520:
+    #####:  521:bool intervalosOrdenadosIguales(vector<intervalo> s1, vector<intervalo> s2){
+    #####:  522:    if(s1.size() != s2.size())
+    $$$$$:  522-block  0
+    $$$$$:  522-block  1
+    #####:  523:        return false;
+    $$$$$:  523-block  0
+        -:  524:
+    #####:  525:    sort(s1.begin(), s1.end());
+    #####:  526:    sort(s2.begin(), s2.end());
+        -:  527:
+    #####:  528:    for (int i = 0; i < s1.size(); ++i)
+    $$$$$:  528-block  0
+    $$$$$:  528-block  1
+    $$$$$:  528-block  2
+    #####:  529:        if (s1[i] != s2[i]){return false;}
+    $$$$$:  529-block  0
+    $$$$$:  529-block  1
+    $$$$$:  529-block  2
+        -:  530:
+    #####:  531:    return true;
+    $$$$$:  531-block  0
+    #####:  532:}
+    $$$$$:  532-block  0
+        -:  533:
+    #####:  534:void ASSERT_SENIAL_EQ(senial s1, senial s2) {
+    #####:  535:    ASSERT_TRUE(senialesOrdenadasIguales(s1, s2));
+    $$$$$:  535-block  0
+    $$$$$:  535-block  1
+    $$$$$:  535-block  2
+    $$$$$:  535-block  3
+    $$$$$:  535-block  4
+    $$$$$:  535-block  5
+    $$$$$:  535-block  6
+    $$$$$:  535-block  7
+    $$$$$:  535-block  8
+    $$$$$:  535-block  9
+    $$$$$:  535-block 10
+    $$$$$:  535-block 11
+    $$$$$:  535-block 12
+    $$$$$:  535-block 13
+    $$$$$:  535-block 14
+    $$$$$:  535-block 15
+    $$$$$:  535-block 16
+    $$$$$:  535-block 17
+    $$$$$:  535-block 18
+    $$$$$:  535-block 19
+    $$$$$:  535-block 20
+    #####:  536:}
+    $$$$$:  536-block  0
+    $$$$$:  536-block  1
+    $$$$$:  536-block  2
+    $$$$$:  536-block  3
+    $$$$$:  536-block  4
+        -:  537:
+    #####:  538:void ASSERT_REUNION_EQ(reunion reunion1, reunion reunion2) {
+    #####:  539:    ASSERT_TRUE(reunionesIguales(reunion1, reunion2));
+    $$$$$:  539-block  0
+    $$$$$:  539-block  1
+    $$$$$:  539-block  2
+    $$$$$:  539-block  3
+    $$$$$:  539-block  4
+    $$$$$:  539-block  5
+    $$$$$:  539-block  6
+    $$$$$:  539-block  7
+    $$$$$:  539-block  8
+    $$$$$:  539-block  9
+    $$$$$:  539-block 10
+    $$$$$:  539-block 11
+    $$$$$:  539-block 12
+    $$$$$:  539-block 13
+    $$$$$:  539-block 14
+    $$$$$:  539-block 15
+    $$$$$:  539-block 16
+    $$$$$:  539-block 17
+    $$$$$:  539-block 18
+    $$$$$:  539-block 19
+    $$$$$:  539-block 20
+    #####:  540:}
+    $$$$$:  540-block  0
+    $$$$$:  540-block  1
+    $$$$$:  540-block  2
+    $$$$$:  540-block  3
+    $$$$$:  540-block  4
+        -:  541:
+    #####:  542:void ASSERT_HABLANTES_EQ(vector<hablante> s1, vector<hablante> s2) {
+    #####:  543:    ASSERT_TRUE(hablantesOrdenadosIguales(s1, s2));
+    $$$$$:  543-block  0
+    $$$$$:  543-block  1
+    $$$$$:  543-block  2
+    $$$$$:  543-block  3
+    $$$$$:  543-block  4
+    $$$$$:  543-block  5
+    $$$$$:  543-block  6
+    $$$$$:  543-block  7
+    $$$$$:  543-block  8
+    $$$$$:  543-block  9
+    $$$$$:  543-block 10
+    $$$$$:  543-block 11
+    $$$$$:  543-block 12
+    $$$$$:  543-block 13
+    $$$$$:  543-block 14
+    $$$$$:  543-block 15
+    $$$$$:  543-block 16
+    $$$$$:  543-block 17
+    $$$$$:  543-block 18
+    $$$$$:  543-block 19
+    $$$$$:  543-block 20
+    #####:  544:}
+    $$$$$:  544-block  0
+    $$$$$:  544-block  1
+    $$$$$:  544-block  2
+    $$$$$:  544-block  3
+    $$$$$:  544-block  4
+        -:  545:
+    #####:  546:void ASSERT_INTERVALOS_EQ(vector<intervalo> s1, vector<intervalo> s2) {
+    #####:  547:    ASSERT_TRUE(intervalosOrdenadosIguales(s1, s2));
+    $$$$$:  547-block  0
+    $$$$$:  547-block  1
+    $$$$$:  547-block  2
+    $$$$$:  547-block  3
+    $$$$$:  547-block  4
+    $$$$$:  547-block  5
+    $$$$$:  547-block  6
+    $$$$$:  547-block  7
+    $$$$$:  547-block  8
+    $$$$$:  547-block  9
+    $$$$$:  547-block 10
+    $$$$$:  547-block 11
+    $$$$$:  547-block 12
+    $$$$$:  547-block 13
+    $$$$$:  547-block 14
+    $$$$$:  547-block 15
+    $$$$$:  547-block 16
+    $$$$$:  547-block 17
+    $$$$$:  547-block 18
+    $$$$$:  547-block 19
+    $$$$$:  547-block 20
+    #####:  548:}
+    $$$$$:  548-block  0
+    $$$$$:  548-block  1
+    $$$$$:  548-block  2
+    $$$$$:  548-block  3
+    $$$$$:  548-block  4

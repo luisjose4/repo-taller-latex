@@ -1,0 +1,1193 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/esSenial.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/esSenial.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../src/solucion.h"
+        -:    2:#include "../src/auxiliares.h"
+        -:    3:#include "../lib/gtest.h"
+        -:    4:
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+        1:    8:TEST(esSenialTEST, frecuenciaValida){
+        1:    8-block  0
+        1:    8-block  1
+        1:    8-block  2
+        1:    8-block  3
+        1:    8-block  4
+        1:    8-block  5
+        1:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+    $$$$$:    8-block 12
+    $$$$$:    8-block 13
+    $$$$$:    8-block 14
+    $$$$$:    8-block 15
+    $$$$$:    8-block 16
+    $$$$$:    8-block 17
+    $$$$$:    8-block 18
+    $$$$$:    8-block 19
+    $$$$$:    8-block 20
+    $$$$$:    8-block 21
+    $$$$$:    8-block 22
+    $$$$$:    8-block 23
+    #####:    9:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:   10:    int prof = 8;
+    #####:   11:    int freq = 10;
+        -:   12:
+    #####:   13:    ASSERT_TRUE(esSenial(s, prof, freq));
+    $$$$$:   13-block  0
+    $$$$$:   13-block  1
+    $$$$$:   13-block  2
+    $$$$$:   13-block  3
+    $$$$$:   13-block  4
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+    $$$$$:   13-block  7
+    $$$$$:   13-block  8
+    $$$$$:   13-block  9
+    $$$$$:   13-block 10
+    $$$$$:   13-block 11
+    $$$$$:   13-block 12
+    $$$$$:   13-block 13
+    $$$$$:   13-block 14
+    $$$$$:   13-block 15
+    $$$$$:   13-block 16
+    $$$$$:   13-block 17
+    #####:   14:}
+    $$$$$:   14-block  0
+    $$$$$:   14-block  1
+    $$$$$:   14-block  2
+    $$$$$:   14-block  3
+    $$$$$:   14-block  4
+    $$$$$:   14-block  5
+    $$$$$:   14-block  6
+    $$$$$:   14-block  7
+    $$$$$:   14-block  8
+        -:   15:
+        1:   16:TEST(esSenialTEST, frecuenciaInvalida){
+        1:   16-block  0
+        1:   16-block  1
+        1:   16-block  2
+        1:   16-block  3
+        1:   16-block  4
+        1:   16-block  5
+        1:   16-block  6
+    $$$$$:   16-block  7
+    $$$$$:   16-block  8
+    $$$$$:   16-block  9
+    $$$$$:   16-block 10
+    $$$$$:   16-block 11
+    $$$$$:   16-block 12
+    $$$$$:   16-block 13
+    $$$$$:   16-block 14
+    $$$$$:   16-block 15
+    $$$$$:   16-block 16
+    $$$$$:   16-block 17
+    $$$$$:   16-block 18
+    $$$$$:   16-block 19
+    $$$$$:   16-block 20
+    $$$$$:   16-block 21
+    $$$$$:   16-block 22
+    $$$$$:   16-block 23
+    #####:   17:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:   18:    int prof = 8;
+    #####:   19:    int freq = 25;
+        -:   20:
+    #####:   21:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:   21-block  0
+    $$$$$:   21-block  1
+    $$$$$:   21-block  2
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+    $$$$$:   21-block  6
+    $$$$$:   21-block  7
+    $$$$$:   21-block  8
+    $$$$$:   21-block  9
+    $$$$$:   21-block 10
+    $$$$$:   21-block 11
+    $$$$$:   21-block 12
+    $$$$$:   21-block 13
+    $$$$$:   21-block 14
+    $$$$$:   21-block 15
+    $$$$$:   21-block 16
+    $$$$$:   21-block 17
+    #####:   22:}
+    $$$$$:   22-block  0
+    $$$$$:   22-block  1
+    $$$$$:   22-block  2
+    $$$$$:   22-block  3
+    $$$$$:   22-block  4
+    $$$$$:   22-block  5
+    $$$$$:   22-block  6
+    $$$$$:   22-block  7
+    $$$$$:   22-block  8
+        -:   23:
+        1:   24:TEST(esSenialTEST, frecuenciaNegativa){
+        1:   24-block  0
+        1:   24-block  1
+        1:   24-block  2
+        1:   24-block  3
+        1:   24-block  4
+        1:   24-block  5
+        1:   24-block  6
+    $$$$$:   24-block  7
+    $$$$$:   24-block  8
+    $$$$$:   24-block  9
+    $$$$$:   24-block 10
+    $$$$$:   24-block 11
+    $$$$$:   24-block 12
+    $$$$$:   24-block 13
+    $$$$$:   24-block 14
+    $$$$$:   24-block 15
+    $$$$$:   24-block 16
+    $$$$$:   24-block 17
+    $$$$$:   24-block 18
+    $$$$$:   24-block 19
+    $$$$$:   24-block 20
+    $$$$$:   24-block 21
+    $$$$$:   24-block 22
+    $$$$$:   24-block 23
+    #####:   25:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:   26:    int prof = 8;
+    #####:   27:    int freq = -10;
+        -:   28:
+    #####:   29:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:   29-block  0
+    $$$$$:   29-block  1
+    $$$$$:   29-block  2
+    $$$$$:   29-block  3
+    $$$$$:   29-block  4
+    $$$$$:   29-block  5
+    $$$$$:   29-block  6
+    $$$$$:   29-block  7
+    $$$$$:   29-block  8
+    $$$$$:   29-block  9
+    $$$$$:   29-block 10
+    $$$$$:   29-block 11
+    $$$$$:   29-block 12
+    $$$$$:   29-block 13
+    $$$$$:   29-block 14
+    $$$$$:   29-block 15
+    $$$$$:   29-block 16
+    $$$$$:   29-block 17
+    #####:   30:}
+    $$$$$:   30-block  0
+    $$$$$:   30-block  1
+    $$$$$:   30-block  2
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+    $$$$$:   30-block  5
+    $$$$$:   30-block  6
+    $$$$$:   30-block  7
+    $$$$$:   30-block  8
+        -:   31:
+        1:   32:TEST(esSenialTEST, frecuenciaIgualACero){
+        1:   32-block  0
+        1:   32-block  1
+        1:   32-block  2
+        1:   32-block  3
+        1:   32-block  4
+        1:   32-block  5
+        1:   32-block  6
+    $$$$$:   32-block  7
+    $$$$$:   32-block  8
+    $$$$$:   32-block  9
+    $$$$$:   32-block 10
+    $$$$$:   32-block 11
+    $$$$$:   32-block 12
+    $$$$$:   32-block 13
+    $$$$$:   32-block 14
+    $$$$$:   32-block 15
+    $$$$$:   32-block 16
+    $$$$$:   32-block 17
+    $$$$$:   32-block 18
+    $$$$$:   32-block 19
+    $$$$$:   32-block 20
+    $$$$$:   32-block 21
+    $$$$$:   32-block 22
+    $$$$$:   32-block 23
+    #####:   33:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:   34:    int prof = 8;
+    #####:   35:    int freq = 0;
+        -:   36:
+    #####:   37:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:   37-block  0
+    $$$$$:   37-block  1
+    $$$$$:   37-block  2
+    $$$$$:   37-block  3
+    $$$$$:   37-block  4
+    $$$$$:   37-block  5
+    $$$$$:   37-block  6
+    $$$$$:   37-block  7
+    $$$$$:   37-block  8
+    $$$$$:   37-block  9
+    $$$$$:   37-block 10
+    $$$$$:   37-block 11
+    $$$$$:   37-block 12
+    $$$$$:   37-block 13
+    $$$$$:   37-block 14
+    $$$$$:   37-block 15
+    $$$$$:   37-block 16
+    $$$$$:   37-block 17
+    #####:   38:}
+    $$$$$:   38-block  0
+    $$$$$:   38-block  1
+    $$$$$:   38-block  2
+    $$$$$:   38-block  3
+    $$$$$:   38-block  4
+    $$$$$:   38-block  5
+    $$$$$:   38-block  6
+    $$$$$:   38-block  7
+    $$$$$:   38-block  8
+        -:   39:
+        1:   40:TEST(esSenialTEST, muestrasEnRango){
+        1:   40-block  0
+        1:   40-block  1
+        1:   40-block  2
+        1:   40-block  3
+        1:   40-block  4
+        1:   40-block  5
+        1:   40-block  6
+    $$$$$:   40-block  7
+    $$$$$:   40-block  8
+    $$$$$:   40-block  9
+    $$$$$:   40-block 10
+    $$$$$:   40-block 11
+    $$$$$:   40-block 12
+    $$$$$:   40-block 13
+    $$$$$:   40-block 14
+    $$$$$:   40-block 15
+    $$$$$:   40-block 16
+    $$$$$:   40-block 17
+    $$$$$:   40-block 18
+    $$$$$:   40-block 19
+    $$$$$:   40-block 20
+    $$$$$:   40-block 21
+    $$$$$:   40-block 22
+    $$$$$:   40-block 23
+    #####:   41:    senial s = {1,3,-3,127,6,0,-128,-8,9,-15,7};
+    #####:   42:    int prof = 8;
+    #####:   43:    int freq = 10;
+        -:   44:
+    #####:   45:    ASSERT_TRUE(esSenial(s, prof, freq));
+    $$$$$:   45-block  0
+    $$$$$:   45-block  1
+    $$$$$:   45-block  2
+    $$$$$:   45-block  3
+    $$$$$:   45-block  4
+    $$$$$:   45-block  5
+    $$$$$:   45-block  6
+    $$$$$:   45-block  7
+    $$$$$:   45-block  8
+    $$$$$:   45-block  9
+    $$$$$:   45-block 10
+    $$$$$:   45-block 11
+    $$$$$:   45-block 12
+    $$$$$:   45-block 13
+    $$$$$:   45-block 14
+    $$$$$:   45-block 15
+    $$$$$:   45-block 16
+    $$$$$:   45-block 17
+    #####:   46:}
+    $$$$$:   46-block  0
+    $$$$$:   46-block  1
+    $$$$$:   46-block  2
+    $$$$$:   46-block  3
+    $$$$$:   46-block  4
+    $$$$$:   46-block  5
+    $$$$$:   46-block  6
+    $$$$$:   46-block  7
+    $$$$$:   46-block  8
+        -:   47:
+        1:   48:TEST(esSenialTEST, muestrasNoEnRango1){
+        1:   48-block  0
+        1:   48-block  1
+        1:   48-block  2
+        1:   48-block  3
+        1:   48-block  4
+        1:   48-block  5
+        1:   48-block  6
+    $$$$$:   48-block  7
+    $$$$$:   48-block  8
+    $$$$$:   48-block  9
+    $$$$$:   48-block 10
+    $$$$$:   48-block 11
+    $$$$$:   48-block 12
+    $$$$$:   48-block 13
+    $$$$$:   48-block 14
+    $$$$$:   48-block 15
+    $$$$$:   48-block 16
+    $$$$$:   48-block 17
+    $$$$$:   48-block 18
+    $$$$$:   48-block 19
+    $$$$$:   48-block 20
+    $$$$$:   48-block 21
+    $$$$$:   48-block 22
+    $$$$$:   48-block 23
+    #####:   49:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,145};
+    #####:   50:    int prof = 8;
+    #####:   51:    int freq = 10;
+        -:   52:
+    #####:   53:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:   53-block  0
+    $$$$$:   53-block  1
+    $$$$$:   53-block  2
+    $$$$$:   53-block  3
+    $$$$$:   53-block  4
+    $$$$$:   53-block  5
+    $$$$$:   53-block  6
+    $$$$$:   53-block  7
+    $$$$$:   53-block  8
+    $$$$$:   53-block  9
+    $$$$$:   53-block 10
+    $$$$$:   53-block 11
+    $$$$$:   53-block 12
+    $$$$$:   53-block 13
+    $$$$$:   53-block 14
+    $$$$$:   53-block 15
+    $$$$$:   53-block 16
+    $$$$$:   53-block 17
+    #####:   54:}
+    $$$$$:   54-block  0
+    $$$$$:   54-block  1
+    $$$$$:   54-block  2
+    $$$$$:   54-block  3
+    $$$$$:   54-block  4
+    $$$$$:   54-block  5
+    $$$$$:   54-block  6
+    $$$$$:   54-block  7
+    $$$$$:   54-block  8
+        -:   55:
+        1:   56:TEST(esSenialTEST, muestrasNoEnRango2){
+        1:   56-block  0
+        1:   56-block  1
+        1:   56-block  2
+        1:   56-block  3
+        1:   56-block  4
+        1:   56-block  5
+        1:   56-block  6
+    $$$$$:   56-block  7
+    $$$$$:   56-block  8
+    $$$$$:   56-block  9
+    $$$$$:   56-block 10
+    $$$$$:   56-block 11
+    $$$$$:   56-block 12
+    $$$$$:   56-block 13
+    $$$$$:   56-block 14
+    $$$$$:   56-block 15
+    $$$$$:   56-block 16
+    $$$$$:   56-block 17
+    $$$$$:   56-block 18
+    $$$$$:   56-block 19
+    $$$$$:   56-block 20
+    $$$$$:   56-block 21
+    $$$$$:   56-block 22
+    $$$$$:   56-block 23
+    #####:   57:    senial s = {1,3,-313,4,6,0,-2,-8,9,-223,145};
+    #####:   58:    int prof = 8;
+    #####:   59:    int freq = 10;
+        -:   60:
+    #####:   61:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:   61-block  0
+    $$$$$:   61-block  1
+    $$$$$:   61-block  2
+    $$$$$:   61-block  3
+    $$$$$:   61-block  4
+    $$$$$:   61-block  5
+    $$$$$:   61-block  6
+    $$$$$:   61-block  7
+    $$$$$:   61-block  8
+    $$$$$:   61-block  9
+    $$$$$:   61-block 10
+    $$$$$:   61-block 11
+    $$$$$:   61-block 12
+    $$$$$:   61-block 13
+    $$$$$:   61-block 14
+    $$$$$:   61-block 15
+    $$$$$:   61-block 16
+    $$$$$:   61-block 17
+    #####:   62:}
+    $$$$$:   62-block  0
+    $$$$$:   62-block  1
+    $$$$$:   62-block  2
+    $$$$$:   62-block  3
+    $$$$$:   62-block  4
+    $$$$$:   62-block  5
+    $$$$$:   62-block  6
+    $$$$$:   62-block  7
+    $$$$$:   62-block  8
+        -:   63:
+        1:   64:TEST(esSenialTEST, profundidadValida1){
+        1:   64-block  0
+        1:   64-block  1
+        1:   64-block  2
+        1:   64-block  3
+        1:   64-block  4
+        1:   64-block  5
+        1:   64-block  6
+    $$$$$:   64-block  7
+    $$$$$:   64-block  8
+    $$$$$:   64-block  9
+    $$$$$:   64-block 10
+    $$$$$:   64-block 11
+    $$$$$:   64-block 12
+    $$$$$:   64-block 13
+    $$$$$:   64-block 14
+    $$$$$:   64-block 15
+    $$$$$:   64-block 16
+    $$$$$:   64-block 17
+    $$$$$:   64-block 18
+    $$$$$:   64-block 19
+    $$$$$:   64-block 20
+    $$$$$:   64-block 21
+    $$$$$:   64-block 22
+    $$$$$:   64-block 23
+    #####:   65:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:   66:    int prof = 8;
+    #####:   67:    int freq = 10;
+        -:   68:
+    #####:   69:    ASSERT_TRUE(esSenial(s, prof, freq));
+    $$$$$:   69-block  0
+    $$$$$:   69-block  1
+    $$$$$:   69-block  2
+    $$$$$:   69-block  3
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+    $$$$$:   69-block  6
+    $$$$$:   69-block  7
+    $$$$$:   69-block  8
+    $$$$$:   69-block  9
+    $$$$$:   69-block 10
+    $$$$$:   69-block 11
+    $$$$$:   69-block 12
+    $$$$$:   69-block 13
+    $$$$$:   69-block 14
+    $$$$$:   69-block 15
+    $$$$$:   69-block 16
+    $$$$$:   69-block 17
+    #####:   70:}
+    $$$$$:   70-block  0
+    $$$$$:   70-block  1
+    $$$$$:   70-block  2
+    $$$$$:   70-block  3
+    $$$$$:   70-block  4
+    $$$$$:   70-block  5
+    $$$$$:   70-block  6
+    $$$$$:   70-block  7
+    $$$$$:   70-block  8
+        -:   71:
+        1:   72:TEST(esSenialTEST, profundidadValida2){
+        1:   72-block  0
+        1:   72-block  1
+        1:   72-block  2
+        1:   72-block  3
+        1:   72-block  4
+        1:   72-block  5
+        1:   72-block  6
+    $$$$$:   72-block  7
+    $$$$$:   72-block  8
+    $$$$$:   72-block  9
+    $$$$$:   72-block 10
+    $$$$$:   72-block 11
+    $$$$$:   72-block 12
+    $$$$$:   72-block 13
+    $$$$$:   72-block 14
+    $$$$$:   72-block 15
+    $$$$$:   72-block 16
+    $$$$$:   72-block 17
+    $$$$$:   72-block 18
+    $$$$$:   72-block 19
+    $$$$$:   72-block 20
+    $$$$$:   72-block 21
+    $$$$$:   72-block 22
+    $$$$$:   72-block 23
+    #####:   73:    senial s = { 1, 3, -3, 4, 6, 32000, -2, -8, 9, -15, 7 };
+    #####:   74:    int prof = 16;
+    #####:   75:    int freq = 10;
+        -:   76:
+    #####:   77:    ASSERT_TRUE(esSenial(s, prof, freq));
+    $$$$$:   77-block  0
+    $$$$$:   77-block  1
+    $$$$$:   77-block  2
+    $$$$$:   77-block  3
+    $$$$$:   77-block  4
+    $$$$$:   77-block  5
+    $$$$$:   77-block  6
+    $$$$$:   77-block  7
+    $$$$$:   77-block  8
+    $$$$$:   77-block  9
+    $$$$$:   77-block 10
+    $$$$$:   77-block 11
+    $$$$$:   77-block 12
+    $$$$$:   77-block 13
+    $$$$$:   77-block 14
+    $$$$$:   77-block 15
+    $$$$$:   77-block 16
+    $$$$$:   77-block 17
+    #####:   78:}
+    $$$$$:   78-block  0
+    $$$$$:   78-block  1
+    $$$$$:   78-block  2
+    $$$$$:   78-block  3
+    $$$$$:   78-block  4
+    $$$$$:   78-block  5
+    $$$$$:   78-block  6
+    $$$$$:   78-block  7
+    $$$$$:   78-block  8
+        -:   79:
+        1:   80:TEST(esSenialTEST, profundidadValida3){
+        1:   80-block  0
+        1:   80-block  1
+        1:   80-block  2
+        1:   80-block  3
+        1:   80-block  4
+        1:   80-block  5
+        1:   80-block  6
+    $$$$$:   80-block  7
+    $$$$$:   80-block  8
+    $$$$$:   80-block  9
+    $$$$$:   80-block 10
+    $$$$$:   80-block 11
+    $$$$$:   80-block 12
+    $$$$$:   80-block 13
+    $$$$$:   80-block 14
+    $$$$$:   80-block 15
+    $$$$$:   80-block 16
+    $$$$$:   80-block 17
+    $$$$$:   80-block 18
+    $$$$$:   80-block 19
+    $$$$$:   80-block 20
+    $$$$$:   80-block 21
+    $$$$$:   80-block 22
+    $$$$$:   80-block 23
+    #####:   81:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:   82:    int prof = 32;
+    #####:   83:    int freq = 10;
+        -:   84:
+    #####:   85:    ASSERT_TRUE(esSenial(s, prof, freq));
+    $$$$$:   85-block  0
+    $$$$$:   85-block  1
+    $$$$$:   85-block  2
+    $$$$$:   85-block  3
+    $$$$$:   85-block  4
+    $$$$$:   85-block  5
+    $$$$$:   85-block  6
+    $$$$$:   85-block  7
+    $$$$$:   85-block  8
+    $$$$$:   85-block  9
+    $$$$$:   85-block 10
+    $$$$$:   85-block 11
+    $$$$$:   85-block 12
+    $$$$$:   85-block 13
+    $$$$$:   85-block 14
+    $$$$$:   85-block 15
+    $$$$$:   85-block 16
+    $$$$$:   85-block 17
+    #####:   86:}
+    $$$$$:   86-block  0
+    $$$$$:   86-block  1
+    $$$$$:   86-block  2
+    $$$$$:   86-block  3
+    $$$$$:   86-block  4
+    $$$$$:   86-block  5
+    $$$$$:   86-block  6
+    $$$$$:   86-block  7
+    $$$$$:   86-block  8
+        -:   87:
+        1:   88:TEST(esSenialTEST, profundidadValida4)
+        1:   88-block  0
+        1:   88-block  1
+        1:   88-block  2
+        1:   88-block  3
+        1:   88-block  4
+        1:   88-block  5
+        1:   88-block  6
+    $$$$$:   88-block  7
+    $$$$$:   88-block  8
+    $$$$$:   88-block  9
+    $$$$$:   88-block 10
+    $$$$$:   88-block 11
+    $$$$$:   88-block 12
+    $$$$$:   88-block 13
+    $$$$$:   88-block 14
+    $$$$$:   88-block 15
+    $$$$$:   88-block 16
+    $$$$$:   88-block 17
+    $$$$$:   88-block 18
+    $$$$$:   88-block 19
+    $$$$$:   88-block 20
+    $$$$$:   88-block 21
+    $$$$$:   88-block 22
+    $$$$$:   88-block 23
+        -:   89:{
+    #####:   90:    senial s = { 1, 3, -3, 4, 6, 0, -2, -8, 70000, -15, 7 };
+    #####:   91:    int prof = 32;
+    #####:   92:    int freq = 10;
+        -:   93:
+    #####:   94:    ASSERT_TRUE(esSenial(s, prof, freq));
+    $$$$$:   94-block  0
+    $$$$$:   94-block  1
+    $$$$$:   94-block  2
+    $$$$$:   94-block  3
+    $$$$$:   94-block  4
+    $$$$$:   94-block  5
+    $$$$$:   94-block  6
+    $$$$$:   94-block  7
+    $$$$$:   94-block  8
+    $$$$$:   94-block  9
+    $$$$$:   94-block 10
+    $$$$$:   94-block 11
+    $$$$$:   94-block 12
+    $$$$$:   94-block 13
+    $$$$$:   94-block 14
+    $$$$$:   94-block 15
+    $$$$$:   94-block 16
+    $$$$$:   94-block 17
+    #####:   95:}
+    $$$$$:   95-block  0
+    $$$$$:   95-block  1
+    $$$$$:   95-block  2
+    $$$$$:   95-block  3
+    $$$$$:   95-block  4
+    $$$$$:   95-block  5
+    $$$$$:   95-block  6
+    $$$$$:   95-block  7
+    $$$$$:   95-block  8
+        -:   96:
+        1:   97:TEST(esSenialTEST, profundidadInvalida){
+        1:   97-block  0
+        1:   97-block  1
+        1:   97-block  2
+        1:   97-block  3
+        1:   97-block  4
+        1:   97-block  5
+        1:   97-block  6
+    $$$$$:   97-block  7
+    $$$$$:   97-block  8
+    $$$$$:   97-block  9
+    $$$$$:   97-block 10
+    $$$$$:   97-block 11
+    $$$$$:   97-block 12
+    $$$$$:   97-block 13
+    $$$$$:   97-block 14
+    $$$$$:   97-block 15
+    $$$$$:   97-block 16
+    $$$$$:   97-block 17
+    $$$$$:   97-block 18
+    $$$$$:   97-block 19
+    $$$$$:   97-block 20
+    $$$$$:   97-block 21
+    $$$$$:   97-block 22
+    $$$$$:   97-block 23
+    #####:   98:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:   99:    int prof = 3;
+    #####:  100:    int freq = 10;
+        -:  101:
+    #####:  102:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:  102-block  0
+    $$$$$:  102-block  1
+    $$$$$:  102-block  2
+    $$$$$:  102-block  3
+    $$$$$:  102-block  4
+    $$$$$:  102-block  5
+    $$$$$:  102-block  6
+    $$$$$:  102-block  7
+    $$$$$:  102-block  8
+    $$$$$:  102-block  9
+    $$$$$:  102-block 10
+    $$$$$:  102-block 11
+    $$$$$:  102-block 12
+    $$$$$:  102-block 13
+    $$$$$:  102-block 14
+    $$$$$:  102-block 15
+    $$$$$:  102-block 16
+    $$$$$:  102-block 17
+    #####:  103:}
+    $$$$$:  103-block  0
+    $$$$$:  103-block  1
+    $$$$$:  103-block  2
+    $$$$$:  103-block  3
+    $$$$$:  103-block  4
+    $$$$$:  103-block  5
+    $$$$$:  103-block  6
+    $$$$$:  103-block  7
+    $$$$$:  103-block  8
+        -:  104:
+        1:  105:TEST(esSenialTEST, profundidadInvalida2)
+        1:  105-block  0
+        1:  105-block  1
+        1:  105-block  2
+        1:  105-block  3
+        1:  105-block  4
+        1:  105-block  5
+        1:  105-block  6
+    $$$$$:  105-block  7
+    $$$$$:  105-block  8
+    $$$$$:  105-block  9
+    $$$$$:  105-block 10
+    $$$$$:  105-block 11
+    $$$$$:  105-block 12
+    $$$$$:  105-block 13
+    $$$$$:  105-block 14
+    $$$$$:  105-block 15
+    $$$$$:  105-block 16
+    $$$$$:  105-block 17
+    $$$$$:  105-block 18
+    $$$$$:  105-block 19
+    $$$$$:  105-block 20
+    $$$$$:  105-block 21
+    $$$$$:  105-block 22
+    $$$$$:  105-block 23
+        -:  106:{
+    #####:  107:    senial s = { 1, 3, -3, 4, 6, 0, -2, -8, 70000, -15, 7 };
+    #####:  108:    int prof = 16;
+    #####:  109:    int freq = 10;
+        -:  110:
+    #####:  111:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:  111-block  0
+    $$$$$:  111-block  1
+    $$$$$:  111-block  2
+    $$$$$:  111-block  3
+    $$$$$:  111-block  4
+    $$$$$:  111-block  5
+    $$$$$:  111-block  6
+    $$$$$:  111-block  7
+    $$$$$:  111-block  8
+    $$$$$:  111-block  9
+    $$$$$:  111-block 10
+    $$$$$:  111-block 11
+    $$$$$:  111-block 12
+    $$$$$:  111-block 13
+    $$$$$:  111-block 14
+    $$$$$:  111-block 15
+    $$$$$:  111-block 16
+    $$$$$:  111-block 17
+    #####:  112:}
+    $$$$$:  112-block  0
+    $$$$$:  112-block  1
+    $$$$$:  112-block  2
+    $$$$$:  112-block  3
+    $$$$$:  112-block  4
+    $$$$$:  112-block  5
+    $$$$$:  112-block  6
+    $$$$$:  112-block  7
+    $$$$$:  112-block  8
+        -:  113:
+        1:  114:TEST(esSenialTEST, profundidadInvalidaNegativa){
+        1:  114-block  0
+        1:  114-block  1
+        1:  114-block  2
+        1:  114-block  3
+        1:  114-block  4
+        1:  114-block  5
+        1:  114-block  6
+    $$$$$:  114-block  7
+    $$$$$:  114-block  8
+    $$$$$:  114-block  9
+    $$$$$:  114-block 10
+    $$$$$:  114-block 11
+    $$$$$:  114-block 12
+    $$$$$:  114-block 13
+    $$$$$:  114-block 14
+    $$$$$:  114-block 15
+    $$$$$:  114-block 16
+    $$$$$:  114-block 17
+    $$$$$:  114-block 18
+    $$$$$:  114-block 19
+    $$$$$:  114-block 20
+    $$$$$:  114-block 21
+    $$$$$:  114-block 22
+    $$$$$:  114-block 23
+    #####:  115:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:  116:    int prof = -8;
+    #####:  117:    int freq = 10;
+        -:  118:
+    #####:  119:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:  119-block  0
+    $$$$$:  119-block  1
+    $$$$$:  119-block  2
+    $$$$$:  119-block  3
+    $$$$$:  119-block  4
+    $$$$$:  119-block  5
+    $$$$$:  119-block  6
+    $$$$$:  119-block  7
+    $$$$$:  119-block  8
+    $$$$$:  119-block  9
+    $$$$$:  119-block 10
+    $$$$$:  119-block 11
+    $$$$$:  119-block 12
+    $$$$$:  119-block 13
+    $$$$$:  119-block 14
+    $$$$$:  119-block 15
+    $$$$$:  119-block 16
+    $$$$$:  119-block 17
+    #####:  120:}
+    $$$$$:  120-block  0
+    $$$$$:  120-block  1
+    $$$$$:  120-block  2
+    $$$$$:  120-block  3
+    $$$$$:  120-block  4
+    $$$$$:  120-block  5
+    $$$$$:  120-block  6
+    $$$$$:  120-block  7
+    $$$$$:  120-block  8
+        -:  121:
+        1:  122:TEST(esSenialTEST, profundidadIgualACero){
+        1:  122-block  0
+        1:  122-block  1
+        1:  122-block  2
+        1:  122-block  3
+        1:  122-block  4
+        1:  122-block  5
+        1:  122-block  6
+    $$$$$:  122-block  7
+    $$$$$:  122-block  8
+    $$$$$:  122-block  9
+    $$$$$:  122-block 10
+    $$$$$:  122-block 11
+    $$$$$:  122-block 12
+    $$$$$:  122-block 13
+    $$$$$:  122-block 14
+    $$$$$:  122-block 15
+    $$$$$:  122-block 16
+    $$$$$:  122-block 17
+    $$$$$:  122-block 18
+    $$$$$:  122-block 19
+    $$$$$:  122-block 20
+    $$$$$:  122-block 21
+    $$$$$:  122-block 22
+    $$$$$:  122-block 23
+    #####:  123:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:  124:    int prof = 0;
+    #####:  125:    int freq = 10;
+        -:  126:
+    #####:  127:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:  127-block  0
+    $$$$$:  127-block  1
+    $$$$$:  127-block  2
+    $$$$$:  127-block  3
+    $$$$$:  127-block  4
+    $$$$$:  127-block  5
+    $$$$$:  127-block  6
+    $$$$$:  127-block  7
+    $$$$$:  127-block  8
+    $$$$$:  127-block  9
+    $$$$$:  127-block 10
+    $$$$$:  127-block 11
+    $$$$$:  127-block 12
+    $$$$$:  127-block 13
+    $$$$$:  127-block 14
+    $$$$$:  127-block 15
+    $$$$$:  127-block 16
+    $$$$$:  127-block 17
+    #####:  128:}
+    $$$$$:  128-block  0
+    $$$$$:  128-block  1
+    $$$$$:  128-block  2
+    $$$$$:  128-block  3
+    $$$$$:  128-block  4
+    $$$$$:  128-block  5
+    $$$$$:  128-block  6
+    $$$$$:  128-block  7
+    $$$$$:  128-block  8
+        -:  129:
+        1:  130:TEST(esSenialTEST, duracionValida){
+        1:  130-block  0
+        1:  130-block  1
+        1:  130-block  2
+        1:  130-block  3
+        1:  130-block  4
+        1:  130-block  5
+        1:  130-block  6
+    $$$$$:  130-block  7
+    $$$$$:  130-block  8
+    $$$$$:  130-block  9
+    $$$$$:  130-block 10
+    $$$$$:  130-block 11
+    $$$$$:  130-block 12
+    $$$$$:  130-block 13
+    $$$$$:  130-block 14
+    $$$$$:  130-block 15
+    $$$$$:  130-block 16
+    $$$$$:  130-block 17
+    $$$$$:  130-block 18
+    $$$$$:  130-block 19
+    $$$$$:  130-block 20
+    $$$$$:  130-block 21
+    $$$$$:  130-block 22
+    $$$$$:  130-block 23
+    #####:  131:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15,7};
+    #####:  132:    int prof = 8;
+    #####:  133:    int freq = 10;
+        -:  134:
+    #####:  135:    ASSERT_TRUE(esSenial(s, prof, freq));
+    $$$$$:  135-block  0
+    $$$$$:  135-block  1
+    $$$$$:  135-block  2
+    $$$$$:  135-block  3
+    $$$$$:  135-block  4
+    $$$$$:  135-block  5
+    $$$$$:  135-block  6
+    $$$$$:  135-block  7
+    $$$$$:  135-block  8
+    $$$$$:  135-block  9
+    $$$$$:  135-block 10
+    $$$$$:  135-block 11
+    $$$$$:  135-block 12
+    $$$$$:  135-block 13
+    $$$$$:  135-block 14
+    $$$$$:  135-block 15
+    $$$$$:  135-block 16
+    $$$$$:  135-block 17
+    #####:  136:}
+    $$$$$:  136-block  0
+    $$$$$:  136-block  1
+    $$$$$:  136-block  2
+    $$$$$:  136-block  3
+    $$$$$:  136-block  4
+    $$$$$:  136-block  5
+    $$$$$:  136-block  6
+    $$$$$:  136-block  7
+    $$$$$:  136-block  8
+        -:  137:
+        1:  138:TEST(esSenialTEST, duracionBorde){
+        1:  138-block  0
+        1:  138-block  1
+        1:  138-block  2
+        1:  138-block  3
+        1:  138-block  4
+        1:  138-block  5
+        1:  138-block  6
+    $$$$$:  138-block  7
+    $$$$$:  138-block  8
+    $$$$$:  138-block  9
+    $$$$$:  138-block 10
+    $$$$$:  138-block 11
+    $$$$$:  138-block 12
+    $$$$$:  138-block 13
+    $$$$$:  138-block 14
+    $$$$$:  138-block 15
+    $$$$$:  138-block 16
+    $$$$$:  138-block 17
+    $$$$$:  138-block 18
+    $$$$$:  138-block 19
+    $$$$$:  138-block 20
+    $$$$$:  138-block 21
+    $$$$$:  138-block 22
+    $$$$$:  138-block 23
+    #####:  139:    senial s = {1,3,-3,4,6,0,-2,-8,9,-15};
+    #####:  140:    int prof = 8;
+    #####:  141:    int freq = 10;
+        -:  142:
+    #####:  143:    ASSERT_TRUE(esSenial(s, prof, freq));
+    $$$$$:  143-block  0
+    $$$$$:  143-block  1
+    $$$$$:  143-block  2
+    $$$$$:  143-block  3
+    $$$$$:  143-block  4
+    $$$$$:  143-block  5
+    $$$$$:  143-block  6
+    $$$$$:  143-block  7
+    $$$$$:  143-block  8
+    $$$$$:  143-block  9
+    $$$$$:  143-block 10
+    $$$$$:  143-block 11
+    $$$$$:  143-block 12
+    $$$$$:  143-block 13
+    $$$$$:  143-block 14
+    $$$$$:  143-block 15
+    $$$$$:  143-block 16
+    $$$$$:  143-block 17
+    #####:  144:}
+    $$$$$:  144-block  0
+    $$$$$:  144-block  1
+    $$$$$:  144-block  2
+    $$$$$:  144-block  3
+    $$$$$:  144-block  4
+    $$$$$:  144-block  5
+    $$$$$:  144-block  6
+    $$$$$:  144-block  7
+    $$$$$:  144-block  8
+        -:  145:
+        1:  146:TEST(esSenialTEST, duracionInvalida){
+        1:  146-block  0
+        1:  146-block  1
+        1:  146-block  2
+        1:  146-block  3
+        1:  146-block  4
+        1:  146-block  5
+        1:  146-block  6
+    $$$$$:  146-block  7
+    $$$$$:  146-block  8
+    $$$$$:  146-block  9
+    $$$$$:  146-block 10
+    $$$$$:  146-block 11
+    $$$$$:  146-block 12
+    $$$$$:  146-block 13
+    $$$$$:  146-block 14
+    $$$$$:  146-block 15
+    $$$$$:  146-block 16
+    $$$$$:  146-block 17
+    $$$$$:  146-block 18
+    $$$$$:  146-block 19
+    $$$$$:  146-block 20
+    $$$$$:  146-block 21
+    $$$$$:  146-block 22
+    $$$$$:  146-block 23
+    #####:  147:    senial s = {1,3,-3,4,6,0,-2,-8};
+    #####:  148:    int prof = 8;
+    #####:  149:    int freq = 10;
+        -:  150:
+    #####:  151:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:  151-block  0
+    $$$$$:  151-block  1
+    $$$$$:  151-block  2
+    $$$$$:  151-block  3
+    $$$$$:  151-block  4
+    $$$$$:  151-block  5
+    $$$$$:  151-block  6
+    $$$$$:  151-block  7
+    $$$$$:  151-block  8
+    $$$$$:  151-block  9
+    $$$$$:  151-block 10
+    $$$$$:  151-block 11
+    $$$$$:  151-block 12
+    $$$$$:  151-block 13
+    $$$$$:  151-block 14
+    $$$$$:  151-block 15
+    $$$$$:  151-block 16
+    $$$$$:  151-block 17
+    #####:  152:}
+    $$$$$:  152-block  0
+    $$$$$:  152-block  1
+    $$$$$:  152-block  2
+    $$$$$:  152-block  3
+    $$$$$:  152-block  4
+    $$$$$:  152-block  5
+    $$$$$:  152-block  6
+    $$$$$:  152-block  7
+    $$$$$:  152-block  8
+        -:  153:
+        1:  154:TEST(esSenialTEST, secuenciaVacia){
+        1:  154-block  0
+        1:  154-block  1
+        1:  154-block  2
+        1:  154-block  3
+        1:  154-block  4
+        1:  154-block  5
+        1:  154-block  6
+    $$$$$:  154-block  7
+    $$$$$:  154-block  8
+    $$$$$:  154-block  9
+    $$$$$:  154-block 10
+    $$$$$:  154-block 11
+    $$$$$:  154-block 12
+    $$$$$:  154-block 13
+    $$$$$:  154-block 14
+    $$$$$:  154-block 15
+    $$$$$:  154-block 16
+    $$$$$:  154-block 17
+    $$$$$:  154-block 18
+    $$$$$:  154-block 19
+    $$$$$:  154-block 20
+    $$$$$:  154-block 21
+    $$$$$:  154-block 22
+    $$$$$:  154-block 23
+    #####:  155:    senial s = { };
+    #####:  156:    int prof = 8;
+    #####:  157:    int freq = 10;
+        -:  158:
+    #####:  159:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:  159-block  0
+    $$$$$:  159-block  1
+    $$$$$:  159-block  2
+    $$$$$:  159-block  3
+    $$$$$:  159-block  4
+    $$$$$:  159-block  5
+    $$$$$:  159-block  6
+    $$$$$:  159-block  7
+    $$$$$:  159-block  8
+    $$$$$:  159-block  9
+    $$$$$:  159-block 10
+    $$$$$:  159-block 11
+    $$$$$:  159-block 12
+    $$$$$:  159-block 13
+    $$$$$:  159-block 14
+    $$$$$:  159-block 15
+    $$$$$:  159-block 16
+    $$$$$:  159-block 17
+    #####:  160:}
+    $$$$$:  160-block  0
+    $$$$$:  160-block  1
+    $$$$$:  160-block  2
+    $$$$$:  160-block  3
+    $$$$$:  160-block  4
+    $$$$$:  160-block  5
+    $$$$$:  160-block  6
+    $$$$$:  160-block  7
+    $$$$$:  160-block  8
+        -:  161:
+        1:  162:TEST(esSenialTEST, secuenciaDeSolo1Elemento){
+        1:  162-block  0
+        1:  162-block  1
+        1:  162-block  2
+        1:  162-block  3
+        1:  162-block  4
+        1:  162-block  5
+        1:  162-block  6
+    $$$$$:  162-block  7
+    $$$$$:  162-block  8
+    $$$$$:  162-block  9
+    $$$$$:  162-block 10
+    $$$$$:  162-block 11
+    $$$$$:  162-block 12
+    $$$$$:  162-block 13
+    $$$$$:  162-block 14
+    $$$$$:  162-block 15
+    $$$$$:  162-block 16
+    $$$$$:  162-block 17
+    $$$$$:  162-block 18
+    $$$$$:  162-block 19
+    $$$$$:  162-block 20
+    $$$$$:  162-block 21
+    $$$$$:  162-block 22
+    $$$$$:  162-block 23
+    #####:  163:    senial s = { 7 };
+    #####:  164:    int prof = 8;
+    #####:  165:    int freq = 10;
+        -:  166:
+    #####:  167:    ASSERT_FALSE(esSenial(s, prof, freq));
+    $$$$$:  167-block  0
+    $$$$$:  167-block  1
+    $$$$$:  167-block  2
+    $$$$$:  167-block  3
+    $$$$$:  167-block  4
+    $$$$$:  167-block  5
+    $$$$$:  167-block  6
+    $$$$$:  167-block  7
+    $$$$$:  167-block  8
+    $$$$$:  167-block  9
+    $$$$$:  167-block 10
+    $$$$$:  167-block 11
+    $$$$$:  167-block 12
+    $$$$$:  167-block 13
+    $$$$$:  167-block 14
+    $$$$$:  167-block 15
+    $$$$$:  167-block 16
+    $$$$$:  167-block 17
+    #####:  168:}
+    $$$$$:  168-block  0
+    $$$$$:  168-block  1
+    $$$$$:  168-block  2
+    $$$$$:  168-block  3
+    $$$$$:  168-block  4
+    $$$$$:  168-block  5
+    $$$$$:  168-block  6
+    $$$$$:  168-block  7
+    $$$$$:  168-block  8

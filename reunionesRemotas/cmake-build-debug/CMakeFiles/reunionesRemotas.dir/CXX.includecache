@@ -152,14 +152,6 @@ iosfwd
 vector
 -
 
-/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/main.cpp
-iostream
--
-lib/gtest.h
-/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/lib/gtest.h
-src/solucion.h
-/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/solucion.h
-
 /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/src/auxiliares.cpp
 ../lib/gtest.h
 /Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/lib/gtest.h

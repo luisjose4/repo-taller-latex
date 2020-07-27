@@ -4,23 +4,27 @@
 #include "definiciones.h"
 #include <iostream>
 
-
+senial subSeq(senial s, int i, int r);
 
 /************* esSenial ************/
-bool esValida(senial s, int prof, int freq);
+bool freqValida(int freq);
+bool enRango(senial s, int prof);
+bool profValida(int prof);
 bool duraMasDe(senial s, int freq, float seg);
 
 
 /************* seEnojo *************/
 float tono(senial s);
-bool existeSubseqEnojada(senial s, int umbral, int prof, int freq);
-
+bool superaUmbral(senial s, int umbral);
 
 /******** esReunionValida **********/
-bool reunionValida(reunion r, int prof, int freq);
+bool esMatriz(reunion r);
+bool senialesValidas(reunion r, int prof, int freq);
+bool todosHablantesDistintos(reunion r);
+bool hablantesDeReunionValidos(reunion r, int prof, int freq);
 
 
-/************* accelerar ***********/
+/************* acelerar ***********/
 void acelerarSenial(senial &s, int prof, int freq);
 
 
@@ -29,30 +33,36 @@ void ralentizarSenial(senial &s, int prof, int freq);
 
 
 /******** tonosDeVozElevados *******/
-vector<hablante> hablantesConTonosElevados(reunion r, int freq, int prof);
+// Sin auxiliares
 
 
 /************* ordenar *************/
-void ordenarReunionAcordeAPromedios(reunion &r);
+void swapPorTono(reunion &reunion, int i, int j);
 
 
 /************ silencios ************/
+bool superaUmbral(int valor, int umbral);
 void actualizarIndicesYFlags(int &inicioSilencio, int indiceActual, bool &outCandidatoSilencio, bool &outEsSilencio, int freq);
 void agregarIntervalo(vector<intervalo> &listaDeSilencios, int inicioSilencio, int finSilencio);
-vector<intervalo> obtenerSilencios(senial s, int freq, int umbral);
 
 
 /****** hablantesSuperpuestos ********/
-bool hayHablantesSuperpuestos(reunion r, int freq, int umbral);
+int valorAbsoluto(int x);
+bool estaHablando(senial s, int pos, int umbral);
 
 
 /*********** reconstruir *************/
-senial reconstruirSenial(senial s);
+int valor(vector<int> s, int i);
+int signo(int k);
+bool esPasajePorCero(vector<int> s, int i);
 
 
 /********* friltradoMediana **********/
-senial filtrada(senial s, int R);
-
+bool coincidenExtremos(senial s, int i, int r);
+void swap(senial &lista, int i, int j);
+void insertar(senial &lista, int i);
+senial insertionSort(senial lista);
+senial ordenarSenialW(senial w);
 
 
 

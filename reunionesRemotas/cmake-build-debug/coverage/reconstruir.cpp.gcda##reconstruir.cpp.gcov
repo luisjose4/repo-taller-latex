@@ -1,0 +1,230 @@
+        -:    0:Source:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/tests/reconstruir.cpp
+        -:    0:Graph:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.gcno
+        -:    0:Data:/Users/usuario/Desktop/LabAlgo1/tp2/reunionesRemotas/cmake-build-debug/CMakeFiles/reunionesRemotas.dir/tests/reconstruir.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../src/solucion.h"
+        -:    2:#include "../src/auxiliares.h"
+        -:    3:#include "../lib/gtest.h"
+        -:    4:
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:
+        1:    8:TEST(reconstruirTEST, reconstruirValidos){
+        1:    8-block  0
+        1:    8-block  1
+        1:    8-block  2
+        1:    8-block  3
+        1:    8-block  4
+        1:    8-block  5
+        1:    8-block  6
+    $$$$$:    8-block  7
+    $$$$$:    8-block  8
+    $$$$$:    8-block  9
+    $$$$$:    8-block 10
+    $$$$$:    8-block 11
+    $$$$$:    8-block 12
+    $$$$$:    8-block 13
+    $$$$$:    8-block 14
+    $$$$$:    8-block 15
+    $$$$$:    8-block 16
+    $$$$$:    8-block 17
+    $$$$$:    8-block 18
+    $$$$$:    8-block 19
+    $$$$$:    8-block 20
+    $$$$$:    8-block 21
+    $$$$$:    8-block 22
+    $$$$$:    8-block 23
+    #####:    9:    senial hablante1 = { 1, 3, -3, 4, 6, 0, 0, -8, 0, -15 };
+    #####:   10:    int prof = 8;
+    #####:   11:    int freq = 10;
+        -:   12:
+    #####:   13:    senial hablante1Reconstruido = { 1, 3, -3, 4, 6, -1, -1, -8, -11, -15 };
+    $$$$$:   13-block  0
+        -:   14:
+    #####:   15:    senial hablanteObtenido = reconstruir(hablante1, prof, freq);
+    $$$$$:   15-block  0
+    $$$$$:   15-block  1
+    $$$$$:   15-block  2
+        -:   16:
+    #####:   17:    ASSERT_HABLANTES_EQ(hablanteObtenido, hablante1Reconstruido);
+    $$$$$:   17-block  0
+    $$$$$:   17-block  1
+    $$$$$:   17-block  2
+    $$$$$:   17-block  3
+    $$$$$:   17-block  4
+    #####:   18:}
+    $$$$$:   18-block  0
+    $$$$$:   18-block  1
+    $$$$$:   18-block  2
+    $$$$$:   18-block  3
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+    $$$$$:   18-block  6
+    $$$$$:   18-block  7
+    $$$$$:   18-block  8
+        -:   19:
+        1:   20:TEST(reconstruirTEST, reconstruirSenialSinCeros)
+        1:   20-block  0
+        1:   20-block  1
+        1:   20-block  2
+        1:   20-block  3
+        1:   20-block  4
+        1:   20-block  5
+        1:   20-block  6
+    $$$$$:   20-block  7
+    $$$$$:   20-block  8
+    $$$$$:   20-block  9
+    $$$$$:   20-block 10
+    $$$$$:   20-block 11
+    $$$$$:   20-block 12
+    $$$$$:   20-block 13
+    $$$$$:   20-block 14
+    $$$$$:   20-block 15
+    $$$$$:   20-block 16
+    $$$$$:   20-block 17
+    $$$$$:   20-block 18
+    $$$$$:   20-block 19
+    $$$$$:   20-block 20
+    $$$$$:   20-block 21
+    $$$$$:   20-block 22
+    $$$$$:   20-block 23
+        -:   21:{
+    #####:   22:    senial hablante1 = { 1, 3, -3, 4, 6, 2, 1, -8, 9, -15 };
+    #####:   23:    int prof = 8;
+    #####:   24:    int freq = 10;
+        -:   25:
+    #####:   26:    senial hablante1Reconstruido = { 1, 3, -3, 4, 6, 2, 1, -8, 9, -15 };
+    $$$$$:   26-block  0
+        -:   27:
+    #####:   28:    senial hablanteObtenido = reconstruir(hablante1, prof, freq);
+    $$$$$:   28-block  0
+    $$$$$:   28-block  1
+    $$$$$:   28-block  2
+        -:   29:
+    #####:   30:    ASSERT_HABLANTES_EQ(hablanteObtenido, hablante1Reconstruido);
+    $$$$$:   30-block  0
+    $$$$$:   30-block  1
+    $$$$$:   30-block  2
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+    #####:   31:}
+    $$$$$:   31-block  0
+    $$$$$:   31-block  1
+    $$$$$:   31-block  2
+    $$$$$:   31-block  3
+    $$$$$:   31-block  4
+    $$$$$:   31-block  5
+    $$$$$:   31-block  6
+    $$$$$:   31-block  7
+    $$$$$:   31-block  8
+        -:   32:
+        1:   33:TEST(reconstruirTEST, reconstruirSenialConDistanciaCinco)
+        1:   33-block  0
+        1:   33-block  1
+        1:   33-block  2
+        1:   33-block  3
+        1:   33-block  4
+        1:   33-block  5
+        1:   33-block  6
+    $$$$$:   33-block  7
+    $$$$$:   33-block  8
+    $$$$$:   33-block  9
+    $$$$$:   33-block 10
+    $$$$$:   33-block 11
+    $$$$$:   33-block 12
+    $$$$$:   33-block 13
+    $$$$$:   33-block 14
+    $$$$$:   33-block 15
+    $$$$$:   33-block 16
+    $$$$$:   33-block 17
+    $$$$$:   33-block 18
+    $$$$$:   33-block 19
+    $$$$$:   33-block 20
+    $$$$$:   33-block 21
+    $$$$$:   33-block 22
+    $$$$$:   33-block 23
+        -:   34:{
+    #####:   35:    senial hablante1 = { 6, 0, 0, 0, 0, -8, 0, 0, 0, 0, 6 };
+    #####:   36:    int prof = 8;
+    #####:   37:    int freq = 10;
+        -:   38:
+    #####:   39:    senial hablante1Reconstruido = { 6, -1, -1, -1, -1, -8, -1, -1, -1, -1, 6 };
+    $$$$$:   39-block  0
+        -:   40:
+    #####:   41:    senial hablanteObtenido = reconstruir(hablante1, prof, freq);
+    $$$$$:   41-block  0
+    $$$$$:   41-block  1
+    $$$$$:   41-block  2
+        -:   42:
+    #####:   43:    ASSERT_HABLANTES_EQ(hablanteObtenido, hablante1Reconstruido);
+    $$$$$:   43-block  0
+    $$$$$:   43-block  1
+    $$$$$:   43-block  2
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+    #####:   44:}
+    $$$$$:   44-block  0
+    $$$$$:   44-block  1
+    $$$$$:   44-block  2
+    $$$$$:   44-block  3
+    $$$$$:   44-block  4
+    $$$$$:   44-block  5
+    $$$$$:   44-block  6
+    $$$$$:   44-block  7
+    $$$$$:   44-block  8
+        -:   45:
+        1:   46:TEST(reconstruirTEST, reconstruirValidosConPasajePorCero)
+        1:   46-block  0
+        1:   46-block  1
+        1:   46-block  2
+        1:   46-block  3
+        1:   46-block  4
+        1:   46-block  5
+        1:   46-block  6
+    $$$$$:   46-block  7
+    $$$$$:   46-block  8
+    $$$$$:   46-block  9
+    $$$$$:   46-block 10
+    $$$$$:   46-block 11
+    $$$$$:   46-block 12
+    $$$$$:   46-block 13
+    $$$$$:   46-block 14
+    $$$$$:   46-block 15
+    $$$$$:   46-block 16
+    $$$$$:   46-block 17
+    $$$$$:   46-block 18
+    $$$$$:   46-block 19
+    $$$$$:   46-block 20
+    $$$$$:   46-block 21
+    $$$$$:   46-block 22
+    $$$$$:   46-block 23
+        -:   47:{
+    #####:   48:    senial hablante1 = { 1, 0, -3, 4, 6, 0, 0, -8, 0, -15 };
+    #####:   49:    int prof = 8;
+    #####:   50:    int freq = 10;
+        -:   51:
+    #####:   52:    senial hablante1Reconstruido = { 1, 0, -3, 4, 6, -1, -1, -8, -11, -15 };
+    $$$$$:   52-block  0
+        -:   53:
+    #####:   54:    senial hablanteObtenido = reconstruir(hablante1, prof, freq);
+    $$$$$:   54-block  0
+    $$$$$:   54-block  1
+    $$$$$:   54-block  2
+        -:   55:
+    #####:   56:    ASSERT_HABLANTES_EQ(hablanteObtenido, hablante1Reconstruido);
+    $$$$$:   56-block  0
+    $$$$$:   56-block  1
+    $$$$$:   56-block  2
+    $$$$$:   56-block  3
+    $$$$$:   56-block  4
+    #####:   57:}
+    $$$$$:   57-block  0
+    $$$$$:   57-block  1
+    $$$$$:   57-block  2
+    $$$$$:   57-block  3
+    $$$$$:   57-block  4
+    $$$$$:   57-block  5
+    $$$$$:   57-block  6
+    $$$$$:   57-block  7
+    $$$$$:   57-block  8

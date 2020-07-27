@@ -34,20 +34,6 @@ TEST(ordenarTEST, ordenarValido2)
     ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
 }
 
-TEST(ordenarTEST, ordenarValido3)
-{
-    senial hablante = { };
-    reunion reunionOriginal = { make_pair(hablante, 0) };
-    int prof = 32;
-    int freq = 10;
-
-    reunion reunionOrdenada = { make_pair(hablante, 0) };
-
-    ordenar(reunionOriginal, prof, freq);
-
-    ASSERT_REUNION_EQ(reunionOriginal, reunionOrdenada);
-}
-
 TEST(ordenarTEST, ordenarValido4)
 {
     senial hablante1 = { 5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
