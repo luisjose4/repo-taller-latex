@@ -42,8 +42,7 @@ void swapPorTono(reunion &reunion, int i, int j);
 
 /************ silencios ************/
 bool superaUmbral(int valor, int umbral);
-void actualizarIndicesYFlags(int &inicioSilencio, int indiceActual, bool &outCandidatoSilencio, bool &outEsSilencio, int freq);
-void agregarIntervalo(vector<intervalo> &listaDeSilencios, int inicioSilencio, int finSilencio);
+void agregarIntervaloSiCorresponde(vector<intervalo> &outListaIntervalos, int inicioSilencio, int indiceActual, bool esSilencio);
 
 
 /****** hablantesSuperpuestos ********/
