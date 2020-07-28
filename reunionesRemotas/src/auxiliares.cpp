@@ -274,7 +274,7 @@ senial ordenarSenialW(senial w)
 senial leerSenial(string nombreArchivo)
 {
     senial s(0);
-    string StringDeLaSenial;
+    int valor;
     ifstream inputArchivo;
 
 
@@ -283,20 +283,9 @@ senial leerSenial(string nombreArchivo)
         return s;
     }
 
-    getline(inputArchivo, StringDeLaSenial);
-
-    for (int k = 0; k < StringDeLaSenial.size(); k++) {
-
-        int numeroDeSenial = 0;
-
-        if (StringDeLaSenial[k] != ' ') {
-            numeroDeSenial *= 10;
-            numeroDeSenial += StringDeLaSenial[k] - '0';
-        }
-        else {
-            s.push_back(numeroDeSenial);
-            numeroDeSenial = 0;
-        }
+    while(!inputArchivo.eof()){
+    	inputArchivo >> valor;
+    	s.push_back(valor);
     }
 
     inputArchivo.close();
