@@ -164,27 +164,17 @@ bool superaUmbral(int valor, int umbral)
     return abs(valor) >= umbral;
 }
 
-void actualizarIndicesYFlags(int &outInicioSilencio, int indiceActual, bool &outCandidatoSilencio, bool &outEsSilencio, int freq)
-{
-    if ( !outCandidatoSilencio ) {
-        outInicioSilencio = indiceActual;
-    }
-
-    outCandidatoSilencio = true;
-
-    if (indiceActual - outInicioSilencio + 1 >= freq * 0.2) {
-        outEsSilencio = true;
-    }
-}
-
-void agregarIntervalo(vector<intervalo> &listaDeSilencios, int inicioSilencio, int finSilencio)
+void agregarIntervaloSiCorresponde(vector<intervalo> &outListaIntervalos, int inicioSilencio, int indiceActual, bool esSilencio)
 {
     intervalo silencio;
 
-    silencio.first = inicioSilencio;
-    silencio.second = finSilencio;
+	if(esSilencio){
+	    silencio.first = inicioSilencio;
+	    silencio.second = indiceActual;
 
-    listaDeSilencios.push_back(silencio);
+	    outListaIntervalos.push_back(silencio);
+	}
+
 }
 
 

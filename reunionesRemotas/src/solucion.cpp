@@ -66,6 +66,7 @@ vector<hablante> tonosDeVozElevados(reunion r, int freq, int prof) {
 }
 
 void ordenar(reunion& r, int freq, int prof) {
+
     for (int i = 1; i < r.size(); ++i) {
         pair<senial, hablante> elementoAOrdenar = r[i];
         for (int j = i-1; j >= 0; --j) {
@@ -80,26 +81,28 @@ vector<intervalo> silencios(senial s, int prof, int freq, int umbral)
 {
     vector<intervalo> ret(0);
     int inicioSilencio = 0;
-    bool candidatoASilencio = false;
     bool esSilencio = false;
 
     for (int i = 0; i < s.size(); i++) {
 
-        if ( !superaUmbral(s[i], umbral) ) {
-            actualizarIndicesYFlags(inicioSilencio, i, candidatoASilencio, esSilencio, freq);
+        if ( superaUmbral(s[i], umbral) ) {
+        	agregarIntervaloSiCorresponde(ret,inicioSilencio, i-1, esSilencio);
+        	inicioSilencio = i + 1;
+        	esSilencio = false;
+        }
+        else if (i>0){
+        	if(superaUmbral(s[i-1], umbral) ){
+        		inicioSilencio = i;
+        	}
+        	if(i + 1 - inicioSilencio >= freq * 0.2){
+        		esSilencio = true;
+        	}
         }
 
-        else {
-            if (esSilencio) {
-                agregarIntervalo(ret, inicioSilencio, i - 1);
-            }
-            esSilencio = false;
-            candidatoASilencio = false;
-        }
     }
 
     if (esSilencio) { /* agregar silencio en caso de que termine al final */
-        agregarIntervalo(ret, inicioSilencio, s.size() - 1);
+    	agregarIntervaloSiCorresponde(ret, inicioSilencio, s.size() - 1, esSilencio);
     }
 
     return ret;
