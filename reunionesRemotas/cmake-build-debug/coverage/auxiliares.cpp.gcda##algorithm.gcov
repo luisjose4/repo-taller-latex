@@ -718,13 +718,13 @@
         -:  713:struct __less<_T1, _T1>
         -:  714:{
         -:  715:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
-    58196:  716:    bool operator()(const _T1& __x, const _T1& __y) const {return __x < __y;}
+    60857:  716:    bool operator()(const _T1& __x, const _T1& __y) const {return __x < __y;}
     $$$$$:  716-block  0
     $$$$$:  716-block  1
-    58196:  716-block  2
-    58196:  716-block  3
-    $$$$$:  716-block  4
-    $$$$$:  716-block  5
+    60839:  716-block  2
+    60839:  716-block  3
+       18:  716-block  4
+       18:  716-block  5
         -:  717:};
         -:  718:
         -:  719:template <class _T1>
@@ -1591,13 +1591,11 @@
         -: 1580:template <class _Iter>
         -: 1581:inline _LIBCPP_INLINE_VISIBILITY
         -: 1582:_Iter
-    #####: 1583:__unwrap_iter(_Iter __i)
-    $$$$$: 1583-block  0
-    $$$$$: 1583-block  1
+      357: 1583:__unwrap_iter(_Iter __i)
+      357: 1583-block  0
         -: 1584:{
-    #####: 1585:    return __i;
-    $$$$$: 1585-block  0
-    $$$$$: 1585-block  1
+      357: 1585:    return __i;
+      357: 1585-block  0
         -: 1586:}
         -: 1587:
         -: 1588:template <class _Tp>
@@ -1660,32 +1658,26 @@
         -: 1645:    is_trivially_copy_assignable<_Up>::value,
         -: 1646:    _Up*
         -: 1647:>::type
-    #####: 1648:__copy(_Tp* __first, _Tp* __last, _Up* __result)
-    $$$$$: 1648-block  0
-    $$$$$: 1648-block  1
+      119: 1648:__copy(_Tp* __first, _Tp* __last, _Up* __result)
+      119: 1648-block  0
         -: 1649:{
-    #####: 1650:    const size_t __n = static_cast<size_t>(__last - __first);
-    #####: 1651:    if (__n > 0)
-    $$$$$: 1651-block  0
-    $$$$$: 1651-block  1
-    #####: 1652:        _VSTD::memmove(__result, __first, __n * sizeof(_Up));
-    $$$$$: 1652-block  0
-    $$$$$: 1652-block  1
-    #####: 1653:    return __result + __n;
-    $$$$$: 1653-block  0
-    $$$$$: 1653-block  1
+      119: 1650:    const size_t __n = static_cast<size_t>(__last - __first);
+      119: 1651:    if (__n > 0)
+      119: 1651-block  0
+      119: 1652:        _VSTD::memmove(__result, __first, __n * sizeof(_Up));
+      119: 1652-block  0
+      119: 1653:    return __result + __n;
+      119: 1653-block  0
         -: 1654:}
         -: 1655:
         -: 1656:template <class _InputIterator, class _OutputIterator>
         -: 1657:inline _LIBCPP_INLINE_VISIBILITY
         -: 1658:_OutputIterator
-    #####: 1659:copy(_InputIterator __first, _InputIterator __last, _OutputIterator __result)
-    $$$$$: 1659-block  0
-    $$$$$: 1659-block  1
+      119: 1659:copy(_InputIterator __first, _InputIterator __last, _OutputIterator __result)
+      119: 1659-block  0
         -: 1660:{
-    #####: 1661:    return _VSTD::__copy(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));
-    $$$$$: 1661-block  0
-    $$$$$: 1661-block  1
+      119: 1661:    return _VSTD::__copy(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));
+      119: 1661-block  0
         -: 1662:}
         -: 1663:
         -: 1664:// copy_backward
@@ -1811,26 +1803,20 @@
         -: 1784:    is_trivially_copy_assignable<_Up>::value,
         -: 1785:    _Up*
         -: 1786:>::type
-    #####: 1787:__move(_Tp* __first, _Tp* __last, _Up* __result)
-    $$$$$: 1787-block  0
+        -: 1787:__move(_Tp* __first, _Tp* __last, _Up* __result)
         -: 1788:{
-    #####: 1789:    const size_t __n = static_cast<size_t>(__last - __first);
-    #####: 1790:    if (__n > 0)
-    $$$$$: 1790-block  0
-    #####: 1791:        _VSTD::memmove(__result, __first, __n * sizeof(_Up));
-    $$$$$: 1791-block  0
-    #####: 1792:    return __result + __n;
-    $$$$$: 1792-block  0
+        -: 1789:    const size_t __n = static_cast<size_t>(__last - __first);
+        -: 1790:    if (__n > 0)
+        -: 1791:        _VSTD::memmove(__result, __first, __n * sizeof(_Up));
+        -: 1792:    return __result + __n;
         -: 1793:}
         -: 1794:
         -: 1795:template <class _InputIterator, class _OutputIterator>
         -: 1796:inline _LIBCPP_INLINE_VISIBILITY
         -: 1797:_OutputIterator
-    #####: 1798:move(_InputIterator __first, _InputIterator __last, _OutputIterator __result)
-    $$$$$: 1798-block  0
+        -: 1798:move(_InputIterator __first, _InputIterator __last, _OutputIterator __result)
         -: 1799:{
-    #####: 1800:    return _VSTD::__move(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));
-    $$$$$: 1800-block  0
+        -: 1800:    return _VSTD::__move(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));
         -: 1801:}
         -: 1802:
         -: 1803:// move_backward
@@ -2484,24 +2470,24 @@
         -: 2451:template <class _Tp, class _Compare>
         -: 2452:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -: 2453:const _Tp&
-    34350: 2454:min(const _Tp& __a, const _Tp& __b, _Compare __comp)
-    34350: 2454-block  0
+    36813: 2454:min(const _Tp& __a, const _Tp& __b, _Compare __comp)
+    36813: 2454-block  0
         -: 2455:{
-    34350: 2456:    return __comp(__b, __a) ? __b : __a;
-    34350: 2456-block  0
+    36813: 2456:    return __comp(__b, __a) ? __b : __a;
+    36813: 2456-block  0
     $$$$$: 2456-block  1
-    34350: 2456-block  2
-    34350: 2456-block  3
+    36813: 2456-block  2
+    36813: 2456-block  3
         -: 2457:}
         -: 2458:
         -: 2459:template <class _Tp>
         -: 2460:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -: 2461:const _Tp&
-    34350: 2462:min(const _Tp& __a, const _Tp& __b)
-    34350: 2462-block  0
+    36813: 2462:min(const _Tp& __a, const _Tp& __b)
+    36813: 2462-block  0
         -: 2463:{
-    34350: 2464:    return _VSTD::min(__a, __b, __less<_Tp>());
-    34350: 2464-block  0
+    36813: 2464:    return _VSTD::min(__a, __b, __less<_Tp>());
+    36813: 2464-block  0
         -: 2465:}
         -: 2466:
         -: 2467:#ifndef _LIBCPP_CXX03_LANG
@@ -2558,31 +2544,31 @@
         -: 2518:template <class _Tp, class _Compare>
         -: 2519:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -: 2520:const _Tp&
-    23846: 2521:max(const _Tp& __a, const _Tp& __b, _Compare __comp)
+    24026: 2521:max(const _Tp& __a, const _Tp& __b, _Compare __comp)
     $$$$$: 2521-block  0
-    23846: 2521-block  1
+    24026: 2521-block  1
         -: 2522:{
-    23846: 2523:    return __comp(__a, __b) ? __b : __a;
+    24026: 2523:    return __comp(__a, __b) ? __b : __a;
     $$$$$: 2523-block  0
     $$$$$: 2523-block  1
     $$$$$: 2523-block  2
     $$$$$: 2523-block  3
-    23846: 2523-block  4
-     3470: 2523-block  5
-    20376: 2523-block  6
-    23846: 2523-block  7
+    24026: 2523-block  4
+     3525: 2523-block  5
+    20501: 2523-block  6
+    24026: 2523-block  7
         -: 2524:}
         -: 2525:
         -: 2526:template <class _Tp>
         -: 2527:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -: 2528:const _Tp&
-    23846: 2529:max(const _Tp& __a, const _Tp& __b)
+    24026: 2529:max(const _Tp& __a, const _Tp& __b)
     $$$$$: 2529-block  0
-    23846: 2529-block  1
+    24026: 2529-block  1
         -: 2530:{
-    23846: 2531:    return _VSTD::max(__a, __b, __less<_Tp>());
+    24026: 2531:    return _VSTD::max(__a, __b, __less<_Tp>());
     $$$$$: 2531-block  0
-    23846: 2531-block  1
+    24026: 2531-block  1
         -: 2532:}
         -: 2533:
         -: 2534:#ifndef _LIBCPP_CXX03_LANG
@@ -3629,17 +3615,17 @@
         -: 3575:
         -: 3576:template <class _Compare, class _ForwardIterator>
         -: 3577:unsigned
-    #####: 3578:__sort3(_ForwardIterator __x, _ForwardIterator __y, _ForwardIterator __z, _Compare __c)
-    $$$$$: 3578-block  0
+        8: 3578:__sort3(_ForwardIterator __x, _ForwardIterator __y, _ForwardIterator __z, _Compare __c)
+        8: 3578-block  0
         -: 3579:{
-    #####: 3580:    unsigned __r = 0;
-    #####: 3581:    if (!__c(*__y, *__x))          // if x <= y
-    $$$$$: 3581-block  0
+        8: 3580:    unsigned __r = 0;
+        8: 3581:    if (!__c(*__y, *__x))          // if x <= y
+        8: 3581-block  0
         -: 3582:    {
-    #####: 3583:        if (!__c(*__z, *__y))      // if y <= z
-    $$$$$: 3583-block  0
-    #####: 3584:            return __r;            // x <= y && y <= z
-    $$$$$: 3584-block  0
+        8: 3583:        if (!__c(*__z, *__y))      // if y <= z
+        8: 3583-block  0
+        8: 3584:            return __r;            // x <= y && y <= z
+        8: 3584-block  0
         -: 3585:                                   // x <= y && y > z
     #####: 3586:        swap(*__y, *__z);          // x <= z && y < z
     #####: 3587:        __r = 1;
@@ -3672,20 +3658,20 @@
     $$$$$: 3607-block  0
     #####: 3608:    return __r;
     $$$$$: 3608-block  0
-    #####: 3609:}                                  // x <= y && y <= z
-    $$$$$: 3609-block  0
+        8: 3609:}                                  // x <= y && y <= z
+        8: 3609-block  0
         -: 3610:
         -: 3611:// stable, 3-6 compares, 0-5 swaps
         -: 3612:
         -: 3613:template <class _Compare, class _ForwardIterator>
         -: 3614:unsigned
-    #####: 3615:__sort4(_ForwardIterator __x1, _ForwardIterator __x2, _ForwardIterator __x3,
-    $$$$$: 3615-block  0
+        2: 3615:__sort4(_ForwardIterator __x1, _ForwardIterator __x2, _ForwardIterator __x3,
+        2: 3615-block  0
         -: 3616:            _ForwardIterator __x4, _Compare __c)
         -: 3617:{
-    #####: 3618:    unsigned __r = __sort3<_Compare>(__x1, __x2, __x3, __c);
-    #####: 3619:    if (__c(*__x4, *__x3))
-    $$$$$: 3619-block  0
+        2: 3618:    unsigned __r = __sort3<_Compare>(__x1, __x2, __x3, __c);
+        2: 3619:    if (__c(*__x4, *__x3))
+        2: 3619-block  0
         -: 3620:    {
     #####: 3621:        swap(*__x3, *__x4);
     #####: 3622:        ++__r;
@@ -3705,8 +3691,8 @@
     $$$$$: 3632-block  0
     #####: 3633:    }
     $$$$$: 3633-block  0
-    #####: 3634:    return __r;
-    $$$$$: 3634-block  0
+        2: 3634:    return __r;
+        2: 3634-block  0
         -: 3635:}
         -: 3636:
         -: 3637:// stable, 4-10 compares, 0-9 swaps
@@ -3934,28 +3920,28 @@
         -: 3812:
         -: 3813:template <class _Compare, class _RandomAccessIterator>
         -: 3814:void
-    #####: 3815:__sort(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp)
-    $$$$$: 3815-block  0
+       16: 3815:__sort(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp)
+       16: 3815-block  0
         -: 3816:{
         -: 3817:    // _Compare is known to be a reference type
         -: 3818:    typedef typename iterator_traits<_RandomAccessIterator>::difference_type difference_type;
         -: 3819:    typedef typename iterator_traits<_RandomAccessIterator>::value_type value_type;
-    #####: 3820:    const difference_type __limit = is_trivially_copy_constructible<value_type>::value &&
+       16: 3820:    const difference_type __limit = is_trivially_copy_constructible<value_type>::value &&
         -: 3821:                                    is_trivially_copy_assignable<value_type>::value ? 30 : 6;
-    #####: 3822:    while (true)
-    $$$$$: 3822-block  0
+       16: 3822:    while (true)
+       16: 3822-block  0
     $$$$$: 3822-block  1
-    #####: 3823:    {
-    $$$$$: 3823-block  0
+       16: 3823:    {
+       16: 3823-block  0
         -: 3824:    __restart:
-    #####: 3825:        difference_type __len = __last - __first;
-    #####: 3826:        switch (__len)
-    $$$$$: 3826-block  0
+       16: 3825:        difference_type __len = __last - __first;
+       16: 3826:        switch (__len)
+       16: 3826-block  0
         -: 3827:        {
         -: 3828:        case 0:
         -: 3829:        case 1:
-    #####: 3830:            return;
-    $$$$$: 3830-block  0
+        8: 3830:            return;
+        8: 3830-block  0
         -: 3831:        case 2:
     #####: 3832:            if (__comp(*--__last, *__first))
     $$$$$: 3832-block  0
@@ -3964,13 +3950,13 @@
     #####: 3834:            return;
     $$$$$: 3834-block  0
         -: 3835:        case 3:
-    #####: 3836:            _VSTD::__sort3<_Compare>(__first, __first+1, --__last, __comp);
-    #####: 3837:            return;
-    $$$$$: 3837-block  0
+        6: 3836:            _VSTD::__sort3<_Compare>(__first, __first+1, --__last, __comp);
+        6: 3837:            return;
+        6: 3837-block  0
         -: 3838:        case 4:
-    #####: 3839:            _VSTD::__sort4<_Compare>(__first, __first+1, __first+2, --__last, __comp);
-    #####: 3840:            return;
-    $$$$$: 3840-block  0
+        2: 3839:            _VSTD::__sort4<_Compare>(__first, __first+1, __first+2, --__last, __comp);
+        2: 3840:            return;
+        2: 3840-block  0
         -: 3841:        case 5:
     #####: 3842:            _VSTD::__sort5<_Compare>(__first, __first+1, __first+2, __first+3, --__last, __comp);
     #####: 3843:            return;
@@ -4196,16 +4182,16 @@
     $$$$$: 4001-block  0
         -: 4002:        }
         -: 4003:    }
-    #####: 4004:}
-    $$$$$: 4004-block  0
+       16: 4004:}
+       16: 4004-block  0
         -: 4005:
         -: 4006:// This forwarder keeps the top call and the recursive calls using the same instantiation, forcing a reference _Compare
         -: 4007:template <class _RandomAccessIterator, class _Compare>
         -: 4008:inline _LIBCPP_INLINE_VISIBILITY
         -: 4009:void
-    #####: 4010:sort(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp)
-    $$$$$: 4010-block  0
-    $$$$$: 4010-block  1
+       40: 4010:sort(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp)
+       24: 4010-block  0
+       16: 4010-block  1
         -: 4011:{
         -: 4012:#ifdef _LIBCPP_DEBUG
         -: 4013:    typedef typename add_lvalue_reference<__debug_less<_Compare> >::type _Comp_ref;
@@ -4213,23 +4199,23 @@
         -: 4015:    __sort<_Comp_ref>(__first, __last, __c);
         -: 4016:#else  // _LIBCPP_DEBUG
         -: 4017:    typedef typename add_lvalue_reference<_Compare>::type _Comp_ref;
-    #####: 4018:    __sort<_Comp_ref>(__first, __last, __comp);
+       40: 4018:    __sort<_Comp_ref>(__first, __last, __comp);
         -: 4019:#endif  // _LIBCPP_DEBUG
-    #####: 4020:}
-    $$$$$: 4020-block  0
-    $$$$$: 4020-block  1
+       40: 4020:}
+       24: 4020-block  0
+       16: 4020-block  1
         -: 4021:
         -: 4022:template <class _RandomAccessIterator>
         -: 4023:inline _LIBCPP_INLINE_VISIBILITY
         -: 4024:void
-    #####: 4025:sort(_RandomAccessIterator __first, _RandomAccessIterator __last)
-    $$$$$: 4025-block  0
-    $$$$$: 4025-block  1
+       40: 4025:sort(_RandomAccessIterator __first, _RandomAccessIterator __last)
+       24: 4025-block  0
+       16: 4025-block  1
         -: 4026:{
-    #####: 4027:    _VSTD::sort(__first, __last, __less<typename iterator_traits<_RandomAccessIterator>::value_type>());
-    #####: 4028:}
-    $$$$$: 4028-block  0
-    $$$$$: 4028-block  1
+       40: 4027:    _VSTD::sort(__first, __last, __less<typename iterator_traits<_RandomAccessIterator>::value_type>());
+       40: 4028:}
+       24: 4028-block  0
+       16: 4028-block  1
         -: 4029:
         -: 4030:template <class _Tp>
         -: 4031:inline _LIBCPP_INLINE_VISIBILITY
@@ -4242,14 +4228,14 @@
         -: 4038:template <class _Tp>
         -: 4039:inline _LIBCPP_INLINE_VISIBILITY
         -: 4040:void
-    #####: 4041:sort(__wrap_iter<_Tp*> __first, __wrap_iter<_Tp*> __last)
-    $$$$$: 4041-block  0
-    $$$$$: 4041-block  1
+       40: 4041:sort(__wrap_iter<_Tp*> __first, __wrap_iter<_Tp*> __last)
+       24: 4041-block  0
+       16: 4041-block  1
         -: 4042:{
-    #####: 4043:    _VSTD::sort(__first.base(), __last.base());
-    #####: 4044:}
-    $$$$$: 4044-block  0
-    $$$$$: 4044-block  1
+       40: 4043:    _VSTD::sort(__first.base(), __last.base());
+       40: 4044:}
+       24: 4044-block  0
+       16: 4044-block  1
         -: 4045:
         -: 4046:template <class _Tp, class _Compare>
         -: 4047:inline _LIBCPP_INLINE_VISIBILITY

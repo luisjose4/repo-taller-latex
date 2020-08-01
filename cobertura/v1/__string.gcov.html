@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">8</td>
-            <td class="headerCovTableEntry">14</td>
-            <td class="headerCovTableEntryLo">57.1 %</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntryLo">53.8 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">5</td>
-            <td class="headerCovTableEntry">8</td>
-            <td class="headerCovTableEntryLo">62.5 %</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntryLo">57.1 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -268,7 +268,7 @@
 <a name="206"><span class="lineNum">     206 </span>            :     typedef mbstate_t state_type;</a>
 <a name="207"><span class="lineNum">     207 </span>            : </a>
 <a name="208"><span class="lineNum">     208 </span>            :     static inline _LIBCPP_CONSTEXPR_AFTER_CXX14</a>
-<a name="209"><span class="lineNum">     209 </span><span class="lineCov">       3123 :     void assign(char_type&amp; __c1, const char_type&amp; __c2) _NOEXCEPT {__c1 = __c2;}</span></a>
+<a name="209"><span class="lineNum">     209 </span>            :     void assign(char_type&amp; __c1, const char_type&amp; __c2) _NOEXCEPT {__c1 = __c2;}</a>
 <a name="210"><span class="lineNum">     210 </span><span class="lineNoCov">          0 :     static inline _LIBCPP_CONSTEXPR bool eq(char_type __c1, char_type __c2) _NOEXCEPT</span></a>
 <a name="211"><span class="lineNum">     211 </span><span class="lineNoCov">          0 :             {return __c1 == __c2;}</span></a>
 <a name="212"><span class="lineNum">     212 </span>            :     static inline _LIBCPP_CONSTEXPR bool lt(char_type __c1, char_type __c2) _NOEXCEPT</a>
@@ -277,7 +277,7 @@
 <a name="215"><span class="lineNum">     215 </span>            :     static _LIBCPP_CONSTEXPR_AFTER_CXX14</a>
 <a name="216"><span class="lineNum">     216 </span>            :     int compare(const char_type* __s1, const char_type* __s2, size_t __n) _NOEXCEPT;</a>
 <a name="217"><span class="lineNum">     217 </span>            :     static inline size_t _LIBCPP_CONSTEXPR_AFTER_CXX14</a>
-<a name="218"><span class="lineNum">     218 </span><span class="lineCov">       2094 :     length(const char_type* __s)  _NOEXCEPT {return __builtin_strlen(__s);}</span></a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">        704 :     length(const char_type* __s)  _NOEXCEPT {return __builtin_strlen(__s);}</span></a>
 <a name="219"><span class="lineNum">     219 </span>            :     static _LIBCPP_CONSTEXPR_AFTER_CXX14</a>
 <a name="220"><span class="lineNum">     220 </span>            :     const char_type* find(const char_type* __s, size_t __n, const char_type&amp; __a) _NOEXCEPT;</a>
 <a name="221"><span class="lineNum">     221 </span>            :     static inline char_type* move(char_type* __s1, const char_type* __s2, size_t __n) _NOEXCEPT</a>
@@ -294,12 +294,12 @@
 <a name="232"><span class="lineNum">     232 </span><span class="lineNoCov">          0 :         {return eq_int_type(__c, eof()) ? ~eof() : __c;}</span></a>
 <a name="233"><span class="lineNum">     233 </span><span class="lineNoCov">          0 :     static inline _LIBCPP_CONSTEXPR char_type to_char_type(int_type __c) _NOEXCEPT</span></a>
 <a name="234"><span class="lineNum">     234 </span><span class="lineNoCov">          0 :         {return char_type(__c);}</span></a>
-<a name="235"><span class="lineNum">     235 </span><span class="lineCov">        552 :     static inline _LIBCPP_CONSTEXPR int_type to_int_type(char_type __c) _NOEXCEPT</span></a>
-<a name="236"><span class="lineNum">     236 </span><span class="lineCov">        552 :         {return int_type((unsigned char)__c);}</span></a>
-<a name="237"><span class="lineNum">     237 </span><span class="lineCov">       1542 :     static inline _LIBCPP_CONSTEXPR bool eq_int_type(int_type __c1, int_type __c2) _NOEXCEPT</span></a>
-<a name="238"><span class="lineNum">     238 </span><span class="lineCov">       1542 :         {return __c1 == __c2;}</span></a>
-<a name="239"><span class="lineNum">     239 </span><span class="lineCov">       2070 :     static inline _LIBCPP_CONSTEXPR int_type  eof() _NOEXCEPT</span></a>
-<a name="240"><span class="lineNum">     240 </span><span class="lineCov">       2070 :         {return int_type(EOF);}</span></a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineCov">        184 :     static inline _LIBCPP_CONSTEXPR int_type to_int_type(char_type __c) _NOEXCEPT</span></a>
+<a name="236"><span class="lineNum">     236 </span><span class="lineCov">        184 :         {return int_type((unsigned char)__c);}</span></a>
+<a name="237"><span class="lineNum">     237 </span><span class="lineCov">        512 :     static inline _LIBCPP_CONSTEXPR bool eq_int_type(int_type __c1, int_type __c2) _NOEXCEPT</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineCov">        512 :         {return __c1 == __c2;}</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">        688 :     static inline _LIBCPP_CONSTEXPR int_type  eof() _NOEXCEPT</span></a>
+<a name="240"><span class="lineNum">     240 </span><span class="lineCov">        688 :         {return int_type(EOF);}</span></a>
 <a name="241"><span class="lineNum">     241 </span>            : };</a>
 <a name="242"><span class="lineNum">     242 </span>            : </a>
 <a name="243"><span class="lineNum">     243 </span>            : inline _LIBCPP_CONSTEXPR_AFTER_CXX14</a>

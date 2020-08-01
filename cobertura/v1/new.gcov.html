@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">5</td>
@@ -282,7 +282,7 @@
 <a name="220"><span class="lineNum">     220 </span>            : #endif</a>
 <a name="221"><span class="lineNum">     221 </span>            : }</a>
 <a name="222"><span class="lineNum">     222 </span>            : </a>
-<a name="223"><span class="lineNum">     223 </span><span class="lineCov">      38720 : inline _LIBCPP_INLINE_VISIBILITY void *__libcpp_allocate(size_t __size, size_t __align) {</span></a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineCov">      36790 : inline _LIBCPP_INLINE_VISIBILITY void *__libcpp_allocate(size_t __size, size_t __align) {</span></a>
 <a name="224"><span class="lineNum">     224 </span>            : #ifndef _LIBCPP_HAS_NO_ALIGNED_ALLOCATION</a>
 <a name="225"><span class="lineNum">     225 </span>            :   if (__is_overaligned_for_new(__align)) {</a>
 <a name="226"><span class="lineNum">     226 </span>            :     const align_val_t __align_val = static_cast&lt;align_val_t&gt;(__align);</a>
@@ -298,16 +298,16 @@
 <a name="236"><span class="lineNum">     236 </span>            : #ifdef _LIBCPP_HAS_NO_BUILTIN_OPERATOR_NEW_DELETE</a>
 <a name="237"><span class="lineNum">     237 </span>            :   return ::operator new(__size);</a>
 <a name="238"><span class="lineNum">     238 </span>            : #else</a>
-<a name="239"><span class="lineNum">     239 </span><span class="lineCov">      38720 :   return __builtin_operator_new(__size);</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">      36790 :   return __builtin_operator_new(__size);</span></a>
 <a name="240"><span class="lineNum">     240 </span>            : #endif</a>
 <a name="241"><span class="lineNum">     241 </span>            : }</a>
 <a name="242"><span class="lineNum">     242 </span>            : </a>
 <a name="243"><span class="lineNum">     243 </span>            : struct _DeallocateCaller {</a>
 <a name="244"><span class="lineNum">     244 </span>            :   static inline _LIBCPP_INLINE_VISIBILITY</a>
-<a name="245"><span class="lineNum">     245 </span><span class="lineCov">      38720 :   void __do_deallocate_handle_size_align(void *__ptr, size_t __size, size_t __align) {</span></a>
+<a name="245"><span class="lineNum">     245 </span><span class="lineCov">      36790 :   void __do_deallocate_handle_size_align(void *__ptr, size_t __size, size_t __align) {</span></a>
 <a name="246"><span class="lineNum">     246 </span>            : #if defined(_LIBCPP_HAS_NO_ALIGNED_ALLOCATION)</a>
 <a name="247"><span class="lineNum">     247 </span>            :     ((void)__align);</a>
-<a name="248"><span class="lineNum">     248 </span><span class="lineCov">      38720 :     return __do_deallocate_handle_size(__ptr, __size);</span></a>
+<a name="248"><span class="lineNum">     248 </span><span class="lineCov">      36790 :     return __do_deallocate_handle_size(__ptr, __size);</span></a>
 <a name="249"><span class="lineNum">     249 </span>            : #else</a>
 <a name="250"><span class="lineNum">     250 </span>            :     if (__is_overaligned_for_new(__align)) {</a>
 <a name="251"><span class="lineNum">     251 </span>            :       const align_val_t __align_val = static_cast&lt;align_val_t&gt;(__align);</a>
@@ -334,10 +334,10 @@
 <a name="272"><span class="lineNum">     272 </span>            :   }</a>
 <a name="273"><span class="lineNum">     273 </span>            : </a>
 <a name="274"><span class="lineNum">     274 </span>            :  private:</a>
-<a name="275"><span class="lineNum">     275 </span><span class="lineCov">      38885 :   static inline void __do_deallocate_handle_size(void *__ptr, size_t __size) {</span></a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">      36844 :   static inline void __do_deallocate_handle_size(void *__ptr, size_t __size) {</span></a>
 <a name="276"><span class="lineNum">     276 </span>            : #ifdef _LIBCPP_HAS_NO_SIZED_DEALLOCATION</a>
 <a name="277"><span class="lineNum">     277 </span>            :     ((void)__size);</a>
-<a name="278"><span class="lineNum">     278 </span><span class="lineCov">      38885 :     return __do_call(__ptr);</span></a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">      36844 :     return __do_call(__ptr);</span></a>
 <a name="279"><span class="lineNum">     279 </span>            : #else</a>
 <a name="280"><span class="lineNum">     280 </span>            :     return __do_call(__ptr, __size);</a>
 <a name="281"><span class="lineNum">     281 </span>            : #endif</a>
@@ -375,18 +375,18 @@
 <a name="313"><span class="lineNum">     313 </span>            : #endif</a>
 <a name="314"><span class="lineNum">     314 </span>            :   }</a>
 <a name="315"><span class="lineNum">     315 </span>            : </a>
-<a name="316"><span class="lineNum">     316 </span><span class="lineCov">      38885 :   static inline void __do_call(void *__ptr) {</span></a>
+<a name="316"><span class="lineNum">     316 </span><span class="lineCov">      36844 :   static inline void __do_call(void *__ptr) {</span></a>
 <a name="317"><span class="lineNum">     317 </span>            : #ifdef _LIBCPP_HAS_NO_BUILTIN_OPERATOR_NEW_DELETE</a>
 <a name="318"><span class="lineNum">     318 </span>            :     return ::operator delete(__ptr);</a>
 <a name="319"><span class="lineNum">     319 </span>            : #else</a>
-<a name="320"><span class="lineNum">     320 </span><span class="lineCov">      38885 :     return __builtin_operator_delete(__ptr);</span></a>
+<a name="320"><span class="lineNum">     320 </span><span class="lineCov">      36844 :     return __builtin_operator_delete(__ptr);</span></a>
 <a name="321"><span class="lineNum">     321 </span>            : #endif</a>
 <a name="322"><span class="lineNum">     322 </span>            :   }</a>
 <a name="323"><span class="lineNum">     323 </span>            : };</a>
 <a name="324"><span class="lineNum">     324 </span>            : </a>
-<a name="325"><span class="lineNum">     325 </span><span class="lineCov">      38720 : inline _LIBCPP_INLINE_VISIBILITY void __libcpp_deallocate(void* __ptr, size_t __size, size_t __align) {</span></a>
-<a name="326"><span class="lineNum">     326 </span><span class="lineCov">      38720 :   _DeallocateCaller::__do_deallocate_handle_size_align(__ptr, __size, __align);</span></a>
-<a name="327"><span class="lineNum">     327 </span><span class="lineCov">      38720 : }</span></a>
+<a name="325"><span class="lineNum">     325 </span><span class="lineCov">      36790 : inline _LIBCPP_INLINE_VISIBILITY void __libcpp_deallocate(void* __ptr, size_t __size, size_t __align) {</span></a>
+<a name="326"><span class="lineNum">     326 </span><span class="lineCov">      36790 :   _DeallocateCaller::__do_deallocate_handle_size_align(__ptr, __size, __align);</span></a>
+<a name="327"><span class="lineNum">     327 </span><span class="lineCov">      36790 : }</span></a>
 <a name="328"><span class="lineNum">     328 </span>            : </a>
 <a name="329"><span class="lineNum">     329 </span>            : inline _LIBCPP_INLINE_VISIBILITY void __libcpp_deallocate_unsized(void* __ptr, size_t __align) {</a>
 <a name="330"><span class="lineNum">     330 </span>            :   _DeallocateCaller::__do_deallocate_handle_align(__ptr, __align);</a>

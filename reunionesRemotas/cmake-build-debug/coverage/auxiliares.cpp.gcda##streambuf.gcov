@@ -191,16 +191,11 @@
         -:  184:    }
         -:  185:
         -:  186:    inline _LIBCPP_HIDE_FROM_ABI_AFTER_V1
-    #####:  187:    int_type sbumpc() {
-    $$$$$:  187-block  0
-    #####:  188:        if (__ninp_ == __einp_)
-    $$$$$:  188-block  0
-    #####:  189:            return uflow();
-    $$$$$:  189-block  0
-    #####:  190:        return traits_type::to_int_type(*__ninp_++);
-    $$$$$:  190-block  0
-    #####:  191:    }
-    $$$$$:  191-block  0
+        -:  187:    int_type sbumpc() {
+        -:  188:        if (__ninp_ == __einp_)
+        -:  189:            return uflow();
+        -:  190:        return traits_type::to_int_type(*__ninp_++);
+        -:  191:    }
         -:  192:
         -:  193:    inline _LIBCPP_HIDE_FROM_ABI_AFTER_V1
         -:  194:    int_type sgetc() {

@@ -1069,13 +1069,13 @@
         -: 1064:private:
         -: 1065:    streambuf_type* __sbuf_;
         -: 1066:public:
-      664: 1067:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(ostream_type& __s) _NOEXCEPT
-      332: 1067-block  0
-      332: 1067-block  1
-      664: 1068:        : __sbuf_(__s.rdbuf()) {}
-      332: 1068-block  0
-      332: 1068-block  1
-      332: 1068-block  2
+      656: 1067:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(ostream_type& __s) _NOEXCEPT
+      328: 1067-block  0
+      328: 1067-block  1
+      656: 1068:        : __sbuf_(__s.rdbuf()) {}
+      328: 1068-block  0
+      328: 1068-block  1
+      328: 1068-block  2
     $$$$$: 1068-block  3
         -: 1069:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(streambuf_type* __s) _NOEXCEPT
         -: 1070:        : __sbuf_(__s) {}
@@ -1088,9 +1088,9 @@
         -: 1077:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator*()     {return *this;}
         -: 1078:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator++()    {return *this;}
         -: 1079:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator++(int) {return *this;}
-      332: 1080:    _LIBCPP_INLINE_VISIBILITY bool failed() const _NOEXCEPT {return __sbuf_ == 0;}
-      332: 1080-block  0
-      332: 1080-block  1
+      328: 1080:    _LIBCPP_INLINE_VISIBILITY bool failed() const _NOEXCEPT {return __sbuf_ == 0;}
+      328: 1080-block  0
+      328: 1080-block  1
         -: 1081:
         -: 1082:#if !defined(__APPLE__) || \
         -: 1083:    (defined(__MAC_OS_X_VERSION_MIN_REQUIRED) && __MAC_OS_X_VERSION_MIN_REQUIRED > __MAC_10_8) || \

@@ -998,14 +998,14 @@
         -:  993:    std::is_arithmetic<_A2>::value,
         -:  994:    std::__promote<_A1, _A2>
         -:  995:>::type
-    #####:  996:pow(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
-    $$$$$:  996-block  0
+       92:  996:pow(_A1 __lcpp_x, _A2 __lcpp_y) _NOEXCEPT
+       92:  996-block  0
         -:  997:{
         -:  998:    typedef typename std::__promote<_A1, _A2>::type __result_type;
         -:  999:    static_assert((!(std::is_same<_A1, __result_type>::value &&
         -: 1000:                     std::is_same<_A2, __result_type>::value)), "");
-    #####: 1001:    return ::pow((__result_type)__lcpp_x, (__result_type)__lcpp_y);
-    $$$$$: 1001-block  0
+       92: 1001:    return ::pow((__result_type)__lcpp_x, (__result_type)__lcpp_y);
+       92: 1001-block  0
         -: 1002:}
         -: 1003:
         -: 1004:// sin

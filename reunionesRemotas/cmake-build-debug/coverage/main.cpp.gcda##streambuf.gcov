@@ -231,10 +231,10 @@
         -:  226:    }
         -:  227:
         -:  228:    inline _LIBCPP_HIDE_FROM_ABI_AFTER_V1
-      332:  229:    streamsize sputn(const char_type* __s, streamsize __n)
-      332:  229-block  0
-      332:  230:    { return xsputn(__s, __n); }
-      332:  230-block  0
+      328:  229:    streamsize sputn(const char_type* __s, streamsize __n)
+      328:  229-block  0
+      328:  230:    { return xsputn(__s, __n); }
+      328:  230-block  0
         -:  231:
         -:  232:protected:
         -:  233:    basic_streambuf();

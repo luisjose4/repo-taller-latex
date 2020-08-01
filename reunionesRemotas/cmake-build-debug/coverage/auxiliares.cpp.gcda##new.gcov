@@ -225,8 +225,8 @@
         -:  220:#endif
         -:  221:}
         -:  222:
-    34350:  223:inline _LIBCPP_INLINE_VISIBILITY void *__libcpp_allocate(size_t __size, size_t __align) {
-    34350:  223-block  0
+    36790:  223:inline _LIBCPP_INLINE_VISIBILITY void *__libcpp_allocate(size_t __size, size_t __align) {
+    36790:  223-block  0
         -:  224:#ifndef _LIBCPP_HAS_NO_ALIGNED_ALLOCATION
         -:  225:  if (__is_overaligned_for_new(__align)) {
         -:  226:    const align_val_t __align_val = static_cast<align_val_t>(__align);
@@ -242,19 +242,19 @@
         -:  236:#ifdef _LIBCPP_HAS_NO_BUILTIN_OPERATOR_NEW_DELETE
         -:  237:  return ::operator new(__size);
         -:  238:#else
-    34350:  239:  return __builtin_operator_new(__size);
-    34350:  239-block  0
+    36790:  239:  return __builtin_operator_new(__size);
+    36790:  239-block  0
         -:  240:#endif
         -:  241:}
         -:  242:
         -:  243:struct _DeallocateCaller {
         -:  244:  static inline _LIBCPP_INLINE_VISIBILITY
-    34350:  245:  void __do_deallocate_handle_size_align(void *__ptr, size_t __size, size_t __align) {
-    34350:  245-block  0
+    36790:  245:  void __do_deallocate_handle_size_align(void *__ptr, size_t __size, size_t __align) {
+    36790:  245-block  0
         -:  246:#if defined(_LIBCPP_HAS_NO_ALIGNED_ALLOCATION)
         -:  247:    ((void)__align);
-    34350:  248:    return __do_deallocate_handle_size(__ptr, __size);
-    34350:  248-block  0
+    36790:  248:    return __do_deallocate_handle_size(__ptr, __size);
+    36790:  248-block  0
         -:  249:#else
         -:  250:    if (__is_overaligned_for_new(__align)) {
         -:  251:      const align_val_t __align_val = static_cast<align_val_t>(__align);
@@ -281,12 +281,12 @@
         -:  272:  }
         -:  273:
         -:  274: private:
-    34406:  275:  static inline void __do_deallocate_handle_size(void *__ptr, size_t __size) {
-    34406:  275-block  0
+    36844:  275:  static inline void __do_deallocate_handle_size(void *__ptr, size_t __size) {
+    36844:  275-block  0
         -:  276:#ifdef _LIBCPP_HAS_NO_SIZED_DEALLOCATION
         -:  277:    ((void)__size);
-    34406:  278:    return __do_call(__ptr);
-    34406:  278-block  0
+    36844:  278:    return __do_call(__ptr);
+    36844:  278-block  0
         -:  279:#else
         -:  280:    return __do_call(__ptr, __size);
         -:  281:#endif
@@ -324,22 +324,22 @@
         -:  313:#endif
         -:  314:  }
         -:  315:
-    34406:  316:  static inline void __do_call(void *__ptr) {
-    34406:  316-block  0
+    36844:  316:  static inline void __do_call(void *__ptr) {
+    36844:  316-block  0
         -:  317:#ifdef _LIBCPP_HAS_NO_BUILTIN_OPERATOR_NEW_DELETE
         -:  318:    return ::operator delete(__ptr);
         -:  319:#else
-    34406:  320:    return __builtin_operator_delete(__ptr);
-    34406:  320-block  0
+    36844:  320:    return __builtin_operator_delete(__ptr);
+    36844:  320-block  0
         -:  321:#endif
         -:  322:  }
         -:  323:};
         -:  324:
-    34350:  325:inline _LIBCPP_INLINE_VISIBILITY void __libcpp_deallocate(void* __ptr, size_t __size, size_t __align) {
-    34350:  325-block  0
-    34350:  326:  _DeallocateCaller::__do_deallocate_handle_size_align(__ptr, __size, __align);
-    34350:  327:}
-    34350:  327-block  0
+    36790:  325:inline _LIBCPP_INLINE_VISIBILITY void __libcpp_deallocate(void* __ptr, size_t __size, size_t __align) {
+    36790:  325-block  0
+    36790:  326:  _DeallocateCaller::__do_deallocate_handle_size_align(__ptr, __size, __align);
+    36790:  327:}
+    36790:  327-block  0
         -:  328:
         -:  329:inline _LIBCPP_INLINE_VISIBILITY void __libcpp_deallocate_unsized(void* __ptr, size_t __align) {
         -:  330:  _DeallocateCaller::__do_deallocate_handle_align(__ptr, __align);

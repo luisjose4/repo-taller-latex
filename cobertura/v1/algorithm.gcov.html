@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">56</td>
-            <td class="headerCovTableEntry">245</td>
-            <td class="headerCovTableEntryLo">22.9 %</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">238</td>
+            <td class="headerCovTableEntryLo">20.6 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">21</td>
-            <td class="headerCovTableEntry">29</td>
-            <td class="headerCovTableEntryLo">72.4 %</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntryMed">77.8 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -775,7 +775,7 @@
 <a name="713"><span class="lineNum">     713 </span>            : struct __less&lt;_T1, _T1&gt;</a>
 <a name="714"><span class="lineNum">     714 </span>            : {</a>
 <a name="715"><span class="lineNum">     715 </span>            :     _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11</a>
-<a name="716"><span class="lineNum">     716 </span><span class="lineCov">      39212 :     bool operator()(const _T1&amp; __x, const _T1&amp; __y) const {return __x &lt; __y;}</span></a>
+<a name="716"><span class="lineNum">     716 </span><span class="lineCov">      60865 :     bool operator()(const _T1&amp; __x, const _T1&amp; __y) const {return __x &lt; __y;}</span></a>
 <a name="717"><span class="lineNum">     717 </span>            : };</a>
 <a name="718"><span class="lineNum">     718 </span>            : </a>
 <a name="719"><span class="lineNum">     719 </span>            : template &lt;class _T1&gt;</a>
@@ -1642,9 +1642,9 @@
 <a name="1580"><span class="lineNum">    1580 </span>            : template &lt;class _Iter&gt;</a>
 <a name="1581"><span class="lineNum">    1581 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="1582"><span class="lineNum">    1582 </span>            : _Iter</a>
-<a name="1583"><span class="lineNum">    1583 </span><span class="lineCov">       1665 : __unwrap_iter(_Iter __i)</span></a>
+<a name="1583"><span class="lineNum">    1583 </span><span class="lineCov">        366 : __unwrap_iter(_Iter __i)</span></a>
 <a name="1584"><span class="lineNum">    1584 </span>            : {</a>
-<a name="1585"><span class="lineNum">    1585 </span><span class="lineCov">       1665 :     return __i;</span></a>
+<a name="1585"><span class="lineNum">    1585 </span><span class="lineCov">        366 :     return __i;</span></a>
 <a name="1586"><span class="lineNum">    1586 </span>            : }</a>
 <a name="1587"><span class="lineNum">    1587 </span>            : </a>
 <a name="1588"><span class="lineNum">    1588 </span>            : template &lt;class _Tp&gt;</a>
@@ -1707,20 +1707,20 @@
 <a name="1645"><span class="lineNum">    1645 </span>            :     is_trivially_copy_assignable&lt;_Up&gt;::value,</a>
 <a name="1646"><span class="lineNum">    1646 </span>            :     _Up*</a>
 <a name="1647"><span class="lineNum">    1647 </span>            : &gt;::type</a>
-<a name="1648"><span class="lineNum">    1648 </span><span class="lineCov">          9 : __copy(_Tp* __first, _Tp* __last, _Up* __result)</span></a>
+<a name="1648"><span class="lineNum">    1648 </span><span class="lineCov">        122 : __copy(_Tp* __first, _Tp* __last, _Up* __result)</span></a>
 <a name="1649"><span class="lineNum">    1649 </span>            : {</a>
-<a name="1650"><span class="lineNum">    1650 </span><span class="lineCov">          9 :     const size_t __n = static_cast&lt;size_t&gt;(__last - __first);</span></a>
-<a name="1651"><span class="lineNum">    1651 </span><span class="lineCov">          9 :     if (__n &gt; 0)</span></a>
-<a name="1652"><span class="lineNum">    1652 </span><span class="lineCov">          9 :         _VSTD::memmove(__result, __first, __n * sizeof(_Up));</span></a>
-<a name="1653"><span class="lineNum">    1653 </span><span class="lineCov">          9 :     return __result + __n;</span></a>
+<a name="1650"><span class="lineNum">    1650 </span><span class="lineCov">        122 :     const size_t __n = static_cast&lt;size_t&gt;(__last - __first);</span></a>
+<a name="1651"><span class="lineNum">    1651 </span><span class="lineCov">        122 :     if (__n &gt; 0)</span></a>
+<a name="1652"><span class="lineNum">    1652 </span><span class="lineCov">        122 :         _VSTD::memmove(__result, __first, __n * sizeof(_Up));</span></a>
+<a name="1653"><span class="lineNum">    1653 </span><span class="lineCov">        122 :     return __result + __n;</span></a>
 <a name="1654"><span class="lineNum">    1654 </span>            : }</a>
 <a name="1655"><span class="lineNum">    1655 </span>            : </a>
 <a name="1656"><span class="lineNum">    1656 </span>            : template &lt;class _InputIterator, class _OutputIterator&gt;</a>
 <a name="1657"><span class="lineNum">    1657 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="1658"><span class="lineNum">    1658 </span>            : _OutputIterator</a>
-<a name="1659"><span class="lineNum">    1659 </span><span class="lineCov">          9 : copy(_InputIterator __first, _InputIterator __last, _OutputIterator __result)</span></a>
+<a name="1659"><span class="lineNum">    1659 </span><span class="lineCov">        122 : copy(_InputIterator __first, _InputIterator __last, _OutputIterator __result)</span></a>
 <a name="1660"><span class="lineNum">    1660 </span>            : {</a>
-<a name="1661"><span class="lineNum">    1661 </span><span class="lineCov">          9 :     return _VSTD::__copy(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));</span></a>
+<a name="1661"><span class="lineNum">    1661 </span><span class="lineCov">        122 :     return _VSTD::__copy(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));</span></a>
 <a name="1662"><span class="lineNum">    1662 </span>            : }</a>
 <a name="1663"><span class="lineNum">    1663 </span>            : </a>
 <a name="1664"><span class="lineNum">    1664 </span>            : // copy_backward</a>
@@ -1846,20 +1846,20 @@
 <a name="1784"><span class="lineNum">    1784 </span>            :     is_trivially_copy_assignable&lt;_Up&gt;::value,</a>
 <a name="1785"><span class="lineNum">    1785 </span>            :     _Up*</a>
 <a name="1786"><span class="lineNum">    1786 </span>            : &gt;::type</a>
-<a name="1787"><span class="lineNum">    1787 </span><span class="lineCov">        546 : __move(_Tp* __first, _Tp* __last, _Up* __result)</span></a>
+<a name="1787"><span class="lineNum">    1787 </span>            : __move(_Tp* __first, _Tp* __last, _Up* __result)</a>
 <a name="1788"><span class="lineNum">    1788 </span>            : {</a>
-<a name="1789"><span class="lineNum">    1789 </span><span class="lineCov">        546 :     const size_t __n = static_cast&lt;size_t&gt;(__last - __first);</span></a>
-<a name="1790"><span class="lineNum">    1790 </span><span class="lineCov">        546 :     if (__n &gt; 0)</span></a>
-<a name="1791"><span class="lineNum">    1791 </span><span class="lineCov">        516 :         _VSTD::memmove(__result, __first, __n * sizeof(_Up));</span></a>
-<a name="1792"><span class="lineNum">    1792 </span><span class="lineCov">        546 :     return __result + __n;</span></a>
+<a name="1789"><span class="lineNum">    1789 </span>            :     const size_t __n = static_cast&lt;size_t&gt;(__last - __first);</a>
+<a name="1790"><span class="lineNum">    1790 </span>            :     if (__n &gt; 0)</a>
+<a name="1791"><span class="lineNum">    1791 </span>            :         _VSTD::memmove(__result, __first, __n * sizeof(_Up));</a>
+<a name="1792"><span class="lineNum">    1792 </span>            :     return __result + __n;</a>
 <a name="1793"><span class="lineNum">    1793 </span>            : }</a>
 <a name="1794"><span class="lineNum">    1794 </span>            : </a>
 <a name="1795"><span class="lineNum">    1795 </span>            : template &lt;class _InputIterator, class _OutputIterator&gt;</a>
 <a name="1796"><span class="lineNum">    1796 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="1797"><span class="lineNum">    1797 </span>            : _OutputIterator</a>
-<a name="1798"><span class="lineNum">    1798 </span><span class="lineCov">        546 : move(_InputIterator __first, _InputIterator __last, _OutputIterator __result)</span></a>
+<a name="1798"><span class="lineNum">    1798 </span>            : move(_InputIterator __first, _InputIterator __last, _OutputIterator __result)</a>
 <a name="1799"><span class="lineNum">    1799 </span>            : {</a>
-<a name="1800"><span class="lineNum">    1800 </span><span class="lineCov">        546 :     return _VSTD::__move(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));</span></a>
+<a name="1800"><span class="lineNum">    1800 </span>            :     return _VSTD::__move(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));</a>
 <a name="1801"><span class="lineNum">    1801 </span>            : }</a>
 <a name="1802"><span class="lineNum">    1802 </span>            : </a>
 <a name="1803"><span class="lineNum">    1803 </span>            : // move_backward</a>
@@ -2513,17 +2513,17 @@
 <a name="2451"><span class="lineNum">    2451 </span>            : template &lt;class _Tp, class _Compare&gt;</a>
 <a name="2452"><span class="lineNum">    2452 </span>            : inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11</a>
 <a name="2453"><span class="lineNum">    2453 </span>            : const _Tp&amp;</a>
-<a name="2454"><span class="lineNum">    2454 </span><span class="lineCov">      38789 : min(const _Tp&amp; __a, const _Tp&amp; __b, _Compare __comp)</span></a>
+<a name="2454"><span class="lineNum">    2454 </span><span class="lineCov">      36813 : min(const _Tp&amp; __a, const _Tp&amp; __b, _Compare __comp)</span></a>
 <a name="2455"><span class="lineNum">    2455 </span>            : {</a>
-<a name="2456"><span class="lineNum">    2456 </span><span class="lineCov">      38789 :     return __comp(__b, __a) ? __b : __a;</span></a>
+<a name="2456"><span class="lineNum">    2456 </span><span class="lineCov">      36813 :     return __comp(__b, __a) ? __b : __a;</span></a>
 <a name="2457"><span class="lineNum">    2457 </span>            : }</a>
 <a name="2458"><span class="lineNum">    2458 </span>            : </a>
 <a name="2459"><span class="lineNum">    2459 </span>            : template &lt;class _Tp&gt;</a>
 <a name="2460"><span class="lineNum">    2460 </span>            : inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11</a>
 <a name="2461"><span class="lineNum">    2461 </span>            : const _Tp&amp;</a>
-<a name="2462"><span class="lineNum">    2462 </span><span class="lineCov">      38789 : min(const _Tp&amp; __a, const _Tp&amp; __b)</span></a>
+<a name="2462"><span class="lineNum">    2462 </span><span class="lineCov">      36813 : min(const _Tp&amp; __a, const _Tp&amp; __b)</span></a>
 <a name="2463"><span class="lineNum">    2463 </span>            : {</a>
-<a name="2464"><span class="lineNum">    2464 </span><span class="lineCov">      38789 :     return _VSTD::min(__a, __b, __less&lt;_Tp&gt;());</span></a>
+<a name="2464"><span class="lineNum">    2464 </span><span class="lineCov">      36813 :     return _VSTD::min(__a, __b, __less&lt;_Tp&gt;());</span></a>
 <a name="2465"><span class="lineNum">    2465 </span>            : }</a>
 <a name="2466"><span class="lineNum">    2466 </span>            : </a>
 <a name="2467"><span class="lineNum">    2467 </span>            : #ifndef _LIBCPP_CXX03_LANG</a>
@@ -2580,17 +2580,17 @@
 <a name="2518"><span class="lineNum">    2518 </span>            : template &lt;class _Tp, class _Compare&gt;</a>
 <a name="2519"><span class="lineNum">    2519 </span>            : inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11</a>
 <a name="2520"><span class="lineNum">    2520 </span>            : const _Tp&amp;</a>
-<a name="2521"><span class="lineNum">    2521 </span><span class="lineCov">        369 : max(const _Tp&amp; __a, const _Tp&amp; __b, _Compare __comp)</span></a>
+<a name="2521"><span class="lineNum">    2521 </span><span class="lineCov">      24034 : max(const _Tp&amp; __a, const _Tp&amp; __b, _Compare __comp)</span></a>
 <a name="2522"><span class="lineNum">    2522 </span>            : {</a>
-<a name="2523"><span class="lineNum">    2523 </span><span class="lineCov">        369 :     return __comp(__a, __b) ? __b : __a;</span></a>
+<a name="2523"><span class="lineNum">    2523 </span><span class="lineCov">      24034 :     return __comp(__a, __b) ? __b : __a;</span></a>
 <a name="2524"><span class="lineNum">    2524 </span>            : }</a>
 <a name="2525"><span class="lineNum">    2525 </span>            : </a>
 <a name="2526"><span class="lineNum">    2526 </span>            : template &lt;class _Tp&gt;</a>
 <a name="2527"><span class="lineNum">    2527 </span>            : inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11</a>
 <a name="2528"><span class="lineNum">    2528 </span>            : const _Tp&amp;</a>
-<a name="2529"><span class="lineNum">    2529 </span><span class="lineCov">        369 : max(const _Tp&amp; __a, const _Tp&amp; __b)</span></a>
+<a name="2529"><span class="lineNum">    2529 </span><span class="lineCov">      24034 : max(const _Tp&amp; __a, const _Tp&amp; __b)</span></a>
 <a name="2530"><span class="lineNum">    2530 </span>            : {</a>
-<a name="2531"><span class="lineNum">    2531 </span><span class="lineCov">        369 :     return _VSTD::max(__a, __b, __less&lt;_Tp&gt;());</span></a>
+<a name="2531"><span class="lineNum">    2531 </span><span class="lineCov">      24034 :     return _VSTD::max(__a, __b, __less&lt;_Tp&gt;());</span></a>
 <a name="2532"><span class="lineNum">    2532 </span>            : }</a>
 <a name="2533"><span class="lineNum">    2533 </span>            : </a>
 <a name="2534"><span class="lineNum">    2534 </span>            : #ifndef _LIBCPP_CXX03_LANG</a>
@@ -3637,13 +3637,13 @@
 <a name="3575"><span class="lineNum">    3575 </span>            : </a>
 <a name="3576"><span class="lineNum">    3576 </span>            : template &lt;class _Compare, class _ForwardIterator&gt;</a>
 <a name="3577"><span class="lineNum">    3577 </span>            : unsigned</a>
-<a name="3578"><span class="lineNum">    3578 </span><span class="lineCov">         24 : __sort3(_ForwardIterator __x, _ForwardIterator __y, _ForwardIterator __z, _Compare __c)</span></a>
+<a name="3578"><span class="lineNum">    3578 </span><span class="lineCov">          8 : __sort3(_ForwardIterator __x, _ForwardIterator __y, _ForwardIterator __z, _Compare __c)</span></a>
 <a name="3579"><span class="lineNum">    3579 </span>            : {</a>
-<a name="3580"><span class="lineNum">    3580 </span><span class="lineCov">         24 :     unsigned __r = 0;</span></a>
-<a name="3581"><span class="lineNum">    3581 </span><span class="lineCov">         24 :     if (!__c(*__y, *__x))          // if x &lt;= y</span></a>
+<a name="3580"><span class="lineNum">    3580 </span><span class="lineCov">          8 :     unsigned __r = 0;</span></a>
+<a name="3581"><span class="lineNum">    3581 </span><span class="lineCov">          8 :     if (!__c(*__y, *__x))          // if x &lt;= y</span></a>
 <a name="3582"><span class="lineNum">    3582 </span>            :     {</a>
-<a name="3583"><span class="lineNum">    3583 </span><span class="lineCov">         24 :         if (!__c(*__z, *__y))      // if y &lt;= z</span></a>
-<a name="3584"><span class="lineNum">    3584 </span><span class="lineCov">         24 :             return __r;            // x &lt;= y &amp;&amp; y &lt;= z</span></a>
+<a name="3583"><span class="lineNum">    3583 </span><span class="lineCov">          8 :         if (!__c(*__z, *__y))      // if y &lt;= z</span></a>
+<a name="3584"><span class="lineNum">    3584 </span><span class="lineCov">          8 :             return __r;            // x &lt;= y &amp;&amp; y &lt;= z</span></a>
 <a name="3585"><span class="lineNum">    3585 </span>            :                                    // x &lt;= y &amp;&amp; y &gt; z</a>
 <a name="3586"><span class="lineNum">    3586 </span><span class="lineNoCov">          0 :         swap(*__y, *__z);          // x &lt;= z &amp;&amp; y &lt; z</span></a>
 <a name="3587"><span class="lineNum">    3587 </span><span class="lineNoCov">          0 :         __r = 1;</span></a>
@@ -3668,17 +3668,17 @@
 <a name="3606"><span class="lineNum">    3606 </span><span class="lineNoCov">          0 :         __r = 2;</span></a>
 <a name="3607"><span class="lineNum">    3607 </span><span class="lineNoCov">          0 :     }</span></a>
 <a name="3608"><span class="lineNum">    3608 </span><span class="lineNoCov">          0 :     return __r;</span></a>
-<a name="3609"><span class="lineNum">    3609 </span><span class="lineCov">         24 : }                                  // x &lt;= y &amp;&amp; y &lt;= z</span></a>
+<a name="3609"><span class="lineNum">    3609 </span><span class="lineCov">          8 : }                                  // x &lt;= y &amp;&amp; y &lt;= z</span></a>
 <a name="3610"><span class="lineNum">    3610 </span>            : </a>
 <a name="3611"><span class="lineNum">    3611 </span>            : // stable, 3-6 compares, 0-5 swaps</a>
 <a name="3612"><span class="lineNum">    3612 </span>            : </a>
 <a name="3613"><span class="lineNum">    3613 </span>            : template &lt;class _Compare, class _ForwardIterator&gt;</a>
 <a name="3614"><span class="lineNum">    3614 </span>            : unsigned</a>
-<a name="3615"><span class="lineNum">    3615 </span><span class="lineCov">          6 : __sort4(_ForwardIterator __x1, _ForwardIterator __x2, _ForwardIterator __x3,</span></a>
+<a name="3615"><span class="lineNum">    3615 </span><span class="lineCov">          2 : __sort4(_ForwardIterator __x1, _ForwardIterator __x2, _ForwardIterator __x3,</span></a>
 <a name="3616"><span class="lineNum">    3616 </span>            :             _ForwardIterator __x4, _Compare __c)</a>
 <a name="3617"><span class="lineNum">    3617 </span>            : {</a>
-<a name="3618"><span class="lineNum">    3618 </span><span class="lineCov">          6 :     unsigned __r = __sort3&lt;_Compare&gt;(__x1, __x2, __x3, __c);</span></a>
-<a name="3619"><span class="lineNum">    3619 </span><span class="lineCov">          6 :     if (__c(*__x4, *__x3))</span></a>
+<a name="3618"><span class="lineNum">    3618 </span><span class="lineCov">          2 :     unsigned __r = __sort3&lt;_Compare&gt;(__x1, __x2, __x3, __c);</span></a>
+<a name="3619"><span class="lineNum">    3619 </span><span class="lineCov">          2 :     if (__c(*__x4, *__x3))</span></a>
 <a name="3620"><span class="lineNum">    3620 </span>            :     {</a>
 <a name="3621"><span class="lineNum">    3621 </span><span class="lineNoCov">          0 :         swap(*__x3, *__x4);</span></a>
 <a name="3622"><span class="lineNum">    3622 </span><span class="lineNoCov">          0 :         ++__r;</span></a>
@@ -3693,7 +3693,7 @@
 <a name="3631"><span class="lineNum">    3631 </span><span class="lineNoCov">          0 :             }</span></a>
 <a name="3632"><span class="lineNum">    3632 </span><span class="lineNoCov">          0 :         }</span></a>
 <a name="3633"><span class="lineNum">    3633 </span><span class="lineNoCov">          0 :     }</span></a>
-<a name="3634"><span class="lineNum">    3634 </span><span class="lineCov">          6 :     return __r;</span></a>
+<a name="3634"><span class="lineNum">    3634 </span><span class="lineCov">          2 :     return __r;</span></a>
 <a name="3635"><span class="lineNum">    3635 </span>            : }</a>
 <a name="3636"><span class="lineNum">    3636 </span>            : </a>
 <a name="3637"><span class="lineNum">    3637 </span>            : // stable, 4-10 compares, 0-9 swaps</a>
@@ -3874,32 +3874,32 @@
 <a name="3812"><span class="lineNum">    3812 </span>            : </a>
 <a name="3813"><span class="lineNum">    3813 </span>            : template &lt;class _Compare, class _RandomAccessIterator&gt;</a>
 <a name="3814"><span class="lineNum">    3814 </span>            : void</a>
-<a name="3815"><span class="lineNum">    3815 </span><span class="lineCov">         48 : __sort(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp)</span></a>
+<a name="3815"><span class="lineNum">    3815 </span><span class="lineCov">         16 : __sort(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp)</span></a>
 <a name="3816"><span class="lineNum">    3816 </span>            : {</a>
 <a name="3817"><span class="lineNum">    3817 </span>            :     // _Compare is known to be a reference type</a>
 <a name="3818"><span class="lineNum">    3818 </span>            :     typedef typename iterator_traits&lt;_RandomAccessIterator&gt;::difference_type difference_type;</a>
 <a name="3819"><span class="lineNum">    3819 </span>            :     typedef typename iterator_traits&lt;_RandomAccessIterator&gt;::value_type value_type;</a>
-<a name="3820"><span class="lineNum">    3820 </span><span class="lineCov">         48 :     const difference_type __limit = is_trivially_copy_constructible&lt;value_type&gt;::value &amp;&amp;</span></a>
+<a name="3820"><span class="lineNum">    3820 </span><span class="lineCov">         16 :     const difference_type __limit = is_trivially_copy_constructible&lt;value_type&gt;::value &amp;&amp;</span></a>
 <a name="3821"><span class="lineNum">    3821 </span>            :                                     is_trivially_copy_assignable&lt;value_type&gt;::value ? 30 : 6;</a>
-<a name="3822"><span class="lineNum">    3822 </span><span class="lineCov">         48 :     while (true)</span></a>
-<a name="3823"><span class="lineNum">    3823 </span><span class="lineCov">         48 :     {</span></a>
+<a name="3822"><span class="lineNum">    3822 </span><span class="lineCov">         16 :     while (true)</span></a>
+<a name="3823"><span class="lineNum">    3823 </span><span class="lineCov">         16 :     {</span></a>
 <a name="3824"><span class="lineNum">    3824 </span>            :     __restart:</a>
-<a name="3825"><span class="lineNum">    3825 </span><span class="lineCov">         48 :         difference_type __len = __last - __first;</span></a>
-<a name="3826"><span class="lineNum">    3826 </span><span class="lineCov">         48 :         switch (__len)</span></a>
+<a name="3825"><span class="lineNum">    3825 </span><span class="lineCov">         16 :         difference_type __len = __last - __first;</span></a>
+<a name="3826"><span class="lineNum">    3826 </span><span class="lineCov">         16 :         switch (__len)</span></a>
 <a name="3827"><span class="lineNum">    3827 </span>            :         {</a>
 <a name="3828"><span class="lineNum">    3828 </span>            :         case 0:</a>
 <a name="3829"><span class="lineNum">    3829 </span>            :         case 1:</a>
-<a name="3830"><span class="lineNum">    3830 </span><span class="lineCov">         24 :             return;</span></a>
+<a name="3830"><span class="lineNum">    3830 </span><span class="lineCov">          8 :             return;</span></a>
 <a name="3831"><span class="lineNum">    3831 </span>            :         case 2:</a>
 <a name="3832"><span class="lineNum">    3832 </span><span class="lineNoCov">          0 :             if (__comp(*--__last, *__first))</span></a>
 <a name="3833"><span class="lineNum">    3833 </span><span class="lineNoCov">          0 :                 swap(*__first, *__last);</span></a>
 <a name="3834"><span class="lineNum">    3834 </span><span class="lineNoCov">          0 :             return;</span></a>
 <a name="3835"><span class="lineNum">    3835 </span>            :         case 3:</a>
-<a name="3836"><span class="lineNum">    3836 </span><span class="lineCov">         18 :             _VSTD::__sort3&lt;_Compare&gt;(__first, __first+1, --__last, __comp);</span></a>
-<a name="3837"><span class="lineNum">    3837 </span><span class="lineCov">         18 :             return;</span></a>
+<a name="3836"><span class="lineNum">    3836 </span><span class="lineCov">          6 :             _VSTD::__sort3&lt;_Compare&gt;(__first, __first+1, --__last, __comp);</span></a>
+<a name="3837"><span class="lineNum">    3837 </span><span class="lineCov">          6 :             return;</span></a>
 <a name="3838"><span class="lineNum">    3838 </span>            :         case 4:</a>
-<a name="3839"><span class="lineNum">    3839 </span><span class="lineCov">          6 :             _VSTD::__sort4&lt;_Compare&gt;(__first, __first+1, __first+2, --__last, __comp);</span></a>
-<a name="3840"><span class="lineNum">    3840 </span><span class="lineCov">          6 :             return;</span></a>
+<a name="3839"><span class="lineNum">    3839 </span><span class="lineCov">          2 :             _VSTD::__sort4&lt;_Compare&gt;(__first, __first+1, __first+2, --__last, __comp);</span></a>
+<a name="3840"><span class="lineNum">    3840 </span><span class="lineCov">          2 :             return;</span></a>
 <a name="3841"><span class="lineNum">    3841 </span>            :         case 5:</a>
 <a name="3842"><span class="lineNum">    3842 </span><span class="lineNoCov">          0 :             _VSTD::__sort5&lt;_Compare&gt;(__first, __first+1, __first+2, __first+3, --__last, __comp);</span></a>
 <a name="3843"><span class="lineNum">    3843 </span><span class="lineNoCov">          0 :             return;</span></a>
@@ -4063,13 +4063,13 @@
 <a name="4001"><span class="lineNum">    4001 </span><span class="lineNoCov">          0 :             __last = __i;</span></a>
 <a name="4002"><span class="lineNum">    4002 </span>            :         }</a>
 <a name="4003"><span class="lineNum">    4003 </span>            :     }</a>
-<a name="4004"><span class="lineNum">    4004 </span><span class="lineCov">         48 : }</span></a>
+<a name="4004"><span class="lineNum">    4004 </span><span class="lineCov">         16 : }</span></a>
 <a name="4005"><span class="lineNum">    4005 </span>            : </a>
 <a name="4006"><span class="lineNum">    4006 </span>            : // This forwarder keeps the top call and the recursive calls using the same instantiation, forcing a reference _Compare</a>
 <a name="4007"><span class="lineNum">    4007 </span>            : template &lt;class _RandomAccessIterator, class _Compare&gt;</a>
 <a name="4008"><span class="lineNum">    4008 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="4009"><span class="lineNum">    4009 </span>            : void</a>
-<a name="4010"><span class="lineNum">    4010 </span><span class="lineCov">        120 : sort(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp)</span></a>
+<a name="4010"><span class="lineNum">    4010 </span><span class="lineCov">         40 : sort(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp)</span></a>
 <a name="4011"><span class="lineNum">    4011 </span>            : {</a>
 <a name="4012"><span class="lineNum">    4012 </span>            : #ifdef _LIBCPP_DEBUG</a>
 <a name="4013"><span class="lineNum">    4013 </span>            :     typedef typename add_lvalue_reference&lt;__debug_less&lt;_Compare&gt; &gt;::type _Comp_ref;</a>
@@ -4077,17 +4077,17 @@
 <a name="4015"><span class="lineNum">    4015 </span>            :     __sort&lt;_Comp_ref&gt;(__first, __last, __c);</a>
 <a name="4016"><span class="lineNum">    4016 </span>            : #else  // _LIBCPP_DEBUG</a>
 <a name="4017"><span class="lineNum">    4017 </span>            :     typedef typename add_lvalue_reference&lt;_Compare&gt;::type _Comp_ref;</a>
-<a name="4018"><span class="lineNum">    4018 </span><span class="lineCov">        120 :     __sort&lt;_Comp_ref&gt;(__first, __last, __comp);</span></a>
+<a name="4018"><span class="lineNum">    4018 </span><span class="lineCov">         40 :     __sort&lt;_Comp_ref&gt;(__first, __last, __comp);</span></a>
 <a name="4019"><span class="lineNum">    4019 </span>            : #endif  // _LIBCPP_DEBUG</a>
-<a name="4020"><span class="lineNum">    4020 </span><span class="lineCov">        120 : }</span></a>
+<a name="4020"><span class="lineNum">    4020 </span><span class="lineCov">         40 : }</span></a>
 <a name="4021"><span class="lineNum">    4021 </span>            : </a>
 <a name="4022"><span class="lineNum">    4022 </span>            : template &lt;class _RandomAccessIterator&gt;</a>
 <a name="4023"><span class="lineNum">    4023 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="4024"><span class="lineNum">    4024 </span>            : void</a>
-<a name="4025"><span class="lineNum">    4025 </span><span class="lineCov">        120 : sort(_RandomAccessIterator __first, _RandomAccessIterator __last)</span></a>
+<a name="4025"><span class="lineNum">    4025 </span><span class="lineCov">         40 : sort(_RandomAccessIterator __first, _RandomAccessIterator __last)</span></a>
 <a name="4026"><span class="lineNum">    4026 </span>            : {</a>
-<a name="4027"><span class="lineNum">    4027 </span><span class="lineCov">        120 :     _VSTD::sort(__first, __last, __less&lt;typename iterator_traits&lt;_RandomAccessIterator&gt;::value_type&gt;());</span></a>
-<a name="4028"><span class="lineNum">    4028 </span><span class="lineCov">        120 : }</span></a>
+<a name="4027"><span class="lineNum">    4027 </span><span class="lineCov">         40 :     _VSTD::sort(__first, __last, __less&lt;typename iterator_traits&lt;_RandomAccessIterator&gt;::value_type&gt;());</span></a>
+<a name="4028"><span class="lineNum">    4028 </span><span class="lineCov">         40 : }</span></a>
 <a name="4029"><span class="lineNum">    4029 </span>            : </a>
 <a name="4030"><span class="lineNum">    4030 </span>            : template &lt;class _Tp&gt;</a>
 <a name="4031"><span class="lineNum">    4031 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
@@ -4100,10 +4100,10 @@
 <a name="4038"><span class="lineNum">    4038 </span>            : template &lt;class _Tp&gt;</a>
 <a name="4039"><span class="lineNum">    4039 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="4040"><span class="lineNum">    4040 </span>            : void</a>
-<a name="4041"><span class="lineNum">    4041 </span><span class="lineCov">        120 : sort(__wrap_iter&lt;_Tp*&gt; __first, __wrap_iter&lt;_Tp*&gt; __last)</span></a>
+<a name="4041"><span class="lineNum">    4041 </span><span class="lineCov">         40 : sort(__wrap_iter&lt;_Tp*&gt; __first, __wrap_iter&lt;_Tp*&gt; __last)</span></a>
 <a name="4042"><span class="lineNum">    4042 </span>            : {</a>
-<a name="4043"><span class="lineNum">    4043 </span><span class="lineCov">        120 :     _VSTD::sort(__first.base(), __last.base());</span></a>
-<a name="4044"><span class="lineNum">    4044 </span><span class="lineCov">        120 : }</span></a>
+<a name="4043"><span class="lineNum">    4043 </span><span class="lineCov">         40 :     _VSTD::sort(__first.base(), __last.base());</span></a>
+<a name="4044"><span class="lineNum">    4044 </span><span class="lineCov">         40 : }</span></a>
 <a name="4045"><span class="lineNum">    4045 </span>            : </a>
 <a name="4046"><span class="lineNum">    4046 </span>            : template &lt;class _Tp, class _Compare&gt;</a>
 <a name="4047"><span class="lineNum">    4047 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>

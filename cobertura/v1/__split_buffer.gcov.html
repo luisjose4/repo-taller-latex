@@ -37,11 +37,11 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">33</td>
-            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">22</td>
             <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
@@ -115,10 +115,10 @@
 <a name="53"><span class="lineNum">      53 </span>            :     typedef typename add_lvalue_reference&lt;allocator_type&gt;::type __alloc_ref;</a>
 <a name="54"><span class="lineNum">      54 </span>            :     typedef typename add_lvalue_reference&lt;allocator_type&gt;::type __alloc_const_ref;</a>
 <a name="55"><span class="lineNum">      55 </span>            : </a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineCov">       1698 :     _LIBCPP_INLINE_VISIBILITY __alloc_rr&amp;           __alloc() _NOEXCEPT         {return __end_cap_.second();}</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">     270846 :     _LIBCPP_INLINE_VISIBILITY __alloc_rr&amp;           __alloc() _NOEXCEPT         {return __end_cap_.second();}</span></a>
 <a name="57"><span class="lineNum">      57 </span>            :     _LIBCPP_INLINE_VISIBILITY const __alloc_rr&amp;     __alloc() const _NOEXCEPT   {return __end_cap_.second();}</a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">        912 :     _LIBCPP_INLINE_VISIBILITY pointer&amp;              __end_cap() _NOEXCEPT       {return __end_cap_.first();}</span></a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">        333 :     _LIBCPP_INLINE_VISIBILITY const pointer&amp;        __end_cap() const _NOEXCEPT {return __end_cap_.first();}</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">      48126 :     _LIBCPP_INLINE_VISIBILITY pointer&amp;              __end_cap() _NOEXCEPT       {return __end_cap_.first();}</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">      20541 :     _LIBCPP_INLINE_VISIBILITY const pointer&amp;        __end_cap() const _NOEXCEPT {return __end_cap_.first();}</span></a>
 <a name="60"><span class="lineNum">      60 </span>            : </a>
 <a name="61"><span class="lineNum">      61 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
 <a name="62"><span class="lineNum">      62 </span>            :     __split_buffer()</a>
@@ -146,11 +146,11 @@
 <a name="84"><span class="lineNum">      84 </span>            :     _LIBCPP_INLINE_VISIBILITY const_iterator end() const _NOEXCEPT   {return __end_;}</a>
 <a name="85"><span class="lineNum">      85 </span>            : </a>
 <a name="86"><span class="lineNum">      86 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="87"><span class="lineNum">      87 </span><span class="lineCov">        456 :     void clear() _NOEXCEPT</span></a>
-<a name="88"><span class="lineNum">      88 </span><span class="lineCov">        456 :         {__destruct_at_end(__begin_);}</span></a>
+<a name="87"><span class="lineNum">      87 </span><span class="lineCov">      24063 :     void clear() _NOEXCEPT</span></a>
+<a name="88"><span class="lineNum">      88 </span><span class="lineCov">      24063 :         {__destruct_at_end(__begin_);}</span></a>
 <a name="89"><span class="lineNum">      89 </span>            :     _LIBCPP_INLINE_VISIBILITY size_type size() const {return static_cast&lt;size_type&gt;(__end_ - __begin_);}</a>
 <a name="90"><span class="lineNum">      90 </span>            :     _LIBCPP_INLINE_VISIBILITY bool empty()     const {return __end_ == __begin_;}</a>
-<a name="91"><span class="lineNum">      91 </span><span class="lineCov">        333 :     _LIBCPP_INLINE_VISIBILITY size_type capacity() const {return static_cast&lt;size_type&gt;(__end_cap() - __first_);}</span></a>
+<a name="91"><span class="lineNum">      91 </span><span class="lineCov">      20541 :     _LIBCPP_INLINE_VISIBILITY size_type capacity() const {return static_cast&lt;size_type&gt;(__end_cap() - __first_);}</span></a>
 <a name="92"><span class="lineNum">      92 </span>            :     _LIBCPP_INLINE_VISIBILITY size_type __front_spare() const {return static_cast&lt;size_type&gt;(__begin_ - __first_);}</a>
 <a name="93"><span class="lineNum">      93 </span>            :     _LIBCPP_INLINE_VISIBILITY size_type __back_spare() const {return static_cast&lt;size_type&gt;(__end_cap() - __end_);}</a>
 <a name="94"><span class="lineNum">      94 </span>            : </a>
@@ -199,8 +199,8 @@
 <a name="137"><span class="lineNum">     137 </span>            :         void __destruct_at_begin(pointer __new_begin, true_type);</a>
 <a name="138"><span class="lineNum">     138 </span>            : </a>
 <a name="139"><span class="lineNum">     139 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="140"><span class="lineNum">     140 </span><span class="lineCov">        456 :     void __destruct_at_end(pointer __new_last) _NOEXCEPT</span></a>
-<a name="141"><span class="lineNum">     141 </span><span class="lineCov">        456 :         {__destruct_at_end(__new_last, false_type());}</span></a>
+<a name="140"><span class="lineNum">     140 </span><span class="lineCov">      24063 :     void __destruct_at_end(pointer __new_last) _NOEXCEPT</span></a>
+<a name="141"><span class="lineNum">     141 </span><span class="lineCov">      24063 :         {__destruct_at_end(__new_last, false_type());}</span></a>
 <a name="142"><span class="lineNum">     142 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
 <a name="143"><span class="lineNum">     143 </span>            :         void __destruct_at_end(pointer __new_last, false_type) _NOEXCEPT;</a>
 <a name="144"><span class="lineNum">     144 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
@@ -352,11 +352,11 @@
 <a name="290"><span class="lineNum">     290 </span>            : template &lt;class _Tp, class _Allocator&gt;</a>
 <a name="291"><span class="lineNum">     291 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="292"><span class="lineNum">     292 </span>            : void</a>
-<a name="293"><span class="lineNum">     293 </span><span class="lineCov">        456 : __split_buffer&lt;_Tp, _Allocator&gt;::__destruct_at_end(pointer __new_last, false_type) _NOEXCEPT</span></a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineCov">      24063 : __split_buffer&lt;_Tp, _Allocator&gt;::__destruct_at_end(pointer __new_last, false_type) _NOEXCEPT</span></a>
 <a name="294"><span class="lineNum">     294 </span>            : {</a>
-<a name="295"><span class="lineNum">     295 </span><span class="lineCov">       1365 :     while (__new_last != __end_)</span></a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineCov">        909 :         __alloc_traits::destroy(__alloc(), __to_raw_pointer(--__end_));</span></a>
-<a name="297"><span class="lineNum">     297 </span><span class="lineCov">        456 : }</span></a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">     250305 :     while (__new_last != __end_)</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">     226242 :         __alloc_traits::destroy(__alloc(), __to_raw_pointer(--__end_));</span></a>
+<a name="297"><span class="lineNum">     297 </span><span class="lineCov">      24063 : }</span></a>
 <a name="298"><span class="lineNum">     298 </span>            : </a>
 <a name="299"><span class="lineNum">     299 </span>            : template &lt;class _Tp, class _Allocator&gt;</a>
 <a name="300"><span class="lineNum">     300 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
@@ -367,13 +367,13 @@
 <a name="305"><span class="lineNum">     305 </span>            : }</a>
 <a name="306"><span class="lineNum">     306 </span>            : </a>
 <a name="307"><span class="lineNum">     307 </span>            : template &lt;class _Tp, class _Allocator&gt;</a>
-<a name="308"><span class="lineNum">     308 </span><span class="lineCov">        912 : __split_buffer&lt;_Tp, _Allocator&gt;::__split_buffer(size_type __cap, size_type __start, __alloc_rr&amp; __a)</span></a>
-<a name="309"><span class="lineNum">     309 </span><span class="lineCov">        456 :     : __end_cap_(nullptr, __a)</span></a>
-<a name="310"><span class="lineNum">     310 </span><span class="lineCov">        912 : {</span></a>
-<a name="311"><span class="lineNum">     311 </span><span class="lineCov">        456 :     __first_ = __cap != 0 ? __alloc_traits::allocate(__alloc(), __cap) : nullptr;</span></a>
-<a name="312"><span class="lineNum">     312 </span><span class="lineCov">        456 :     __begin_ = __end_ = __first_ + __start;</span></a>
-<a name="313"><span class="lineNum">     313 </span><span class="lineCov">        456 :     __end_cap() = __first_ + __cap;</span></a>
-<a name="314"><span class="lineNum">     314 </span><span class="lineCov">        912 : }</span></a>
+<a name="308"><span class="lineNum">     308 </span><span class="lineCov">      48126 : __split_buffer&lt;_Tp, _Allocator&gt;::__split_buffer(size_type __cap, size_type __start, __alloc_rr&amp; __a)</span></a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">      24063 :     : __end_cap_(nullptr, __a)</span></a>
+<a name="310"><span class="lineNum">     310 </span><span class="lineCov">      48126 : {</span></a>
+<a name="311"><span class="lineNum">     311 </span><span class="lineCov">      24063 :     __first_ = __cap != 0 ? __alloc_traits::allocate(__alloc(), __cap) : nullptr;</span></a>
+<a name="312"><span class="lineNum">     312 </span><span class="lineCov">      24063 :     __begin_ = __end_ = __first_ + __start;</span></a>
+<a name="313"><span class="lineNum">     313 </span><span class="lineCov">      24063 :     __end_cap() = __first_ + __cap;</span></a>
+<a name="314"><span class="lineNum">     314 </span><span class="lineCov">      48126 : }</span></a>
 <a name="315"><span class="lineNum">     315 </span>            : </a>
 <a name="316"><span class="lineNum">     316 </span>            : template &lt;class _Tp, class _Allocator&gt;</a>
 <a name="317"><span class="lineNum">     317 </span>            : inline</a>
@@ -398,12 +398,12 @@
 <a name="336"><span class="lineNum">     336 </span>            : }</a>
 <a name="337"><span class="lineNum">     337 </span>            : </a>
 <a name="338"><span class="lineNum">     338 </span>            : template &lt;class _Tp, class _Allocator&gt;</a>
-<a name="339"><span class="lineNum">     339 </span><span class="lineCov">        912 : __split_buffer&lt;_Tp, _Allocator&gt;::~__split_buffer()</span></a>
-<a name="340"><span class="lineNum">     340 </span><span class="lineCov">        456 : {</span></a>
-<a name="341"><span class="lineNum">     341 </span><span class="lineCov">        456 :     clear();</span></a>
-<a name="342"><span class="lineNum">     342 </span><span class="lineCov">        456 :     if (__first_)</span></a>
-<a name="343"><span class="lineNum">     343 </span><span class="lineCov">        333 :         __alloc_traits::deallocate(__alloc(), __first_, capacity());</span></a>
-<a name="344"><span class="lineNum">     344 </span><span class="lineCov">        912 : }</span></a>
+<a name="339"><span class="lineNum">     339 </span><span class="lineCov">      48126 : __split_buffer&lt;_Tp, _Allocator&gt;::~__split_buffer()</span></a>
+<a name="340"><span class="lineNum">     340 </span><span class="lineCov">      24063 : {</span></a>
+<a name="341"><span class="lineNum">     341 </span><span class="lineCov">      24063 :     clear();</span></a>
+<a name="342"><span class="lineNum">     342 </span><span class="lineCov">      24063 :     if (__first_)</span></a>
+<a name="343"><span class="lineNum">     343 </span><span class="lineCov">      20541 :         __alloc_traits::deallocate(__alloc(), __first_, capacity());</span></a>
+<a name="344"><span class="lineNum">     344 </span><span class="lineCov">      48126 : }</span></a>
 <a name="345"><span class="lineNum">     345 </span>            : </a>
 <a name="346"><span class="lineNum">     346 </span>            : #ifndef _LIBCPP_CXX03_LANG</a>
 <a name="347"><span class="lineNum">     347 </span>            : </a>

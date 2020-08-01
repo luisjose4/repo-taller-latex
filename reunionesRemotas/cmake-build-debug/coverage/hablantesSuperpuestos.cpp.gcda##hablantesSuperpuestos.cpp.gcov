@@ -10,7 +10,7 @@
         -:    5:
         -:    6:using namespace std;
         -:    7:
-        1:    8:TEST(hablantesSuperpuestosTEST, hablantesSuperpuestosValidos){
+        7:    8:TEST(hablantesSuperpuestosTEST, hablantesSuperpuestosValidos){
         1:    8-block  0
         1:    8-block  1
         1:    8-block  2
@@ -24,43 +24,43 @@
     $$$$$:    8-block 10
     $$$$$:    8-block 11
     $$$$$:    8-block 12
-    $$$$$:    8-block 13
-    $$$$$:    8-block 14
-    $$$$$:    8-block 15
-    $$$$$:    8-block 16
-    $$$$$:    8-block 17
-    $$$$$:    8-block 18
-    $$$$$:    8-block 19
-    $$$$$:    8-block 20
-    $$$$$:    8-block 21
-    $$$$$:    8-block 22
-    $$$$$:    8-block 23
-    #####:    9:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
-    #####:   10:    senial hablante2 = {2, 6, 3, 8, 6, 10, 2, 12, 10, -15};
-    $$$$$:   10-block  0
-    #####:   11:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
-    $$$$$:   11-block  0
-    $$$$$:   11-block  1
-    $$$$$:   11-block  2
-    $$$$$:   11-block  3
-    $$$$$:   11-block  4
+        1:    8-block 13
+        1:    8-block 14
+        1:    8-block 15
+        1:    8-block 16
+        1:    8-block 17
+        1:    8-block 18
+        1:    8-block 19
+        1:    8-block 20
+        1:    8-block 21
+        1:    8-block 22
+        1:    8-block 23
+        1:    9:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+        1:   10:    senial hablante2 = {2, 6, 3, 8, 6, 10, 2, 12, 10, -15};
+        1:   10-block  0
+        2:   11:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+        1:   11-block  0
+        1:   11-block  1
+        1:   11-block  2
+        1:   11-block  3
+        2:   11-block  4
     $$$$$:   11-block  5
     $$$$$:   11-block  6
     $$$$$:   11-block  7
     $$$$$:   11-block  8
     $$$$$:   11-block  9
     $$$$$:   11-block 10
-    #####:   12:    int prof = 8;
-    #####:   13:    int freq = 10;
-    #####:   14:    int umbral = 3;
+        1:   12:    int prof = 8;
+        1:   13:    int freq = 10;
+        1:   14:    int umbral = 3;
         -:   15:
-    #####:   16:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
-    $$$$$:   16-block  0
-    $$$$$:   16-block  1
-    $$$$$:   16-block  2
-    $$$$$:   16-block  3
-    $$$$$:   16-block  4
-    $$$$$:   16-block  5
+        1:   16:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+        1:   16-block  0
+        1:   16-block  1
+        1:   16-block  2
+        1:   16-block  3
+        1:   16-block  4
+        1:   16-block  5
     $$$$$:   16-block  6
     $$$$$:   16-block  7
     $$$$$:   16-block  8
@@ -70,24 +70,24 @@
     $$$$$:   16-block 12
     $$$$$:   16-block 13
     $$$$$:   16-block 14
-    $$$$$:   16-block 15
-    $$$$$:   16-block 16
+        1:   16-block 15
+        1:   16-block 16
     $$$$$:   16-block 17
-    #####:   17:}
+        1:   17:}
     $$$$$:   17-block  0
     $$$$$:   17-block  1
     $$$$$:   17-block  2
     $$$$$:   17-block  3
     $$$$$:   17-block  4
-    $$$$$:   17-block  5
-    $$$$$:   17-block  6
-    $$$$$:   17-block  7
+        1:   17-block  5
+        1:   17-block  6
+        1:   17-block  7
     $$$$$:   17-block  8
     $$$$$:   17-block  9
     $$$$$:   17-block 10
     $$$$$:   17-block 11
         -:   18:
-        1:   19:TEST(hablantesSuperpuestosTEST, noHayHablantesSuperpuestos)
+        7:   19:TEST(hablantesSuperpuestosTEST, noHayHablantesSuperpuestos)
         1:   19-block  0
         1:   19-block  1
         1:   19-block  2
@@ -101,44 +101,44 @@
     $$$$$:   19-block 10
     $$$$$:   19-block 11
     $$$$$:   19-block 12
-    $$$$$:   19-block 13
-    $$$$$:   19-block 14
-    $$$$$:   19-block 15
-    $$$$$:   19-block 16
-    $$$$$:   19-block 17
-    $$$$$:   19-block 18
-    $$$$$:   19-block 19
-    $$$$$:   19-block 20
-    $$$$$:   19-block 21
-    $$$$$:   19-block 22
-    $$$$$:   19-block 23
+        1:   19-block 13
+        1:   19-block 14
+        1:   19-block 15
+        1:   19-block 16
+        1:   19-block 17
+        1:   19-block 18
+        1:   19-block 19
+        1:   19-block 20
+        1:   19-block 21
+        1:   19-block 22
+        1:   19-block 23
         -:   20:{
-    #####:   21:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15 };
-    #####:   22:    senial hablante2 = { 2, 6, 3, 8, 6, 10, 2, 12, 10, -15 };
-    $$$$$:   22-block  0
-    #####:   23:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
-    $$$$$:   23-block  0
-    $$$$$:   23-block  1
-    $$$$$:   23-block  2
-    $$$$$:   23-block  3
-    $$$$$:   23-block  4
+        1:   21:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15 };
+        1:   22:    senial hablante2 = { 2, 6, 3, 8, 6, 10, 2, 12, 10, -15 };
+        1:   22-block  0
+        2:   23:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
+        1:   23-block  0
+        1:   23-block  1
+        1:   23-block  2
+        1:   23-block  3
+        2:   23-block  4
     $$$$$:   23-block  5
     $$$$$:   23-block  6
     $$$$$:   23-block  7
     $$$$$:   23-block  8
     $$$$$:   23-block  9
     $$$$$:   23-block 10
-    #####:   24:    int prof = 8;
-    #####:   25:    int freq = 10;
-    #####:   26:    int umbral = 20;
+        1:   24:    int prof = 8;
+        1:   25:    int freq = 10;
+        1:   26:    int umbral = 20;
         -:   27:
-    #####:   28:    EXPECT_FALSE(hablantesSuperpuestos(reunion, prof, freq, umbral));
-    $$$$$:   28-block  0
-    $$$$$:   28-block  1
-    $$$$$:   28-block  2
-    $$$$$:   28-block  3
-    $$$$$:   28-block  4
-    $$$$$:   28-block  5
+        1:   28:    EXPECT_FALSE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+        1:   28-block  0
+        1:   28-block  1
+        1:   28-block  2
+        1:   28-block  3
+        1:   28-block  4
+        1:   28-block  5
     $$$$$:   28-block  6
     $$$$$:   28-block  7
     $$$$$:   28-block  8
@@ -149,19 +149,19 @@
     $$$$$:   28-block 13
     $$$$$:   28-block 14
     $$$$$:   28-block 15
-    #####:   29:}
+        1:   29:}
     $$$$$:   29-block  0
     $$$$$:   29-block  1
     $$$$$:   29-block  2
     $$$$$:   29-block  3
     $$$$$:   29-block  4
-    $$$$$:   29-block  5
+        1:   29-block  5
     $$$$$:   29-block  6
     $$$$$:   29-block  7
     $$$$$:   29-block  8
     $$$$$:   29-block  9
         -:   30:
-        1:   31:TEST(hablantesSuperpuestosTEST, hablantesSuperpuestosAlFinalEigualAlUmbral)
+        7:   31:TEST(hablantesSuperpuestosTEST, hablantesSuperpuestosAlFinalEigualAlUmbral)
         1:   31-block  0
         1:   31-block  1
         1:   31-block  2
@@ -175,44 +175,44 @@
     $$$$$:   31-block 10
     $$$$$:   31-block 11
     $$$$$:   31-block 12
-    $$$$$:   31-block 13
-    $$$$$:   31-block 14
-    $$$$$:   31-block 15
-    $$$$$:   31-block 16
-    $$$$$:   31-block 17
-    $$$$$:   31-block 18
-    $$$$$:   31-block 19
-    $$$$$:   31-block 20
-    $$$$$:   31-block 21
-    $$$$$:   31-block 22
-    $$$$$:   31-block 23
+        1:   31-block 13
+        1:   31-block 14
+        1:   31-block 15
+        1:   31-block 16
+        1:   31-block 17
+        1:   31-block 18
+        1:   31-block 19
+        1:   31-block 20
+        1:   31-block 21
+        1:   31-block 22
+        1:   31-block 23
         -:   32:{
-    #####:   33:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -20 };
-    #####:   34:    senial hablante2 = { 2, 6, 3, 8, 6, 10, 2, 12, 10, 20 };
-    $$$$$:   34-block  0
-    #####:   35:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
-    $$$$$:   35-block  0
-    $$$$$:   35-block  1
-    $$$$$:   35-block  2
-    $$$$$:   35-block  3
-    $$$$$:   35-block  4
+        1:   33:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -20 };
+        1:   34:    senial hablante2 = { 2, 6, 3, 8, 6, 10, 2, 12, 10, 20 };
+        1:   34-block  0
+        2:   35:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
+        1:   35-block  0
+        1:   35-block  1
+        1:   35-block  2
+        1:   35-block  3
+        2:   35-block  4
     $$$$$:   35-block  5
     $$$$$:   35-block  6
     $$$$$:   35-block  7
     $$$$$:   35-block  8
     $$$$$:   35-block  9
     $$$$$:   35-block 10
-    #####:   36:    int prof = 8;
-    #####:   37:    int freq = 10;
-    #####:   38:    int umbral = 20;
+        1:   36:    int prof = 8;
+        1:   37:    int freq = 10;
+        1:   38:    int umbral = 20;
         -:   39:
-    #####:   40:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
-    $$$$$:   40-block  0
-    $$$$$:   40-block  1
-    $$$$$:   40-block  2
-    $$$$$:   40-block  3
-    $$$$$:   40-block  4
-    $$$$$:   40-block  5
+        1:   40:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+        1:   40-block  0
+        1:   40-block  1
+        1:   40-block  2
+        1:   40-block  3
+        1:   40-block  4
+        1:   40-block  5
     $$$$$:   40-block  6
     $$$$$:   40-block  7
     $$$$$:   40-block  8
@@ -222,24 +222,24 @@
     $$$$$:   40-block 12
     $$$$$:   40-block 13
     $$$$$:   40-block 14
-    $$$$$:   40-block 15
-    $$$$$:   40-block 16
+        1:   40-block 15
+        1:   40-block 16
     $$$$$:   40-block 17
-    #####:   41:}
+        1:   41:}
     $$$$$:   41-block  0
     $$$$$:   41-block  1
     $$$$$:   41-block  2
     $$$$$:   41-block  3
     $$$$$:   41-block  4
-    $$$$$:   41-block  5
-    $$$$$:   41-block  6
-    $$$$$:   41-block  7
+        1:   41-block  5
+        1:   41-block  6
+        1:   41-block  7
     $$$$$:   41-block  8
     $$$$$:   41-block  9
     $$$$$:   41-block 10
     $$$$$:   41-block 11
         -:   42:
-        1:   43:TEST(hablantesSuperpuestosTEST, hablantesSuperpuestosAlFinal)
+        7:   43:TEST(hablantesSuperpuestosTEST, hablantesSuperpuestosAlFinal)
         1:   43-block  0
         1:   43-block  1
         1:   43-block  2
@@ -253,47 +253,47 @@
     $$$$$:   43-block 10
     $$$$$:   43-block 11
     $$$$$:   43-block 12
-    $$$$$:   43-block 13
-    $$$$$:   43-block 14
-    $$$$$:   43-block 15
-    $$$$$:   43-block 16
-    $$$$$:   43-block 17
-    $$$$$:   43-block 18
-    $$$$$:   43-block 19
-    $$$$$:   43-block 20
-    $$$$$:   43-block 21
-    $$$$$:   43-block 22
-    $$$$$:   43-block 23
+        1:   43-block 13
+        1:   43-block 14
+        1:   43-block 15
+        1:   43-block 16
+        1:   43-block 17
+        1:   43-block 18
+        1:   43-block 19
+        1:   43-block 20
+        1:   43-block 21
+        1:   43-block 22
+        1:   43-block 23
         -:   44:{
-    #####:   45:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -21 };
-    #####:   46:    senial hablante2 = { 2, 6, 3, 8, 6, 10, 2, 12, 10, 4 };
-    $$$$$:   46-block  0
-    #####:   47:    senial hablante3 = { 2, 6, 3, 8, 6, 10, 2, 12, 10, -21 };
-    $$$$$:   47-block  0
-    #####:   48:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2) };
-    $$$$$:   48-block  0
-    $$$$$:   48-block  1
-    $$$$$:   48-block  2
-    $$$$$:   48-block  3
-    $$$$$:   48-block  4
-    $$$$$:   48-block  5
+        1:   45:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -21 };
+        1:   46:    senial hablante2 = { 2, 6, 3, 8, 6, 10, 2, 12, 10, 4 };
+        1:   46-block  0
+        1:   47:    senial hablante3 = { 2, 6, 3, 8, 6, 10, 2, 12, 20, -2 };
+        1:   47-block  0
+        3:   48:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2) };
+        1:   48-block  0
+        1:   48-block  1
+        1:   48-block  2
+        1:   48-block  3
+        1:   48-block  4
+        3:   48-block  5
     $$$$$:   48-block  6
     $$$$$:   48-block  7
     $$$$$:   48-block  8
     $$$$$:   48-block  9
     $$$$$:   48-block 10
     $$$$$:   48-block 11
-    #####:   49:    int prof = 8;
-    #####:   50:    int freq = 10;
-    #####:   51:    int umbral = 20;
+        1:   49:    int prof = 8;
+        1:   50:    int freq = 10;
+        1:   51:    int umbral = 20;
         -:   52:
-    #####:   53:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
-    $$$$$:   53-block  0
-    $$$$$:   53-block  1
-    $$$$$:   53-block  2
-    $$$$$:   53-block  3
-    $$$$$:   53-block  4
-    $$$$$:   53-block  5
+        1:   53:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+        1:   53-block  0
+        1:   53-block  1
+        1:   53-block  2
+        1:   53-block  3
+        1:   53-block  4
+        1:   53-block  5
     $$$$$:   53-block  6
     $$$$$:   53-block  7
     $$$$$:   53-block  8
@@ -303,26 +303,26 @@
     $$$$$:   53-block 12
     $$$$$:   53-block 13
     $$$$$:   53-block 14
-    $$$$$:   53-block 15
-    $$$$$:   53-block 16
+        1:   53-block 15
+        1:   53-block 16
     $$$$$:   53-block 17
-    #####:   54:}
+        1:   54:}
     $$$$$:   54-block  0
     $$$$$:   54-block  1
     $$$$$:   54-block  2
     $$$$$:   54-block  3
     $$$$$:   54-block  4
     $$$$$:   54-block  5
-    $$$$$:   54-block  6
-    $$$$$:   54-block  7
-    $$$$$:   54-block  8
+        1:   54-block  6
+        1:   54-block  7
+        1:   54-block  8
     $$$$$:   54-block  9
     $$$$$:   54-block 10
     $$$$$:   54-block 11
     $$$$$:   54-block 12
     $$$$$:   54-block 13
         -:   55:
-        1:   56:TEST(hablantesSuperpuestosTEST, noHablantesSuperpuestosAlFinalPeroSuperanElUmbral)
+        7:   56:TEST(hablantesSuperpuestosTEST, noHablantesSuperpuestosAlFinalPeroSuperanElUmbral)
         1:   56-block  0
         1:   56-block  1
         1:   56-block  2
@@ -336,47 +336,47 @@
     $$$$$:   56-block 10
     $$$$$:   56-block 11
     $$$$$:   56-block 12
-    $$$$$:   56-block 13
-    $$$$$:   56-block 14
-    $$$$$:   56-block 15
-    $$$$$:   56-block 16
-    $$$$$:   56-block 17
-    $$$$$:   56-block 18
-    $$$$$:   56-block 19
-    $$$$$:   56-block 20
-    $$$$$:   56-block 21
-    $$$$$:   56-block 22
-    $$$$$:   56-block 23
+        1:   56-block 13
+        1:   56-block 14
+        1:   56-block 15
+        1:   56-block 16
+        1:   56-block 17
+        1:   56-block 18
+        1:   56-block 19
+        1:   56-block 20
+        1:   56-block 21
+        1:   56-block 22
+        1:   56-block 23
         -:   57:{
-    #####:   58:    senial hablante1 = { 11, 3, -3, 12, 6, 0, 11, -8, 9, 2 };
-    #####:   59:    senial hablante2 = { 2, 11, 3, 8, 13, 1, 2, 9, 11, 4 };
-    $$$$$:   59-block  0
-    #####:   60:    senial hablante3 = { 2, 6, 11, 8, 6, 13, 2, 8, 3, -21 };
-    $$$$$:   60-block  0
-    #####:   61:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2) };
-    $$$$$:   61-block  0
-    $$$$$:   61-block  1
-    $$$$$:   61-block  2
-    $$$$$:   61-block  3
-    $$$$$:   61-block  4
-    $$$$$:   61-block  5
+        1:   58:    senial hablante1 = { 11, 3, -3, 12, 6, 0, 11, -8, 9, 2 };
+        1:   59:    senial hablante2 = { 2, 11, 3, 8, 13, 1, 2, 9, 11, 4 };
+        1:   59-block  0
+        1:   60:    senial hablante3 = { 2, 6, 11, 8, 6, 13, 2, 8, 3, -21 };
+        1:   60-block  0
+        3:   61:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2) };
+        1:   61-block  0
+        1:   61-block  1
+        1:   61-block  2
+        1:   61-block  3
+        1:   61-block  4
+        3:   61-block  5
     $$$$$:   61-block  6
     $$$$$:   61-block  7
     $$$$$:   61-block  8
     $$$$$:   61-block  9
     $$$$$:   61-block 10
     $$$$$:   61-block 11
-    #####:   62:    int prof = 8;
-    #####:   63:    int freq = 10;
-    #####:   64:    int umbral = 10;
+        1:   62:    int prof = 8;
+        1:   63:    int freq = 10;
+        1:   64:    int umbral = 10;
         -:   65:
-    #####:   66:    ASSERT_FALSE(hablantesSuperpuestos(reunion, prof, freq, umbral));
-    $$$$$:   66-block  0
-    $$$$$:   66-block  1
-    $$$$$:   66-block  2
-    $$$$$:   66-block  3
-    $$$$$:   66-block  4
-    $$$$$:   66-block  5
+        1:   66:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+        1:   66-block  0
+        1:   66-block  1
+        1:   66-block  2
+        1:   66-block  3
+        1:   66-block  4
+        1:   66-block  5
     $$$$$:   66-block  6
     $$$$$:   66-block  7
     $$$$$:   66-block  8
@@ -386,21 +386,270 @@
     $$$$$:   66-block 12
     $$$$$:   66-block 13
     $$$$$:   66-block 14
-    $$$$$:   66-block 15
-    $$$$$:   66-block 16
+        1:   66-block 15
+        1:   66-block 16
     $$$$$:   66-block 17
-    #####:   67:}
+        1:   67:}
     $$$$$:   67-block  0
     $$$$$:   67-block  1
     $$$$$:   67-block  2
     $$$$$:   67-block  3
     $$$$$:   67-block  4
     $$$$$:   67-block  5
-    $$$$$:   67-block  6
-    $$$$$:   67-block  7
-    $$$$$:   67-block  8
+        1:   67-block  6
+        1:   67-block  7
+        1:   67-block  8
     $$$$$:   67-block  9
     $$$$$:   67-block 10
     $$$$$:   67-block 11
     $$$$$:   67-block 12
     $$$$$:   67-block 13
+        -:   68:
+        7:   69:TEST(hablantesSuperpuestosTEST, noHablantesSuperpuestos1)
+        1:   69-block  0
+        1:   69-block  1
+        1:   69-block  2
+        1:   69-block  3
+        1:   69-block  4
+        1:   69-block  5
+        1:   69-block  6
+    $$$$$:   69-block  7
+    $$$$$:   69-block  8
+    $$$$$:   69-block  9
+    $$$$$:   69-block 10
+    $$$$$:   69-block 11
+    $$$$$:   69-block 12
+        1:   69-block 13
+        1:   69-block 14
+        1:   69-block 15
+        1:   69-block 16
+        1:   69-block 17
+        1:   69-block 18
+        1:   69-block 19
+        1:   69-block 20
+        1:   69-block 21
+        1:   69-block 22
+        1:   69-block 23
+        -:   70:{
+        1:   71:    senial hablante1 = { 11, 3, -3, 12,  6,  0, 11, -8,  9,  2 };
+        1:   72:    senial hablante2 = {  2, 1, 11,  8,  3,  1,  2,  9, 11,  4 };
+        1:   72-block  0
+        1:   73:    senial hablante3 = {  2, 6, -9,  8, 16, 13,  2,  8,  3, -1 };
+        1:   73-block  0
+        3:   74:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2) };
+        1:   74-block  0
+        1:   74-block  1
+        1:   74-block  2
+        1:   74-block  3
+        1:   74-block  4
+        3:   74-block  5
+    $$$$$:   74-block  6
+    $$$$$:   74-block  7
+    $$$$$:   74-block  8
+    $$$$$:   74-block  9
+    $$$$$:   74-block 10
+    $$$$$:   74-block 11
+        1:   75:    int prof = 8;
+        1:   76:    int freq = 10;
+        1:   77:    int umbral = 10;
+        -:   78:
+        1:   79:    ASSERT_FALSE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+        1:   79-block  0
+        1:   79-block  1
+        1:   79-block  2
+        1:   79-block  3
+        1:   79-block  4
+        1:   79-block  5
+    $$$$$:   79-block  6
+    $$$$$:   79-block  7
+    $$$$$:   79-block  8
+    $$$$$:   79-block  9
+    $$$$$:   79-block 10
+    $$$$$:   79-block 11
+    $$$$$:   79-block 12
+    $$$$$:   79-block 13
+    $$$$$:   79-block 14
+        1:   79-block 15
+        1:   79-block 16
+    $$$$$:   79-block 17
+        1:   80:}
+    $$$$$:   80-block  0
+    $$$$$:   80-block  1
+    $$$$$:   80-block  2
+    $$$$$:   80-block  3
+    $$$$$:   80-block  4
+    $$$$$:   80-block  5
+        1:   80-block  6
+        1:   80-block  7
+        1:   80-block  8
+    $$$$$:   80-block  9
+    $$$$$:   80-block 10
+    $$$$$:   80-block 11
+    $$$$$:   80-block 12
+    $$$$$:   80-block 13
+        -:   81:
+        7:   82:TEST(hablantesSuperpuestosTEST, hablantesSuperpuestos1)
+        1:   82-block  0
+        1:   82-block  1
+        1:   82-block  2
+        1:   82-block  3
+        1:   82-block  4
+        1:   82-block  5
+        1:   82-block  6
+    $$$$$:   82-block  7
+    $$$$$:   82-block  8
+    $$$$$:   82-block  9
+    $$$$$:   82-block 10
+    $$$$$:   82-block 11
+    $$$$$:   82-block 12
+        1:   82-block 13
+        1:   82-block 14
+        1:   82-block 15
+        1:   82-block 16
+        1:   82-block 17
+        1:   82-block 18
+        1:   82-block 19
+        1:   82-block 20
+        1:   82-block 21
+        1:   82-block 22
+        1:   82-block 23
+        -:   83:{
+        1:   84:    senial hablante1 = { 11, 13, -3, 12,  6,  0, 11, -8,  9,   2 };
+        1:   85:    senial hablante2 = {  2,  1, 11,  8,  3,  1,  2,  9, 11,   4 };
+        1:   85-block  0
+        1:   86:    senial hablante3 = {  2,  6, -9,  8, 16, 13,  2,  8,  3, -21 };
+        1:   86-block  0
+        3:   87:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2) };
+        1:   87-block  0
+        1:   87-block  1
+        1:   87-block  2
+        1:   87-block  3
+        1:   87-block  4
+        3:   87-block  5
+    $$$$$:   87-block  6
+    $$$$$:   87-block  7
+    $$$$$:   87-block  8
+    $$$$$:   87-block  9
+    $$$$$:   87-block 10
+    $$$$$:   87-block 11
+        1:   88:    int prof = 8;
+        1:   89:    int freq = 10;
+        1:   90:    int umbral = 10;
+        -:   91:
+        1:   92:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+        1:   92-block  0
+        1:   92-block  1
+        1:   92-block  2
+        1:   92-block  3
+        1:   92-block  4
+        1:   92-block  5
+    $$$$$:   92-block  6
+    $$$$$:   92-block  7
+    $$$$$:   92-block  8
+    $$$$$:   92-block  9
+    $$$$$:   92-block 10
+    $$$$$:   92-block 11
+    $$$$$:   92-block 12
+    $$$$$:   92-block 13
+    $$$$$:   92-block 14
+        1:   92-block 15
+        1:   92-block 16
+    $$$$$:   92-block 17
+        1:   93:}
+    $$$$$:   93-block  0
+    $$$$$:   93-block  1
+    $$$$$:   93-block  2
+    $$$$$:   93-block  3
+    $$$$$:   93-block  4
+    $$$$$:   93-block  5
+        1:   93-block  6
+        1:   93-block  7
+        1:   93-block  8
+    $$$$$:   93-block  9
+    $$$$$:   93-block 10
+    $$$$$:   93-block 11
+    $$$$$:   93-block 12
+    $$$$$:   93-block 13
+        -:   94:
+        7:   95:TEST(hablantesSuperpuestosTEST, hablantesSuperpuestos2)
+        1:   95-block  0
+        1:   95-block  1
+        1:   95-block  2
+        1:   95-block  3
+        1:   95-block  4
+        1:   95-block  5
+        1:   95-block  6
+    $$$$$:   95-block  7
+    $$$$$:   95-block  8
+    $$$$$:   95-block  9
+    $$$$$:   95-block 10
+    $$$$$:   95-block 11
+    $$$$$:   95-block 12
+        1:   95-block 13
+        1:   95-block 14
+        1:   95-block 15
+        1:   95-block 16
+        1:   95-block 17
+        1:   95-block 18
+        1:   95-block 19
+        1:   95-block 20
+        1:   95-block 21
+        1:   95-block 22
+        1:   95-block 23
+        -:   96:{
+        1:   97:    senial hablante1 = {   1, 13, -3, 12,  6,  0, 11, -8,  9,   2 };
+        1:   98:    senial hablante2 = {  12,  1,  0,  8,  3,  1,  2,  9, 11,   4 };
+        1:   98-block  0
+        1:   99:    senial hablante3 = {   2,  6, -9,  8, 16, 13,  2,  8,  3, -21 };
+        1:   99-block  0
+        3:  100:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2) };
+        1:  100-block  0
+        1:  100-block  1
+        1:  100-block  2
+        1:  100-block  3
+        1:  100-block  4
+        3:  100-block  5
+    $$$$$:  100-block  6
+    $$$$$:  100-block  7
+    $$$$$:  100-block  8
+    $$$$$:  100-block  9
+    $$$$$:  100-block 10
+    $$$$$:  100-block 11
+        1:  101:    int prof = 8;
+        1:  102:    int freq = 10;
+        1:  103:    int umbral = 10;
+        -:  104:
+        1:  105:    ASSERT_TRUE(hablantesSuperpuestos(reunion, prof, freq, umbral));
+        1:  105-block  0
+        1:  105-block  1
+        1:  105-block  2
+        1:  105-block  3
+        1:  105-block  4
+        1:  105-block  5
+    $$$$$:  105-block  6
+    $$$$$:  105-block  7
+    $$$$$:  105-block  8
+    $$$$$:  105-block  9
+    $$$$$:  105-block 10
+    $$$$$:  105-block 11
+    $$$$$:  105-block 12
+    $$$$$:  105-block 13
+    $$$$$:  105-block 14
+        1:  105-block 15
+        1:  105-block 16
+    $$$$$:  105-block 17
+        1:  106:}
+    $$$$$:  106-block  0
+    $$$$$:  106-block  1
+    $$$$$:  106-block  2
+    $$$$$:  106-block  3
+    $$$$$:  106-block  4
+    $$$$$:  106-block  5
+        1:  106-block  6
+        1:  106-block  7
+        1:  106-block  8
+    $$$$$:  106-block  9
+    $$$$$:  106-block 10
+    $$$$$:  106-block 11
+    $$$$$:  106-block 12
+    $$$$$:  106-block 13

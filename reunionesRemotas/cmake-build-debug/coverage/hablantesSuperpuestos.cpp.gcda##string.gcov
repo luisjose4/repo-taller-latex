@@ -820,17 +820,17 @@
         -:  815:
         -:  816:    template <class = typename enable_if<__is_allocator<_Allocator>::value, nullptr_t>::type>
         -:  817:    _LIBCPP_INLINE_VISIBILITY
-       10:  818:    basic_string(const _CharT* __s) {
-        5:  818-block  0
-        5:  818-block  1
+       16:  818:    basic_string(const _CharT* __s) {
+        8:  818-block  0
+        8:  818-block  1
         -:  819:      _LIBCPP_ASSERT(__s != nullptr, "basic_string(const char*) detected nullptr");
-        5:  820:      __init(__s, traits_type::length(__s));
+        8:  820:      __init(__s, traits_type::length(__s));
         -:  821:#   if _LIBCPP_DEBUG_LEVEL >= 2
         -:  822:      __get_db()->__insert_c(this);
         -:  823:#   endif
-       10:  824:    }
-        5:  824-block  0
-        5:  824-block  1
+       16:  824:    }
+        8:  824-block  0
+        8:  824-block  1
         -:  825:
         -:  826:    template <class = typename enable_if<__is_allocator<_Allocator>::value, nullptr_t>::type>
         -:  827:        _LIBCPP_INLINE_VISIBILITY

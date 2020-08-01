@@ -2312,14 +2312,14 @@
         -: 2307:template <class _Tp>
         -: 2308:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
         -: 2309:typename remove_reference<_Tp>::type&&
-    #####: 2310:move(_Tp&& __t) _NOEXCEPT
-    $$$$$: 2310-block  0
+       22: 2310:move(_Tp&& __t) _NOEXCEPT
+       22: 2310-block  0
     $$$$$: 2310-block  1
     $$$$$: 2310-block  2
         -: 2311:{
         -: 2312:    typedef typename remove_reference<_Tp>::type _Up;
-    #####: 2313:    return static_cast<_Up&&>(__t);
-    $$$$$: 2313-block  0
+       22: 2313:    return static_cast<_Up&&>(__t);
+       22: 2313-block  0
     $$$$$: 2313-block  1
     $$$$$: 2313-block  2
         -: 2314:}
@@ -2327,17 +2327,21 @@
         -: 2316:template <class _Tp>
         -: 2317:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
         -: 2318:_Tp&&
-    #####: 2319:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT
-    $$$$$: 2319-block  0
-    $$$$$: 2319-block  1
+       62: 2319:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT
+       48: 2319-block  0
+        8: 2319-block  1
     $$$$$: 2319-block  2
     $$$$$: 2319-block  3
+        6: 2319-block  4
+    $$$$$: 2319-block  5
         -: 2320:{
-    #####: 2321:    return static_cast<_Tp&&>(__t);
-    $$$$$: 2321-block  0
-    $$$$$: 2321-block  1
+       62: 2321:    return static_cast<_Tp&&>(__t);
+       48: 2321-block  0
+        8: 2321-block  1
     $$$$$: 2321-block  2
     $$$$$: 2321-block  3
+        6: 2321-block  4
+    $$$$$: 2321-block  5
         -: 2322:}
         -: 2323:
         -: 2324:template <class _Tp>
@@ -4539,13 +4543,15 @@
         -: 4520:#else
         -: 4521:void
         -: 4522:#endif
-        -: 4523:swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+    #####: 4523:swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+    $$$$$: 4523-block  0
         -: 4524:                                    is_nothrow_move_assignable<_Tp>::value)
         -: 4525:{
-        -: 4526:    _Tp __t(_VSTD::move(__x));
-        -: 4527:    __x = _VSTD::move(__y);
-        -: 4528:    __y = _VSTD::move(__t);
-        -: 4529:}
+    #####: 4526:    _Tp __t(_VSTD::move(__x));
+    #####: 4527:    __x = _VSTD::move(__y);
+    #####: 4528:    __y = _VSTD::move(__t);
+    #####: 4529:}
+    $$$$$: 4529-block  0
         -: 4530:
         -: 4531:template<class _Tp, size_t _Np>
         -: 4532:inline _LIBCPP_INLINE_VISIBILITY

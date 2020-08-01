@@ -2396,23 +2396,23 @@
         -: 2391: public:
         -: 2392:  typedef T element_type;
         -: 2393:
-       28: 2394:  explicit scoped_ptr(T* p = NULL) : ptr_(p) {}
-       14: 2394-block  0
-       14: 2394-block  1
-       14: 2394-block  2
-       14: 2394-block  3
-      148: 2395:  ~scoped_ptr() { reset(); }
-       60: 2395-block  0
-       60: 2395-block  1
-       60: 2395-block  2
-       60: 2395-block  3
-       60: 2395-block  4
+      208: 2394:  explicit scoped_ptr(T* p = NULL) : ptr_(p) {}
+      104: 2394-block  0
+      104: 2394-block  1
+      104: 2394-block  2
+      104: 2394-block  3
+      560: 2395:  ~scoped_ptr() { reset(); }
+      176: 2395-block  0
+      176: 2395-block  1
+      176: 2395-block  2
+      176: 2395-block  3
+      176: 2395-block  4
     $$$$$: 2395-block  5
-       14: 2395-block  6
-       14: 2395-block  7
-       14: 2395-block  8
-       14: 2395-block  9
-       14: 2395-block 10
+      104: 2395-block  6
+      104: 2395-block  7
+      104: 2395-block  8
+      104: 2395-block  9
+      104: 2395-block 10
     $$$$$: 2395-block 11
         -: 2396:
         -: 2397:  T& operator*() const { return *ptr_; }
@@ -2425,30 +2425,30 @@
         -: 2404:    return ptr;
         -: 2405:  }
         -: 2406:
-       74: 2407:  void reset(T* p = NULL) {
-       60: 2407-block  0
-       14: 2407-block  1
-       74: 2408:    if (p != ptr_) {
-       60: 2408-block  0
-       14: 2408-block  1
-       60: 2409:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
-       60: 2409-block  0
+      280: 2407:  void reset(T* p = NULL) {
+      176: 2407-block  0
+      104: 2407-block  1
+      280: 2408:    if (p != ptr_) {
+      176: 2408-block  0
+      104: 2408-block  1
+      176: 2409:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
+      176: 2409-block  0
     $$$$$: 2409-block  1
-       60: 2410:        delete ptr_;
-       60: 2410-block  0
-       60: 2410-block  1
+      176: 2410:        delete ptr_;
+      176: 2410-block  0
+      176: 2410-block  1
     $$$$$: 2410-block  2
     $$$$$: 2410-block  3
-       60: 2411:      }
-       60: 2411-block  0
+      176: 2411:      }
+      176: 2411-block  0
     $$$$$: 2411-block  1
-       60: 2412:      ptr_ = p;
-       60: 2413:    }
-       60: 2413-block  0
+      176: 2412:      ptr_ = p;
+      176: 2413:    }
+      176: 2413-block  0
     $$$$$: 2413-block  1
-       74: 2414:  }
-       60: 2414-block  0
-       14: 2414-block  1
+      280: 2414:  }
+      176: 2414-block  0
+      104: 2414-block  1
         -: 2415:
         -: 2416:  friend void swap(scoped_ptr& a, scoped_ptr& b) {
         -: 2417:    using std::swap;
@@ -3969,11 +3969,11 @@
         -: 3932:// latter (it causes an access violation if you do).  The Message
         -: 3933:// class hides this difference by treating a NULL char pointer as
         -: 3934:// "(null)".
-      120: 3935:class GTEST_API_ Message {
-       60: 3935-block  0
-       60: 3935-block  1
-       60: 3935-block  2
-       60: 3935-block  3
+      352: 3935:class GTEST_API_ Message {
+      176: 3935-block  0
+      176: 3935-block  1
+      176: 3935-block  2
+      176: 3935-block  3
         -: 3936: private:
         -: 3937:  // The type of basic IO manipulators (endl, ends, and flush) for
         -: 3938:  // narrow streams.
@@ -18893,11 +18893,11 @@
         -:18852://   Expected: Foo() is even
         -:18853://     Actual: it's 5
         -:18854://
-       28:18855:class GTEST_API_ AssertionResult {
-       14:18855-block  0
-       14:18855-block  1
-       14:18855-block  2
-       14:18855-block  3
+      208:18855:class GTEST_API_ AssertionResult {
+      104:18855-block  0
+      104:18855-block  1
+      104:18855-block  2
+      104:18855-block  3
         -:18856: public:
         -:18857:  // Copy constructor.
         -:18858:  // Used in EXPECT_TRUE/FALSE(assertion_result).
@@ -18913,17 +18913,17 @@
         -:18868:  // the argument is implicitly convertible to AssertionResult. In that case
         -:18869:  // we want AssertionResult's copy constructor to be used.
         -:18870:  template <typename T>
-       28:18871:  explicit AssertionResult(
-       14:18871-block  0
-       14:18871-block  1
+      208:18871:  explicit AssertionResult(
+      104:18871-block  0
+      104:18871-block  1
         -:18872:      const T& success,
         -:18873:      typename internal::EnableIf<
         -:18874:          !internal::ImplicitlyConvertible<T, AssertionResult>::value>::type*
         -:18875:          /*enabler*/ = NULL)
-       42:18876:      : success_(success) {}
-       14:18876-block  0
-       14:18876-block  1
-       14:18876-block  2
+      312:18876:      : success_(success) {}
+      104:18876-block  0
+      104:18876-block  1
+      104:18876-block  2
         -:18877:
         -:18878:  GTEST_DISABLE_MSC_WARNINGS_POP_()
         -:18879:
@@ -18934,9 +18934,9 @@
         -:18884:  }
         -:18885:
         -:18886:  // Returns true iff the assertion succeeded.
-       14:18887:  operator bool() const { return success_; }  // NOLINT
-       14:18887-block  0
-       14:18887-block  1
+      104:18887:  operator bool() const { return success_; }  // NOLINT
+      104:18887-block  0
+      104:18887-block  1
         -:18888:
         -:18889:  // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.
         -:18890:  AssertionResult operator!() const;

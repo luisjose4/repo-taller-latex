@@ -37,11 +37,11 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">636</td>
-            <td class="headerCovTableEntry">639</td>
+            <td class="headerCovTableEntry">648</td>
+            <td class="headerCovTableEntry">651</td>
             <td class="headerCovTableEntryHi">99.5 %</td>
           </tr>
           <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -2453,8 +2453,8 @@
 <a name="2391"><span class="lineNum">    2391 </span>            :  public:</a>
 <a name="2392"><span class="lineNum">    2392 </span>            :   typedef T element_type;</a>
 <a name="2393"><span class="lineNum">    2393 </span>            : </a>
-<a name="2394"><span class="lineNum">    2394 </span><span class="lineCov">        612 :   explicit scoped_ptr(T* p = NULL) : ptr_(p) {}</span></a>
-<a name="2395"><span class="lineNum">    2395 </span><span class="lineCov">       1668 :   ~scoped_ptr() { reset(); }</span></a>
+<a name="2394"><span class="lineNum">    2394 </span><span class="lineCov">        208 :   explicit scoped_ptr(T* p = NULL) : ptr_(p) {}</span></a>
+<a name="2395"><span class="lineNum">    2395 </span><span class="lineCov">        560 :   ~scoped_ptr() { reset(); }</span></a>
 <a name="2396"><span class="lineNum">    2396 </span>            : </a>
 <a name="2397"><span class="lineNum">    2397 </span>            :   T&amp; operator*() const { return *ptr_; }</a>
 <a name="2398"><span class="lineNum">    2398 </span>            :   T* operator-&gt;() const { return ptr_; }</a>
@@ -2466,14 +2466,14 @@
 <a name="2404"><span class="lineNum">    2404 </span>            :     return ptr;</a>
 <a name="2405"><span class="lineNum">    2405 </span>            :   }</a>
 <a name="2406"><span class="lineNum">    2406 </span>            : </a>
-<a name="2407"><span class="lineNum">    2407 </span><span class="lineCov">        834 :   void reset(T* p = NULL) {</span></a>
-<a name="2408"><span class="lineNum">    2408 </span><span class="lineCov">        834 :     if (p != ptr_) {</span></a>
-<a name="2409"><span class="lineNum">    2409 </span><span class="lineCov">        528 :       if (IsTrue(sizeof(T) &gt; 0)) {  // Makes sure T is a complete type.</span></a>
-<a name="2410"><span class="lineNum">    2410 </span><span class="lineCov">        528 :         delete ptr_;</span></a>
-<a name="2411"><span class="lineNum">    2411 </span><span class="lineCov">        528 :       }</span></a>
-<a name="2412"><span class="lineNum">    2412 </span><span class="lineCov">        528 :       ptr_ = p;</span></a>
-<a name="2413"><span class="lineNum">    2413 </span><span class="lineCov">        528 :     }</span></a>
-<a name="2414"><span class="lineNum">    2414 </span><span class="lineCov">        834 :   }</span></a>
+<a name="2407"><span class="lineNum">    2407 </span><span class="lineCov">        280 :   void reset(T* p = NULL) {</span></a>
+<a name="2408"><span class="lineNum">    2408 </span><span class="lineCov">        280 :     if (p != ptr_) {</span></a>
+<a name="2409"><span class="lineNum">    2409 </span><span class="lineCov">        176 :       if (IsTrue(sizeof(T) &gt; 0)) {  // Makes sure T is a complete type.</span></a>
+<a name="2410"><span class="lineNum">    2410 </span><span class="lineCov">        176 :         delete ptr_;</span></a>
+<a name="2411"><span class="lineNum">    2411 </span><span class="lineCov">        176 :       }</span></a>
+<a name="2412"><span class="lineNum">    2412 </span><span class="lineCov">        176 :       ptr_ = p;</span></a>
+<a name="2413"><span class="lineNum">    2413 </span><span class="lineCov">        176 :     }</span></a>
+<a name="2414"><span class="lineNum">    2414 </span><span class="lineCov">        280 :   }</span></a>
 <a name="2415"><span class="lineNum">    2415 </span>            : </a>
 <a name="2416"><span class="lineNum">    2416 </span>            :   friend void swap(scoped_ptr&amp; a, scoped_ptr&amp; b) {</a>
 <a name="2417"><span class="lineNum">    2417 </span>            :     using std::swap;</a>
@@ -3994,7 +3994,7 @@
 <a name="3932"><span class="lineNum">    3932 </span>            : // latter (it causes an access violation if you do).  The Message</a>
 <a name="3933"><span class="lineNum">    3933 </span>            : // class hides this difference by treating a NULL char pointer as</a>
 <a name="3934"><span class="lineNum">    3934 </span>            : // &quot;(null)&quot;.</a>
-<a name="3935"><span class="lineNum">    3935 </span><span class="lineCov">       1056 : class GTEST_API_ Message {</span></a>
+<a name="3935"><span class="lineNum">    3935 </span><span class="lineCov">        352 : class GTEST_API_ Message {</span></a>
 <a name="3936"><span class="lineNum">    3936 </span>            :  private:</a>
 <a name="3937"><span class="lineNum">    3937 </span>            :   // The type of basic IO manipulators (endl, ends, and flush) for</a>
 <a name="3938"><span class="lineNum">    3938 </span>            :   // narrow streams.</a>
@@ -8260,14 +8260,14 @@
 <a name="8198"><span class="lineNum">    8198 </span>            : // of a Test object.</a>
 <a name="8199"><span class="lineNum">    8199 </span>            : class TestFactoryBase {</a>
 <a name="8200"><span class="lineNum">    8200 </span>            :  public:</a>
-<a name="8201"><span class="lineNum">    8201 </span><span class="lineCov">        306 :   virtual ~TestFactoryBase() {}</span></a>
+<a name="8201"><span class="lineNum">    8201 </span><span class="lineCov">        104 :   virtual ~TestFactoryBase() {}</span></a>
 <a name="8202"><span class="lineNum">    8202 </span>            : </a>
 <a name="8203"><span class="lineNum">    8203 </span>            :   // Creates a test instance to run. The instance is both created and destroyed</a>
 <a name="8204"><span class="lineNum">    8204 </span>            :   // within TestInfoImpl::Run()</a>
 <a name="8205"><span class="lineNum">    8205 </span>            :   virtual Test* CreateTest() = 0;</a>
 <a name="8206"><span class="lineNum">    8206 </span>            : </a>
 <a name="8207"><span class="lineNum">    8207 </span>            :  protected:</a>
-<a name="8208"><span class="lineNum">    8208 </span><span class="lineCov">        306 :   TestFactoryBase() {}</span></a>
+<a name="8208"><span class="lineNum">    8208 </span><span class="lineCov">        104 :   TestFactoryBase() {}</span></a>
 <a name="8209"><span class="lineNum">    8209 </span>            : </a>
 <a name="8210"><span class="lineNum">    8210 </span>            :  private:</a>
 <a name="8211"><span class="lineNum">    8211 </span>            :   GTEST_DISALLOW_COPY_AND_ASSIGN_(TestFactoryBase);</a>
@@ -8276,9 +8276,9 @@
 <a name="8214"><span class="lineNum">    8214 </span>            : // This class provides implementation of TeastFactoryBase interface.</a>
 <a name="8215"><span class="lineNum">    8215 </span>            : // It is used in TEST and TEST_F macros.</a>
 <a name="8216"><span class="lineNum">    8216 </span>            : template &lt;class TestClass&gt;</a>
-<a name="8217"><span class="lineNum">    8217 </span><span class="lineCov">       1530 : class TestFactoryImpl : public TestFactoryBase {</span></a>
+<a name="8217"><span class="lineNum">    8217 </span><span class="lineCov">        520 : class TestFactoryImpl : public TestFactoryBase {</span></a>
 <a name="8218"><span class="lineNum">    8218 </span>            :  public:</a>
-<a name="8219"><span class="lineNum">    8219 </span><span class="lineCov">        306 :   virtual Test* CreateTest() { return new TestClass; }</span></a>
+<a name="8219"><span class="lineNum">    8219 </span><span class="lineCov">        104 :   virtual Test* CreateTest() { return new TestClass; }</span></a>
 <a name="8220"><span class="lineNum">    8220 </span>            : };</a>
 <a name="8221"><span class="lineNum">    8221 </span>            : </a>
 <a name="8222"><span class="lineNum">    8222 </span>            : #if GTEST_OS_WINDOWS</a>
@@ -8298,8 +8298,8 @@
 <a name="8236"><span class="lineNum">    8236 </span>            : typedef void (*SetUpTestCaseFunc)();</a>
 <a name="8237"><span class="lineNum">    8237 </span>            : typedef void (*TearDownTestCaseFunc)();</a>
 <a name="8238"><span class="lineNum">    8238 </span>            : </a>
-<a name="8239"><span class="lineNum">    8239 </span><span class="lineCov">       1836 : struct CodeLocation {</span></a>
-<a name="8240"><span class="lineNum">    8240 </span><span class="lineCov">        612 :   CodeLocation(const string&amp; a_file, int a_line) : file(a_file), line(a_line) {}</span></a>
+<a name="8239"><span class="lineNum">    8239 </span><span class="lineCov">        624 : struct CodeLocation {</span></a>
+<a name="8240"><span class="lineNum">    8240 </span><span class="lineCov">        208 :   CodeLocation(const string&amp; a_file, int a_line) : file(a_file), line(a_line) {}</span></a>
 <a name="8241"><span class="lineNum">    8241 </span>            : </a>
 <a name="8242"><span class="lineNum">    8242 </span>            :   string file;</a>
 <a name="8243"><span class="lineNum">    8243 </span>            :   int line;</a>
@@ -18914,7 +18914,7 @@
 <a name="18852"><span class="lineNum">   18852 </span>            : //   Expected: Foo() is even</a>
 <a name="18853"><span class="lineNum">   18853 </span>            : //     Actual: it's 5</a>
 <a name="18854"><span class="lineNum">   18854 </span>            : //</a>
-<a name="18855"><span class="lineNum">   18855 </span><span class="lineCov">        612 : class GTEST_API_ AssertionResult {</span></a>
+<a name="18855"><span class="lineNum">   18855 </span><span class="lineCov">        208 : class GTEST_API_ AssertionResult {</span></a>
 <a name="18856"><span class="lineNum">   18856 </span>            :  public:</a>
 <a name="18857"><span class="lineNum">   18857 </span>            :   // Copy constructor.</a>
 <a name="18858"><span class="lineNum">   18858 </span>            :   // Used in EXPECT_TRUE/FALSE(assertion_result).</a>
@@ -18930,12 +18930,12 @@
 <a name="18868"><span class="lineNum">   18868 </span>            :   // the argument is implicitly convertible to AssertionResult. In that case</a>
 <a name="18869"><span class="lineNum">   18869 </span>            :   // we want AssertionResult's copy constructor to be used.</a>
 <a name="18870"><span class="lineNum">   18870 </span>            :   template &lt;typename T&gt;</a>
-<a name="18871"><span class="lineNum">   18871 </span><span class="lineCov">        612 :   explicit AssertionResult(</span></a>
+<a name="18871"><span class="lineNum">   18871 </span><span class="lineCov">        208 :   explicit AssertionResult(</span></a>
 <a name="18872"><span class="lineNum">   18872 </span>            :       const T&amp; success,</a>
 <a name="18873"><span class="lineNum">   18873 </span>            :       typename internal::EnableIf&lt;</a>
 <a name="18874"><span class="lineNum">   18874 </span>            :           !internal::ImplicitlyConvertible&lt;T, AssertionResult&gt;::value&gt;::type*</a>
 <a name="18875"><span class="lineNum">   18875 </span>            :           /*enabler*/ = NULL)</a>
-<a name="18876"><span class="lineNum">   18876 </span><span class="lineCov">        918 :       : success_(success) {}</span></a>
+<a name="18876"><span class="lineNum">   18876 </span><span class="lineCov">        312 :       : success_(success) {}</span></a>
 <a name="18877"><span class="lineNum">   18877 </span>            : </a>
 <a name="18878"><span class="lineNum">   18878 </span>            :   GTEST_DISABLE_MSC_WARNINGS_POP_()</a>
 <a name="18879"><span class="lineNum">   18879 </span>            : </a>
@@ -18946,7 +18946,7 @@
 <a name="18884"><span class="lineNum">   18884 </span>            :   }</a>
 <a name="18885"><span class="lineNum">   18885 </span>            : </a>
 <a name="18886"><span class="lineNum">   18886 </span>            :   // Returns true iff the assertion succeeded.</a>
-<a name="18887"><span class="lineNum">   18887 </span><span class="lineCov">        306 :   operator bool() const { return success_; }  // NOLINT</span></a>
+<a name="18887"><span class="lineNum">   18887 </span><span class="lineCov">        104 :   operator bool() const { return success_; }  // NOLINT</span></a>
 <a name="18888"><span class="lineNum">   18888 </span>            : </a>
 <a name="18889"><span class="lineNum">   18889 </span>            :   // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.</a>
 <a name="18890"><span class="lineNum">   18890 </span>            :   AssertionResult operator!() const;</a>
@@ -19047,7 +19047,7 @@
 <a name="18985"><span class="lineNum">   18985 </span>            :   // test in test case Foo.  Hence a sub-class can define its own</a>
 <a name="18986"><span class="lineNum">   18986 </span>            :   // SetUpTestCase() method to shadow the one defined in the super</a>
 <a name="18987"><span class="lineNum">   18987 </span>            :   // class.</a>
-<a name="18988"><span class="lineNum">   18988 </span><span class="lineCov">         33 :   static void SetUpTestCase() {}</span></a>
+<a name="18988"><span class="lineNum">   18988 </span><span class="lineCov">         11 :   static void SetUpTestCase() {}</span></a>
 <a name="18989"><span class="lineNum">   18989 </span>            : </a>
 <a name="18990"><span class="lineNum">   18990 </span>            :   // Tears down the stuff shared by all tests in this test case.</a>
 <a name="18991"><span class="lineNum">   18991 </span>            :   //</a>
@@ -19055,7 +19055,7 @@
 <a name="18993"><span class="lineNum">   18993 </span>            :   // test in test case Foo.  Hence a sub-class can define its own</a>
 <a name="18994"><span class="lineNum">   18994 </span>            :   // TearDownTestCase() method to shadow the one defined in the super</a>
 <a name="18995"><span class="lineNum">   18995 </span>            :   // class.</a>
-<a name="18996"><span class="lineNum">   18996 </span><span class="lineCov">         33 :   static void TearDownTestCase() {}</span></a>
+<a name="18996"><span class="lineNum">   18996 </span><span class="lineCov">         11 :   static void TearDownTestCase() {}</span></a>
 <a name="18997"><span class="lineNum">   18997 </span>            : </a>
 <a name="18998"><span class="lineNum">   18998 </span>            :   // Returns true iff the current test has a fatal failure.</a>
 <a name="18999"><span class="lineNum">   18999 </span>            :   static bool HasFatalFailure();</a>
@@ -21247,8 +21247,8 @@
 <a name="21185"><span class="lineNum">   21185 </span>            : // namespace and has an all-caps name.</a>
 <a name="21186"><span class="lineNum">   21186 </span>            : int RUN_ALL_TESTS() GTEST_MUST_USE_RESULT_;</a>
 <a name="21187"><span class="lineNum">   21187 </span>            : </a>
-<a name="21188"><span class="lineNum">   21188 </span><span class="lineCov">          3 : inline int RUN_ALL_TESTS() {</span></a>
-<a name="21189"><span class="lineNum">   21189 </span><span class="lineCov">          3 :   return ::testing::UnitTest::GetInstance()-&gt;Run();</span></a>
+<a name="21188"><span class="lineNum">   21188 </span><span class="lineCov">          1 : inline int RUN_ALL_TESTS() {</span></a>
+<a name="21189"><span class="lineNum">   21189 </span><span class="lineCov">          1 :   return ::testing::UnitTest::GetInstance()-&gt;Run();</span></a>
 <a name="21190"><span class="lineNum">   21190 </span>            : }</a>
 <a name="21191"><span class="lineNum">   21191 </span>            : </a>
 <a name="21192"><span class="lineNum">   21192 </span>            : #endif  // GTEST_INCLUDE_GTEST_GTEST_H_</a>

@@ -211,9 +211,7 @@
         -:  206:    typedef mbstate_t state_type;
         -:  207:
         -:  208:    static inline _LIBCPP_CONSTEXPR_AFTER_CXX14
-     6181:  209:    void assign(char_type& __c1, const char_type& __c2) _NOEXCEPT {__c1 = __c2;}
-     6181:  209-block  0
-     6181:  209-block  1
+        -:  209:    void assign(char_type& __c1, const char_type& __c2) _NOEXCEPT {__c1 = __c2;}
     #####:  210:    static inline _LIBCPP_CONSTEXPR bool eq(char_type __c1, char_type __c2) _NOEXCEPT
     $$$$$:  210-block  0
     #####:  211:            {return __c1 == __c2;}
@@ -248,10 +246,10 @@
     $$$$$:  233-block  0
     #####:  234:        {return char_type(__c);}
     $$$$$:  234-block  0
-       82:  235:    static inline _LIBCPP_CONSTEXPR int_type to_int_type(char_type __c) _NOEXCEPT
-       82:  235-block  0
-       82:  236:        {return int_type((unsigned char)__c);}
-       82:  236-block  0
+      184:  235:    static inline _LIBCPP_CONSTEXPR int_type to_int_type(char_type __c) _NOEXCEPT
+      184:  235-block  0
+      184:  236:        {return int_type((unsigned char)__c);}
+      184:  236-block  0
     #####:  237:    static inline _LIBCPP_CONSTEXPR bool eq_int_type(int_type __c1, int_type __c2) _NOEXCEPT
     $$$$$:  237-block  0
     #####:  238:        {return __c1 == __c2;}

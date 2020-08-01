@@ -2325,15 +2325,15 @@
         -: 2316:template <class _Tp>
         -: 2317:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
         -: 2318:_Tp&&
-    #####: 2319:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT
-    $$$$$: 2319-block  0
-    $$$$$: 2319-block  1
+      100: 2319:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT
+       32: 2319-block  0
+       68: 2319-block  1
     $$$$$: 2319-block  2
     $$$$$: 2319-block  3
         -: 2320:{
-    #####: 2321:    return static_cast<_Tp&&>(__t);
-    $$$$$: 2321-block  0
-    $$$$$: 2321-block  1
+      100: 2321:    return static_cast<_Tp&&>(__t);
+       32: 2321-block  0
+       68: 2321-block  1
     $$$$$: 2321-block  2
     $$$$$: 2321-block  3
         -: 2322:}
