@@ -6,7 +6,7 @@
 
 senial subSeq(senial s, int i, int r)
 {
-    senial w;
+    senial w = {};
     for (int j = i; j < r; ++j) {
         w.push_back(s[j]);
     }
@@ -119,7 +119,7 @@ bool hablantesDeReunionValidos(reunion r, int prof, int freq)
 /************ acelerar *************/
 void acelerarSenial(senial &s, int prof, int freq)
 {
-    senial salida;
+    senial salida = {};
     for (int i = 1; i < s.size(); i = i+2) {
         salida.push_back(s[i]);
     }
@@ -159,7 +159,7 @@ void swapPorTono(reunion &reunion, int i, int j)
 
 
 /************* silencios *************/
-bool superaUmbral(int valor, int umbral)
+bool muestraSuperaUmbral(int valor, int umbral)
 {
     return abs(valor) >= umbral;
 }
@@ -187,7 +187,7 @@ int valorAbsoluto(int x)
 bool estaHablando(senial s, int pos, int umbral)
 {
     bool superaUmbral = valorAbsoluto( s[pos] )  >= umbral;
-    bool algunoConsecutivoSuperaUmbral;
+    bool algunoConsecutivoSuperaUmbral = true;
     if ( pos == 0 ) {
         algunoConsecutivoSuperaUmbral = (valorAbsoluto(s[pos + 1]) >= umbral);
     } else if ( pos == s.size() - 1 ) {

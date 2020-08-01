@@ -85,13 +85,13 @@ vector<intervalo> silencios(senial s, int prof, int freq, int umbral)
 
     for (int i = 0; i < s.size(); i++) {
 
-        if ( superaUmbral(s[i], umbral) ) {
+        if ( muestraSuperaUmbral(s[i], umbral) ) {
         	agregarIntervaloSiCorresponde(ret,inicioSilencio, i-1, esSilencio);
         	inicioSilencio = i + 1;
         	esSilencio = false;
         }
         else if (i>0){
-        	if(superaUmbral(s[i-1], umbral) ){
+        	if(muestraSuperaUmbral(s[i-1], umbral) ){
         		inicioSilencio = i;
         	}
         	if(i + 1 - inicioSilencio >= freq * 0.2){
