@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">6</td>
@@ -254,8 +254,8 @@
 <a name="192"><span class="lineNum">     192 </span>            : </a>
 <a name="193"><span class="lineNum">     193 </span>            :     // 27.7.2.6 Formatted output:</a>
 <a name="194"><span class="lineNum">     194 </span>            :     inline _LIBCPP_HIDE_FROM_ABI_AFTER_V1</a>
-<a name="195"><span class="lineNum">     195 </span><span class="lineCov">          3 :     basic_ostream&amp; operator&lt;&lt;(basic_ostream&amp; (*__pf)(basic_ostream&amp;))</span></a>
-<a name="196"><span class="lineNum">     196 </span><span class="lineCov">          3 :     { return __pf(*this); }</span></a>
+<a name="195"><span class="lineNum">     195 </span><span class="lineCov">          1 :     basic_ostream&amp; operator&lt;&lt;(basic_ostream&amp; (*__pf)(basic_ostream&amp;))</span></a>
+<a name="196"><span class="lineNum">     196 </span><span class="lineCov">          1 :     { return __pf(*this); }</span></a>
 <a name="197"><span class="lineNum">     197 </span>            : </a>
 <a name="198"><span class="lineNum">     198 </span>            :     inline _LIBCPP_HIDE_FROM_ABI_AFTER_V1</a>
 <a name="199"><span class="lineNum">     199 </span>            :     basic_ostream&amp; operator&lt;&lt;(basic_ios&lt;char_type, traits_type&gt;&amp;</a>
@@ -314,7 +314,7 @@
 <a name="252"><span class="lineNum">     252 </span>            : </a>
 <a name="253"><span class="lineNum">     253 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
 <a name="254"><span class="lineNum">     254 </span>            :         _LIBCPP_EXPLICIT</a>
-<a name="255"><span class="lineNum">     255 </span><span class="lineCov">        990 :         operator bool() const {return __ok_;}</span></a>
+<a name="255"><span class="lineNum">     255 </span><span class="lineCov">        328 :         operator bool() const {return __ok_;}</span></a>
 <a name="256"><span class="lineNum">     256 </span>            : };</a>
 <a name="257"><span class="lineNum">     257 </span>            : </a>
 <a name="258"><span class="lineNum">     258 </span>            : template &lt;class _CharT, class _Traits&gt;</a>
@@ -774,35 +774,35 @@
 <a name="712"><span class="lineNum">     712 </span>            : </a>
 <a name="713"><span class="lineNum">     713 </span>            : template&lt;class _CharT, class _Traits&gt;</a>
 <a name="714"><span class="lineNum">     714 </span>            : basic_ostream&lt;_CharT, _Traits&gt;&amp;</a>
-<a name="715"><span class="lineNum">     715 </span><span class="lineCov">        990 : __put_character_sequence(basic_ostream&lt;_CharT, _Traits&gt;&amp; __os,</span></a>
+<a name="715"><span class="lineNum">     715 </span><span class="lineCov">        328 : __put_character_sequence(basic_ostream&lt;_CharT, _Traits&gt;&amp; __os,</span></a>
 <a name="716"><span class="lineNum">     716 </span>            :                           const _CharT* __str, size_t __len)</a>
 <a name="717"><span class="lineNum">     717 </span>            : {</a>
 <a name="718"><span class="lineNum">     718 </span>            : #ifndef _LIBCPP_NO_EXCEPTIONS</a>
 <a name="719"><span class="lineNum">     719 </span>            :     try</a>
 <a name="720"><span class="lineNum">     720 </span>            :     {</a>
 <a name="721"><span class="lineNum">     721 </span>            : #endif  // _LIBCPP_NO_EXCEPTIONS</a>
-<a name="722"><span class="lineNum">     722 </span><span class="lineCov">        990 :         typename basic_ostream&lt;_CharT, _Traits&gt;::sentry __s(__os);</span></a>
-<a name="723"><span class="lineNum">     723 </span><span class="lineCov">        990 :         if (__s)</span></a>
+<a name="722"><span class="lineNum">     722 </span><span class="lineCov">        328 :         typename basic_ostream&lt;_CharT, _Traits&gt;::sentry __s(__os);</span></a>
+<a name="723"><span class="lineNum">     723 </span><span class="lineCov">        328 :         if (__s)</span></a>
 <a name="724"><span class="lineNum">     724 </span>            :         {</a>
 <a name="725"><span class="lineNum">     725 </span>            :             typedef ostreambuf_iterator&lt;_CharT, _Traits&gt; _Ip;</a>
-<a name="726"><span class="lineNum">     726 </span><span class="lineCov">       1980 :             if (__pad_and_output(_Ip(__os),</span></a>
-<a name="727"><span class="lineNum">     727 </span><span class="lineCov">        990 :                                  __str,</span></a>
-<a name="728"><span class="lineNum">     728 </span><span class="lineCov">        990 :                                  (__os.flags() &amp; ios_base::adjustfield) == ios_base::left ?</span></a>
+<a name="726"><span class="lineNum">     726 </span><span class="lineCov">        656 :             if (__pad_and_output(_Ip(__os),</span></a>
+<a name="727"><span class="lineNum">     727 </span><span class="lineCov">        328 :                                  __str,</span></a>
+<a name="728"><span class="lineNum">     728 </span><span class="lineCov">        328 :                                  (__os.flags() &amp; ios_base::adjustfield) == ios_base::left ?</span></a>
 <a name="729"><span class="lineNum">     729 </span><span class="lineNoCov">          0 :                                      __str + __len :</span></a>
-<a name="730"><span class="lineNum">     730 </span><span class="lineCov">        990 :                                      __str,</span></a>
-<a name="731"><span class="lineNum">     731 </span><span class="lineCov">        990 :                                  __str + __len,</span></a>
-<a name="732"><span class="lineNum">     732 </span><span class="lineCov">        990 :                                  __os,</span></a>
-<a name="733"><span class="lineNum">     733 </span><span class="lineCov">       1980 :                                  __os.fill()).failed())</span></a>
+<a name="730"><span class="lineNum">     730 </span><span class="lineCov">        328 :                                      __str,</span></a>
+<a name="731"><span class="lineNum">     731 </span><span class="lineCov">        328 :                                  __str + __len,</span></a>
+<a name="732"><span class="lineNum">     732 </span><span class="lineCov">        328 :                                  __os,</span></a>
+<a name="733"><span class="lineNum">     733 </span><span class="lineCov">        656 :                                  __os.fill()).failed())</span></a>
 <a name="734"><span class="lineNum">     734 </span><span class="lineNoCov">          0 :                 __os.setstate(ios_base::badbit | ios_base::failbit);</span></a>
-<a name="735"><span class="lineNum">     735 </span><span class="lineCov">        990 :         }</span></a>
+<a name="735"><span class="lineNum">     735 </span><span class="lineCov">        328 :         }</span></a>
 <a name="736"><span class="lineNum">     736 </span>            : #ifndef _LIBCPP_NO_EXCEPTIONS</a>
-<a name="737"><span class="lineNum">     737 </span><span class="lineCov">        990 :     }</span></a>
+<a name="737"><span class="lineNum">     737 </span><span class="lineCov">        328 :     }</span></a>
 <a name="738"><span class="lineNum">     738 </span>            :     catch (...)</a>
 <a name="739"><span class="lineNum">     739 </span>            :     {</a>
 <a name="740"><span class="lineNum">     740 </span><span class="lineNoCov">          0 :         __os.__set_badbit_and_consider_rethrow();</span></a>
 <a name="741"><span class="lineNum">     741 </span><span class="lineNoCov">          0 :     }</span></a>
 <a name="742"><span class="lineNum">     742 </span>            : #endif  // _LIBCPP_NO_EXCEPTIONS</a>
-<a name="743"><span class="lineNum">     743 </span><span class="lineCov">        990 :     return __os;</span></a>
+<a name="743"><span class="lineNum">     743 </span><span class="lineCov">        328 :     return __os;</span></a>
 <a name="744"><span class="lineNum">     744 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="745"><span class="lineNum">     745 </span>            : </a>
 <a name="746"><span class="lineNum">     746 </span>            : </a>
@@ -848,9 +848,9 @@
 <a name="786"><span class="lineNum">     786 </span>            : </a>
 <a name="787"><span class="lineNum">     787 </span>            : template&lt;class _Traits&gt;</a>
 <a name="788"><span class="lineNum">     788 </span>            : basic_ostream&lt;char, _Traits&gt;&amp;</a>
-<a name="789"><span class="lineNum">     789 </span><span class="lineCov">        882 : operator&lt;&lt;(basic_ostream&lt;char, _Traits&gt;&amp; __os, char __c)</span></a>
+<a name="789"><span class="lineNum">     789 </span><span class="lineCov">        294 : operator&lt;&lt;(basic_ostream&lt;char, _Traits&gt;&amp; __os, char __c)</span></a>
 <a name="790"><span class="lineNum">     790 </span>            : {</a>
-<a name="791"><span class="lineNum">     791 </span><span class="lineCov">        882 :     return _VSTD::__put_character_sequence(__os, &amp;__c, 1);</span></a>
+<a name="791"><span class="lineNum">     791 </span><span class="lineCov">        294 :     return _VSTD::__put_character_sequence(__os, &amp;__c, 1);</span></a>
 <a name="792"><span class="lineNum">     792 </span>            : }</a>
 <a name="793"><span class="lineNum">     793 </span>            : </a>
 <a name="794"><span class="lineNum">     794 </span>            : template&lt;class _Traits&gt;</a>
@@ -922,9 +922,9 @@
 <a name="860"><span class="lineNum">     860 </span>            : </a>
 <a name="861"><span class="lineNum">     861 </span>            : template&lt;class _Traits&gt;</a>
 <a name="862"><span class="lineNum">     862 </span>            : basic_ostream&lt;char, _Traits&gt;&amp;</a>
-<a name="863"><span class="lineNum">     863 </span><span class="lineCov">        108 : operator&lt;&lt;(basic_ostream&lt;char, _Traits&gt;&amp; __os, const char* __str)</span></a>
+<a name="863"><span class="lineNum">     863 </span><span class="lineCov">         34 : operator&lt;&lt;(basic_ostream&lt;char, _Traits&gt;&amp; __os, const char* __str)</span></a>
 <a name="864"><span class="lineNum">     864 </span>            : {</a>
-<a name="865"><span class="lineNum">     865 </span><span class="lineCov">        108 :     return _VSTD::__put_character_sequence(__os, __str, _Traits::length(__str));</span></a>
+<a name="865"><span class="lineNum">     865 </span><span class="lineCov">         34 :     return _VSTD::__put_character_sequence(__os, __str, _Traits::length(__str));</span></a>
 <a name="866"><span class="lineNum">     866 </span>            : }</a>
 <a name="867"><span class="lineNum">     867 </span>            : </a>
 <a name="868"><span class="lineNum">     868 </span>            : template&lt;class _Traits&gt;</a>
@@ -1059,11 +1059,11 @@
 <a name="997"><span class="lineNum">     997 </span>            : template &lt;class _CharT, class _Traits&gt;</a>
 <a name="998"><span class="lineNum">     998 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="999"><span class="lineNum">     999 </span>            : basic_ostream&lt;_CharT, _Traits&gt;&amp;</a>
-<a name="1000"><span class="lineNum">    1000 </span><span class="lineCov">          3 : endl(basic_ostream&lt;_CharT, _Traits&gt;&amp; __os)</span></a>
+<a name="1000"><span class="lineNum">    1000 </span><span class="lineCov">          1 : endl(basic_ostream&lt;_CharT, _Traits&gt;&amp; __os)</span></a>
 <a name="1001"><span class="lineNum">    1001 </span>            : {</a>
-<a name="1002"><span class="lineNum">    1002 </span><span class="lineCov">          3 :     __os.put(__os.widen('\n'));</span></a>
-<a name="1003"><span class="lineNum">    1003 </span><span class="lineCov">          3 :     __os.flush();</span></a>
-<a name="1004"><span class="lineNum">    1004 </span><span class="lineCov">          3 :     return __os;</span></a>
+<a name="1002"><span class="lineNum">    1002 </span><span class="lineCov">          1 :     __os.put(__os.widen('\n'));</span></a>
+<a name="1003"><span class="lineNum">    1003 </span><span class="lineCov">          1 :     __os.flush();</span></a>
+<a name="1004"><span class="lineNum">    1004 </span><span class="lineCov">          1 :     return __os;</span></a>
 <a name="1005"><span class="lineNum">    1005 </span>            : }</a>
 <a name="1006"><span class="lineNum">    1006 </span>            : </a>
 <a name="1007"><span class="lineNum">    1007 </span>            : template &lt;class _CharT, class _Traits&gt;</a>

@@ -1385,27 +1385,27 @@
         -: 1380:template <class _CharT, class _Traits>
         -: 1381:_LIBCPP_HIDDEN
         -: 1382:ostreambuf_iterator<_CharT, _Traits>
-      332: 1383:__pad_and_output(ostreambuf_iterator<_CharT, _Traits> __s,
-      332: 1383-block  0
+      328: 1383:__pad_and_output(ostreambuf_iterator<_CharT, _Traits> __s,
+      328: 1383-block  0
         -: 1384:                 const _CharT* __ob, const _CharT* __op, const _CharT* __oe,
         -: 1385:                 ios_base& __iob, _CharT __fl)
         -: 1386:{
-      332: 1387:    if (__s.__sbuf_ == nullptr)
-      332: 1387-block  0
+      328: 1387:    if (__s.__sbuf_ == nullptr)
+      328: 1387-block  0
     #####: 1388:        return __s;
     $$$$$: 1388-block  0
-      332: 1389:    streamsize __sz = __oe - __ob;
-      332: 1390:    streamsize __ns = __iob.width();
-      332: 1391:    if (__ns > __sz)
-      332: 1391-block  0
+      328: 1389:    streamsize __sz = __oe - __ob;
+      328: 1390:    streamsize __ns = __iob.width();
+      328: 1391:    if (__ns > __sz)
+      328: 1391-block  0
     #####: 1392:        __ns -= __sz;
     $$$$$: 1392-block  0
         -: 1393:    else
-      332: 1394:        __ns = 0;
-      332: 1394-block  0
-      332: 1395:    streamsize __np = __op - __ob;
-      332: 1396:    if (__np > 0)
-      332: 1396-block  0
+      328: 1394:        __ns = 0;
+      328: 1394-block  0
+      328: 1395:    streamsize __np = __op - __ob;
+      328: 1396:    if (__np > 0)
+      328: 1396-block  0
         -: 1397:    {
     #####: 1398:        if (__s.__sbuf_->sputn(__ob, __np) != __np)
     $$$$$: 1398-block  0
@@ -1416,8 +1416,8 @@
         -: 1402:        }
     #####: 1403:    }
     $$$$$: 1403-block  0
-      332: 1404:    if (__ns > 0)
-      332: 1404-block  0
+      328: 1404:    if (__ns > 0)
+      328: 1404-block  0
         -: 1405:    {
     #####: 1406:        basic_string<_CharT, _Traits> __sp(__ns, __fl);
     #####: 1407:        if (__s.__sbuf_->sputn(__sp.data(), __ns) != __ns)
@@ -1434,24 +1434,24 @@
     $$$$$: 1412-block  2
     $$$$$: 1412-block  3
     $$$$$: 1412-block  4
-      332: 1413:    __np = __oe - __op;
-      332: 1414:    if (__np > 0)
-      332: 1414-block  0
+      328: 1413:    __np = __oe - __op;
+      328: 1414:    if (__np > 0)
+      328: 1414-block  0
         -: 1415:    {
-      332: 1416:        if (__s.__sbuf_->sputn(__op, __np) != __np)
-      332: 1416-block  0
+      328: 1416:        if (__s.__sbuf_->sputn(__op, __np) != __np)
+      328: 1416-block  0
         -: 1417:        {
     #####: 1418:            __s.__sbuf_ = nullptr;
     #####: 1419:            return __s;
     $$$$$: 1419-block  0
         -: 1420:        }
-      332: 1421:    }
-      332: 1421-block  0
-      332: 1422:    __iob.width(0);
-      332: 1423:    return __s;
-      332: 1423-block  0
-      332: 1424:}
-      332: 1424-block  0
+      328: 1421:    }
+      328: 1421-block  0
+      328: 1422:    __iob.width(0);
+      328: 1423:    return __s;
+      328: 1423-block  0
+      328: 1424:}
+      328: 1424-block  0
         -: 1425:
         -: 1426:#endif
         -: 1427:

@@ -318,11 +318,11 @@
         -:  313:#endif
         -:  314:
         -:  315:template <class _T1, class _T2>
-    #####:  316:struct _LIBCPP_TEMPLATE_VIS pair
-    $$$$$:  316-block  0
-    $$$$$:  316-block  1
-    $$$$$:  316-block  2
-    $$$$$:  316-block  3
+     1934:  316:struct _LIBCPP_TEMPLATE_VIS pair
+      967:  316-block  0
+      967:  316-block  1
+      967:  316-block  2
+      967:  316-block  3
         -:  317:#if defined(_LIBCPP_DEPRECATED_ABI_DISABLE_PAIR_TRIVIAL_COPY_CTOR)
         -:  318:: private __non_trivially_copyable_base<_T1, _T2>
         -:  319:#endif
@@ -334,11 +334,11 @@
         -:  325:    _T2 second;
         -:  326:
         -:  327:#if !defined(_LIBCPP_CXX03_LANG)
-    #####:  328:    pair(pair const&) = default;
-    $$$$$:  328-block  0
-    $$$$$:  328-block  1
-    $$$$$:  328-block  2
-    $$$$$:  328-block  3
+     1506:  328:    pair(pair const&) = default;
+      753:  328-block  0
+      753:  328-block  1
+      753:  328-block  2
+      753:  328-block  3
         -:  329:    pair(pair&&) = default;
         -:  330:#else
         -:  331:  // Use the implicitly declared copy constructor in C++03
@@ -423,17 +423,13 @@
         -:  410:            _CheckArgsDep<_Dummy>::template __enable_default<_T1, _T2>()
         -:  411:    > = false>
         -:  412:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
-    #####:  413:    pair() _NOEXCEPT_(is_nothrow_default_constructible<first_type>::value &&
-    $$$$$:  413-block  0
-    $$$$$:  413-block  1
-    $$$$$:  413-block  2
-    $$$$$:  413-block  3
+      104:  413:    pair() _NOEXCEPT_(is_nothrow_default_constructible<first_type>::value &&
+       52:  413-block  0
+       52:  413-block  1
         -:  414:                      is_nothrow_default_constructible<second_type>::value)
-    #####:  415:        : first(), second() {}
-    $$$$$:  415-block  0
-    $$$$$:  415-block  1
-    $$$$$:  415-block  2
-    $$$$$:  415-block  3
+      104:  415:        : first(), second() {}
+       52:  415-block  0
+       52:  415-block  1
         -:  416:
         -:  417:    template <bool _Dummy = true, _EnableB<
         -:  418:             _CheckArgsDep<_Dummy>::template __enable_explicit<_T1 const&, _T2 const&>()
@@ -534,16 +530,18 @@
         -:  513:                typename __make_tuple_indices<sizeof...(_Args2) >::type()) {}
         -:  514:
         -:  515:    _LIBCPP_INLINE_VISIBILITY
-        -:  516:    pair& operator=(typename conditional<
+      102:  516:    pair& operator=(typename conditional<
+      102:  516-block  0
         -:  517:                        is_copy_assignable<first_type>::value &&
         -:  518:                        is_copy_assignable<second_type>::value,
         -:  519:                    pair, __nat>::type const& __p)
         -:  520:        _NOEXCEPT_(is_nothrow_copy_assignable<first_type>::value &&
         -:  521:                   is_nothrow_copy_assignable<second_type>::value)
         -:  522:    {
-        -:  523:        first = __p.first;
-        -:  524:        second = __p.second;
-        -:  525:        return *this;
+      102:  523:        first = __p.first;
+      102:  524:        second = __p.second;
+      102:  525:        return *this;
+      102:  525-block  0
         -:  526:    }
         -:  527:
         -:  528:    _LIBCPP_INLINE_VISIBILITY
@@ -576,8 +574,6 @@
         -:  553:    void
     #####:  554:    swap(pair& __p) _NOEXCEPT_(__is_nothrow_swappable<first_type>::value &&
     $$$$$:  554-block  0
-    $$$$$:  554-block  1
-    $$$$$:  554-block  2
         -:  555:                               __is_nothrow_swappable<second_type>::value)
         -:  556:    {
         -:  557:        using _VSTD::swap;
@@ -585,8 +581,6 @@
     #####:  559:        swap(second, __p.second);
     #####:  560:    }
     $$$$$:  560-block  0
-    $$$$$:  560-block  1
-    $$$$$:  560-block  2
         -:  561:private:
         -:  562:
         -:  563:#ifndef _LIBCPP_CXX03_LANG
@@ -606,37 +600,37 @@
         -:  577:template <class _T1, class _T2>
         -:  578:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -:  579:bool
-    #####:  580:operator==(const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
-    $$$$$:  580-block  0
+       17:  580:operator==(const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
+       17:  580-block  0
         -:  581:{
-    #####:  582:    return __x.first == __y.first && __x.second == __y.second;
-    $$$$$:  582-block  0
-    $$$$$:  582-block  1
-    $$$$$:  582-block  2
+       17:  582:    return __x.first == __y.first && __x.second == __y.second;
+       17:  582-block  0
+       17:  582-block  1
+       17:  582-block  2
         -:  583:}
         -:  584:
         -:  585:template <class _T1, class _T2>
         -:  586:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -:  587:bool
-    #####:  588:operator!=(const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
-    $$$$$:  588-block  0
+       17:  588:operator!=(const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
+       17:  588-block  0
         -:  589:{
-    #####:  590:    return !(__x == __y);
-    $$$$$:  590-block  0
+       17:  590:    return !(__x == __y);
+       17:  590-block  0
         -:  591:}
         -:  592:
         -:  593:template <class _T1, class _T2>
         -:  594:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -:  595:bool
-    #####:  596:operator< (const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
-    $$$$$:  596-block  0
+       18:  596:operator< (const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
+       18:  596-block  0
         -:  597:{
-    #####:  598:    return __x.first < __y.first || (!(__y.first < __x.first) && __x.second < __y.second);
-    $$$$$:  598-block  0
-    $$$$$:  598-block  1
+       18:  598:    return __x.first < __y.first || (!(__y.first < __x.first) && __x.second < __y.second);
+       18:  598-block  0
+       18:  598-block  1
     $$$$$:  598-block  2
-    $$$$$:  598-block  3
-    $$$$$:  598-block  4
+       18:  598-block  3
+       18:  598-block  4
         -:  599:}
         -:  600:
         -:  601:template <class _T1, class _T2>
@@ -673,16 +667,12 @@
         -:  632:>::type
     #####:  633:swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
     $$$$$:  633-block  0
-    $$$$$:  633-block  1
-    $$$$$:  633-block  2
         -:  634:                     _NOEXCEPT_((__is_nothrow_swappable<_T1>::value &&
         -:  635:                                 __is_nothrow_swappable<_T2>::value))
         -:  636:{
     #####:  637:    __x.swap(__y);
     #####:  638:}
     $$$$$:  638-block  0
-    $$$$$:  638-block  1
-    $$$$$:  638-block  2
         -:  639:
         -:  640:template <class _Tp>
         -:  641:struct __unwrap_reference { typedef _Tp type; };

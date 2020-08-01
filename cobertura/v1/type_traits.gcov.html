@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">12</td>
-            <td class="headerCovTableEntry">14</td>
-            <td class="headerCovTableEntryMed">85.7 %</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntryMed">81.8 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">30</td>
-            <td class="headerCovTableEntry">36</td>
-            <td class="headerCovTableEntryMed">83.3 %</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntryLo">73.1 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -2369,18 +2369,18 @@
 <a name="2307"><span class="lineNum">    2307 </span>            : template &lt;class _Tp&gt;</a>
 <a name="2308"><span class="lineNum">    2308 </span>            : inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR</a>
 <a name="2309"><span class="lineNum">    2309 </span>            : typename remove_reference&lt;_Tp&gt;::type&amp;&amp;</a>
-<a name="2310"><span class="lineNum">    2310 </span><span class="lineCov">      33635 : move(_Tp&amp;&amp; __t) _NOEXCEPT</span></a>
+<a name="2310"><span class="lineNum">    2310 </span><span class="lineCov">     228992 : move(_Tp&amp;&amp; __t) _NOEXCEPT</span></a>
 <a name="2311"><span class="lineNum">    2311 </span>            : {</a>
 <a name="2312"><span class="lineNum">    2312 </span>            :     typedef typename remove_reference&lt;_Tp&gt;::type _Up;</a>
-<a name="2313"><span class="lineNum">    2313 </span><span class="lineCov">      33635 :     return static_cast&lt;_Up&amp;&amp;&gt;(__t);</span></a>
+<a name="2313"><span class="lineNum">    2313 </span><span class="lineCov">     228992 :     return static_cast&lt;_Up&amp;&amp;&gt;(__t);</span></a>
 <a name="2314"><span class="lineNum">    2314 </span>            : }</a>
 <a name="2315"><span class="lineNum">    2315 </span>            : </a>
 <a name="2316"><span class="lineNum">    2316 </span>            : template &lt;class _Tp&gt;</a>
 <a name="2317"><span class="lineNum">    2317 </span>            : inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR</a>
 <a name="2318"><span class="lineNum">    2318 </span>            : _Tp&amp;&amp;</a>
-<a name="2319"><span class="lineNum">    2319 </span><span class="lineCov">    1578890 : forward(typename remove_reference&lt;_Tp&gt;::type&amp; __t) _NOEXCEPT</span></a>
+<a name="2319"><span class="lineNum">    2319 </span><span class="lineCov">     659392 : forward(typename remove_reference&lt;_Tp&gt;::type&amp; __t) _NOEXCEPT</span></a>
 <a name="2320"><span class="lineNum">    2320 </span>            : {</a>
-<a name="2321"><span class="lineNum">    2321 </span><span class="lineCov">    1578890 :     return static_cast&lt;_Tp&amp;&amp;&gt;(__t);</span></a>
+<a name="2321"><span class="lineNum">    2321 </span><span class="lineCov">     659392 :     return static_cast&lt;_Tp&amp;&amp;&gt;(__t);</span></a>
 <a name="2322"><span class="lineNum">    2322 </span>            : }</a>
 <a name="2323"><span class="lineNum">    2323 </span>            : </a>
 <a name="2324"><span class="lineNum">    2324 </span>            : template &lt;class _Tp&gt;</a>
@@ -4582,13 +4582,13 @@
 <a name="4520"><span class="lineNum">    4520 </span>            : #else</a>
 <a name="4521"><span class="lineNum">    4521 </span>            : void</a>
 <a name="4522"><span class="lineNum">    4522 </span>            : #endif</a>
-<a name="4523"><span class="lineNum">    4523 </span><span class="lineCov">       2184 : swap(_Tp&amp; __x, _Tp&amp; __y) _NOEXCEPT_(is_nothrow_move_constructible&lt;_Tp&gt;::value &amp;&amp;</span></a>
+<a name="4523"><span class="lineNum">    4523 </span><span class="lineCov">      72189 : swap(_Tp&amp; __x, _Tp&amp; __y) _NOEXCEPT_(is_nothrow_move_constructible&lt;_Tp&gt;::value &amp;&amp;</span></a>
 <a name="4524"><span class="lineNum">    4524 </span>            :                                     is_nothrow_move_assignable&lt;_Tp&gt;::value)</a>
 <a name="4525"><span class="lineNum">    4525 </span>            : {</a>
-<a name="4526"><span class="lineNum">    4526 </span><span class="lineCov">       2184 :     _Tp __t(_VSTD::move(__x));</span></a>
-<a name="4527"><span class="lineNum">    4527 </span><span class="lineCov">       2184 :     __x = _VSTD::move(__y);</span></a>
-<a name="4528"><span class="lineNum">    4528 </span><span class="lineCov">       2184 :     __y = _VSTD::move(__t);</span></a>
-<a name="4529"><span class="lineNum">    4529 </span><span class="lineCov">       2184 : }</span></a>
+<a name="4526"><span class="lineNum">    4526 </span><span class="lineCov">      72189 :     _Tp __t(_VSTD::move(__x));</span></a>
+<a name="4527"><span class="lineNum">    4527 </span><span class="lineCov">      72189 :     __x = _VSTD::move(__y);</span></a>
+<a name="4528"><span class="lineNum">    4528 </span><span class="lineCov">      72189 :     __y = _VSTD::move(__t);</span></a>
+<a name="4529"><span class="lineNum">    4529 </span><span class="lineCov">      72189 : }</span></a>
 <a name="4530"><span class="lineNum">    4530 </span>            : </a>
 <a name="4531"><span class="lineNum">    4531 </span>            : template&lt;class _Tp, size_t _Np&gt;</a>
 <a name="4532"><span class="lineNum">    4532 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
@@ -4600,13 +4600,13 @@
 <a name="4538"><span class="lineNum">    4538 </span>            : template &lt;class _ForwardIterator1, class _ForwardIterator2&gt;</a>
 <a name="4539"><span class="lineNum">    4539 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="4540"><span class="lineNum">    4540 </span>            : void</a>
-<a name="4541"><span class="lineNum">    4541 </span><span class="lineCov">        255 : iter_swap(_ForwardIterator1 __a, _ForwardIterator2 __b)</span></a>
+<a name="4541"><span class="lineNum">    4541 </span>            : iter_swap(_ForwardIterator1 __a, _ForwardIterator2 __b)</a>
 <a name="4542"><span class="lineNum">    4542 </span>            :     //                                  _NOEXCEPT_(_NOEXCEPT_(swap(*__a, *__b)))</a>
 <a name="4543"><span class="lineNum">    4543 </span>            :                _NOEXCEPT_(_NOEXCEPT_(swap(*_VSTD::declval&lt;_ForwardIterator1&gt;(),</a>
 <a name="4544"><span class="lineNum">    4544 </span>            :                                           *_VSTD::declval&lt;_ForwardIterator2&gt;())))</a>
 <a name="4545"><span class="lineNum">    4545 </span>            : {</a>
-<a name="4546"><span class="lineNum">    4546 </span><span class="lineCov">        255 :     swap(*__a, *__b);</span></a>
-<a name="4547"><span class="lineNum">    4547 </span><span class="lineCov">        255 : }</span></a>
+<a name="4546"><span class="lineNum">    4546 </span>            :     swap(*__a, *__b);</a>
+<a name="4547"><span class="lineNum">    4547 </span>            : }</a>
 <a name="4548"><span class="lineNum">    4548 </span>            : </a>
 <a name="4549"><span class="lineNum">    4549 </span>            : // __swappable</a>
 <a name="4550"><span class="lineNum">    4550 </span>            : </a>

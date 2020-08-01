@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -291,9 +291,9 @@
 <a name="229"><span class="lineNum">     229 </span>            : template &lt;class _Facet&gt;</a>
 <a name="230"><span class="lineNum">     230 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="231"><span class="lineNum">     231 </span>            : const _Facet&amp;</a>
-<a name="232"><span class="lineNum">     232 </span><span class="lineCov">        111 : use_facet(const locale&amp; __l)</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">         35 : use_facet(const locale&amp; __l)</span></a>
 <a name="233"><span class="lineNum">     233 </span>            : {</a>
-<a name="234"><span class="lineNum">     234 </span><span class="lineCov">        111 :     return static_cast&lt;const _Facet&amp;&gt;(*__l.use_facet(_Facet::id));</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">         35 :     return static_cast&lt;const _Facet&amp;&gt;(*__l.use_facet(_Facet::id));</span></a>
 <a name="235"><span class="lineNum">     235 </span>            : }</a>
 <a name="236"><span class="lineNum">     236 </span>            : </a>
 <a name="237"><span class="lineNum">     237 </span>            : // template &lt;class _CharT&gt; class collate;</a>
@@ -706,9 +706,9 @@
 <a name="644"><span class="lineNum">     644 </span>            :     }</a>
 <a name="645"><span class="lineNum">     645 </span>            : </a>
 <a name="646"><span class="lineNum">     646 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="647"><span class="lineNum">     647 </span><span class="lineCov">        111 :     char_type widen(char __c) const</span></a>
+<a name="647"><span class="lineNum">     647 </span><span class="lineCov">         35 :     char_type widen(char __c) const</span></a>
 <a name="648"><span class="lineNum">     648 </span>            :     {</a>
-<a name="649"><span class="lineNum">     649 </span><span class="lineCov">        111 :         return do_widen(__c);</span></a>
+<a name="649"><span class="lineNum">     649 </span><span class="lineCov">         35 :         return do_widen(__c);</span></a>
 <a name="650"><span class="lineNum">     650 </span>            :     }</a>
 <a name="651"><span class="lineNum">     651 </span>            : </a>
 <a name="652"><span class="lineNum">     652 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>

@@ -259,9 +259,9 @@
         -:  252:
         -:  253:    _LIBCPP_INLINE_VISIBILITY
         -:  254:        _LIBCPP_EXPLICIT
-      332:  255:        operator bool() const {return __ok_;}
-      332:  255-block  0
-      332:  255-block  1
+      328:  255:        operator bool() const {return __ok_;}
+      328:  255-block  0
+      328:  255-block  1
         -:  256:};
         -:  257:
         -:  258:template <class _CharT, class _Traits>
@@ -721,46 +721,46 @@
         -:  712:
         -:  713:template<class _CharT, class _Traits>
         -:  714:basic_ostream<_CharT, _Traits>&
-      332:  715:__put_character_sequence(basic_ostream<_CharT, _Traits>& __os,
-      332:  715-block  0
+      328:  715:__put_character_sequence(basic_ostream<_CharT, _Traits>& __os,
+      328:  715-block  0
         -:  716:                          const _CharT* __str, size_t __len)
         -:  717:{
         -:  718:#ifndef _LIBCPP_NO_EXCEPTIONS
         -:  719:    try
         -:  720:    {
         -:  721:#endif  // _LIBCPP_NO_EXCEPTIONS
-      332:  722:        typename basic_ostream<_CharT, _Traits>::sentry __s(__os);
-      332:  722-block  0
-      332:  723:        if (__s)
-      332:  723-block  0
-      332:  723-block  1
+      328:  722:        typename basic_ostream<_CharT, _Traits>::sentry __s(__os);
+      328:  722-block  0
+      328:  723:        if (__s)
+      328:  723-block  0
+      328:  723-block  1
         -:  724:        {
         -:  725:            typedef ostreambuf_iterator<_CharT, _Traits> _Ip;
-      664:  726:            if (__pad_and_output(_Ip(__os),
-      332:  726-block  0
-      332:  726-block  1
-      332:  726-block  2
-      332:  727:                                 __str,
-      332:  728:                                 (__os.flags() & ios_base::adjustfield) == ios_base::left ?
-      332:  728-block  0
-      332:  728-block  1
+      656:  726:            if (__pad_and_output(_Ip(__os),
+      328:  726-block  0
+      328:  726-block  1
+      328:  726-block  2
+      328:  727:                                 __str,
+      328:  728:                                 (__os.flags() & ios_base::adjustfield) == ios_base::left ?
+      328:  728-block  0
+      328:  728-block  1
     $$$$$:  728-block  2
-      332:  728-block  3
+      328:  728-block  3
     #####:  729:                                     __str + __len :
-      332:  730:                                     __str,
-      332:  731:                                 __str + __len,
-      332:  732:                                 __os,
-      664:  733:                                 __os.fill()).failed())
-      332:  733-block  0
+      328:  730:                                     __str,
+      328:  731:                                 __str + __len,
+      328:  732:                                 __os,
+      656:  733:                                 __os.fill()).failed())
+      328:  733-block  0
     #####:  734:                __os.setstate(ios_base::badbit | ios_base::failbit);
     $$$$$:  734-block  0
     $$$$$:  734-block  1
-      332:  735:        }
-      332:  735-block  0
+      328:  735:        }
+      328:  735-block  0
         -:  736:#ifndef _LIBCPP_NO_EXCEPTIONS
-      332:  737:    }
+      328:  737:    }
     $$$$$:  737-block  0
-      332:  737-block  1
+      328:  737-block  1
         -:  738:    catch (...)
         -:  739:    {
     #####:  740:        __os.__set_badbit_and_consider_rethrow();
@@ -772,8 +772,8 @@
     $$$$$:  741-block  3
     $$$$$:  741-block  4
         -:  742:#endif  // _LIBCPP_NO_EXCEPTIONS
-      332:  743:    return __os;
-      332:  743-block  0
+      328:  743:    return __os;
+      328:  743-block  0
     #####:  744:}
     $$$$$:  744-block  0
         -:  745:
@@ -894,11 +894,11 @@
         -:  860:
         -:  861:template<class _Traits>
         -:  862:basic_ostream<char, _Traits>&
-       38:  863:operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
-       38:  863-block  0
+       34:  863:operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
+       34:  863-block  0
         -:  864:{
-       38:  865:    return _VSTD::__put_character_sequence(__os, __str, _Traits::length(__str));
-       38:  865-block  0
+       34:  865:    return _VSTD::__put_character_sequence(__os, __str, _Traits::length(__str));
+       34:  865-block  0
         -:  866:}
         -:  867:
         -:  868:template<class _Traits>

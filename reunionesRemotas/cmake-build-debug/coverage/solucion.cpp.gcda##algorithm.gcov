@@ -718,9 +718,9 @@
         -:  713:struct __less<_T1, _T1>
         -:  714:{
         -:  715:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
-    #####:  716:    bool operator()(const _T1& __x, const _T1& __y) const {return __x < __y;}
-    $$$$$:  716-block  0
-    $$$$$:  716-block  1
+        8:  716:    bool operator()(const _T1& __x, const _T1& __y) const {return __x < __y;}
+        8:  716-block  0
+        8:  716-block  1
         -:  717:};
         -:  718:
         -:  719:template <class _T1>
@@ -1587,9 +1587,13 @@
         -: 1580:template <class _Iter>
         -: 1581:inline _LIBCPP_INLINE_VISIBILITY
         -: 1582:_Iter
-        -: 1583:__unwrap_iter(_Iter __i)
+        9: 1583:__unwrap_iter(_Iter __i)
+        6: 1583-block  0
+        3: 1583-block  1
         -: 1584:{
-        -: 1585:    return __i;
+        9: 1585:    return __i;
+        6: 1585-block  0
+        3: 1585-block  1
         -: 1586:}
         -: 1587:
         -: 1588:template <class _Tp>
@@ -1652,20 +1656,26 @@
         -: 1645:    is_trivially_copy_assignable<_Up>::value,
         -: 1646:    _Up*
         -: 1647:>::type
-        -: 1648:__copy(_Tp* __first, _Tp* __last, _Up* __result)
+        3: 1648:__copy(_Tp* __first, _Tp* __last, _Up* __result)
+        3: 1648-block  0
         -: 1649:{
-        -: 1650:    const size_t __n = static_cast<size_t>(__last - __first);
-        -: 1651:    if (__n > 0)
-        -: 1652:        _VSTD::memmove(__result, __first, __n * sizeof(_Up));
-        -: 1653:    return __result + __n;
+        3: 1650:    const size_t __n = static_cast<size_t>(__last - __first);
+        3: 1651:    if (__n > 0)
+        3: 1651-block  0
+        3: 1652:        _VSTD::memmove(__result, __first, __n * sizeof(_Up));
+        3: 1652-block  0
+        3: 1653:    return __result + __n;
+        3: 1653-block  0
         -: 1654:}
         -: 1655:
         -: 1656:template <class _InputIterator, class _OutputIterator>
         -: 1657:inline _LIBCPP_INLINE_VISIBILITY
         -: 1658:_OutputIterator
-        -: 1659:copy(_InputIterator __first, _InputIterator __last, _OutputIterator __result)
+        3: 1659:copy(_InputIterator __first, _InputIterator __last, _OutputIterator __result)
+        3: 1659-block  0
         -: 1660:{
-        -: 1661:    return _VSTD::__copy(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));
+        3: 1661:    return _VSTD::__copy(__unwrap_iter(__first), __unwrap_iter(__last), __unwrap_iter(__result));
+        3: 1661-block  0
         -: 1662:}
         -: 1663:
         -: 1664:// copy_backward
@@ -2532,17 +2542,24 @@
         -: 2518:template <class _Tp, class _Compare>
         -: 2519:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -: 2520:const _Tp&
-        -: 2521:max(const _Tp& __a, const _Tp& __b, _Compare __comp)
+        8: 2521:max(const _Tp& __a, const _Tp& __b, _Compare __comp)
+        8: 2521-block  0
         -: 2522:{
-        -: 2523:    return __comp(__a, __b) ? __b : __a;
+        8: 2523:    return __comp(__a, __b) ? __b : __a;
+        8: 2523-block  0
+        8: 2523-block  1
+    $$$$$: 2523-block  2
+        8: 2523-block  3
         -: 2524:}
         -: 2525:
         -: 2526:template <class _Tp>
         -: 2527:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_AFTER_CXX11
         -: 2528:const _Tp&
-        -: 2529:max(const _Tp& __a, const _Tp& __b)
+        8: 2529:max(const _Tp& __a, const _Tp& __b)
+        8: 2529-block  0
         -: 2530:{
-        -: 2531:    return _VSTD::max(__a, __b, __less<_Tp>());
+        8: 2531:    return _VSTD::max(__a, __b, __less<_Tp>());
+        8: 2531-block  0
         -: 2532:}
         -: 2533:
         -: 2534:#ifndef _LIBCPP_CXX03_LANG

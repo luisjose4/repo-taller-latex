@@ -423,9 +423,13 @@
         -:  410:            _CheckArgsDep<_Dummy>::template __enable_default<_T1, _T2>()
         -:  411:    > = false>
         -:  412:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
-        -:  413:    pair() _NOEXCEPT_(is_nothrow_default_constructible<first_type>::value &&
+    #####:  413:    pair() _NOEXCEPT_(is_nothrow_default_constructible<first_type>::value &&
+    $$$$$:  413-block  0
+    $$$$$:  413-block  1
         -:  414:                      is_nothrow_default_constructible<second_type>::value)
-        -:  415:        : first(), second() {}
+    #####:  415:        : first(), second() {}
+    $$$$$:  415-block  0
+    $$$$$:  415-block  1
         -:  416:
         -:  417:    template <bool _Dummy = true, _EnableB<
         -:  418:             _CheckArgsDep<_Dummy>::template __enable_explicit<_T1 const&, _T2 const&>()

@@ -234,11 +234,11 @@
         -:  229:template <class _Facet>
         -:  230:inline _LIBCPP_INLINE_VISIBILITY
         -:  231:const _Facet&
-       39:  232:use_facet(const locale& __l)
-       39:  232-block  0
+       35:  232:use_facet(const locale& __l)
+       35:  232-block  0
         -:  233:{
-       39:  234:    return static_cast<const _Facet&>(*__l.use_facet(_Facet::id));
-       39:  234-block  0
+       35:  234:    return static_cast<const _Facet&>(*__l.use_facet(_Facet::id));
+       35:  234-block  0
         -:  235:}
         -:  236:
         -:  237:// template <class _CharT> class collate;
@@ -651,11 +651,11 @@
         -:  644:    }
         -:  645:
         -:  646:    _LIBCPP_INLINE_VISIBILITY
-       39:  647:    char_type widen(char __c) const
-       39:  647-block  0
+       35:  647:    char_type widen(char __c) const
+       35:  647-block  0
         -:  648:    {
-       39:  649:        return do_widen(__c);
-       39:  649-block  0
+       35:  649:        return do_widen(__c);
+       35:  649-block  0
         -:  650:    }
         -:  651:
         -:  652:    _LIBCPP_INLINE_VISIBILITY

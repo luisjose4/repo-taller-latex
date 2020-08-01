@@ -32,17 +32,17 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">3</td>
-            <td class="headerCovTableEntry">66</td>
-            <td class="headerCovTableEntryLo">4.5 %</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntryLo">13.6 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">31</td>
-            <td class="headerCovTableEntryLo">6.5 %</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntryLo">13.3 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -849,7 +849,7 @@
 <a name="787"><span class="lineNum">     787 </span>            : public:</a>
 <a name="788"><span class="lineNum">     788 </span>            :     static const size_type npos = -1;</a>
 <a name="789"><span class="lineNum">     789 </span>            : </a>
-<a name="790"><span class="lineNum">     790 </span><span class="lineNoCov">          0 :     _LIBCPP_INLINE_VISIBILITY basic_string()</span></a>
+<a name="790"><span class="lineNum">     790 </span>            :     _LIBCPP_INLINE_VISIBILITY basic_string()</a>
 <a name="791"><span class="lineNum">     791 </span>            :         _NOEXCEPT_(is_nothrow_default_constructible&lt;allocator_type&gt;::value);</a>
 <a name="792"><span class="lineNum">     792 </span>            : </a>
 <a name="793"><span class="lineNum">     793 </span>            :     _LIBCPP_INLINE_VISIBILITY explicit basic_string(const allocator_type&amp; __a)</a>
@@ -877,13 +877,13 @@
 <a name="815"><span class="lineNum">     815 </span>            : </a>
 <a name="816"><span class="lineNum">     816 </span>            :     template &lt;class = typename enable_if&lt;__is_allocator&lt;_Allocator&gt;::value, nullptr_t&gt;::type&gt;</a>
 <a name="817"><span class="lineNum">     817 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="818"><span class="lineNum">     818 </span><span class="lineCov">        612 :     basic_string(const _CharT* __s) {</span></a>
+<a name="818"><span class="lineNum">     818 </span><span class="lineCov">        208 :     basic_string(const _CharT* __s) {</span></a>
 <a name="819"><span class="lineNum">     819 </span>            :       _LIBCPP_ASSERT(__s != nullptr, &quot;basic_string(const char*) detected nullptr&quot;);</a>
-<a name="820"><span class="lineNum">     820 </span><span class="lineCov">        306 :       __init(__s, traits_type::length(__s));</span></a>
+<a name="820"><span class="lineNum">     820 </span><span class="lineCov">        104 :       __init(__s, traits_type::length(__s));</span></a>
 <a name="821"><span class="lineNum">     821 </span>            : #   if _LIBCPP_DEBUG_LEVEL &gt;= 2</a>
 <a name="822"><span class="lineNum">     822 </span>            :       __get_db()-&gt;__insert_c(this);</a>
 <a name="823"><span class="lineNum">     823 </span>            : #   endif</a>
-<a name="824"><span class="lineNum">     824 </span><span class="lineCov">        612 :     }</span></a>
+<a name="824"><span class="lineNum">     824 </span><span class="lineCov">        208 :     }</span></a>
 <a name="825"><span class="lineNum">     825 </span>            : </a>
 <a name="826"><span class="lineNum">     826 </span>            :     template &lt;class = typename enable_if&lt;__is_allocator&lt;_Allocator&gt;::value, nullptr_t&gt;::type&gt;</a>
 <a name="827"><span class="lineNum">     827 </span>            :         _LIBCPP_INLINE_VISIBILITY</a>
@@ -1006,8 +1006,8 @@
 <a name="944"><span class="lineNum">     944 </span>            :     const_reverse_iterator crend() const _NOEXCEPT</a>
 <a name="945"><span class="lineNum">     945 </span>            :         {return rend();}</a>
 <a name="946"><span class="lineNum">     946 </span>            : </a>
-<a name="947"><span class="lineNum">     947 </span><span class="lineNoCov">          0 :     _LIBCPP_INLINE_VISIBILITY size_type size() const _NOEXCEPT</span></a>
-<a name="948"><span class="lineNum">     948 </span><span class="lineNoCov">          0 :         {return __is_long() ? __get_long_size() : __get_short_size();}</span></a>
+<a name="947"><span class="lineNum">     947 </span>            :     _LIBCPP_INLINE_VISIBILITY size_type size() const _NOEXCEPT</a>
+<a name="948"><span class="lineNum">     948 </span>            :         {return __is_long() ? __get_long_size() : __get_short_size();}</a>
 <a name="949"><span class="lineNum">     949 </span>            :     _LIBCPP_INLINE_VISIBILITY size_type length() const _NOEXCEPT {return size();}</a>
 <a name="950"><span class="lineNum">     950 </span>            :     _LIBCPP_INLINE_VISIBILITY size_type max_size() const _NOEXCEPT;</a>
 <a name="951"><span class="lineNum">     951 </span>            :     _LIBCPP_INLINE_VISIBILITY size_type capacity() const _NOEXCEPT</a>
@@ -1496,8 +1496,8 @@
 <a name="1434"><span class="lineNum">    1434 </span>            :     allocator_type&amp; __alloc() _NOEXCEPT</a>
 <a name="1435"><span class="lineNum">    1435 </span>            :         {return __r_.second();}</a>
 <a name="1436"><span class="lineNum">    1436 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1437"><span class="lineNum">    1437 </span><span class="lineNoCov">          0 :     const allocator_type&amp; __alloc() const _NOEXCEPT</span></a>
-<a name="1438"><span class="lineNum">    1438 </span><span class="lineNoCov">          0 :         {return __r_.second();}</span></a>
+<a name="1437"><span class="lineNum">    1437 </span>            :     const allocator_type&amp; __alloc() const _NOEXCEPT</a>
+<a name="1438"><span class="lineNum">    1438 </span>            :         {return __r_.second();}</a>
 <a name="1439"><span class="lineNum">    1439 </span>            : </a>
 <a name="1440"><span class="lineNum">    1440 </span>            : #ifdef _LIBCPP_ABI_ALTERNATE_STRING_LAYOUT</a>
 <a name="1441"><span class="lineNum">    1441 </span>            : </a>
@@ -1520,29 +1520,29 @@
 <a name="1458"><span class="lineNum">    1458 </span>            : #else  // _LIBCPP_ABI_ALTERNATE_STRING_LAYOUT</a>
 <a name="1459"><span class="lineNum">    1459 </span>            : </a>
 <a name="1460"><span class="lineNum">    1460 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1461"><span class="lineNum">    1461 </span><span class="lineNoCov">          0 :     void __set_short_size(size_type __s) _NOEXCEPT</span></a>
+<a name="1461"><span class="lineNum">    1461 </span>            :     void __set_short_size(size_type __s) _NOEXCEPT</a>
 <a name="1462"><span class="lineNum">    1462 </span>            : #   ifdef _LIBCPP_BIG_ENDIAN</a>
 <a name="1463"><span class="lineNum">    1463 </span>            :         {__r_.first().__s.__size_ = (unsigned char)(__s);}</a>
 <a name="1464"><span class="lineNum">    1464 </span>            : #   else</a>
-<a name="1465"><span class="lineNum">    1465 </span><span class="lineNoCov">          0 :         {__r_.first().__s.__size_ = (unsigned char)(__s &lt;&lt; 1);}</span></a>
+<a name="1465"><span class="lineNum">    1465 </span>            :         {__r_.first().__s.__size_ = (unsigned char)(__s &lt;&lt; 1);}</a>
 <a name="1466"><span class="lineNum">    1466 </span>            : #   endif</a>
 <a name="1467"><span class="lineNum">    1467 </span>            : </a>
 <a name="1468"><span class="lineNum">    1468 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1469"><span class="lineNum">    1469 </span><span class="lineNoCov">          0 :     size_type __get_short_size() const _NOEXCEPT</span></a>
+<a name="1469"><span class="lineNum">    1469 </span>            :     size_type __get_short_size() const _NOEXCEPT</a>
 <a name="1470"><span class="lineNum">    1470 </span>            : #   ifdef _LIBCPP_BIG_ENDIAN</a>
 <a name="1471"><span class="lineNum">    1471 </span>            :         {return __r_.first().__s.__size_;}</a>
 <a name="1472"><span class="lineNum">    1472 </span>            : #   else</a>
-<a name="1473"><span class="lineNum">    1473 </span><span class="lineNoCov">          0 :         {return __r_.first().__s.__size_ &gt;&gt; 1;}</span></a>
+<a name="1473"><span class="lineNum">    1473 </span>            :         {return __r_.first().__s.__size_ &gt;&gt; 1;}</a>
 <a name="1474"><span class="lineNum">    1474 </span>            : #   endif</a>
 <a name="1475"><span class="lineNum">    1475 </span>            : </a>
 <a name="1476"><span class="lineNum">    1476 </span>            : #endif  // _LIBCPP_ABI_ALTERNATE_STRING_LAYOUT</a>
 <a name="1477"><span class="lineNum">    1477 </span>            : </a>
 <a name="1478"><span class="lineNum">    1478 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1479"><span class="lineNum">    1479 </span><span class="lineNoCov">          0 :     void __set_long_size(size_type __s) _NOEXCEPT</span></a>
-<a name="1480"><span class="lineNum">    1480 </span><span class="lineNoCov">          0 :         {__r_.first().__l.__size_ = __s;}</span></a>
+<a name="1479"><span class="lineNum">    1479 </span>            :     void __set_long_size(size_type __s) _NOEXCEPT</a>
+<a name="1480"><span class="lineNum">    1480 </span>            :         {__r_.first().__l.__size_ = __s;}</a>
 <a name="1481"><span class="lineNum">    1481 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1482"><span class="lineNum">    1482 </span><span class="lineNoCov">          0 :     size_type __get_long_size() const _NOEXCEPT</span></a>
-<a name="1483"><span class="lineNum">    1483 </span><span class="lineNoCov">          0 :         {return __r_.first().__l.__size_;}</span></a>
+<a name="1482"><span class="lineNum">    1482 </span>            :     size_type __get_long_size() const _NOEXCEPT</a>
+<a name="1483"><span class="lineNum">    1483 </span>            :         {return __r_.first().__l.__size_;}</a>
 <a name="1484"><span class="lineNum">    1484 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
 <a name="1485"><span class="lineNum">    1485 </span>            :     void __set_size(size_type __s) _NOEXCEPT</a>
 <a name="1486"><span class="lineNum">    1486 </span>            :         {if (__is_long()) __set_long_size(__s); else __set_short_size(__s);}</a>
@@ -1558,31 +1558,31 @@
 <a name="1496"><span class="lineNum">    1496 </span>            :     void __set_long_pointer(pointer __p) _NOEXCEPT</a>
 <a name="1497"><span class="lineNum">    1497 </span>            :         {__r_.first().__l.__data_ = __p;}</a>
 <a name="1498"><span class="lineNum">    1498 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1499"><span class="lineNum">    1499 </span><span class="lineNoCov">          0 :     pointer __get_long_pointer() _NOEXCEPT</span></a>
-<a name="1500"><span class="lineNum">    1500 </span><span class="lineNoCov">          0 :         {return __r_.first().__l.__data_;}</span></a>
+<a name="1499"><span class="lineNum">    1499 </span>            :     pointer __get_long_pointer() _NOEXCEPT</a>
+<a name="1500"><span class="lineNum">    1500 </span>            :         {return __r_.first().__l.__data_;}</a>
 <a name="1501"><span class="lineNum">    1501 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
 <a name="1502"><span class="lineNum">    1502 </span><span class="lineNoCov">          0 :     const_pointer __get_long_pointer() const _NOEXCEPT</span></a>
 <a name="1503"><span class="lineNum">    1503 </span><span class="lineNoCov">          0 :         {return __r_.first().__l.__data_;}</span></a>
 <a name="1504"><span class="lineNum">    1504 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1505"><span class="lineNum">    1505 </span><span class="lineNoCov">          0 :     pointer __get_short_pointer() _NOEXCEPT</span></a>
-<a name="1506"><span class="lineNum">    1506 </span><span class="lineNoCov">          0 :         {return pointer_traits&lt;pointer&gt;::pointer_to(__r_.first().__s.__data_[0]);}</span></a>
+<a name="1505"><span class="lineNum">    1505 </span>            :     pointer __get_short_pointer() _NOEXCEPT</a>
+<a name="1506"><span class="lineNum">    1506 </span>            :         {return pointer_traits&lt;pointer&gt;::pointer_to(__r_.first().__s.__data_[0]);}</a>
 <a name="1507"><span class="lineNum">    1507 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
 <a name="1508"><span class="lineNum">    1508 </span><span class="lineNoCov">          0 :     const_pointer __get_short_pointer() const _NOEXCEPT</span></a>
 <a name="1509"><span class="lineNum">    1509 </span><span class="lineNoCov">          0 :         {return pointer_traits&lt;const_pointer&gt;::pointer_to(__r_.first().__s.__data_[0]);}</span></a>
 <a name="1510"><span class="lineNum">    1510 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1511"><span class="lineNum">    1511 </span><span class="lineNoCov">          0 :     pointer __get_pointer() _NOEXCEPT</span></a>
-<a name="1512"><span class="lineNum">    1512 </span><span class="lineNoCov">          0 :         {return __is_long() ? __get_long_pointer() : __get_short_pointer();}</span></a>
+<a name="1511"><span class="lineNum">    1511 </span>            :     pointer __get_pointer() _NOEXCEPT</a>
+<a name="1512"><span class="lineNum">    1512 </span>            :         {return __is_long() ? __get_long_pointer() : __get_short_pointer();}</a>
 <a name="1513"><span class="lineNum">    1513 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
 <a name="1514"><span class="lineNum">    1514 </span><span class="lineNoCov">          0 :     const_pointer __get_pointer() const _NOEXCEPT</span></a>
 <a name="1515"><span class="lineNum">    1515 </span><span class="lineNoCov">          0 :         {return __is_long() ? __get_long_pointer() : __get_short_pointer();}</span></a>
 <a name="1516"><span class="lineNum">    1516 </span>            : </a>
 <a name="1517"><span class="lineNum">    1517 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
-<a name="1518"><span class="lineNum">    1518 </span><span class="lineNoCov">          0 :     void __zero() _NOEXCEPT</span></a>
+<a name="1518"><span class="lineNum">    1518 </span>            :     void __zero() _NOEXCEPT</a>
 <a name="1519"><span class="lineNum">    1519 </span>            :         {</a>
-<a name="1520"><span class="lineNum">    1520 </span><span class="lineNoCov">          0 :             size_type (&amp;__a)[__n_words] = __r_.first().__r.__words;</span></a>
-<a name="1521"><span class="lineNum">    1521 </span><span class="lineNoCov">          0 :             for (unsigned __i = 0; __i &lt; __n_words; ++__i)</span></a>
-<a name="1522"><span class="lineNum">    1522 </span><span class="lineNoCov">          0 :                 __a[__i] = 0;</span></a>
-<a name="1523"><span class="lineNum">    1523 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="1520"><span class="lineNum">    1520 </span>            :             size_type (&amp;__a)[__n_words] = __r_.first().__r.__words;</a>
+<a name="1521"><span class="lineNum">    1521 </span>            :             for (unsigned __i = 0; __i &lt; __n_words; ++__i)</a>
+<a name="1522"><span class="lineNum">    1522 </span>            :                 __a[__i] = 0;</a>
+<a name="1523"><span class="lineNum">    1523 </span>            :         }</a>
 <a name="1524"><span class="lineNum">    1524 </span>            : </a>
 <a name="1525"><span class="lineNum">    1525 </span>            :     template &lt;size_type __a&gt; static</a>
 <a name="1526"><span class="lineNum">    1526 </span>            :         _LIBCPP_INLINE_VISIBILITY</a>
@@ -1743,12 +1743,12 @@
 <a name="1681"><span class="lineNum">    1681 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="1682"><span class="lineNum">    1682 </span>            : inline</a>
 <a name="1683"><span class="lineNum">    1683 </span>            : void</a>
-<a name="1684"><span class="lineNum">    1684 </span><span class="lineNoCov">          0 : basic_string&lt;_CharT, _Traits, _Allocator&gt;::__invalidate_all_iterators()</span></a>
+<a name="1684"><span class="lineNum">    1684 </span>            : basic_string&lt;_CharT, _Traits, _Allocator&gt;::__invalidate_all_iterators()</a>
 <a name="1685"><span class="lineNum">    1685 </span>            : {</a>
 <a name="1686"><span class="lineNum">    1686 </span>            : #if _LIBCPP_DEBUG_LEVEL &gt;= 2</a>
 <a name="1687"><span class="lineNum">    1687 </span>            :     __get_db()-&gt;__invalidate_all(this);</a>
 <a name="1688"><span class="lineNum">    1688 </span>            : #endif  // _LIBCPP_DEBUG_LEVEL &gt;= 2</a>
-<a name="1689"><span class="lineNum">    1689 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="1689"><span class="lineNum">    1689 </span>            : }</a>
 <a name="1690"><span class="lineNum">    1690 </span>            : </a>
 <a name="1691"><span class="lineNum">    1691 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="1692"><span class="lineNum">    1692 </span>            : inline</a>
@@ -1782,14 +1782,14 @@
 <a name="1720"><span class="lineNum">    1720 </span>            : </a>
 <a name="1721"><span class="lineNum">    1721 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="1722"><span class="lineNum">    1722 </span>            : inline</a>
-<a name="1723"><span class="lineNum">    1723 </span><span class="lineNoCov">          0 : basic_string&lt;_CharT, _Traits, _Allocator&gt;::basic_string()</span></a>
+<a name="1723"><span class="lineNum">    1723 </span>            : basic_string&lt;_CharT, _Traits, _Allocator&gt;::basic_string()</a>
 <a name="1724"><span class="lineNum">    1724 </span>            :     _NOEXCEPT_(is_nothrow_default_constructible&lt;allocator_type&gt;::value)</a>
-<a name="1725"><span class="lineNum">    1725 </span><span class="lineNoCov">          0 : {</span></a>
+<a name="1725"><span class="lineNum">    1725 </span>            : {</a>
 <a name="1726"><span class="lineNum">    1726 </span>            : #if _LIBCPP_DEBUG_LEVEL &gt;= 2</a>
 <a name="1727"><span class="lineNum">    1727 </span>            :     __get_db()-&gt;__insert_c(this);</a>
 <a name="1728"><span class="lineNum">    1728 </span>            : #endif</a>
-<a name="1729"><span class="lineNum">    1729 </span><span class="lineNoCov">          0 :     __zero();</span></a>
-<a name="1730"><span class="lineNum">    1730 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="1729"><span class="lineNum">    1729 </span>            :     __zero();</a>
+<a name="1730"><span class="lineNum">    1730 </span>            : }</a>
 <a name="1731"><span class="lineNum">    1731 </span>            : </a>
 <a name="1732"><span class="lineNum">    1732 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="1733"><span class="lineNum">    1733 </span>            : inline</a>
@@ -3120,20 +3120,20 @@
 <a name="3058"><span class="lineNum">    3058 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="3059"><span class="lineNum">    3059 </span>            : inline</a>
 <a name="3060"><span class="lineNum">    3060 </span>            : void</a>
-<a name="3061"><span class="lineNum">    3061 </span><span class="lineNoCov">          0 : basic_string&lt;_CharT, _Traits, _Allocator&gt;::clear() _NOEXCEPT</span></a>
+<a name="3061"><span class="lineNum">    3061 </span>            : basic_string&lt;_CharT, _Traits, _Allocator&gt;::clear() _NOEXCEPT</a>
 <a name="3062"><span class="lineNum">    3062 </span>            : {</a>
-<a name="3063"><span class="lineNum">    3063 </span><span class="lineNoCov">          0 :     __invalidate_all_iterators();</span></a>
-<a name="3064"><span class="lineNum">    3064 </span><span class="lineNoCov">          0 :     if (__is_long())</span></a>
+<a name="3063"><span class="lineNum">    3063 </span>            :     __invalidate_all_iterators();</a>
+<a name="3064"><span class="lineNum">    3064 </span>            :     if (__is_long())</a>
 <a name="3065"><span class="lineNum">    3065 </span>            :     {</a>
-<a name="3066"><span class="lineNum">    3066 </span><span class="lineNoCov">          0 :         traits_type::assign(*__get_long_pointer(), value_type());</span></a>
-<a name="3067"><span class="lineNum">    3067 </span><span class="lineNoCov">          0 :         __set_long_size(0);</span></a>
-<a name="3068"><span class="lineNum">    3068 </span><span class="lineNoCov">          0 :     }</span></a>
+<a name="3066"><span class="lineNum">    3066 </span>            :         traits_type::assign(*__get_long_pointer(), value_type());</a>
+<a name="3067"><span class="lineNum">    3067 </span>            :         __set_long_size(0);</a>
+<a name="3068"><span class="lineNum">    3068 </span>            :     }</a>
 <a name="3069"><span class="lineNum">    3069 </span>            :     else</a>
 <a name="3070"><span class="lineNum">    3070 </span>            :     {</a>
-<a name="3071"><span class="lineNum">    3071 </span><span class="lineNoCov">          0 :         traits_type::assign(*__get_short_pointer(), value_type());</span></a>
-<a name="3072"><span class="lineNum">    3072 </span><span class="lineNoCov">          0 :         __set_short_size(0);</span></a>
+<a name="3071"><span class="lineNum">    3071 </span>            :         traits_type::assign(*__get_short_pointer(), value_type());</a>
+<a name="3072"><span class="lineNum">    3072 </span>            :         __set_short_size(0);</a>
 <a name="3073"><span class="lineNum">    3073 </span>            :     }</a>
-<a name="3074"><span class="lineNum">    3074 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="3074"><span class="lineNum">    3074 </span>            : }</a>
 <a name="3075"><span class="lineNum">    3075 </span>            : </a>
 <a name="3076"><span class="lineNum">    3076 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="3077"><span class="lineNum">    3077 </span>            : inline</a>
@@ -3178,13 +3178,13 @@
 <a name="3116"><span class="lineNum">    3116 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="3117"><span class="lineNum">    3117 </span>            : inline</a>
 <a name="3118"><span class="lineNum">    3118 </span>            : typename basic_string&lt;_CharT, _Traits, _Allocator&gt;::size_type</a>
-<a name="3119"><span class="lineNum">    3119 </span><span class="lineNoCov">          0 : basic_string&lt;_CharT, _Traits, _Allocator&gt;::max_size() const _NOEXCEPT</span></a>
+<a name="3119"><span class="lineNum">    3119 </span>            : basic_string&lt;_CharT, _Traits, _Allocator&gt;::max_size() const _NOEXCEPT</a>
 <a name="3120"><span class="lineNum">    3120 </span>            : {</a>
-<a name="3121"><span class="lineNum">    3121 </span><span class="lineNoCov">          0 :     size_type __m = __alloc_traits::max_size(__alloc());</span></a>
+<a name="3121"><span class="lineNum">    3121 </span>            :     size_type __m = __alloc_traits::max_size(__alloc());</a>
 <a name="3122"><span class="lineNum">    3122 </span>            : #ifdef _LIBCPP_BIG_ENDIAN</a>
 <a name="3123"><span class="lineNum">    3123 </span>            :     return (__m &lt;= ~__long_mask ? __m : __m/2) - __alignment;</a>
 <a name="3124"><span class="lineNum">    3124 </span>            : #else</a>
-<a name="3125"><span class="lineNum">    3125 </span><span class="lineNoCov">          0 :     return __m - __alignment;</span></a>
+<a name="3125"><span class="lineNum">    3125 </span>            :     return __m - __alignment;</a>
 <a name="3126"><span class="lineNum">    3126 </span>            : #endif</a>
 <a name="3127"><span class="lineNum">    3127 </span>            : }</a>
 <a name="3128"><span class="lineNum">    3128 </span>            : </a>
@@ -3263,10 +3263,10 @@
 <a name="3201"><span class="lineNum">    3201 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="3202"><span class="lineNum">    3202 </span>            : inline</a>
 <a name="3203"><span class="lineNum">    3203 </span>            : typename basic_string&lt;_CharT, _Traits, _Allocator&gt;::reference</a>
-<a name="3204"><span class="lineNum">    3204 </span><span class="lineNoCov">          0 : basic_string&lt;_CharT, _Traits, _Allocator&gt;::operator[](size_type __pos) _NOEXCEPT</span></a>
+<a name="3204"><span class="lineNum">    3204 </span>            : basic_string&lt;_CharT, _Traits, _Allocator&gt;::operator[](size_type __pos) _NOEXCEPT</a>
 <a name="3205"><span class="lineNum">    3205 </span>            : {</a>
 <a name="3206"><span class="lineNum">    3206 </span>            :     _LIBCPP_ASSERT(__pos &lt;= size(), &quot;string index out of bounds&quot;);</a>
-<a name="3207"><span class="lineNum">    3207 </span><span class="lineNoCov">          0 :     return *(__get_pointer() + __pos);</span></a>
+<a name="3207"><span class="lineNum">    3207 </span>            :     return *(__get_pointer() + __pos);</a>
 <a name="3208"><span class="lineNum">    3208 </span>            : }</a>
 <a name="3209"><span class="lineNum">    3209 </span>            : </a>
 <a name="3210"><span class="lineNum">    3210 </span>            : template &lt;class _CharT, class _Traits, class _Allocator&gt;</a>

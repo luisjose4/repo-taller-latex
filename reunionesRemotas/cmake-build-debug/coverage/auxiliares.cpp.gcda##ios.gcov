@@ -337,18 +337,13 @@
         -:  332:    void __set_failbit_and_consider_rethrow();
         -:  333:
         -:  334:    _LIBCPP_INLINE_VISIBILITY
-    #####:  335:    void __setstate_nothrow(iostate __state)
-    $$$$$:  335-block  0
+        -:  335:    void __setstate_nothrow(iostate __state)
         -:  336:    {
-    #####:  337:        if (__rdbuf_)
-    $$$$$:  337-block  0
-    #####:  338:            __rdstate_ |= __state;
-    $$$$$:  338-block  0
+        -:  337:        if (__rdbuf_)
+        -:  338:            __rdstate_ |= __state;
         -:  339:        else
-    #####:  340:            __rdstate_ |= __state | ios_base::badbit;
-    $$$$$:  340-block  0
-    #####:  341:    }
-    $$$$$:  341-block  0
+        -:  340:            __rdstate_ |= __state | ios_base::badbit;
+        -:  341:    }
         -:  342:
         -:  343:protected:
         -:  344:    _LIBCPP_INLINE_VISIBILITY
@@ -579,9 +574,11 @@
         -:  557:
         -:  558:inline _LIBCPP_INLINE_VISIBILITY
         -:  559:bool
-        -:  560:ios_base::eof() const
+    #####:  560:ios_base::eof() const
+    $$$$$:  560-block  0
         -:  561:{
-        -:  562:    return (__rdstate_ & eofbit) != 0;
+    #####:  562:    return (__rdstate_ & eofbit) != 0;
+    $$$$$:  562-block  0
         -:  563:}
         -:  564:
         -:  565:inline _LIBCPP_INLINE_VISIBILITY
@@ -600,11 +597,9 @@
         -:  578:
         -:  579:inline _LIBCPP_INLINE_VISIBILITY
         -:  580:ios_base::iostate
-    #####:  581:ios_base::exceptions() const
-    $$$$$:  581-block  0
+        -:  581:ios_base::exceptions() const
         -:  582:{
-    #####:  583:    return __exceptions_;
-    $$$$$:  583-block  0
+        -:  583:    return __exceptions_;
         -:  584:}
         -:  585:
         -:  586:inline _LIBCPP_INLINE_VISIBILITY
@@ -660,13 +655,13 @@
     $$$$$:  633-block  0
     $$$$$:  633-block  1
         -:  634:    _LIBCPP_INLINE_VISIBILITY bool good() const {return ios_base::good();}
-        -:  635:    _LIBCPP_INLINE_VISIBILITY bool eof() const  {return ios_base::eof();}
+    #####:  635:    _LIBCPP_INLINE_VISIBILITY bool eof() const  {return ios_base::eof();}
+    $$$$$:  635-block  0
+    $$$$$:  635-block  1
         -:  636:    _LIBCPP_INLINE_VISIBILITY bool fail() const {return ios_base::fail();}
         -:  637:    _LIBCPP_INLINE_VISIBILITY bool bad() const  {return ios_base::bad();}
         -:  638:
-    #####:  639:    _LIBCPP_INLINE_VISIBILITY iostate exceptions() const {return ios_base::exceptions();}
-    $$$$$:  639-block  0
-    $$$$$:  639-block  1
+        -:  639:    _LIBCPP_INLINE_VISIBILITY iostate exceptions() const {return ios_base::exceptions();}
         -:  640:    _LIBCPP_INLINE_VISIBILITY void exceptions(iostate __iostate) {ios_base::exceptions(__iostate);}
         -:  641:
         -:  642:    // 27.5.4.1 Constructor/destructor:

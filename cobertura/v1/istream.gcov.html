@@ -32,16 +32,16 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntry">2</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-06-28 18:07:31</td>
+            <td class="headerValue">2020-08-01 14:19:39</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">1</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
@@ -366,7 +366,7 @@
 <a name="304"><span class="lineNum">     304 </span>            : </a>
 <a name="305"><span class="lineNum">     305 </span>            :     _LIBCPP_INLINE_VISIBILITY</a>
 <a name="306"><span class="lineNum">     306 </span>            :         _LIBCPP_EXPLICIT</a>
-<a name="307"><span class="lineNum">     307 </span><span class="lineNoCov">          0 :         operator bool() const {return __ok_;}</span></a>
+<a name="307"><span class="lineNum">     307 </span>            :         operator bool() const {return __ok_;}</a>
 <a name="308"><span class="lineNum">     308 </span>            : };</a>
 <a name="309"><span class="lineNum">     309 </span>            : </a>
 <a name="310"><span class="lineNum">     310 </span>            : template &lt;class _CharT, class _Traits&gt;</a>
@@ -1568,64 +1568,64 @@
 <a name="1506"><span class="lineNum">    1506 </span>            : </a>
 <a name="1507"><span class="lineNum">    1507 </span>            : template&lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="1508"><span class="lineNum">    1508 </span>            : basic_istream&lt;_CharT, _Traits&gt;&amp;</a>
-<a name="1509"><span class="lineNum">    1509 </span><span class="lineNoCov">          0 : getline(basic_istream&lt;_CharT, _Traits&gt;&amp; __is,</span></a>
+<a name="1509"><span class="lineNum">    1509 </span>            : getline(basic_istream&lt;_CharT, _Traits&gt;&amp; __is,</a>
 <a name="1510"><span class="lineNum">    1510 </span>            :         basic_string&lt;_CharT, _Traits, _Allocator&gt;&amp; __str, _CharT __dlm)</a>
 <a name="1511"><span class="lineNum">    1511 </span>            : {</a>
-<a name="1512"><span class="lineNum">    1512 </span><span class="lineNoCov">          0 :     ios_base::iostate __state = ios_base::goodbit;</span></a>
-<a name="1513"><span class="lineNum">    1513 </span><span class="lineNoCov">          0 :     typename basic_istream&lt;_CharT, _Traits&gt;::sentry __sen(__is, true);</span></a>
-<a name="1514"><span class="lineNum">    1514 </span><span class="lineNoCov">          0 :     if (__sen)</span></a>
+<a name="1512"><span class="lineNum">    1512 </span>            :     ios_base::iostate __state = ios_base::goodbit;</a>
+<a name="1513"><span class="lineNum">    1513 </span>            :     typename basic_istream&lt;_CharT, _Traits&gt;::sentry __sen(__is, true);</a>
+<a name="1514"><span class="lineNum">    1514 </span>            :     if (__sen)</a>
 <a name="1515"><span class="lineNum">    1515 </span>            :     {</a>
 <a name="1516"><span class="lineNum">    1516 </span>            : #ifndef _LIBCPP_NO_EXCEPTIONS</a>
 <a name="1517"><span class="lineNum">    1517 </span>            :         try</a>
 <a name="1518"><span class="lineNum">    1518 </span>            :         {</a>
 <a name="1519"><span class="lineNum">    1519 </span>            : #endif</a>
-<a name="1520"><span class="lineNum">    1520 </span><span class="lineNoCov">          0 :             __str.clear();</span></a>
-<a name="1521"><span class="lineNum">    1521 </span><span class="lineNoCov">          0 :             streamsize __extr = 0;</span></a>
-<a name="1522"><span class="lineNum">    1522 </span><span class="lineNoCov">          0 :             while (true)</span></a>
+<a name="1520"><span class="lineNum">    1520 </span>            :             __str.clear();</a>
+<a name="1521"><span class="lineNum">    1521 </span>            :             streamsize __extr = 0;</a>
+<a name="1522"><span class="lineNum">    1522 </span>            :             while (true)</a>
 <a name="1523"><span class="lineNum">    1523 </span>            :             {</a>
-<a name="1524"><span class="lineNum">    1524 </span><span class="lineNoCov">          0 :                 typename _Traits::int_type __i = __is.rdbuf()-&gt;sbumpc();</span></a>
-<a name="1525"><span class="lineNum">    1525 </span><span class="lineNoCov">          0 :                 if (_Traits::eq_int_type(__i, _Traits::eof()))</span></a>
+<a name="1524"><span class="lineNum">    1524 </span>            :                 typename _Traits::int_type __i = __is.rdbuf()-&gt;sbumpc();</a>
+<a name="1525"><span class="lineNum">    1525 </span>            :                 if (_Traits::eq_int_type(__i, _Traits::eof()))</a>
 <a name="1526"><span class="lineNum">    1526 </span>            :                 {</a>
-<a name="1527"><span class="lineNum">    1527 </span><span class="lineNoCov">          0 :                    __state |= ios_base::eofbit;</span></a>
-<a name="1528"><span class="lineNum">    1528 </span><span class="lineNoCov">          0 :                    break;</span></a>
+<a name="1527"><span class="lineNum">    1527 </span>            :                    __state |= ios_base::eofbit;</a>
+<a name="1528"><span class="lineNum">    1528 </span>            :                    break;</a>
 <a name="1529"><span class="lineNum">    1529 </span>            :                 }</a>
-<a name="1530"><span class="lineNum">    1530 </span><span class="lineNoCov">          0 :                 ++__extr;</span></a>
-<a name="1531"><span class="lineNum">    1531 </span><span class="lineNoCov">          0 :                 _CharT __ch = _Traits::to_char_type(__i);</span></a>
-<a name="1532"><span class="lineNum">    1532 </span><span class="lineNoCov">          0 :                 if (_Traits::eq(__ch, __dlm))</span></a>
-<a name="1533"><span class="lineNum">    1533 </span><span class="lineNoCov">          0 :                     break;</span></a>
-<a name="1534"><span class="lineNum">    1534 </span><span class="lineNoCov">          0 :                 __str.push_back(__ch);</span></a>
-<a name="1535"><span class="lineNum">    1535 </span><span class="lineNoCov">          0 :                 if (__str.size() == __str.max_size())</span></a>
+<a name="1530"><span class="lineNum">    1530 </span>            :                 ++__extr;</a>
+<a name="1531"><span class="lineNum">    1531 </span>            :                 _CharT __ch = _Traits::to_char_type(__i);</a>
+<a name="1532"><span class="lineNum">    1532 </span>            :                 if (_Traits::eq(__ch, __dlm))</a>
+<a name="1533"><span class="lineNum">    1533 </span>            :                     break;</a>
+<a name="1534"><span class="lineNum">    1534 </span>            :                 __str.push_back(__ch);</a>
+<a name="1535"><span class="lineNum">    1535 </span>            :                 if (__str.size() == __str.max_size())</a>
 <a name="1536"><span class="lineNum">    1536 </span>            :                 {</a>
-<a name="1537"><span class="lineNum">    1537 </span><span class="lineNoCov">          0 :                     __state |= ios_base::failbit;</span></a>
-<a name="1538"><span class="lineNum">    1538 </span><span class="lineNoCov">          0 :                     break;</span></a>
+<a name="1537"><span class="lineNum">    1537 </span>            :                     __state |= ios_base::failbit;</a>
+<a name="1538"><span class="lineNum">    1538 </span>            :                     break;</a>
 <a name="1539"><span class="lineNum">    1539 </span>            :                 }</a>
 <a name="1540"><span class="lineNum">    1540 </span>            :             }</a>
-<a name="1541"><span class="lineNum">    1541 </span><span class="lineNoCov">          0 :             if (__extr == 0)</span></a>
-<a name="1542"><span class="lineNum">    1542 </span><span class="lineNoCov">          0 :                __state |= ios_base::failbit;</span></a>
+<a name="1541"><span class="lineNum">    1541 </span>            :             if (__extr == 0)</a>
+<a name="1542"><span class="lineNum">    1542 </span>            :                __state |= ios_base::failbit;</a>
 <a name="1543"><span class="lineNum">    1543 </span>            : #ifndef _LIBCPP_NO_EXCEPTIONS</a>
-<a name="1544"><span class="lineNum">    1544 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="1544"><span class="lineNum">    1544 </span>            :         }</a>
 <a name="1545"><span class="lineNum">    1545 </span>            :         catch (...)</a>
 <a name="1546"><span class="lineNum">    1546 </span>            :         {</a>
-<a name="1547"><span class="lineNum">    1547 </span><span class="lineNoCov">          0 :             __state |= ios_base::badbit;</span></a>
-<a name="1548"><span class="lineNum">    1548 </span><span class="lineNoCov">          0 :             __is.__setstate_nothrow(__state);</span></a>
-<a name="1549"><span class="lineNum">    1549 </span><span class="lineNoCov">          0 :             if (__is.exceptions() &amp; ios_base::badbit)</span></a>
+<a name="1547"><span class="lineNum">    1547 </span>            :             __state |= ios_base::badbit;</a>
+<a name="1548"><span class="lineNum">    1548 </span>            :             __is.__setstate_nothrow(__state);</a>
+<a name="1549"><span class="lineNum">    1549 </span>            :             if (__is.exceptions() &amp; ios_base::badbit)</a>
 <a name="1550"><span class="lineNum">    1550 </span>            :             {</a>
-<a name="1551"><span class="lineNum">    1551 </span><span class="lineNoCov">          0 :                 throw;</span></a>
+<a name="1551"><span class="lineNum">    1551 </span>            :                 throw;</a>
 <a name="1552"><span class="lineNum">    1552 </span>            :             }</a>
-<a name="1553"><span class="lineNum">    1553 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="1553"><span class="lineNum">    1553 </span>            :         }</a>
 <a name="1554"><span class="lineNum">    1554 </span>            : #endif</a>
-<a name="1555"><span class="lineNum">    1555 </span><span class="lineNoCov">          0 :         __is.setstate(__state);</span></a>
-<a name="1556"><span class="lineNum">    1556 </span><span class="lineNoCov">          0 :     }</span></a>
-<a name="1557"><span class="lineNum">    1557 </span><span class="lineNoCov">          0 :     return __is;</span></a>
-<a name="1558"><span class="lineNum">    1558 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="1555"><span class="lineNum">    1555 </span>            :         __is.setstate(__state);</a>
+<a name="1556"><span class="lineNum">    1556 </span>            :     }</a>
+<a name="1557"><span class="lineNum">    1557 </span>            :     return __is;</a>
+<a name="1558"><span class="lineNum">    1558 </span>            : }</a>
 <a name="1559"><span class="lineNum">    1559 </span>            : </a>
 <a name="1560"><span class="lineNum">    1560 </span>            : template&lt;class _CharT, class _Traits, class _Allocator&gt;</a>
 <a name="1561"><span class="lineNum">    1561 </span>            : inline _LIBCPP_INLINE_VISIBILITY</a>
 <a name="1562"><span class="lineNum">    1562 </span>            : basic_istream&lt;_CharT, _Traits&gt;&amp;</a>
-<a name="1563"><span class="lineNum">    1563 </span><span class="lineNoCov">          0 : getline(basic_istream&lt;_CharT, _Traits&gt;&amp; __is,</span></a>
+<a name="1563"><span class="lineNum">    1563 </span>            : getline(basic_istream&lt;_CharT, _Traits&gt;&amp; __is,</a>
 <a name="1564"><span class="lineNum">    1564 </span>            :         basic_string&lt;_CharT, _Traits, _Allocator&gt;&amp; __str)</a>
 <a name="1565"><span class="lineNum">    1565 </span>            : {</a>
-<a name="1566"><span class="lineNum">    1566 </span><span class="lineNoCov">          0 :     return getline(__is, __str, __is.widen('\n'));</span></a>
+<a name="1566"><span class="lineNum">    1566 </span>            :     return getline(__is, __str, __is.widen('\n'));</a>
 <a name="1567"><span class="lineNum">    1567 </span>            : }</a>
 <a name="1568"><span class="lineNum">    1568 </span>            : </a>
 <a name="1569"><span class="lineNum">    1569 </span>            : #ifndef _LIBCPP_CXX03_LANG</a>

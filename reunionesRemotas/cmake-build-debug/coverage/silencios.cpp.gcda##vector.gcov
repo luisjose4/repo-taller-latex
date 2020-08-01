@@ -306,9 +306,9 @@
         -:  301:class __vector_base_common
         -:  302:{
         -:  303:protected:
-    #####:  304:    _LIBCPP_INLINE_VISIBILITY __vector_base_common() {}
-    $$$$$:  304-block  0
-    $$$$$:  304-block  1
+       16:  304:    _LIBCPP_INLINE_VISIBILITY __vector_base_common() {}
+       16:  304-block  0
+       16:  304-block  1
         -:  305:    _LIBCPP_NORETURN void __throw_length_error() const;
         -:  306:    _LIBCPP_NORETURN void __throw_out_of_range() const;
         -:  307:};
@@ -352,12 +352,12 @@
         -:  345:    __compressed_pair<pointer, allocator_type> __end_cap_;
         -:  346:
         -:  347:    _LIBCPP_INLINE_VISIBILITY
-    #####:  348:    allocator_type& __alloc() _NOEXCEPT
+        8:  348:    allocator_type& __alloc() _NOEXCEPT
     $$$$$:  348-block  0
-    $$$$$:  348-block  1
-    #####:  349:        {return __end_cap_.second();}
+        8:  348-block  1
+        8:  349:        {return __end_cap_.second();}
     $$$$$:  349-block  0
-    $$$$$:  349-block  1
+        8:  349-block  1
         -:  350:    _LIBCPP_INLINE_VISIBILITY
     #####:  351:    const allocator_type& __alloc() const _NOEXCEPT
     $$$$$:  351-block  0
@@ -373,18 +373,18 @@
     $$$$$:  355-block  0
     $$$$$:  355-block  1
         -:  356:    _LIBCPP_INLINE_VISIBILITY
-    #####:  357:    const pointer& __end_cap() const _NOEXCEPT
-    $$$$$:  357-block  0
-    $$$$$:  357-block  1
-    #####:  358:        {return __end_cap_.first();}
-    $$$$$:  358-block  0
-    $$$$$:  358-block  1
+       84:  357:    const pointer& __end_cap() const _NOEXCEPT
+       34:  357-block  0
+       50:  357-block  1
+       84:  358:        {return __end_cap_.first();}
+       34:  358-block  0
+       50:  358-block  1
         -:  359:
         -:  360:    _LIBCPP_INLINE_VISIBILITY
-    #####:  361:    __vector_base()
-    $$$$$:  361-block  0
+       16:  361:    __vector_base()
+        8:  361-block  0
     $$$$$:  361-block  1
-    $$$$$:  361-block  2
+        8:  361-block  2
     $$$$$:  361-block  3
         -:  362:        _NOEXCEPT_(is_nothrow_default_constructible<allocator_type>::value);
         -:  363:    _LIBCPP_INLINE_VISIBILITY __vector_base(const allocator_type& __a);
@@ -404,12 +404,12 @@
     $$$$$:  370-block  2
     $$$$$:  370-block  3
         -:  371:    _LIBCPP_INLINE_VISIBILITY
-    #####:  372:    size_type capacity() const _NOEXCEPT
-    $$$$$:  372-block  0
-    $$$$$:  372-block  1
-    #####:  373:        {return static_cast<size_type>(__end_cap() - __begin_);}
-    $$$$$:  373-block  0
-    $$$$$:  373-block  1
+       84:  372:    size_type capacity() const _NOEXCEPT
+       34:  372-block  0
+       50:  372-block  1
+       84:  373:        {return static_cast<size_type>(__end_cap() - __begin_);}
+       34:  373-block  0
+       50:  373-block  1
         -:  374:
         -:  375:    _LIBCPP_INLINE_VISIBILITY
         -:  376:    void __destruct_at_end(pointer __new_last) _NOEXCEPT;
@@ -483,19 +483,19 @@
         -:  430:
         -:  431:template <class _Tp, class _Allocator>
         -:  432:inline _LIBCPP_INLINE_VISIBILITY
-    #####:  433:__vector_base<_Tp, _Allocator>::__vector_base()
-    $$$$$:  433-block  0
-    $$$$$:  433-block  1
+       16:  433:__vector_base<_Tp, _Allocator>::__vector_base()
+        8:  433-block  0
+        8:  433-block  1
         -:  434:        _NOEXCEPT_(is_nothrow_default_constructible<allocator_type>::value)
-    #####:  435:    : __begin_(nullptr),
-    #####:  436:      __end_(nullptr),
-    #####:  437:      __end_cap_(nullptr)
-    $$$$$:  437-block  0
-    $$$$$:  437-block  1
-    #####:  438:{
-    #####:  439:}
-    $$$$$:  439-block  0
-    $$$$$:  439-block  1
+       16:  435:    : __begin_(nullptr),
+       16:  436:      __end_(nullptr),
+       16:  437:      __end_cap_(nullptr)
+        8:  437-block  0
+        8:  437-block  1
+       16:  438:{
+       16:  439:}
+        8:  439-block  0
+        8:  439-block  1
         -:  440:
         -:  441:template <class _Tp, class _Allocator>
         -:  442:inline _LIBCPP_INLINE_VISIBILITY
@@ -620,25 +620,25 @@
         -:  547:                                    typename iterator_traits<_ForwardIterator>::reference>::value>::type* = 0);
         -:  548:
         -:  549:    _LIBCPP_INLINE_VISIBILITY
-    #####:  550:    ~vector()
-    $$$$$:  550-block  0
-    $$$$$:  550-block  1
-    $$$$$:  550-block  2
-    $$$$$:  550-block  3
-    #####:  551:    {
-    #####:  552:        __annotate_delete();
-    $$$$$:  552-block  0
-    $$$$$:  552-block  1
+       84:  550:    ~vector()
+       17:  550-block  0
+       25:  550-block  1
+       17:  550-block  2
+       25:  550-block  3
+       42:  551:    {
+       42:  552:        __annotate_delete();
+       17:  552-block  0
+       25:  552-block  1
         -:  553:#if _LIBCPP_DEBUG_LEVEL >= 2
         -:  554:        __get_db()->__erase_c(this);
         -:  555:#endif
-    #####:  556:    }
-    $$$$$:  556-block  0
-    $$$$$:  556-block  1
-    $$$$$:  556-block  2
+       84:  556:    }
+       17:  556-block  0
+       25:  556-block  1
+       17:  556-block  2
     $$$$$:  556-block  3
     $$$$$:  556-block  4
-    $$$$$:  556-block  5
+       25:  556-block  5
     $$$$$:  556-block  6
     $$$$$:  556-block  7
         -:  557:
@@ -649,7 +649,7 @@
         -:  562:
         -:  563:#ifndef _LIBCPP_CXX03_LANG
         -:  564:    _LIBCPP_INLINE_VISIBILITY
-    #####:  565:    vector(initializer_list<value_type> __il);
+       16:  565:    vector(initializer_list<value_type> __il);
         -:  566:
         -:  567:    _LIBCPP_INLINE_VISIBILITY
         -:  568:    vector(initializer_list<value_type> __il, const allocator_type& __a);
@@ -740,19 +740,19 @@
         -:  653:        {return rend();}
         -:  654:
         -:  655:    _LIBCPP_INLINE_VISIBILITY
-    #####:  656:    size_type size() const _NOEXCEPT
-    $$$$$:  656-block  0
-    $$$$$:  656-block  1
-    #####:  657:        {return static_cast<size_type>(this->__end_ - this->__begin_);}
-    $$$$$:  657-block  0
-    $$$$$:  657-block  1
+       42:  656:    size_type size() const _NOEXCEPT
+       17:  656-block  0
+       25:  656-block  1
+       42:  657:        {return static_cast<size_type>(this->__end_ - this->__begin_);}
+       17:  657-block  0
+       25:  657-block  1
         -:  658:    _LIBCPP_INLINE_VISIBILITY
-    #####:  659:    size_type capacity() const _NOEXCEPT
-    $$$$$:  659-block  0
-    $$$$$:  659-block  1
-    #####:  660:        {return __base::capacity();}
-    $$$$$:  660-block  0
-    $$$$$:  660-block  1
+       84:  659:    size_type capacity() const _NOEXCEPT
+       34:  659-block  0
+       50:  659-block  1
+       84:  660:        {return __base::capacity();}
+       34:  660-block  0
+       50:  660-block  1
         -:  661:    _LIBCPP_NODISCARD_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY
         -:  662:    bool empty() const _NOEXCEPT
         -:  663:        {return this->__begin_ == this->__end_;}
@@ -790,12 +790,12 @@
         -:  695:    value_type*       data() _NOEXCEPT
         -:  696:        {return _VSTD::__to_raw_pointer(this->__begin_);}
         -:  697:    _LIBCPP_INLINE_VISIBILITY
-    #####:  698:    const value_type* data() const _NOEXCEPT
-    $$$$$:  698-block  0
-    $$$$$:  698-block  1
-    #####:  699:        {return _VSTD::__to_raw_pointer(this->__begin_);}
-    $$$$$:  699-block  0
-    $$$$$:  699-block  1
+      168:  698:    const value_type* data() const _NOEXCEPT
+       68:  698-block  0
+      100:  698-block  1
+      168:  699:        {return _VSTD::__to_raw_pointer(this->__begin_);}
+       68:  699-block  0
+      100:  699-block  1
         -:  700:
         -:  701:#ifdef _LIBCPP_CXX03_LANG
         -:  702:    _LIBCPP_INLINE_VISIBILITY
@@ -958,12 +958,12 @@
         -:  859:    }
         -:  860:#else
         -:  861:    _LIBCPP_INLINE_VISIBILITY
-    #####:  862:    void __annotate_contiguous_container(const void*, const void*, const void*,
-    $$$$$:  862-block  0
-    $$$$$:  862-block  1
-    #####:  863:                                         const void*) const {}
-    $$$$$:  863-block  0
-    $$$$$:  863-block  1
+       42:  862:    void __annotate_contiguous_container(const void*, const void*, const void*,
+       17:  862-block  0
+       25:  862-block  1
+       42:  863:                                         const void*) const {}
+       17:  863-block  0
+       25:  863-block  1
         -:  864:#endif
         -:  865:    _LIBCPP_INLINE_VISIBILITY
     #####:  866:    void __annotate_new(size_type __current_size) const {
@@ -976,14 +976,14 @@
     $$$$$:  869-block  1
         -:  870:
         -:  871:    _LIBCPP_INLINE_VISIBILITY
-    #####:  872:    void __annotate_delete() const {
-    $$$$$:  872-block  0
-    $$$$$:  872-block  1
-    #####:  873:      __annotate_contiguous_container(data(), data() + capacity(),
-    #####:  874:                                      data() + size(), data() + capacity());
-    #####:  875:    }
-    $$$$$:  875-block  0
-    $$$$$:  875-block  1
+       42:  872:    void __annotate_delete() const {
+       17:  872-block  0
+       25:  872-block  1
+       84:  873:      __annotate_contiguous_container(data(), data() + capacity(),
+       42:  874:                                      data() + size(), data() + capacity());
+       42:  875:    }
+       17:  875-block  0
+       25:  875-block  1
         -:  876:
         -:  877:    _LIBCPP_INLINE_VISIBILITY
         -:  878:    void __annotate_increase(size_type __n) const
@@ -1018,20 +1018,20 @@
         -:  907:#else
         -:  908:    struct __RAII_IncreaseAnnotator {
         -:  909:      _LIBCPP_INLINE_VISIBILITY
-    #####:  910:      __RAII_IncreaseAnnotator(const vector &, size_type = 1) {}
+       16:  910:      __RAII_IncreaseAnnotator(const vector &, size_type = 1) {}
     $$$$$:  910-block  0
     $$$$$:  910-block  1
     $$$$$:  910-block  2
     $$$$$:  910-block  3
-    $$$$$:  910-block  4
-    $$$$$:  910-block  5
-    $$$$$:  910-block  6
-    $$$$$:  910-block  7
-    #####:  911:      _LIBCPP_INLINE_VISIBILITY void __done() {}
+        8:  910-block  4
+        8:  910-block  5
+        8:  910-block  6
+        8:  910-block  7
+        8:  911:      _LIBCPP_INLINE_VISIBILITY void __done() {}
     $$$$$:  911-block  0
     $$$$$:  911-block  1
-    $$$$$:  911-block  2
-    $$$$$:  911-block  3
+        8:  911-block  2
+        8:  911-block  3
         -:  912:    };
         -:  913:#endif
         -:  914:
@@ -1204,19 +1204,19 @@
         -: 1063:    __is_forward_iterator<_ForwardIterator>::value,
         -: 1064:    void
         -: 1065:>::type
-    #####: 1066:vector<_Tp, _Allocator>::__construct_at_end(_ForwardIterator __first, _ForwardIterator __last, size_type __n)
+        8: 1066:vector<_Tp, _Allocator>::__construct_at_end(_ForwardIterator __first, _ForwardIterator __last, size_type __n)
     $$$$$: 1066-block  0
-    $$$$$: 1066-block  1
+        8: 1066-block  1
     $$$$$: 1066-block  2
     $$$$$: 1066-block  3
         -: 1067:{
-    #####: 1068:    allocator_type& __a = this->__alloc();
-    #####: 1069:    __RAII_IncreaseAnnotator __annotator(*this, __n);
-    #####: 1070:    __alloc_traits::__construct_range_forward(__a, __first, __last, this->__end_);
-    #####: 1071:    __annotator.__done();
-    #####: 1072:}
+        8: 1068:    allocator_type& __a = this->__alloc();
+        8: 1069:    __RAII_IncreaseAnnotator __annotator(*this, __n);
+        8: 1070:    __alloc_traits::__construct_range_forward(__a, __first, __last, this->__end_);
+        8: 1071:    __annotator.__done();
+        8: 1072:}
     $$$$$: 1072-block  0
-    $$$$$: 1072-block  1
+        8: 1072-block  1
     $$$$$: 1072-block  2
     $$$$$: 1072-block  3
         -: 1073:
@@ -1487,36 +1487,36 @@
         -: 1318:
         -: 1319:template <class _Tp, class _Allocator>
         -: 1320:inline _LIBCPP_INLINE_VISIBILITY
-    #####: 1321:vector<_Tp, _Allocator>::vector(initializer_list<value_type> __il)
-    $$$$$: 1321-block  0
-    $$$$$: 1321-block  1
-    $$$$$: 1321-block  2
-    $$$$$: 1321-block  3
-    #####: 1322:{
+       32: 1321:vector<_Tp, _Allocator>::vector(initializer_list<value_type> __il)
+        8: 1321-block  0
+        8: 1321-block  1
+        8: 1321-block  2
+        8: 1321-block  3
+       32: 1322:{
         -: 1323:#if _LIBCPP_DEBUG_LEVEL >= 2
         -: 1324:    __get_db()->__insert_c(this);
         -: 1325:#endif
-    #####: 1326:    if (__il.size() > 0)
-    $$$$$: 1326-block  0
-    $$$$$: 1326-block  1
+       16: 1326:    if (__il.size() > 0)
+        8: 1326-block  0
+        8: 1326-block  1
         -: 1327:    {
-    #####: 1328:        __vallocate(__il.size());
-    $$$$$: 1328-block  0
-    $$$$$: 1328-block  1
-    #####: 1329:        __construct_at_end(__il.begin(), __il.end(), __il.size());
-    $$$$$: 1329-block  0
-    $$$$$: 1329-block  1
-    #####: 1330:    }
-    $$$$$: 1330-block  0
-    $$$$$: 1330-block  1
-    #####: 1331:}
-    $$$$$: 1331-block  0
-    $$$$$: 1331-block  1
+       16: 1328:        __vallocate(__il.size());
+        8: 1328-block  0
+        8: 1328-block  1
+       16: 1329:        __construct_at_end(__il.begin(), __il.end(), __il.size());
+        8: 1329-block  0
+        8: 1329-block  1
+       16: 1330:    }
+        8: 1330-block  0
+        8: 1330-block  1
+       32: 1331:}
+        8: 1331-block  0
+        8: 1331-block  1
     $$$$$: 1331-block  2
-    $$$$$: 1331-block  3
+        8: 1331-block  3
     $$$$$: 1331-block  4
     $$$$$: 1331-block  5
-    $$$$$: 1331-block  6
+        8: 1331-block  6
     $$$$$: 1331-block  7
         -: 1332:
         -: 1333:template <class _Tp, class _Allocator>

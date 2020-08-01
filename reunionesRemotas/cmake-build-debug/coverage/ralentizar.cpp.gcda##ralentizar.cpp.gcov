@@ -10,7 +10,7 @@
         -:    5:
         -:    6:using namespace std;
         -:    7:
-        1:    8:TEST(ralentizarTEST, ralentizacionValidaSenialesLongitudPar){
+        7:    8:TEST(ralentizarTEST, ralentizacionValidaSenialesLongitudPar){
         1:    8-block  0
         1:    8-block  1
         1:    8-block  2
@@ -24,45 +24,45 @@
     $$$$$:    8-block 10
     $$$$$:    8-block 11
     $$$$$:    8-block 12
-    $$$$$:    8-block 13
-    $$$$$:    8-block 14
-    $$$$$:    8-block 15
-    $$$$$:    8-block 16
-    $$$$$:    8-block 17
-    $$$$$:    8-block 18
-    $$$$$:    8-block 19
-    $$$$$:    8-block 20
-    $$$$$:    8-block 21
-    $$$$$:    8-block 22
-    $$$$$:    8-block 23
-    #####:    9:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
-    #####:   10:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
-    $$$$$:   10-block  0
-    #####:   11:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
-    $$$$$:   11-block  0
-    $$$$$:   11-block  1
-    $$$$$:   11-block  2
-    $$$$$:   11-block  3
-    $$$$$:   11-block  4
+        1:    8-block 13
+        1:    8-block 14
+        1:    8-block 15
+        1:    8-block 16
+        1:    8-block 17
+        1:    8-block 18
+        1:    8-block 19
+        1:    8-block 20
+        1:    8-block 21
+        1:    8-block 22
+        1:    8-block 23
+        1:    9:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+        1:   10:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+        1:   10-block  0
+        2:   11:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+        1:   11-block  0
+        1:   11-block  1
+        1:   11-block  2
+        1:   11-block  3
+        2:   11-block  4
     $$$$$:   11-block  5
     $$$$$:   11-block  6
     $$$$$:   11-block  7
     $$$$$:   11-block  8
     $$$$$:   11-block  9
     $$$$$:   11-block 10
-    #####:   12:    int prof = 8;
-    #####:   13:    int freq = 10;
+        1:   12:    int prof = 8;
+        1:   13:    int freq = 10;
         -:   14:
-    #####:   15:    senial hablante1Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15 };
-    $$$$$:   15-block  0
-    #####:   16:    senial hablante2Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15 };
-    $$$$$:   16-block  0
-    #####:   17:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1) };
-    $$$$$:   17-block  0
-    $$$$$:   17-block  1
-    $$$$$:   17-block  2
-    $$$$$:   17-block  3
-    $$$$$:   17-block  4
+        1:   15:    senial hablante1Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15 };
+        1:   15-block  0
+        1:   16:    senial hablante2Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15 };
+        1:   16-block  0
+        2:   17:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1) };
+        1:   17-block  0
+        1:   17-block  1
+        1:   17-block  2
+        1:   17-block  3
+        2:   17-block  4
     $$$$$:   17-block  5
     $$$$$:   17-block  6
     $$$$$:   17-block  7
@@ -70,17 +70,17 @@
     $$$$$:   17-block  9
     $$$$$:   17-block 10
         -:   18:
-    #####:   19:    ralentizar(reunionOriginal, prof, freq);
-    $$$$$:   19-block  0
+        1:   19:    ralentizar(reunionOriginal, prof, freq);
+        1:   19-block  0
         -:   20:
-    #####:   21:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
-    $$$$$:   21-block  0
-    $$$$$:   21-block  1
-    $$$$$:   21-block  2
+        1:   21:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
+        1:   21-block  0
+        1:   21-block  1
+        1:   21-block  2
     $$$$$:   21-block  3
     $$$$$:   21-block  4
-    #####:   22:}
-    $$$$$:   22-block  0
+        1:   22:}
+        1:   22-block  0
     $$$$$:   22-block  1
     $$$$$:   22-block  2
     $$$$$:   22-block  3
@@ -94,7 +94,7 @@
     $$$$$:   22-block 11
     $$$$$:   22-block 12
         -:   23:
-        1:   24:TEST(ralentizarTEST, ralentizacionValidaSenialesLongitudImpar){
+        7:   24:TEST(ralentizarTEST, ralentizacionValidaSenialesLongitudImpar){
         1:   24-block  0
         1:   24-block  1
         1:   24-block  2
@@ -108,45 +108,45 @@
     $$$$$:   24-block 10
     $$$$$:   24-block 11
     $$$$$:   24-block 12
-    $$$$$:   24-block 13
-    $$$$$:   24-block 14
-    $$$$$:   24-block 15
-    $$$$$:   24-block 16
-    $$$$$:   24-block 17
-    $$$$$:   24-block 18
-    $$$$$:   24-block 19
-    $$$$$:   24-block 20
-    $$$$$:   24-block 21
-    $$$$$:   24-block 22
-    $$$$$:   24-block 23
-    #####:   25:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 25};
-    #####:   26:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 25};
-    $$$$$:   26-block  0
-    #####:   27:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
-    $$$$$:   27-block  0
-    $$$$$:   27-block  1
-    $$$$$:   27-block  2
-    $$$$$:   27-block  3
-    $$$$$:   27-block  4
+        1:   24-block 13
+        1:   24-block 14
+        1:   24-block 15
+        1:   24-block 16
+        1:   24-block 17
+        1:   24-block 18
+        1:   24-block 19
+        1:   24-block 20
+        1:   24-block 21
+        1:   24-block 22
+        1:   24-block 23
+        1:   25:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 25};
+        1:   26:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 25};
+        1:   26-block  0
+        2:   27:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+        1:   27-block  0
+        1:   27-block  1
+        1:   27-block  2
+        1:   27-block  3
+        2:   27-block  4
     $$$$$:   27-block  5
     $$$$$:   27-block  6
     $$$$$:   27-block  7
     $$$$$:   27-block  8
     $$$$$:   27-block  9
     $$$$$:   27-block 10
-    #####:   28:    int prof = 8;
-    #####:   29:    int freq = 10;
+        1:   28:    int prof = 8;
+        1:   29:    int freq = 10;
         -:   30:
-    #####:   31:    senial hablante1Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15, 5, 25 };
-    $$$$$:   31-block  0
-    #####:   32:    senial hablante2Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15, 5, 25 };
-    $$$$$:   32-block  0
-    #####:   33:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1) };
-    $$$$$:   33-block  0
-    $$$$$:   33-block  1
-    $$$$$:   33-block  2
-    $$$$$:   33-block  3
-    $$$$$:   33-block  4
+        1:   31:    senial hablante1Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15, 5, 25 };
+        1:   31-block  0
+        1:   32:    senial hablante2Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15, 5, 25 };
+        1:   32-block  0
+        2:   33:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1) };
+        1:   33-block  0
+        1:   33-block  1
+        1:   33-block  2
+        1:   33-block  3
+        2:   33-block  4
     $$$$$:   33-block  5
     $$$$$:   33-block  6
     $$$$$:   33-block  7
@@ -154,17 +154,17 @@
     $$$$$:   33-block  9
     $$$$$:   33-block 10
         -:   34:
-    #####:   35:    ralentizar(reunionOriginal, prof, freq);
-    $$$$$:   35-block  0
+        1:   35:    ralentizar(reunionOriginal, prof, freq);
+        1:   35-block  0
         -:   36:
-    #####:   37:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
-    $$$$$:   37-block  0
-    $$$$$:   37-block  1
-    $$$$$:   37-block  2
+        1:   37:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
+        1:   37-block  0
+        1:   37-block  1
+        1:   37-block  2
     $$$$$:   37-block  3
     $$$$$:   37-block  4
-    #####:   38:}
-    $$$$$:   38-block  0
+        1:   38:}
+        1:   38-block  0
     $$$$$:   38-block  1
     $$$$$:   38-block  2
     $$$$$:   38-block  3
@@ -178,7 +178,7 @@
     $$$$$:   38-block 11
     $$$$$:   38-block 12
         -:   39:
-        1:   40:TEST(ralentizarTEST, ralentizacionValidaSenialesDistintas){
+        7:   40:TEST(ralentizarTEST, ralentizacionValidaSenialesDistintas){
         1:   40-block  0
         1:   40-block  1
         1:   40-block  2
@@ -192,45 +192,45 @@
     $$$$$:   40-block 10
     $$$$$:   40-block 11
     $$$$$:   40-block 12
-    $$$$$:   40-block 13
-    $$$$$:   40-block 14
-    $$$$$:   40-block 15
-    $$$$$:   40-block 16
-    $$$$$:   40-block 17
-    $$$$$:   40-block 18
-    $$$$$:   40-block 19
-    $$$$$:   40-block 20
-    $$$$$:   40-block 21
-    $$$$$:   40-block 22
-    $$$$$:   40-block 23
-    #####:   41:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
-    #####:   42:    senial hablante2 = {1, 5, -5, 15, 11, 7, -1, -8, -4, -1, 3};
-    $$$$$:   42-block  0
-    #####:   43:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
-    $$$$$:   43-block  0
-    $$$$$:   43-block  1
-    $$$$$:   43-block  2
-    $$$$$:   43-block  3
-    $$$$$:   43-block  4
+        1:   40-block 13
+        1:   40-block 14
+        1:   40-block 15
+        1:   40-block 16
+        1:   40-block 17
+        1:   40-block 18
+        1:   40-block 19
+        1:   40-block 20
+        1:   40-block 21
+        1:   40-block 22
+        1:   40-block 23
+        1:   41:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15};
+        1:   42:    senial hablante2 = {1, 5, -5, 15, 11, 7, -1, -8, -4, -1, 3};
+        1:   42-block  0
+        2:   43:    reunion reunionOriginal = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+        1:   43-block  0
+        1:   43-block  1
+        1:   43-block  2
+        1:   43-block  3
+        2:   43-block  4
     $$$$$:   43-block  5
     $$$$$:   43-block  6
     $$$$$:   43-block  7
     $$$$$:   43-block  8
     $$$$$:   43-block  9
     $$$$$:   43-block 10
-    #####:   44:    int prof = 8;
-    #####:   45:    int freq = 10;
+        1:   44:    int prof = 8;
+        1:   45:    int freq = 10;
         -:   46:
-    #####:   47:    senial hablante1Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15 };
-    $$$$$:   47-block  0
-    #####:   48:    senial hablante2Ralentizado = { 1, 3, 5, 0, -5, 5, 15, 13, 11, 9, 7, 3, -1, -4, -8, -6, -4, -2, -1, 1, 3 };
-    $$$$$:   48-block  0
-    #####:   49:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1) };
-    $$$$$:   49-block  0
-    $$$$$:   49-block  1
-    $$$$$:   49-block  2
-    $$$$$:   49-block  3
-    $$$$$:   49-block  4
+        1:   47:    senial hablante1Ralentizado = { 1, 2, 3, 0, -3, 0, 4, 5, 6, 3, 0, -1, -2, -5, -8, 0, 9, -3, -15 };
+        1:   47-block  0
+        1:   48:    senial hablante2Ralentizado = { 1, 3, 5, 0, -5, 5, 15, 13, 11, 9, 7, 3, -1, -4, -8, -6, -4, -2, -1, 1, 3 };
+        1:   48-block  0
+        2:   49:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1) };
+        1:   49-block  0
+        1:   49-block  1
+        1:   49-block  2
+        1:   49-block  3
+        2:   49-block  4
     $$$$$:   49-block  5
     $$$$$:   49-block  6
     $$$$$:   49-block  7
@@ -238,17 +238,17 @@
     $$$$$:   49-block  9
     $$$$$:   49-block 10
         -:   50:
-    #####:   51:    ralentizar(reunionOriginal, prof, freq);
-    $$$$$:   51-block  0
+        1:   51:    ralentizar(reunionOriginal, prof, freq);
+        1:   51-block  0
         -:   52:
-    #####:   53:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
-    $$$$$:   53-block  0
-    $$$$$:   53-block  1
-    $$$$$:   53-block  2
+        1:   53:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
+        1:   53-block  0
+        1:   53-block  1
+        1:   53-block  2
     $$$$$:   53-block  3
     $$$$$:   53-block  4
-    #####:   54:}
-    $$$$$:   54-block  0
+        1:   54:}
+        1:   54-block  0
     $$$$$:   54-block  1
     $$$$$:   54-block  2
     $$$$$:   54-block  3
@@ -262,7 +262,7 @@
     $$$$$:   54-block 11
     $$$$$:   54-block 12
         -:   55:
-        1:   56:TEST(ralentizarTEST, ralentizacionValida)
+        7:   56:TEST(ralentizarTEST, ralentizacionValida)
         1:   56-block  0
         1:   56-block  1
         1:   56-block  2
@@ -276,77 +276,77 @@
     $$$$$:   56-block 10
     $$$$$:   56-block 11
     $$$$$:   56-block 12
-    $$$$$:   56-block 13
-    $$$$$:   56-block 14
-    $$$$$:   56-block 15
-    $$$$$:   56-block 16
-    $$$$$:   56-block 17
-    $$$$$:   56-block 18
-    $$$$$:   56-block 19
-    $$$$$:   56-block 20
-    $$$$$:   56-block 21
-    $$$$$:   56-block 22
-    $$$$$:   56-block 23
+        1:   56-block 13
+        1:   56-block 14
+        1:   56-block 15
+        1:   56-block 16
+        1:   56-block 17
+        1:   56-block 18
+        1:   56-block 19
+        1:   56-block 20
+        1:   56-block 21
+        1:   56-block 22
+        1:   56-block 23
         -:   57:{
-    #####:   58:    senial hablante1 = { 1, 4, -3, 0, 6, 0, -4, 55, 9, -15 };
-    #####:   59:    senial hablante2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    $$$$$:   59-block  0
-    #####:   60:    senial hablante3 = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-    $$$$$:   60-block  0
-    #####:   61:    senial hablante4 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-    $$$$$:   61-block  0
-    #####:   62:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2), make_pair(hablante4, 3) };
-    $$$$$:   62-block  0
-    $$$$$:   62-block  1
-    $$$$$:   62-block  2
-    $$$$$:   62-block  3
-    $$$$$:   62-block  4
-    $$$$$:   62-block  5
-    $$$$$:   62-block  6
+        1:   58:    senial hablante1 = { 1, 4, -3, 0, 6, 0, -4, 55, 9, -15 };
+        1:   59:    senial hablante2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        1:   59-block  0
+        1:   60:    senial hablante3 = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+        1:   60-block  0
+        1:   61:    senial hablante4 = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+        1:   61-block  0
+        4:   62:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 2), make_pair(hablante4, 3) };
+        1:   62-block  0
+        1:   62-block  1
+        1:   62-block  2
+        1:   62-block  3
+        1:   62-block  4
+        1:   62-block  5
+        4:   62-block  6
     $$$$$:   62-block  7
     $$$$$:   62-block  8
     $$$$$:   62-block  9
     $$$$$:   62-block 10
     $$$$$:   62-block 11
     $$$$$:   62-block 12
-    #####:   63:    int prof = 8;
-    #####:   64:    int freq = 10;
+        1:   63:    int prof = 8;
+        1:   64:    int freq = 10;
         -:   65:
-    #####:   66:    senial hablante1Ralentizado = { 1, 2, 4, 0, -3, -1, 0, 3, 6, 3, 0, -2, -4, 25, 55, 32, 9, -3, -15 };
-    $$$$$:   66-block  0
-    #####:   67:    senial hablante2Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10 };
-    $$$$$:   67-block  0
-    #####:   68:    senial hablante3Ralentizado = { 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1 };
-    $$$$$:   68-block  0
-    #####:   69:    senial hablante4Ralentizado(19, 1);
-    $$$$$:   69-block  0
-    #####:   70:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1), make_pair(hablante3Ralentizado, 2),
-    $$$$$:   70-block  0
-    $$$$$:   70-block  1
-    $$$$$:   70-block  2
-    $$$$$:   70-block  3
-    $$$$$:   70-block  4
-    $$$$$:   70-block  5
+        1:   66:    senial hablante1Ralentizado = { 1, 2, 4, 0, -3, -1, 0, 3, 6, 3, 0, -2, -4, 25, 55, 32, 9, -3, -15 };
+        1:   66-block  0
+        1:   67:    senial hablante2Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10 };
+        1:   67-block  0
+        1:   68:    senial hablante3Ralentizado = { 10, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1 };
+        1:   68-block  0
+        1:   69:    senial hablante4Ralentizado(19, 1);
+        1:   69-block  0
+        4:   70:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante2Ralentizado, 1), make_pair(hablante3Ralentizado, 2),
+        1:   70-block  0
+        1:   70-block  1
+        1:   70-block  2
+        1:   70-block  3
+        1:   70-block  4
+        4:   70-block  5
     $$$$$:   70-block  6
     $$$$$:   70-block  7
     $$$$$:   70-block  8
     $$$$$:   70-block  9
     $$$$$:   70-block 10
     $$$$$:   70-block 11
-    #####:   71:            make_pair(hablante4Ralentizado, 3) };
-    $$$$$:   71-block  0
+        1:   71:            make_pair(hablante4Ralentizado, 3) };
+        1:   71-block  0
         -:   72:
-    #####:   73:    ralentizar(reunionOriginal, prof, freq);
-    $$$$$:   73-block  0
+        1:   73:    ralentizar(reunionOriginal, prof, freq);
+        1:   73-block  0
         -:   74:
-    #####:   75:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
-    $$$$$:   75-block  0
-    $$$$$:   75-block  1
-    $$$$$:   75-block  2
+        1:   75:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
+        1:   75-block  0
+        1:   75-block  1
+        1:   75-block  2
     $$$$$:   75-block  3
     $$$$$:   75-block  4
-    #####:   76:}
-    $$$$$:   76-block  0
+        1:   76:}
+        1:   76-block  0
     $$$$$:   76-block  1
     $$$$$:   76-block  2
     $$$$$:   76-block  3
@@ -368,7 +368,7 @@
     $$$$$:   76-block 19
     $$$$$:   76-block 20
         -:   77:
-        1:   78:TEST(ralentizarTEST, ralentizacionValida2)
+        7:   78:TEST(ralentizarTEST, ralentizacionValida2)
         1:   78-block  0
         1:   78-block  1
         1:   78-block  2
@@ -382,40 +382,40 @@
     $$$$$:   78-block 10
     $$$$$:   78-block 11
     $$$$$:   78-block 12
-    $$$$$:   78-block 13
-    $$$$$:   78-block 14
-    $$$$$:   78-block 15
-    $$$$$:   78-block 16
-    $$$$$:   78-block 17
-    $$$$$:   78-block 18
-    $$$$$:   78-block 19
-    $$$$$:   78-block 20
-    $$$$$:   78-block 21
-    $$$$$:   78-block 22
-    $$$$$:   78-block 23
+        1:   78-block 13
+        1:   78-block 14
+        1:   78-block 15
+        1:   78-block 16
+        1:   78-block 17
+        1:   78-block 18
+        1:   78-block 19
+        1:   78-block 20
+        1:   78-block 21
+        1:   78-block 22
+        1:   78-block 23
         -:   79:{
-    #####:   80:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-    #####:   81:    reunion reunionOriginal = { make_pair(hablante1, 0) };
-    $$$$$:   81-block  0
-    $$$$$:   81-block  1
-    $$$$$:   81-block  2
-    $$$$$:   81-block  3
+        1:   80:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+        1:   81:    reunion reunionOriginal = { make_pair(hablante1, 0) };
+        1:   81-block  0
+        1:   81-block  1
+        1:   81-block  2
+        1:   81-block  3
     $$$$$:   81-block  4
     $$$$$:   81-block  5
     $$$$$:   81-block  6
     $$$$$:   81-block  7
     $$$$$:   81-block  8
     $$$$$:   81-block  9
-    #####:   82:    int prof = 8;
-    #####:   83:    int freq = 10;
+        1:   82:    int prof = 8;
+        1:   83:    int freq = 10;
         -:   84:
-    #####:   85:    senial hablante1Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
-    $$$$$:   85-block  0
-    #####:   86:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0) };
-    $$$$$:   86-block  0
-    $$$$$:   86-block  1
-    $$$$$:   86-block  2
-    $$$$$:   86-block  3
+        1:   85:    senial hablante1Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
+        1:   85-block  0
+        1:   86:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0) };
+        1:   86-block  0
+        1:   86-block  1
+        1:   86-block  2
+        1:   86-block  3
     $$$$$:   86-block  4
     $$$$$:   86-block  5
     $$$$$:   86-block  6
@@ -423,17 +423,17 @@
     $$$$$:   86-block  8
     $$$$$:   86-block  9
         -:   87:
-    #####:   88:    ralentizar(reunionOriginal, prof, freq);
-    $$$$$:   88-block  0
+        1:   88:    ralentizar(reunionOriginal, prof, freq);
+        1:   88-block  0
         -:   89:
-    #####:   90:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
-    $$$$$:   90-block  0
-    $$$$$:   90-block  1
-    $$$$$:   90-block  2
+        1:   90:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
+        1:   90-block  0
+        1:   90-block  1
+        1:   90-block  2
     $$$$$:   90-block  3
     $$$$$:   90-block  4
-    #####:   91:}
-    $$$$$:   91-block  0
+        1:   91:}
+        1:   91-block  0
     $$$$$:   91-block  1
     $$$$$:   91-block  2
     $$$$$:   91-block  3
@@ -443,7 +443,7 @@
     $$$$$:   91-block  7
     $$$$$:   91-block  8
         -:   92:
-        1:   93:TEST(ralentizarTEST, ralentizacionValida3)
+        7:   93:TEST(ralentizarTEST, ralentizacionValida3)
         1:   93-block  0
         1:   93-block  1
         1:   93-block  2
@@ -457,42 +457,42 @@
     $$$$$:   93-block 10
     $$$$$:   93-block 11
     $$$$$:   93-block 12
-    $$$$$:   93-block 13
-    $$$$$:   93-block 14
-    $$$$$:   93-block 15
-    $$$$$:   93-block 16
-    $$$$$:   93-block 17
-    $$$$$:   93-block 18
-    $$$$$:   93-block 19
-    $$$$$:   93-block 20
-    $$$$$:   93-block 21
-    $$$$$:   93-block 22
-    $$$$$:   93-block 23
+        1:   93-block 13
+        1:   93-block 14
+        1:   93-block 15
+        1:   93-block 16
+        1:   93-block 17
+        1:   93-block 18
+        1:   93-block 19
+        1:   93-block 20
+        1:   93-block 21
+        1:   93-block 22
+        1:   93-block 23
         -:   94:{
-    #####:   95:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-    #####:   96:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante1, 1) };
-    $$$$$:   96-block  0
-    $$$$$:   96-block  1
-    $$$$$:   96-block  2
-    $$$$$:   96-block  3
-    $$$$$:   96-block  4
+        1:   95:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+        2:   96:    reunion reunionOriginal = { make_pair(hablante1, 0), make_pair(hablante1, 1) };
+        1:   96-block  0
+        1:   96-block  1
+        1:   96-block  2
+        1:   96-block  3
+        2:   96-block  4
     $$$$$:   96-block  5
     $$$$$:   96-block  6
     $$$$$:   96-block  7
     $$$$$:   96-block  8
     $$$$$:   96-block  9
     $$$$$:   96-block 10
-    #####:   97:    int prof = 8;
-    #####:   98:    int freq = 10;
+        1:   97:    int prof = 8;
+        1:   98:    int freq = 10;
         -:   99:
-    #####:  100:    senial hablante1Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
-    $$$$$:  100-block  0
-    #####:  101:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante1Ralentizado, 1) };
-    $$$$$:  101-block  0
-    $$$$$:  101-block  1
-    $$$$$:  101-block  2
-    $$$$$:  101-block  3
-    $$$$$:  101-block  4
+        1:  100:    senial hablante1Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
+        1:  100-block  0
+        2:  101:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 0), make_pair(hablante1Ralentizado, 1) };
+        1:  101-block  0
+        1:  101-block  1
+        1:  101-block  2
+        1:  101-block  3
+        2:  101-block  4
     $$$$$:  101-block  5
     $$$$$:  101-block  6
     $$$$$:  101-block  7
@@ -500,17 +500,17 @@
     $$$$$:  101-block  9
     $$$$$:  101-block 10
         -:  102:
-    #####:  103:    ralentizar(reunionOriginal, prof, freq);
-    $$$$$:  103-block  0
+        1:  103:    ralentizar(reunionOriginal, prof, freq);
+        1:  103-block  0
         -:  104:
-    #####:  105:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
-    $$$$$:  105-block  0
-    $$$$$:  105-block  1
-    $$$$$:  105-block  2
+        1:  105:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
+        1:  105-block  0
+        1:  105-block  1
+        1:  105-block  2
     $$$$$:  105-block  3
     $$$$$:  105-block  4
-    #####:  106:}
-    $$$$$:  106-block  0
+        1:  106:}
+        1:  106-block  0
     $$$$$:  106-block  1
     $$$$$:  106-block  2
     $$$$$:  106-block  3
@@ -520,7 +520,7 @@
     $$$$$:  106-block  7
     $$$$$:  106-block  8
         -:  107:
-        1:  108:TEST(ralentizarTEST, ralentizacionValida4)
+        7:  108:TEST(ralentizarTEST, ralentizacionValida4)
         1:  108-block  0
         1:  108-block  1
         1:  108-block  2
@@ -534,42 +534,42 @@
     $$$$$:  108-block 10
     $$$$$:  108-block 11
     $$$$$:  108-block 12
-    $$$$$:  108-block 13
-    $$$$$:  108-block 14
-    $$$$$:  108-block 15
-    $$$$$:  108-block 16
-    $$$$$:  108-block 17
-    $$$$$:  108-block 18
-    $$$$$:  108-block 19
-    $$$$$:  108-block 20
-    $$$$$:  108-block 21
-    $$$$$:  108-block 22
-    $$$$$:  108-block 23
+        1:  108-block 13
+        1:  108-block 14
+        1:  108-block 15
+        1:  108-block 16
+        1:  108-block 17
+        1:  108-block 18
+        1:  108-block 19
+        1:  108-block 20
+        1:  108-block 21
+        1:  108-block 22
+        1:  108-block 23
         -:  109:{
-    #####:  110:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-    #####:  111:    reunion reunionOriginal = { make_pair(hablante1, 1), make_pair(hablante1, 0) };
-    $$$$$:  111-block  0
-    $$$$$:  111-block  1
-    $$$$$:  111-block  2
-    $$$$$:  111-block  3
-    $$$$$:  111-block  4
+        1:  110:    senial hablante1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+        2:  111:    reunion reunionOriginal = { make_pair(hablante1, 1), make_pair(hablante1, 0) };
+        1:  111-block  0
+        1:  111-block  1
+        1:  111-block  2
+        1:  111-block  3
+        2:  111-block  4
     $$$$$:  111-block  5
     $$$$$:  111-block  6
     $$$$$:  111-block  7
     $$$$$:  111-block  8
     $$$$$:  111-block  9
     $$$$$:  111-block 10
-    #####:  112:    int prof = 8;
-    #####:  113:    int freq = 10;
+        1:  112:    int prof = 8;
+        1:  113:    int freq = 10;
         -:  114:
-    #####:  115:    senial hablante1Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
-    $$$$$:  115-block  0
-    #####:  116:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 1), make_pair(hablante1Ralentizado, 0) };
-    $$$$$:  116-block  0
-    $$$$$:  116-block  1
-    $$$$$:  116-block  2
-    $$$$$:  116-block  3
-    $$$$$:  116-block  4
+        1:  115:    senial hablante1Ralentizado = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
+        1:  115-block  0
+        2:  116:    reunion reunionRalentizada = { make_pair(hablante1Ralentizado, 1), make_pair(hablante1Ralentizado, 0) };
+        1:  116-block  0
+        1:  116-block  1
+        1:  116-block  2
+        1:  116-block  3
+        2:  116-block  4
     $$$$$:  116-block  5
     $$$$$:  116-block  6
     $$$$$:  116-block  7
@@ -577,17 +577,17 @@
     $$$$$:  116-block  9
     $$$$$:  116-block 10
         -:  117:
-    #####:  118:    ralentizar(reunionOriginal, prof, freq);
-    $$$$$:  118-block  0
+        1:  118:    ralentizar(reunionOriginal, prof, freq);
+        1:  118-block  0
         -:  119:
-    #####:  120:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
-    $$$$$:  120-block  0
-    $$$$$:  120-block  1
-    $$$$$:  120-block  2
+        1:  120:    ASSERT_REUNION_EQ(reunionOriginal, reunionRalentizada);
+        1:  120-block  0
+        1:  120-block  1
+        1:  120-block  2
     $$$$$:  120-block  3
     $$$$$:  120-block  4
-    #####:  121:}
-    $$$$$:  121-block  0
+        1:  121:}
+        1:  121-block  0
     $$$$$:  121-block  1
     $$$$$:  121-block  2
     $$$$$:  121-block  3

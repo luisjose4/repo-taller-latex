@@ -8203,24 +8203,24 @@
         -: 8198:// of a Test object.
         -: 8199:class TestFactoryBase {
         -: 8200: public:
-      102: 8201:  virtual ~TestFactoryBase() {}
+      104: 8201:  virtual ~TestFactoryBase() {}
     $$$$$: 8201-block  0
     $$$$$: 8201-block  1
     $$$$$: 8201-block  2
     $$$$$: 8201-block  3
     $$$$$: 8201-block  4
     $$$$$: 8201-block  5
-      102: 8201-block  6
-      102: 8201-block  7
+      104: 8201-block  6
+      104: 8201-block  7
         -: 8202:
         -: 8203:  // Creates a test instance to run. The instance is both created and destroyed
         -: 8204:  // within TestInfoImpl::Run()
         -: 8205:  virtual Test* CreateTest() = 0;
         -: 8206:
         -: 8207: protected:
-      102: 8208:  TestFactoryBase() {}
-      102: 8208-block  0
-      102: 8208-block  1
+      104: 8208:  TestFactoryBase() {}
+      104: 8208-block  0
+      104: 8208-block  1
         -: 8209:
         -: 8210: private:
         -: 8211:  GTEST_DISALLOW_COPY_AND_ASSIGN_(TestFactoryBase);
@@ -8311,45 +8311,45 @@
         1: 8217-block 78
         1: 8217-block 79
         -: 8218: public:
-    #####: 8219:  virtual Test* CreateTest() { return new TestClass; }
-    $$$$$: 8219-block  0
-    $$$$$: 8219-block  1
-    $$$$$: 8219-block  2
+        8: 8219:  virtual Test* CreateTest() { return new TestClass; }
+        1: 8219-block  0
+        1: 8219-block  1
+        1: 8219-block  2
     $$$$$: 8219-block  3
     $$$$$: 8219-block  4
-    $$$$$: 8219-block  5
-    $$$$$: 8219-block  6
-    $$$$$: 8219-block  7
+        1: 8219-block  5
+        1: 8219-block  6
+        1: 8219-block  7
     $$$$$: 8219-block  8
     $$$$$: 8219-block  9
-    $$$$$: 8219-block 10
-    $$$$$: 8219-block 11
-    $$$$$: 8219-block 12
+        1: 8219-block 10
+        1: 8219-block 11
+        1: 8219-block 12
     $$$$$: 8219-block 13
     $$$$$: 8219-block 14
-    $$$$$: 8219-block 15
-    $$$$$: 8219-block 16
-    $$$$$: 8219-block 17
+        1: 8219-block 15
+        1: 8219-block 16
+        1: 8219-block 17
     $$$$$: 8219-block 18
     $$$$$: 8219-block 19
-    $$$$$: 8219-block 20
-    $$$$$: 8219-block 21
-    $$$$$: 8219-block 22
+        1: 8219-block 20
+        1: 8219-block 21
+        1: 8219-block 22
     $$$$$: 8219-block 23
     $$$$$: 8219-block 24
-    $$$$$: 8219-block 25
-    $$$$$: 8219-block 26
-    $$$$$: 8219-block 27
+        1: 8219-block 25
+        1: 8219-block 26
+        1: 8219-block 27
     $$$$$: 8219-block 28
     $$$$$: 8219-block 29
-    $$$$$: 8219-block 30
-    $$$$$: 8219-block 31
-    $$$$$: 8219-block 32
+        1: 8219-block 30
+        1: 8219-block 31
+        1: 8219-block 32
     $$$$$: 8219-block 33
     $$$$$: 8219-block 34
-    $$$$$: 8219-block 35
-    $$$$$: 8219-block 36
-    $$$$$: 8219-block 37
+        1: 8219-block 35
+        1: 8219-block 36
+        1: 8219-block 37
     $$$$$: 8219-block 38
     $$$$$: 8219-block 39
         -: 8220:};
@@ -8371,16 +8371,16 @@
         -: 8236:typedef void (*SetUpTestCaseFunc)();
         -: 8237:typedef void (*TearDownTestCaseFunc)();
         -: 8238:
-      612: 8239:struct CodeLocation {
-      306: 8239-block  0
-      306: 8239-block  1
-      306: 8239-block  2
-      306: 8239-block  3
-      204: 8240:  CodeLocation(const string& a_file, int a_line) : file(a_file), line(a_line) {}
-      102: 8240-block  0
-      102: 8240-block  1
-      102: 8240-block  2
-      102: 8240-block  3
+      624: 8239:struct CodeLocation {
+      312: 8239-block  0
+      312: 8239-block  1
+      312: 8239-block  2
+      312: 8239-block  3
+      208: 8240:  CodeLocation(const string& a_file, int a_line) : file(a_file), line(a_line) {}
+      104: 8240-block  0
+      104: 8240-block  1
+      104: 8240-block  2
+      104: 8240-block  3
         -: 8241:
         -: 8242:  string file;
         -: 8243:  int line;
@@ -19128,9 +19128,9 @@
         -:18985:  // test in test case Foo.  Hence a sub-class can define its own
         -:18986:  // SetUpTestCase() method to shadow the one defined in the super
         -:18987:  // class.
-        1:18988:  static void SetUpTestCase() {}
-        1:18988-block  0
-        1:18988-block  1
+       11:18988:  static void SetUpTestCase() {}
+       11:18988-block  0
+       11:18988-block  1
         -:18989:
         -:18990:  // Tears down the stuff shared by all tests in this test case.
         -:18991:  //
@@ -19138,9 +19138,9 @@
         -:18993:  // test in test case Foo.  Hence a sub-class can define its own
         -:18994:  // TearDownTestCase() method to shadow the one defined in the super
         -:18995:  // class.
-        1:18996:  static void TearDownTestCase() {}
-        1:18996-block  0
-        1:18996-block  1
+       11:18996:  static void TearDownTestCase() {}
+       11:18996-block  0
+       11:18996-block  1
         -:18997:
         -:18998:  // Returns true iff the current test has a fatal failure.
         -:18999:  static bool HasFatalFailure();

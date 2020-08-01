@@ -458,11 +458,9 @@
         -:  453:_Tp*
     #####:  454:addressof(_Tp& __x) _NOEXCEPT
     $$$$$:  454-block  0
-    $$$$$:  454-block  1
         -:  455:{
     #####:  456:    return __builtin_addressof(__x);
     $$$$$:  456-block  0
-    $$$$$:  456-block  1
         -:  457:}
         -:  458:
         -:  459:#else
@@ -2316,66 +2314,58 @@
         -: 2307:template <class _Tp>
         -: 2308:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
         -: 2309:typename remove_reference<_Tp>::type&&
-   225520: 2310:move(_Tp&& __t) _NOEXCEPT
+   228970: 2310:move(_Tp&& __t) _NOEXCEPT
     $$$$$: 2310-block  0
-   215082: 2310-block  1
-    10438: 2310-block  2
-    $$$$$: 2310-block  3
-    $$$$$: 2310-block  4
+   216414: 2310-block  1
+    12210: 2310-block  2
+      169: 2310-block  3
+      153: 2310-block  4
     $$$$$: 2310-block  5
     $$$$$: 2310-block  6
-    $$$$$: 2310-block  7
-    $$$$$: 2310-block  8
-    $$$$$: 2310-block  9
+       24: 2310-block  7
         -: 2311:{
         -: 2312:    typedef typename remove_reference<_Tp>::type _Up;
-   225520: 2313:    return static_cast<_Up&&>(__t);
+   228970: 2313:    return static_cast<_Up&&>(__t);
     $$$$$: 2313-block  0
-   215082: 2313-block  1
-    10438: 2313-block  2
-    $$$$$: 2313-block  3
-    $$$$$: 2313-block  4
+   216414: 2313-block  1
+    12210: 2313-block  2
+      169: 2313-block  3
+      153: 2313-block  4
     $$$$$: 2313-block  5
     $$$$$: 2313-block  6
-    $$$$$: 2313-block  7
-    $$$$$: 2313-block  8
-    $$$$$: 2313-block  9
+       24: 2313-block  7
         -: 2314:}
         -: 2315:
         -: 2316:template <class _Tp>
         -: 2317:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR
         -: 2318:_Tp&&
-   644823: 2319:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT
+   657158: 2319:forward(typename remove_reference<_Tp>::type& __t) _NOEXCEPT
     $$$$$: 2319-block  0
     $$$$$: 2319-block  1
-    75626: 2319-block  2
-   500525: 2319-block  3
-    47796: 2319-block  4
-    20876: 2319-block  5
-    $$$$$: 2319-block  6
-    $$$$$: 2319-block  7
-    $$$$$: 2319-block  8
-    $$$$$: 2319-block  9
+    79970: 2319-block  2
+   502833: 2319-block  3
+    48092: 2319-block  4
+    24392: 2319-block  5
+      338: 2319-block  6
+     1380: 2319-block  7
+       71: 2319-block  8
+       34: 2319-block  9
     $$$$$: 2319-block 10
-    $$$$$: 2319-block 11
-    $$$$$: 2319-block 12
-    $$$$$: 2319-block 13
+       48: 2319-block 11
         -: 2320:{
-   644823: 2321:    return static_cast<_Tp&&>(__t);
+   657158: 2321:    return static_cast<_Tp&&>(__t);
     $$$$$: 2321-block  0
     $$$$$: 2321-block  1
-    75626: 2321-block  2
-   500525: 2321-block  3
-    47796: 2321-block  4
-    20876: 2321-block  5
-    $$$$$: 2321-block  6
-    $$$$$: 2321-block  7
-    $$$$$: 2321-block  8
-    $$$$$: 2321-block  9
+    79970: 2321-block  2
+   502833: 2321-block  3
+    48092: 2321-block  4
+    24392: 2321-block  5
+      338: 2321-block  6
+     1380: 2321-block  7
+       71: 2321-block  8
+       34: 2321-block  9
     $$$$$: 2321-block 10
-    $$$$$: 2321-block 11
-    $$$$$: 2321-block 12
-    $$$$$: 2321-block 13
+       48: 2321-block 11
         -: 2322:}
         -: 2323:
         -: 2324:template <class _Tp>
@@ -4577,23 +4567,19 @@
         -: 4520:#else
         -: 4521:void
         -: 4522:#endif
-    71694: 4523:swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
-    71694: 4523-block  0
-    $$$$$: 4523-block  1
+    72189: 4523:swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+    72138: 4523-block  0
+       51: 4523-block  1
     $$$$$: 4523-block  2
-    $$$$$: 4523-block  3
-    $$$$$: 4523-block  4
         -: 4524:                                    is_nothrow_move_assignable<_Tp>::value)
         -: 4525:{
-    71694: 4526:    _Tp __t(_VSTD::move(__x));
-    71694: 4527:    __x = _VSTD::move(__y);
-    71694: 4528:    __y = _VSTD::move(__t);
-    71694: 4529:}
-    71694: 4529-block  0
-    $$$$$: 4529-block  1
+    72189: 4526:    _Tp __t(_VSTD::move(__x));
+    72189: 4527:    __x = _VSTD::move(__y);
+    72189: 4528:    __y = _VSTD::move(__t);
+    72189: 4529:}
+    72138: 4529-block  0
+       51: 4529-block  1
     $$$$$: 4529-block  2
-    $$$$$: 4529-block  3
-    $$$$$: 4529-block  4
         -: 4530:
         -: 4531:template<class _Tp, size_t _Np>
         -: 4532:inline _LIBCPP_INLINE_VISIBILITY
@@ -4605,17 +4591,13 @@
         -: 4538:template <class _ForwardIterator1, class _ForwardIterator2>
         -: 4539:inline _LIBCPP_INLINE_VISIBILITY
         -: 4540:void
-    #####: 4541:iter_swap(_ForwardIterator1 __a, _ForwardIterator2 __b)
-    $$$$$: 4541-block  0
-    $$$$$: 4541-block  1
+        -: 4541:iter_swap(_ForwardIterator1 __a, _ForwardIterator2 __b)
         -: 4542:    //                                  _NOEXCEPT_(_NOEXCEPT_(swap(*__a, *__b)))
         -: 4543:               _NOEXCEPT_(_NOEXCEPT_(swap(*_VSTD::declval<_ForwardIterator1>(),
         -: 4544:                                          *_VSTD::declval<_ForwardIterator2>())))
         -: 4545:{
-    #####: 4546:    swap(*__a, *__b);
-    #####: 4547:}
-    $$$$$: 4547-block  0
-    $$$$$: 4547-block  1
+        -: 4546:    swap(*__a, *__b);
+        -: 4547:}
         -: 4548:
         -: 4549:// __swappable
         -: 4550:

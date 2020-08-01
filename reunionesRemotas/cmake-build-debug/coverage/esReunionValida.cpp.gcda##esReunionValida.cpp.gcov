@@ -10,7 +10,7 @@
         -:    5:
         -:    6:using namespace std;
         -:    7:
-        1:    8:TEST(esReunionValidaTEST, reunionValida){
+        7:    8:TEST(esReunionValidaTEST, reunionValida){
         1:    8-block  0
         1:    8-block  1
         1:    8-block  2
@@ -24,42 +24,42 @@
     $$$$$:    8-block 10
     $$$$$:    8-block 11
     $$$$$:    8-block 12
-    $$$$$:    8-block 13
-    $$$$$:    8-block 14
-    $$$$$:    8-block 15
-    $$$$$:    8-block 16
-    $$$$$:    8-block 17
-    $$$$$:    8-block 18
-    $$$$$:    8-block 19
-    $$$$$:    8-block 20
-    $$$$$:    8-block 21
-    $$$$$:    8-block 22
-    $$$$$:    8-block 23
-    #####:    9:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    #####:   10:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    $$$$$:   10-block  0
-    #####:   11:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
-    $$$$$:   11-block  0
-    $$$$$:   11-block  1
-    $$$$$:   11-block  2
-    $$$$$:   11-block  3
-    $$$$$:   11-block  4
+        1:    8-block 13
+        1:    8-block 14
+        1:    8-block 15
+        1:    8-block 16
+        1:    8-block 17
+        1:    8-block 18
+        1:    8-block 19
+        1:    8-block 20
+        1:    8-block 21
+        1:    8-block 22
+        1:    8-block 23
+        1:    9:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:   10:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:   10-block  0
+        2:   11:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+        1:   11-block  0
+        1:   11-block  1
+        1:   11-block  2
+        1:   11-block  3
+        2:   11-block  4
     $$$$$:   11-block  5
     $$$$$:   11-block  6
     $$$$$:   11-block  7
     $$$$$:   11-block  8
     $$$$$:   11-block  9
     $$$$$:   11-block 10
-    #####:   12:    int prof = 8;
-    #####:   13:    int freq = 10;
+        1:   12:    int prof = 8;
+        1:   13:    int freq = 10;
         -:   14:
-    #####:   15:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
-    $$$$$:   15-block  0
-    $$$$$:   15-block  1
-    $$$$$:   15-block  2
-    $$$$$:   15-block  3
-    $$$$$:   15-block  4
-    $$$$$:   15-block  5
+        1:   15:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
+        1:   15-block  0
+        1:   15-block  1
+        1:   15-block  2
+        1:   15-block  3
+        1:   15-block  4
+        1:   15-block  5
     $$$$$:   15-block  6
     $$$$$:   15-block  7
     $$$$$:   15-block  8
@@ -69,24 +69,24 @@
     $$$$$:   15-block 12
     $$$$$:   15-block 13
     $$$$$:   15-block 14
-    $$$$$:   15-block 15
-    $$$$$:   15-block 16
+        1:   15-block 15
+        1:   15-block 16
     $$$$$:   15-block 17
-    #####:   16:}
+        1:   16:}
     $$$$$:   16-block  0
     $$$$$:   16-block  1
     $$$$$:   16-block  2
     $$$$$:   16-block  3
     $$$$$:   16-block  4
-    $$$$$:   16-block  5
-    $$$$$:   16-block  6
-    $$$$$:   16-block  7
+        1:   16-block  5
+        1:   16-block  6
+        1:   16-block  7
     $$$$$:   16-block  8
     $$$$$:   16-block  9
     $$$$$:   16-block 10
     $$$$$:   16-block 11
         -:   17:
-        1:   18:TEST(esReunionValidaTEST, reunionValida2)
+        7:   18:TEST(esReunionValidaTEST, reunionValida2)
         1:   18-block  0
         1:   18-block  1
         1:   18-block  2
@@ -100,43 +100,43 @@
     $$$$$:   18-block 10
     $$$$$:   18-block 11
     $$$$$:   18-block 12
-    $$$$$:   18-block 13
-    $$$$$:   18-block 14
-    $$$$$:   18-block 15
-    $$$$$:   18-block 16
-    $$$$$:   18-block 17
-    $$$$$:   18-block 18
-    $$$$$:   18-block 19
-    $$$$$:   18-block 20
-    $$$$$:   18-block 21
-    $$$$$:   18-block 22
-    $$$$$:   18-block 23
+        1:   18-block 13
+        1:   18-block 14
+        1:   18-block 15
+        1:   18-block 16
+        1:   18-block 17
+        1:   18-block 18
+        1:   18-block 19
+        1:   18-block 20
+        1:   18-block 21
+        1:   18-block 22
+        1:   18-block 23
         -:   19:{
-    #####:   20:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7 };
-    #####:   21:    senial hablante2 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7 };
-    $$$$$:   21-block  0
-    #####:   22:    reunion reunion = { make_pair(hablante1, 1), make_pair(hablante2, 0) };
-    $$$$$:   22-block  0
-    $$$$$:   22-block  1
-    $$$$$:   22-block  2
-    $$$$$:   22-block  3
-    $$$$$:   22-block  4
+        1:   20:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7 };
+        1:   21:    senial hablante2 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7 };
+        1:   21-block  0
+        2:   22:    reunion reunion = { make_pair(hablante1, 1), make_pair(hablante2, 0) };
+        1:   22-block  0
+        1:   22-block  1
+        1:   22-block  2
+        1:   22-block  3
+        2:   22-block  4
     $$$$$:   22-block  5
     $$$$$:   22-block  6
     $$$$$:   22-block  7
     $$$$$:   22-block  8
     $$$$$:   22-block  9
     $$$$$:   22-block 10
-    #####:   23:    int prof = 8;
-    #####:   24:    int freq = 10;
+        1:   23:    int prof = 8;
+        1:   24:    int freq = 10;
         -:   25:
-    #####:   26:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
-    $$$$$:   26-block  0
-    $$$$$:   26-block  1
-    $$$$$:   26-block  2
-    $$$$$:   26-block  3
-    $$$$$:   26-block  4
-    $$$$$:   26-block  5
+        1:   26:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
+        1:   26-block  0
+        1:   26-block  1
+        1:   26-block  2
+        1:   26-block  3
+        1:   26-block  4
+        1:   26-block  5
     $$$$$:   26-block  6
     $$$$$:   26-block  7
     $$$$$:   26-block  8
@@ -146,24 +146,24 @@
     $$$$$:   26-block 12
     $$$$$:   26-block 13
     $$$$$:   26-block 14
-    $$$$$:   26-block 15
-    $$$$$:   26-block 16
+        1:   26-block 15
+        1:   26-block 16
     $$$$$:   26-block 17
-    #####:   27:}
+        1:   27:}
     $$$$$:   27-block  0
     $$$$$:   27-block  1
     $$$$$:   27-block  2
     $$$$$:   27-block  3
     $$$$$:   27-block  4
-    $$$$$:   27-block  5
-    $$$$$:   27-block  6
-    $$$$$:   27-block  7
+        1:   27-block  5
+        1:   27-block  6
+        1:   27-block  7
     $$$$$:   27-block  8
     $$$$$:   27-block  9
     $$$$$:   27-block 10
     $$$$$:   27-block 11
         -:   28:
-        1:   29:TEST(esReunionValidaTEST, reunionValida3)
+        7:   29:TEST(esReunionValidaTEST, reunionValida3)
         1:   29-block  0
         1:   29-block  1
         1:   29-block  2
@@ -177,43 +177,43 @@
     $$$$$:   29-block 10
     $$$$$:   29-block 11
     $$$$$:   29-block 12
-    $$$$$:   29-block 13
-    $$$$$:   29-block 14
-    $$$$$:   29-block 15
-    $$$$$:   29-block 16
-    $$$$$:   29-block 17
-    $$$$$:   29-block 18
-    $$$$$:   29-block 19
-    $$$$$:   29-block 20
-    $$$$$:   29-block 21
-    $$$$$:   29-block 22
-    $$$$$:   29-block 23
+        1:   29-block 13
+        1:   29-block 14
+        1:   29-block 15
+        1:   29-block 16
+        1:   29-block 17
+        1:   29-block 18
+        1:   29-block 19
+        1:   29-block 20
+        1:   29-block 21
+        1:   29-block 22
+        1:   29-block 23
         -:   30:{
-    #####:   31:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 1, 1 };
-    #####:   32:    senial hablante2 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 6, 7, 4 };
-    $$$$$:   32-block  0
-    #####:   33:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
-    $$$$$:   33-block  0
-    $$$$$:   33-block  1
-    $$$$$:   33-block  2
-    $$$$$:   33-block  3
-    $$$$$:   33-block  4
+        1:   31:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 1, 1 };
+        1:   32:    senial hablante2 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 6, 7, 4 };
+        1:   32-block  0
+        2:   33:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
+        1:   33-block  0
+        1:   33-block  1
+        1:   33-block  2
+        1:   33-block  3
+        2:   33-block  4
     $$$$$:   33-block  5
     $$$$$:   33-block  6
     $$$$$:   33-block  7
     $$$$$:   33-block  8
     $$$$$:   33-block  9
     $$$$$:   33-block 10
-    #####:   34:    int prof = 8;
-    #####:   35:    int freq = 10;
+        1:   34:    int prof = 8;
+        1:   35:    int freq = 10;
         -:   36:
-    #####:   37:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
-    $$$$$:   37-block  0
-    $$$$$:   37-block  1
-    $$$$$:   37-block  2
-    $$$$$:   37-block  3
-    $$$$$:   37-block  4
-    $$$$$:   37-block  5
+        1:   37:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
+        1:   37-block  0
+        1:   37-block  1
+        1:   37-block  2
+        1:   37-block  3
+        1:   37-block  4
+        1:   37-block  5
     $$$$$:   37-block  6
     $$$$$:   37-block  7
     $$$$$:   37-block  8
@@ -223,24 +223,24 @@
     $$$$$:   37-block 12
     $$$$$:   37-block 13
     $$$$$:   37-block 14
-    $$$$$:   37-block 15
-    $$$$$:   37-block 16
+        1:   37-block 15
+        1:   37-block 16
     $$$$$:   37-block 17
-    #####:   38:}
+        1:   38:}
     $$$$$:   38-block  0
     $$$$$:   38-block  1
     $$$$$:   38-block  2
     $$$$$:   38-block  3
     $$$$$:   38-block  4
-    $$$$$:   38-block  5
-    $$$$$:   38-block  6
-    $$$$$:   38-block  7
+        1:   38-block  5
+        1:   38-block  6
+        1:   38-block  7
     $$$$$:   38-block  8
     $$$$$:   38-block  9
     $$$$$:   38-block 10
     $$$$$:   38-block 11
         -:   39:
-        1:   40:TEST(esReunionValidaTEST, reunionValida4)
+        7:   40:TEST(esReunionValidaTEST, reunionValida4)
         1:   40-block  0
         1:   40-block  1
         1:   40-block  2
@@ -254,45 +254,45 @@
     $$$$$:   40-block 10
     $$$$$:   40-block 11
     $$$$$:   40-block 12
-    $$$$$:   40-block 13
-    $$$$$:   40-block 14
-    $$$$$:   40-block 15
-    $$$$$:   40-block 16
-    $$$$$:   40-block 17
-    $$$$$:   40-block 18
-    $$$$$:   40-block 19
-    $$$$$:   40-block 20
-    $$$$$:   40-block 21
-    $$$$$:   40-block 22
-    $$$$$:   40-block 23
+        1:   40-block 13
+        1:   40-block 14
+        1:   40-block 15
+        1:   40-block 16
+        1:   40-block 17
+        1:   40-block 18
+        1:   40-block 19
+        1:   40-block 20
+        1:   40-block 21
+        1:   40-block 22
+        1:   40-block 23
         -:   41:{
-    #####:   42:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 1, 1 };
-    #####:   43:    senial hablante2 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 6, 7, 4 };
-    $$$$$:   43-block  0
-    #####:   44:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante2, 3), make_pair(hablante2, 2) };
-    $$$$$:   44-block  0
-    $$$$$:   44-block  1
-    $$$$$:   44-block  2
-    $$$$$:   44-block  3
-    $$$$$:   44-block  4
-    $$$$$:   44-block  5
-    $$$$$:   44-block  6
+        1:   42:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 1, 1 };
+        1:   43:    senial hablante2 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 6, 7, 4 };
+        1:   43-block  0
+        4:   44:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante2, 3), make_pair(hablante2, 2) };
+        1:   44-block  0
+        1:   44-block  1
+        1:   44-block  2
+        1:   44-block  3
+        1:   44-block  4
+        1:   44-block  5
+        4:   44-block  6
     $$$$$:   44-block  7
     $$$$$:   44-block  8
     $$$$$:   44-block  9
     $$$$$:   44-block 10
     $$$$$:   44-block 11
     $$$$$:   44-block 12
-    #####:   45:    int prof = 8;
-    #####:   46:    int freq = 10;
+        1:   45:    int prof = 8;
+        1:   46:    int freq = 10;
         -:   47:
-    #####:   48:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
-    $$$$$:   48-block  0
-    $$$$$:   48-block  1
-    $$$$$:   48-block  2
-    $$$$$:   48-block  3
-    $$$$$:   48-block  4
-    $$$$$:   48-block  5
+        1:   48:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
+        1:   48-block  0
+        1:   48-block  1
+        1:   48-block  2
+        1:   48-block  3
+        1:   48-block  4
+        1:   48-block  5
     $$$$$:   48-block  6
     $$$$$:   48-block  7
     $$$$$:   48-block  8
@@ -302,24 +302,24 @@
     $$$$$:   48-block 12
     $$$$$:   48-block 13
     $$$$$:   48-block 14
-    $$$$$:   48-block 15
-    $$$$$:   48-block 16
+        1:   48-block 15
+        1:   48-block 16
     $$$$$:   48-block 17
-    #####:   49:}
+        1:   49:}
     $$$$$:   49-block  0
     $$$$$:   49-block  1
     $$$$$:   49-block  2
     $$$$$:   49-block  3
     $$$$$:   49-block  4
-    $$$$$:   49-block  5
-    $$$$$:   49-block  6
-    $$$$$:   49-block  7
+        1:   49-block  5
+        1:   49-block  6
+        1:   49-block  7
     $$$$$:   49-block  8
     $$$$$:   49-block  9
     $$$$$:   49-block 10
     $$$$$:   49-block 11
         -:   50:
-        1:   51:TEST(esReunionValidaTEST, reunionValida5)
+        7:   51:TEST(esReunionValidaTEST, reunionValida5)
         1:   51-block  0
         1:   51-block  1
         1:   51-block  2
@@ -333,45 +333,45 @@
     $$$$$:   51-block 10
     $$$$$:   51-block 11
     $$$$$:   51-block 12
-    $$$$$:   51-block 13
-    $$$$$:   51-block 14
-    $$$$$:   51-block 15
-    $$$$$:   51-block 16
-    $$$$$:   51-block 17
-    $$$$$:   51-block 18
-    $$$$$:   51-block 19
-    $$$$$:   51-block 20
-    $$$$$:   51-block 21
-    $$$$$:   51-block 22
-    $$$$$:   51-block 23
+        1:   51-block 13
+        1:   51-block 14
+        1:   51-block 15
+        1:   51-block 16
+        1:   51-block 17
+        1:   51-block 18
+        1:   51-block 19
+        1:   51-block 20
+        1:   51-block 21
+        1:   51-block 22
+        1:   51-block 23
         -:   52:{
-    #####:   53:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 1, 1 };
-    #####:   54:    senial hablante2 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 6, 7, 4 };
-    $$$$$:   54-block  0
-    #####:   55:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante2, 3), make_pair(hablante1, 2) };
-    $$$$$:   55-block  0
-    $$$$$:   55-block  1
-    $$$$$:   55-block  2
-    $$$$$:   55-block  3
-    $$$$$:   55-block  4
-    $$$$$:   55-block  5
-    $$$$$:   55-block  6
+        1:   53:    senial hablante1 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 1, 1, 1 };
+        1:   54:    senial hablante2 = { 1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 6, 7, 4 };
+        1:   54-block  0
+        4:   55:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante2, 3), make_pair(hablante1, 2) };
+        1:   55-block  0
+        1:   55-block  1
+        1:   55-block  2
+        1:   55-block  3
+        1:   55-block  4
+        1:   55-block  5
+        4:   55-block  6
     $$$$$:   55-block  7
     $$$$$:   55-block  8
     $$$$$:   55-block  9
     $$$$$:   55-block 10
     $$$$$:   55-block 11
     $$$$$:   55-block 12
-    #####:   56:    int prof = 8;
-    #####:   57:    int freq = 10;
+        1:   56:    int prof = 8;
+        1:   57:    int freq = 10;
         -:   58:
-    #####:   59:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
-    $$$$$:   59-block  0
-    $$$$$:   59-block  1
-    $$$$$:   59-block  2
-    $$$$$:   59-block  3
-    $$$$$:   59-block  4
-    $$$$$:   59-block  5
+        1:   59:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
+        1:   59-block  0
+        1:   59-block  1
+        1:   59-block  2
+        1:   59-block  3
+        1:   59-block  4
+        1:   59-block  5
     $$$$$:   59-block  6
     $$$$$:   59-block  7
     $$$$$:   59-block  8
@@ -381,24 +381,24 @@
     $$$$$:   59-block 12
     $$$$$:   59-block 13
     $$$$$:   59-block 14
-    $$$$$:   59-block 15
-    $$$$$:   59-block 16
+        1:   59-block 15
+        1:   59-block 16
     $$$$$:   59-block 17
-    #####:   60:}
+        1:   60:}
     $$$$$:   60-block  0
     $$$$$:   60-block  1
     $$$$$:   60-block  2
     $$$$$:   60-block  3
     $$$$$:   60-block  4
-    $$$$$:   60-block  5
-    $$$$$:   60-block  6
-    $$$$$:   60-block  7
+        1:   60-block  5
+        1:   60-block  6
+        1:   60-block  7
     $$$$$:   60-block  8
     $$$$$:   60-block  9
     $$$$$:   60-block 10
     $$$$$:   60-block 11
         -:   61:
-        1:   62:TEST(esReunionValidaTEST, reunionValidaDeUnSoloHablante){
+        7:   62:TEST(esReunionValidaTEST, reunionValidaDeUnSoloHablante){
         1:   62-block  0
         1:   62-block  1
         1:   62-block  2
@@ -412,39 +412,39 @@
     $$$$$:   62-block 10
     $$$$$:   62-block 11
     $$$$$:   62-block 12
-    $$$$$:   62-block 13
-    $$$$$:   62-block 14
-    $$$$$:   62-block 15
-    $$$$$:   62-block 16
-    $$$$$:   62-block 17
-    $$$$$:   62-block 18
-    $$$$$:   62-block 19
-    $$$$$:   62-block 20
-    $$$$$:   62-block 21
-    $$$$$:   62-block 22
-    $$$$$:   62-block 23
-    #####:   63:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    #####:   64:    reunion reunion = {make_pair(hablante1, 0)};
-    $$$$$:   64-block  0
-    $$$$$:   64-block  1
-    $$$$$:   64-block  2
-    $$$$$:   64-block  3
+        1:   62-block 13
+        1:   62-block 14
+        1:   62-block 15
+        1:   62-block 16
+        1:   62-block 17
+        1:   62-block 18
+        1:   62-block 19
+        1:   62-block 20
+        1:   62-block 21
+        1:   62-block 22
+        1:   62-block 23
+        1:   63:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:   64:    reunion reunion = {make_pair(hablante1, 0)};
+        1:   64-block  0
+        1:   64-block  1
+        1:   64-block  2
+        1:   64-block  3
     $$$$$:   64-block  4
     $$$$$:   64-block  5
     $$$$$:   64-block  6
     $$$$$:   64-block  7
     $$$$$:   64-block  8
     $$$$$:   64-block  9
-    #####:   65:    int prof = 8;
-    #####:   66:    int freq = 10;
+        1:   65:    int prof = 8;
+        1:   66:    int freq = 10;
         -:   67:
-    #####:   68:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
-    $$$$$:   68-block  0
-    $$$$$:   68-block  1
-    $$$$$:   68-block  2
-    $$$$$:   68-block  3
-    $$$$$:   68-block  4
-    $$$$$:   68-block  5
+        1:   68:    ASSERT_TRUE(esReunionValida(reunion, prof, freq));
+        1:   68-block  0
+        1:   68-block  1
+        1:   68-block  2
+        1:   68-block  3
+        1:   68-block  4
+        1:   68-block  5
     $$$$$:   68-block  6
     $$$$$:   68-block  7
     $$$$$:   68-block  8
@@ -454,22 +454,22 @@
     $$$$$:   68-block 12
     $$$$$:   68-block 13
     $$$$$:   68-block 14
-    $$$$$:   68-block 15
-    $$$$$:   68-block 16
+        1:   68-block 15
+        1:   68-block 16
     $$$$$:   68-block 17
-    #####:   69:}
+        1:   69:}
     $$$$$:   69-block  0
     $$$$$:   69-block  1
     $$$$$:   69-block  2
     $$$$$:   69-block  3
-    $$$$$:   69-block  4
-    $$$$$:   69-block  5
-    $$$$$:   69-block  6
+        1:   69-block  4
+        1:   69-block  5
+        1:   69-block  6
     $$$$$:   69-block  7
     $$$$$:   69-block  8
     $$$$$:   69-block  9
         -:   70:
-        1:   71:TEST(esReunionValidaTEST, reunionVacia){
+        7:   71:TEST(esReunionValidaTEST, reunionVacia){
         1:   71-block  0
         1:   71-block  1
         1:   71-block  2
@@ -483,28 +483,28 @@
     $$$$$:   71-block 10
     $$$$$:   71-block 11
     $$$$$:   71-block 12
-    $$$$$:   71-block 13
-    $$$$$:   71-block 14
-    $$$$$:   71-block 15
-    $$$$$:   71-block 16
-    $$$$$:   71-block 17
-    $$$$$:   71-block 18
-    $$$$$:   71-block 19
-    $$$$$:   71-block 20
-    $$$$$:   71-block 21
-    $$$$$:   71-block 22
-    $$$$$:   71-block 23
-    #####:   72:    reunion reunion = {};
-    #####:   73:    int prof = 8;
-    #####:   74:    int freq = 10;
+        1:   71-block 13
+        1:   71-block 14
+        1:   71-block 15
+        1:   71-block 16
+        1:   71-block 17
+        1:   71-block 18
+        1:   71-block 19
+        1:   71-block 20
+        1:   71-block 21
+        1:   71-block 22
+        1:   71-block 23
+        1:   72:    reunion reunion = {};
+        1:   73:    int prof = 8;
+        1:   74:    int freq = 10;
         -:   75:
-    #####:   76:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:   76-block  0
-    $$$$$:   76-block  1
-    $$$$$:   76-block  2
-    $$$$$:   76-block  3
-    $$$$$:   76-block  4
-    $$$$$:   76-block  5
+        1:   76:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:   76-block  0
+        1:   76-block  1
+        1:   76-block  2
+        1:   76-block  3
+        1:   76-block  4
+        1:   76-block  5
     $$$$$:   76-block  6
     $$$$$:   76-block  7
     $$$$$:   76-block  8
@@ -514,21 +514,21 @@
     $$$$$:   76-block 12
     $$$$$:   76-block 13
     $$$$$:   76-block 14
-    $$$$$:   76-block 15
-    $$$$$:   76-block 16
+        1:   76-block 15
+        1:   76-block 16
     $$$$$:   76-block 17
-    #####:   77:}
+        1:   77:}
     $$$$$:   77-block  0
     $$$$$:   77-block  1
     $$$$$:   77-block  2
     $$$$$:   77-block  3
-    $$$$$:   77-block  4
-    $$$$$:   77-block  5
-    $$$$$:   77-block  6
+        1:   77-block  4
+        1:   77-block  5
+        1:   77-block  6
     $$$$$:   77-block  7
     $$$$$:   77-block  8
         -:   78:
-        1:   79:TEST(esReunionValidaTEST, ProfundidadFueraDeRango)
+        7:   79:TEST(esReunionValidaTEST, ProfundidadFueraDeRango)
         1:   79-block  0
         1:   79-block  1
         1:   79-block  2
@@ -542,43 +542,43 @@
     $$$$$:   79-block 10
     $$$$$:   79-block 11
     $$$$$:   79-block 12
-    $$$$$:   79-block 13
-    $$$$$:   79-block 14
-    $$$$$:   79-block 15
-    $$$$$:   79-block 16
-    $$$$$:   79-block 17
-    $$$$$:   79-block 18
-    $$$$$:   79-block 19
-    $$$$$:   79-block 20
-    $$$$$:   79-block 21
-    $$$$$:   79-block 22
-    $$$$$:   79-block 23
+        1:   79-block 13
+        1:   79-block 14
+        1:   79-block 15
+        1:   79-block 16
+        1:   79-block 17
+        1:   79-block 18
+        1:   79-block 19
+        1:   79-block 20
+        1:   79-block 21
+        1:   79-block 22
+        1:   79-block 23
         -:   80:{
-    #####:   81:    senial hablante1(15, 0);
-    #####:   82:    senial hablante2(15, 300);
-    $$$$$:   82-block  0
-    #####:   83:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
-    $$$$$:   83-block  0
-    $$$$$:   83-block  1
-    $$$$$:   83-block  2
-    $$$$$:   83-block  3
-    $$$$$:   83-block  4
+        1:   81:    senial hablante1(15, 0);
+        1:   82:    senial hablante2(15, 300);
+        1:   82-block  0
+        2:   83:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 1) };
+        1:   83-block  0
+        1:   83-block  1
+        1:   83-block  2
+        1:   83-block  3
+        2:   83-block  4
     $$$$$:   83-block  5
     $$$$$:   83-block  6
     $$$$$:   83-block  7
     $$$$$:   83-block  8
     $$$$$:   83-block  9
     $$$$$:   83-block 10
-    #####:   84:    int prof = 8;
-    #####:   85:    int freq = 10;
+        1:   84:    int prof = 8;
+        1:   85:    int freq = 10;
         -:   86:
-    #####:   87:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:   87-block  0
-    $$$$$:   87-block  1
-    $$$$$:   87-block  2
-    $$$$$:   87-block  3
-    $$$$$:   87-block  4
-    $$$$$:   87-block  5
+        1:   87:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:   87-block  0
+        1:   87-block  1
+        1:   87-block  2
+        1:   87-block  3
+        1:   87-block  4
+        1:   87-block  5
     $$$$$:   87-block  6
     $$$$$:   87-block  7
     $$$$$:   87-block  8
@@ -588,24 +588,24 @@
     $$$$$:   87-block 12
     $$$$$:   87-block 13
     $$$$$:   87-block 14
-    $$$$$:   87-block 15
-    $$$$$:   87-block 16
+        1:   87-block 15
+        1:   87-block 16
     $$$$$:   87-block 17
-    #####:   88:}
+        1:   88:}
     $$$$$:   88-block  0
     $$$$$:   88-block  1
     $$$$$:   88-block  2
     $$$$$:   88-block  3
     $$$$$:   88-block  4
-    $$$$$:   88-block  5
-    $$$$$:   88-block  6
-    $$$$$:   88-block  7
+        1:   88-block  5
+        1:   88-block  6
+        1:   88-block  7
     $$$$$:   88-block  8
     $$$$$:   88-block  9
     $$$$$:   88-block 10
     $$$$$:   88-block 11
         -:   89:
-        1:   90:TEST(esReunionValidaTEST, FrecuenciaInvalida)
+        7:   90:TEST(esReunionValidaTEST, FrecuenciaInvalida)
         1:   90-block  0
         1:   90-block  1
         1:   90-block  2
@@ -619,43 +619,43 @@
     $$$$$:   90-block 10
     $$$$$:   90-block 11
     $$$$$:   90-block 12
-    $$$$$:   90-block 13
-    $$$$$:   90-block 14
-    $$$$$:   90-block 15
-    $$$$$:   90-block 16
-    $$$$$:   90-block 17
-    $$$$$:   90-block 18
-    $$$$$:   90-block 19
-    $$$$$:   90-block 20
-    $$$$$:   90-block 21
-    $$$$$:   90-block 22
-    $$$$$:   90-block 23
+        1:   90-block 13
+        1:   90-block 14
+        1:   90-block 15
+        1:   90-block 16
+        1:   90-block 17
+        1:   90-block 18
+        1:   90-block 19
+        1:   90-block 20
+        1:   90-block 21
+        1:   90-block 22
+        1:   90-block 23
         -:   91:{
-    #####:   92:    senial hablante1(15, 0);
-    #####:   93:    senial hablante2(15, 1);
-    $$$$$:   93-block  0
-    #####:   94:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante1, 1) };
-    $$$$$:   94-block  0
-    $$$$$:   94-block  1
-    $$$$$:   94-block  2
-    $$$$$:   94-block  3
-    $$$$$:   94-block  4
+        1:   92:    senial hablante1(15, 0);
+        1:   93:    senial hablante2(15, 1);
+        1:   93-block  0
+        2:   94:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante1, 1) };
+        1:   94-block  0
+        1:   94-block  1
+        1:   94-block  2
+        1:   94-block  3
+        2:   94-block  4
     $$$$$:   94-block  5
     $$$$$:   94-block  6
     $$$$$:   94-block  7
     $$$$$:   94-block  8
     $$$$$:   94-block  9
     $$$$$:   94-block 10
-    #####:   95:    int prof = 8;
-    #####:   96:    int freq = 9;
+        1:   95:    int prof = 8;
+        1:   96:    int freq = 9;
         -:   97:
-    #####:   98:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:   98-block  0
-    $$$$$:   98-block  1
-    $$$$$:   98-block  2
-    $$$$$:   98-block  3
-    $$$$$:   98-block  4
-    $$$$$:   98-block  5
+        1:   98:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:   98-block  0
+        1:   98-block  1
+        1:   98-block  2
+        1:   98-block  3
+        1:   98-block  4
+        1:   98-block  5
     $$$$$:   98-block  6
     $$$$$:   98-block  7
     $$$$$:   98-block  8
@@ -665,24 +665,24 @@
     $$$$$:   98-block 12
     $$$$$:   98-block 13
     $$$$$:   98-block 14
-    $$$$$:   98-block 15
-    $$$$$:   98-block 16
+        1:   98-block 15
+        1:   98-block 16
     $$$$$:   98-block 17
-    #####:   99:}
+        1:   99:}
     $$$$$:   99-block  0
     $$$$$:   99-block  1
     $$$$$:   99-block  2
     $$$$$:   99-block  3
     $$$$$:   99-block  4
-    $$$$$:   99-block  5
-    $$$$$:   99-block  6
-    $$$$$:   99-block  7
+        1:   99-block  5
+        1:   99-block  6
+        1:   99-block  7
     $$$$$:   99-block  8
     $$$$$:   99-block  9
     $$$$$:   99-block 10
     $$$$$:   99-block 11
         -:  100:
-        1:  101:TEST(esReunionValidaTEST, reunionInvalidaDeUnSoloHablante1)
+        7:  101:TEST(esReunionValidaTEST, reunionInvalidaDeUnSoloHablante1)
         1:  101-block  0
         1:  101-block  1
         1:  101-block  2
@@ -696,40 +696,40 @@
     $$$$$:  101-block 10
     $$$$$:  101-block 11
     $$$$$:  101-block 12
-    $$$$$:  101-block 13
-    $$$$$:  101-block 14
-    $$$$$:  101-block 15
-    $$$$$:  101-block 16
-    $$$$$:  101-block 17
-    $$$$$:  101-block 18
-    $$$$$:  101-block 19
-    $$$$$:  101-block 20
-    $$$$$:  101-block 21
-    $$$$$:  101-block 22
-    $$$$$:  101-block 23
+        1:  101-block 13
+        1:  101-block 14
+        1:  101-block 15
+        1:  101-block 16
+        1:  101-block 17
+        1:  101-block 18
+        1:  101-block 19
+        1:  101-block 20
+        1:  101-block 21
+        1:  101-block 22
+        1:  101-block 23
         -:  102:{
-    #####:  103:    senial hablante1 = { 1, 3, -3, 4, 6 };
-    #####:  104:    reunion reunion = { make_pair(hablante1, 0) };
-    $$$$$:  104-block  0
-    $$$$$:  104-block  1
-    $$$$$:  104-block  2
-    $$$$$:  104-block  3
+        1:  103:    senial hablante1 = { 1, 3, -3, 4, 6 };
+        1:  104:    reunion reunion = { make_pair(hablante1, 0) };
+        1:  104-block  0
+        1:  104-block  1
+        1:  104-block  2
+        1:  104-block  3
     $$$$$:  104-block  4
     $$$$$:  104-block  5
     $$$$$:  104-block  6
     $$$$$:  104-block  7
     $$$$$:  104-block  8
     $$$$$:  104-block  9
-    #####:  105:    int prof = 8;
-    #####:  106:    int freq = 10;
+        1:  105:    int prof = 8;
+        1:  106:    int freq = 10;
         -:  107:
-    #####:  108:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:  108-block  0
-    $$$$$:  108-block  1
-    $$$$$:  108-block  2
-    $$$$$:  108-block  3
-    $$$$$:  108-block  4
-    $$$$$:  108-block  5
+        1:  108:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:  108-block  0
+        1:  108-block  1
+        1:  108-block  2
+        1:  108-block  3
+        1:  108-block  4
+        1:  108-block  5
     $$$$$:  108-block  6
     $$$$$:  108-block  7
     $$$$$:  108-block  8
@@ -739,22 +739,22 @@
     $$$$$:  108-block 12
     $$$$$:  108-block 13
     $$$$$:  108-block 14
-    $$$$$:  108-block 15
-    $$$$$:  108-block 16
+        1:  108-block 15
+        1:  108-block 16
     $$$$$:  108-block 17
-    #####:  109:}
+        1:  109:}
     $$$$$:  109-block  0
     $$$$$:  109-block  1
     $$$$$:  109-block  2
     $$$$$:  109-block  3
-    $$$$$:  109-block  4
-    $$$$$:  109-block  5
-    $$$$$:  109-block  6
+        1:  109-block  4
+        1:  109-block  5
+        1:  109-block  6
     $$$$$:  109-block  7
     $$$$$:  109-block  8
     $$$$$:  109-block  9
         -:  110:
-        1:  111:TEST(esReunionValidaTEST, reunionInvalidaDeUnSoloHablante2)
+        7:  111:TEST(esReunionValidaTEST, reunionInvalidaDeUnSoloHablante2)
         1:  111-block  0
         1:  111-block  1
         1:  111-block  2
@@ -768,40 +768,40 @@
     $$$$$:  111-block 10
     $$$$$:  111-block 11
     $$$$$:  111-block 12
-    $$$$$:  111-block 13
-    $$$$$:  111-block 14
-    $$$$$:  111-block 15
-    $$$$$:  111-block 16
-    $$$$$:  111-block 17
-    $$$$$:  111-block 18
-    $$$$$:  111-block 19
-    $$$$$:  111-block 20
-    $$$$$:  111-block 21
-    $$$$$:  111-block 22
-    $$$$$:  111-block 23
+        1:  111-block 13
+        1:  111-block 14
+        1:  111-block 15
+        1:  111-block 16
+        1:  111-block 17
+        1:  111-block 18
+        1:  111-block 19
+        1:  111-block 20
+        1:  111-block 21
+        1:  111-block 22
+        1:  111-block 23
         -:  112:{
-    #####:  113:    senial hablante1(15, 0);
-    #####:  114:    reunion reunion = { make_pair(hablante1, 0) };
-    $$$$$:  114-block  0
-    $$$$$:  114-block  1
-    $$$$$:  114-block  2
-    $$$$$:  114-block  3
+        1:  113:    senial hablante1(15, 0);
+        1:  114:    reunion reunion = { make_pair(hablante1, 0) };
+        1:  114-block  0
+        1:  114-block  1
+        1:  114-block  2
+        1:  114-block  3
     $$$$$:  114-block  4
     $$$$$:  114-block  5
     $$$$$:  114-block  6
     $$$$$:  114-block  7
     $$$$$:  114-block  8
     $$$$$:  114-block  9
-    #####:  115:    int prof = 9;
-    #####:  116:    int freq = 10;
+        1:  115:    int prof = 9;
+        1:  116:    int freq = 10;
         -:  117:
-    #####:  118:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:  118-block  0
-    $$$$$:  118-block  1
-    $$$$$:  118-block  2
-    $$$$$:  118-block  3
-    $$$$$:  118-block  4
-    $$$$$:  118-block  5
+        1:  118:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:  118-block  0
+        1:  118-block  1
+        1:  118-block  2
+        1:  118-block  3
+        1:  118-block  4
+        1:  118-block  5
     $$$$$:  118-block  6
     $$$$$:  118-block  7
     $$$$$:  118-block  8
@@ -811,22 +811,22 @@
     $$$$$:  118-block 12
     $$$$$:  118-block 13
     $$$$$:  118-block 14
-    $$$$$:  118-block 15
-    $$$$$:  118-block 16
+        1:  118-block 15
+        1:  118-block 16
     $$$$$:  118-block 17
-    #####:  119:}
+        1:  119:}
     $$$$$:  119-block  0
     $$$$$:  119-block  1
     $$$$$:  119-block  2
     $$$$$:  119-block  3
-    $$$$$:  119-block  4
-    $$$$$:  119-block  5
-    $$$$$:  119-block  6
+        1:  119-block  4
+        1:  119-block  5
+        1:  119-block  6
     $$$$$:  119-block  7
     $$$$$:  119-block  8
     $$$$$:  119-block  9
         -:  120:
-        1:  121:TEST(esReunionValidaTEST, reunionInvalidaDeDosHablantes)
+        7:  121:TEST(esReunionValidaTEST, reunionInvalidaDeDosHablantes)
         1:  121-block  0
         1:  121-block  1
         1:  121-block  2
@@ -840,43 +840,43 @@
     $$$$$:  121-block 10
     $$$$$:  121-block 11
     $$$$$:  121-block 12
-    $$$$$:  121-block 13
-    $$$$$:  121-block 14
-    $$$$$:  121-block 15
-    $$$$$:  121-block 16
-    $$$$$:  121-block 17
-    $$$$$:  121-block 18
-    $$$$$:  121-block 19
-    $$$$$:  121-block 20
-    $$$$$:  121-block 21
-    $$$$$:  121-block 22
-    $$$$$:  121-block 23
+        1:  121-block 13
+        1:  121-block 14
+        1:  121-block 15
+        1:  121-block 16
+        1:  121-block 17
+        1:  121-block 18
+        1:  121-block 19
+        1:  121-block 20
+        1:  121-block 21
+        1:  121-block 22
+        1:  121-block 23
         -:  122:{
-    #####:  123:    senial hablante1(15, 0);
-    #####:  124:    senial hablante2(15, 300);
-    $$$$$:  124-block  0
-    #####:  125:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 0) };
-    $$$$$:  125-block  0
-    $$$$$:  125-block  1
-    $$$$$:  125-block  2
-    $$$$$:  125-block  3
-    $$$$$:  125-block  4
+        1:  123:    senial hablante1(15, 0);
+        1:  124:    senial hablante2(15, 300);
+        1:  124-block  0
+        2:  125:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante2, 0) };
+        1:  125-block  0
+        1:  125-block  1
+        1:  125-block  2
+        1:  125-block  3
+        2:  125-block  4
     $$$$$:  125-block  5
     $$$$$:  125-block  6
     $$$$$:  125-block  7
     $$$$$:  125-block  8
     $$$$$:  125-block  9
     $$$$$:  125-block 10
-    #####:  126:    int prof = 8;
-    #####:  127:    int freq = 10;
+        1:  126:    int prof = 8;
+        1:  127:    int freq = 10;
         -:  128:
-    #####:  129:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:  129-block  0
-    $$$$$:  129-block  1
-    $$$$$:  129-block  2
-    $$$$$:  129-block  3
-    $$$$$:  129-block  4
-    $$$$$:  129-block  5
+        1:  129:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:  129-block  0
+        1:  129-block  1
+        1:  129-block  2
+        1:  129-block  3
+        1:  129-block  4
+        1:  129-block  5
     $$$$$:  129-block  6
     $$$$$:  129-block  7
     $$$$$:  129-block  8
@@ -886,24 +886,24 @@
     $$$$$:  129-block 12
     $$$$$:  129-block 13
     $$$$$:  129-block 14
-    $$$$$:  129-block 15
-    $$$$$:  129-block 16
+        1:  129-block 15
+        1:  129-block 16
     $$$$$:  129-block 17
-    #####:  130:}
+        1:  130:}
     $$$$$:  130-block  0
     $$$$$:  130-block  1
     $$$$$:  130-block  2
     $$$$$:  130-block  3
     $$$$$:  130-block  4
-    $$$$$:  130-block  5
-    $$$$$:  130-block  6
-    $$$$$:  130-block  7
+        1:  130-block  5
+        1:  130-block  6
+        1:  130-block  7
     $$$$$:  130-block  8
     $$$$$:  130-block  9
     $$$$$:  130-block 10
     $$$$$:  130-block 11
         -:  131:
-        1:  132:TEST(esReunionValidaTEST, hablantesFaltantes)
+        7:  132:TEST(esReunionValidaTEST, hablantesFaltantes)
         1:  132-block  0
         1:  132-block  1
         1:  132-block  2
@@ -917,43 +917,43 @@
     $$$$$:  132-block 10
     $$$$$:  132-block 11
     $$$$$:  132-block 12
-    $$$$$:  132-block 13
-    $$$$$:  132-block 14
-    $$$$$:  132-block 15
-    $$$$$:  132-block 16
-    $$$$$:  132-block 17
-    $$$$$:  132-block 18
-    $$$$$:  132-block 19
-    $$$$$:  132-block 20
-    $$$$$:  132-block 21
-    $$$$$:  132-block 22
-    $$$$$:  132-block 23
+        1:  132-block 13
+        1:  132-block 14
+        1:  132-block 15
+        1:  132-block 16
+        1:  132-block 17
+        1:  132-block 18
+        1:  132-block 19
+        1:  132-block 20
+        1:  132-block 21
+        1:  132-block 22
+        1:  132-block 23
         -:  133:{
-    #####:  134:    senial hablante1(15, 0);
-    #####:  135:    senial hablante2(15, 1);
-    $$$$$:  135-block  0
-    #####:  136:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante1, 2) };
-    $$$$$:  136-block  0
-    $$$$$:  136-block  1
-    $$$$$:  136-block  2
-    $$$$$:  136-block  3
-    $$$$$:  136-block  4
+        1:  134:    senial hablante1(15, 0);
+        1:  135:    senial hablante2(15, 1);
+        1:  135-block  0
+        2:  136:    reunion reunion = { make_pair(hablante1, 0), make_pair(hablante1, 2) };
+        1:  136-block  0
+        1:  136-block  1
+        1:  136-block  2
+        1:  136-block  3
+        2:  136-block  4
     $$$$$:  136-block  5
     $$$$$:  136-block  6
     $$$$$:  136-block  7
     $$$$$:  136-block  8
     $$$$$:  136-block  9
     $$$$$:  136-block 10
-    #####:  137:    int prof = 8;
-    #####:  138:    int freq = 10;
+        1:  137:    int prof = 8;
+        1:  138:    int freq = 10;
         -:  139:
-    #####:  140:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:  140-block  0
-    $$$$$:  140-block  1
-    $$$$$:  140-block  2
-    $$$$$:  140-block  3
-    $$$$$:  140-block  4
-    $$$$$:  140-block  5
+        1:  140:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:  140-block  0
+        1:  140-block  1
+        1:  140-block  2
+        1:  140-block  3
+        1:  140-block  4
+        1:  140-block  5
     $$$$$:  140-block  6
     $$$$$:  140-block  7
     $$$$$:  140-block  8
@@ -963,24 +963,24 @@
     $$$$$:  140-block 12
     $$$$$:  140-block 13
     $$$$$:  140-block 14
-    $$$$$:  140-block 15
-    $$$$$:  140-block 16
+        1:  140-block 15
+        1:  140-block 16
     $$$$$:  140-block 17
-    #####:  141:}
+        1:  141:}
     $$$$$:  141-block  0
     $$$$$:  141-block  1
     $$$$$:  141-block  2
     $$$$$:  141-block  3
     $$$$$:  141-block  4
-    $$$$$:  141-block  5
-    $$$$$:  141-block  6
-    $$$$$:  141-block  7
+        1:  141-block  5
+        1:  141-block  6
+        1:  141-block  7
     $$$$$:  141-block  8
     $$$$$:  141-block  9
     $$$$$:  141-block 10
     $$$$$:  141-block 11
         -:  142:
-        1:  143:TEST(esReunionValidaTEST, noEsMatriz){
+        7:  143:TEST(esReunionValidaTEST, noEsMatriz){
         1:  143-block  0
         1:  143-block  1
         1:  143-block  2
@@ -994,42 +994,42 @@
     $$$$$:  143-block 10
     $$$$$:  143-block 11
     $$$$$:  143-block 12
-    $$$$$:  143-block 13
-    $$$$$:  143-block 14
-    $$$$$:  143-block 15
-    $$$$$:  143-block 16
-    $$$$$:  143-block 17
-    $$$$$:  143-block 18
-    $$$$$:  143-block 19
-    $$$$$:  143-block 20
-    $$$$$:  143-block 21
-    $$$$$:  143-block 22
-    $$$$$:  143-block 23
-    #####:  144:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 4, 1, -4};
-    #####:  145:    senial hablante2 = {0, 1, 4, 6, 0, -2, 3, -3, 4, -9, 5};
-    $$$$$:  145-block  0
-    #####:  146:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
-    $$$$$:  146-block  0
-    $$$$$:  146-block  1
-    $$$$$:  146-block  2
-    $$$$$:  146-block  3
-    $$$$$:  146-block  4
+        1:  143-block 13
+        1:  143-block 14
+        1:  143-block 15
+        1:  143-block 16
+        1:  143-block 17
+        1:  143-block 18
+        1:  143-block 19
+        1:  143-block 20
+        1:  143-block 21
+        1:  143-block 22
+        1:  143-block 23
+        1:  144:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7, 4, 1, -4};
+        1:  145:    senial hablante2 = {0, 1, 4, 6, 0, -2, 3, -3, 4, -9, 5};
+        1:  145-block  0
+        2:  146:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+        1:  146-block  0
+        1:  146-block  1
+        1:  146-block  2
+        1:  146-block  3
+        2:  146-block  4
     $$$$$:  146-block  5
     $$$$$:  146-block  6
     $$$$$:  146-block  7
     $$$$$:  146-block  8
     $$$$$:  146-block  9
     $$$$$:  146-block 10
-    #####:  147:    int prof = 8;
-    #####:  148:    int freq = 10;
+        1:  147:    int prof = 8;
+        1:  148:    int freq = 10;
         -:  149:
-    #####:  150:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:  150-block  0
-    $$$$$:  150-block  1
-    $$$$$:  150-block  2
-    $$$$$:  150-block  3
-    $$$$$:  150-block  4
-    $$$$$:  150-block  5
+        1:  150:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:  150-block  0
+        1:  150-block  1
+        1:  150-block  2
+        1:  150-block  3
+        1:  150-block  4
+        1:  150-block  5
     $$$$$:  150-block  6
     $$$$$:  150-block  7
     $$$$$:  150-block  8
@@ -1039,24 +1039,24 @@
     $$$$$:  150-block 12
     $$$$$:  150-block 13
     $$$$$:  150-block 14
-    $$$$$:  150-block 15
-    $$$$$:  150-block 16
+        1:  150-block 15
+        1:  150-block 16
     $$$$$:  150-block 17
-    #####:  151:}
+        1:  151:}
     $$$$$:  151-block  0
     $$$$$:  151-block  1
     $$$$$:  151-block  2
     $$$$$:  151-block  3
     $$$$$:  151-block  4
-    $$$$$:  151-block  5
-    $$$$$:  151-block  6
-    $$$$$:  151-block  7
+        1:  151-block  5
+        1:  151-block  6
+        1:  151-block  7
     $$$$$:  151-block  8
     $$$$$:  151-block  9
     $$$$$:  151-block 10
     $$$$$:  151-block 11
         -:  152:
-        1:  153:TEST(esReunionValidaTEST, hablanteConSenialNoValida){
+        7:  153:TEST(esReunionValidaTEST, hablanteConSenialNoValida){
         1:  153-block  0
         1:  153-block  1
         1:  153-block  2
@@ -1070,42 +1070,42 @@
     $$$$$:  153-block 10
     $$$$$:  153-block 11
     $$$$$:  153-block 12
-    $$$$$:  153-block 13
-    $$$$$:  153-block 14
-    $$$$$:  153-block 15
-    $$$$$:  153-block 16
-    $$$$$:  153-block 17
-    $$$$$:  153-block 18
-    $$$$$:  153-block 19
-    $$$$$:  153-block 20
-    $$$$$:  153-block 21
-    $$$$$:  153-block 22
-    $$$$$:  153-block 23
-    #####:  154:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    #####:  155:    senial hablante2 = {-2, -8, 9, -15, 7};
-    $$$$$:  155-block  0
-    #####:  156:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
-    $$$$$:  156-block  0
-    $$$$$:  156-block  1
-    $$$$$:  156-block  2
-    $$$$$:  156-block  3
-    $$$$$:  156-block  4
+        1:  153-block 13
+        1:  153-block 14
+        1:  153-block 15
+        1:  153-block 16
+        1:  153-block 17
+        1:  153-block 18
+        1:  153-block 19
+        1:  153-block 20
+        1:  153-block 21
+        1:  153-block 22
+        1:  153-block 23
+        1:  154:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:  155:    senial hablante2 = {-2, -8, 9, -15, 7};
+        1:  155-block  0
+        2:  156:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1)};
+        1:  156-block  0
+        1:  156-block  1
+        1:  156-block  2
+        1:  156-block  3
+        2:  156-block  4
     $$$$$:  156-block  5
     $$$$$:  156-block  6
     $$$$$:  156-block  7
     $$$$$:  156-block  8
     $$$$$:  156-block  9
     $$$$$:  156-block 10
-    #####:  157:    int prof = 8;
-    #####:  158:    int freq = 10;
+        1:  157:    int prof = 8;
+        1:  158:    int freq = 10;
         -:  159:
-    #####:  160:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:  160-block  0
-    $$$$$:  160-block  1
-    $$$$$:  160-block  2
-    $$$$$:  160-block  3
-    $$$$$:  160-block  4
-    $$$$$:  160-block  5
+        1:  160:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:  160-block  0
+        1:  160-block  1
+        1:  160-block  2
+        1:  160-block  3
+        1:  160-block  4
+        1:  160-block  5
     $$$$$:  160-block  6
     $$$$$:  160-block  7
     $$$$$:  160-block  8
@@ -1115,24 +1115,24 @@
     $$$$$:  160-block 12
     $$$$$:  160-block 13
     $$$$$:  160-block 14
-    $$$$$:  160-block 15
-    $$$$$:  160-block 16
+        1:  160-block 15
+        1:  160-block 16
     $$$$$:  160-block 17
-    #####:  161:}
+        1:  161:}
     $$$$$:  161-block  0
     $$$$$:  161-block  1
     $$$$$:  161-block  2
     $$$$$:  161-block  3
     $$$$$:  161-block  4
-    $$$$$:  161-block  5
-    $$$$$:  161-block  6
-    $$$$$:  161-block  7
+        1:  161-block  5
+        1:  161-block  6
+        1:  161-block  7
     $$$$$:  161-block  8
     $$$$$:  161-block  9
     $$$$$:  161-block 10
     $$$$$:  161-block 11
         -:  162:
-        1:  163:TEST(esReunionValidaTEST, hablantesRepetidos){
+        7:  163:TEST(esReunionValidaTEST, hablantesRepetidos){
         1:  163-block  0
         1:  163-block  1
         1:  163-block  2
@@ -1146,45 +1146,45 @@
     $$$$$:  163-block 10
     $$$$$:  163-block 11
     $$$$$:  163-block 12
-    $$$$$:  163-block 13
-    $$$$$:  163-block 14
-    $$$$$:  163-block 15
-    $$$$$:  163-block 16
-    $$$$$:  163-block 17
-    $$$$$:  163-block 18
-    $$$$$:  163-block 19
-    $$$$$:  163-block 20
-    $$$$$:  163-block 21
-    $$$$$:  163-block 22
-    $$$$$:  163-block 23
-    #####:  164:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    #####:  165:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    $$$$$:  165-block  0
-    #####:  166:    senial hablante3 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    $$$$$:  166-block  0
-    #####:  167:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 0)};
-    $$$$$:  167-block  0
-    $$$$$:  167-block  1
-    $$$$$:  167-block  2
-    $$$$$:  167-block  3
-    $$$$$:  167-block  4
-    $$$$$:  167-block  5
+        1:  163-block 13
+        1:  163-block 14
+        1:  163-block 15
+        1:  163-block 16
+        1:  163-block 17
+        1:  163-block 18
+        1:  163-block 19
+        1:  163-block 20
+        1:  163-block 21
+        1:  163-block 22
+        1:  163-block 23
+        1:  164:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:  165:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:  165-block  0
+        1:  166:    senial hablante3 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:  166-block  0
+        3:  167:    reunion reunion = {make_pair(hablante1, 0), make_pair(hablante2, 1), make_pair(hablante3, 0)};
+        1:  167-block  0
+        1:  167-block  1
+        1:  167-block  2
+        1:  167-block  3
+        1:  167-block  4
+        3:  167-block  5
     $$$$$:  167-block  6
     $$$$$:  167-block  7
     $$$$$:  167-block  8
     $$$$$:  167-block  9
     $$$$$:  167-block 10
     $$$$$:  167-block 11
-    #####:  168:    int prof = 8;
-    #####:  169:    int freq = 10;
+        1:  168:    int prof = 8;
+        1:  169:    int freq = 10;
         -:  170:
-    #####:  171:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:  171-block  0
-    $$$$$:  171-block  1
-    $$$$$:  171-block  2
-    $$$$$:  171-block  3
-    $$$$$:  171-block  4
-    $$$$$:  171-block  5
+        1:  171:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:  171-block  0
+        1:  171-block  1
+        1:  171-block  2
+        1:  171-block  3
+        1:  171-block  4
+        1:  171-block  5
     $$$$$:  171-block  6
     $$$$$:  171-block  7
     $$$$$:  171-block  8
@@ -1194,26 +1194,26 @@
     $$$$$:  171-block 12
     $$$$$:  171-block 13
     $$$$$:  171-block 14
-    $$$$$:  171-block 15
-    $$$$$:  171-block 16
+        1:  171-block 15
+        1:  171-block 16
     $$$$$:  171-block 17
-    #####:  172:}
+        1:  172:}
     $$$$$:  172-block  0
     $$$$$:  172-block  1
     $$$$$:  172-block  2
     $$$$$:  172-block  3
     $$$$$:  172-block  4
     $$$$$:  172-block  5
-    $$$$$:  172-block  6
-    $$$$$:  172-block  7
-    $$$$$:  172-block  8
+        1:  172-block  6
+        1:  172-block  7
+        1:  172-block  8
     $$$$$:  172-block  9
     $$$$$:  172-block 10
     $$$$$:  172-block 11
     $$$$$:  172-block 12
     $$$$$:  172-block 13
         -:  173:
-        1:  174:TEST(esReunionValidaTEST, hablanteConNumeroFueraDeRango){
+        7:  174:TEST(esReunionValidaTEST, hablanteConNumeroFueraDeRango){
         1:  174-block  0
         1:  174-block  1
         1:  174-block  2
@@ -1227,45 +1227,45 @@
     $$$$$:  174-block 10
     $$$$$:  174-block 11
     $$$$$:  174-block 12
-    $$$$$:  174-block 13
-    $$$$$:  174-block 14
-    $$$$$:  174-block 15
-    $$$$$:  174-block 16
-    $$$$$:  174-block 17
-    $$$$$:  174-block 18
-    $$$$$:  174-block 19
-    $$$$$:  174-block 20
-    $$$$$:  174-block 21
-    $$$$$:  174-block 22
-    $$$$$:  174-block 23
-    #####:  175:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    #####:  176:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    $$$$$:  176-block  0
-    #####:  177:    senial hablante3 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
-    $$$$$:  177-block  0
-    #####:  178:    reunion reunion = {make_pair(hablante1, 5), make_pair(hablante2, 1), make_pair(hablante3, 0)};
-    $$$$$:  178-block  0
-    $$$$$:  178-block  1
-    $$$$$:  178-block  2
-    $$$$$:  178-block  3
-    $$$$$:  178-block  4
-    $$$$$:  178-block  5
+        1:  174-block 13
+        1:  174-block 14
+        1:  174-block 15
+        1:  174-block 16
+        1:  174-block 17
+        1:  174-block 18
+        1:  174-block 19
+        1:  174-block 20
+        1:  174-block 21
+        1:  174-block 22
+        1:  174-block 23
+        1:  175:    senial hablante1 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:  176:    senial hablante2 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:  176-block  0
+        1:  177:    senial hablante3 = {1, 3, -3, 4, 6, 0, -2, -8, 9, -15, 7};
+        1:  177-block  0
+        3:  178:    reunion reunion = {make_pair(hablante1, 5), make_pair(hablante2, 1), make_pair(hablante3, 0)};
+        1:  178-block  0
+        1:  178-block  1
+        1:  178-block  2
+        1:  178-block  3
+        1:  178-block  4
+        3:  178-block  5
     $$$$$:  178-block  6
     $$$$$:  178-block  7
     $$$$$:  178-block  8
     $$$$$:  178-block  9
     $$$$$:  178-block 10
     $$$$$:  178-block 11
-    #####:  179:    int prof = 8;
-    #####:  180:    int freq = 10;
+        1:  179:    int prof = 8;
+        1:  180:    int freq = 10;
         -:  181:
-    #####:  182:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
-    $$$$$:  182-block  0
-    $$$$$:  182-block  1
-    $$$$$:  182-block  2
-    $$$$$:  182-block  3
-    $$$$$:  182-block  4
-    $$$$$:  182-block  5
+        1:  182:    ASSERT_FALSE(esReunionValida(reunion, prof, freq));
+        1:  182-block  0
+        1:  182-block  1
+        1:  182-block  2
+        1:  182-block  3
+        1:  182-block  4
+        1:  182-block  5
     $$$$$:  182-block  6
     $$$$$:  182-block  7
     $$$$$:  182-block  8
@@ -1275,19 +1275,19 @@
     $$$$$:  182-block 12
     $$$$$:  182-block 13
     $$$$$:  182-block 14
-    $$$$$:  182-block 15
-    $$$$$:  182-block 16
+        1:  182-block 15
+        1:  182-block 16
     $$$$$:  182-block 17
-    #####:  183:}
+        1:  183:}
     $$$$$:  183-block  0
     $$$$$:  183-block  1
     $$$$$:  183-block  2
     $$$$$:  183-block  3
     $$$$$:  183-block  4
     $$$$$:  183-block  5
-    $$$$$:  183-block  6
-    $$$$$:  183-block  7
-    $$$$$:  183-block  8
+        1:  183-block  6
+        1:  183-block  7
+        1:  183-block  8
     $$$$$:  183-block  9
     $$$$$:  183-block 10
     $$$$$:  183-block 11
